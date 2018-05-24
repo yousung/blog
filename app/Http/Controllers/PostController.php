@@ -4,11 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\filters\PostFilter;
-use Illuminate\Http\Request;
 
 class PostController extends Controller implements Cacheble
 {
-
     public function cacheTags()
     {
         return 'post';
@@ -22,7 +20,11 @@ class PostController extends Controller implements Cacheble
 
     public function index(PostFilter $filter)
     {
-        $this->seo('포스트 전체보기', '작성된 모든 포스트를 확인할 수 있습니다.');
+        if ($search = \Request::input('search')) {
+            $this->seo("'{$search}' 검색결과", "'{$search}' 로 포스트 제목, 부제목, 태그, 시리즈를 검색합니다");
+        } else {
+            $this->seo('포스트 전체보기', '작성된 모든 포스트를 확인할 수 있습니다.');
+        }
 
         $query = Post::Filter($filter);
 
