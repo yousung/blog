@@ -74,6 +74,9 @@ return [
         //Analytics
         Spatie\Analytics\AnalyticsServiceProvider::class,
 
+        //Minify
+        HTMLMin\HTMLMin\HTMLMinServiceProvider::class,
+
     ],
 
     /*
