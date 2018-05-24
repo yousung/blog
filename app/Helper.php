@@ -23,10 +23,10 @@ if (!function_exists('noTag')) {
     function noTag($detail)
     {
         $detail = strip_tags($detail);
-        $detail = str_replace('&nbsp;', '', $detail);
-        $detail = preg_replace("/[#\&\+\-@=\/\\\:;\.'\"\^`~\_|\!\?\*$#<>()\[\]\{\}]/i", ',', $detail);
-        $detail = str_replace('\r\n', ',', $detail);
-        $detail = str_replace('\n', ',', $detail);
+//        $detail = str_replace('&nbsp;', '', $detail);
+//        $detail = preg_replace("/[#\&\+\-@=\/\\\:;\.\"\^`~\_|\!\?\*$#<>()\[\]\{\}]/i", ',', $detail);
+//        $detail = str_replace('\r\n', ',', $detail);
+//        $detail = str_replace('\n', ',', $detail);
 
         return preg_replace('/\r\n|\r|\n/', ',', $detail);
     }
