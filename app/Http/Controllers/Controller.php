@@ -58,6 +58,10 @@ class Controller extends BaseController
                 \SEOMeta::setKeywords($post->tags->pluck('name')->toArray());
             }
 
+            if ($series = $post->series) {
+                \SEO::setCanonical(route('post.index').'?series='.$series->slug);
+            }
+
             if ($context = $post->context) {
                 foreach (get_images($post) as $image) {
                     \OpenGraph::addImage($image);
