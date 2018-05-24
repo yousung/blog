@@ -40,6 +40,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
     <script src="{{ mix('js/app.js') }}"></script>
 
+    @include('template.sytax')
+
     {{--<script src="js/chart.min.js"></script>--}}
     {{--<script src="js/chart-data.js"></script>--}}
     {{--<script src="js/easypiechart.js"></script>--}}

@@ -6,7 +6,7 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="col-lg-12 col-md-12 mx-auto">
                     <div class="site-heading">
                         <h1>Lovizu Blog</h1>
                         <span class="subheading">Emotional developers learning</span>
@@ -18,7 +18,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="col-lg-12 col-md-12 mx-auto">
                 <p>제목, 태그, 시리즈명을 검색해주세요.</p>
                 <form  action="{{ route('post.index') }}" novalidate method="get">
 
