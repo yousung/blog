@@ -9,3 +9,5 @@ Route::resource('series', 'Admin\SeriesController');
 Route::resource('setting', 'Admin\SettingController')->only('edit', 'update');
 
 Route::post('file', 'Admin\FileController@store')->name('file.store');
+
+Route::get('analytics/{type}', 'Admin\AnalyticsController@index')->name('analytics');

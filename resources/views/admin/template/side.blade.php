@@ -29,21 +29,35 @@
             <a href="{{ route('admin.setting.edit', 1) }}"><em class="fa fa-cogs">&nbsp;</em> Setting</a>
         </li>
 
-        {{--<li class="parent "><a data-toggle="collapse" href="#sub-item-1">--}}
-                {{--<em class="fa fa-navicon">&nbsp;</em> Multilevel <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>--}}
-            {{--</a>--}}
-            {{--<ul class="children collapse" id="sub-item-1">--}}
-                {{--<li><a class="" href="#">--}}
-                        {{--<span class="fa fa-arrow-right">&nbsp;</span> Sub Item 1--}}
-                    {{--</a></li>--}}
-                {{--<li><a class="" href="#">--}}
-                        {{--<span class="fa fa-arrow-right">&nbsp;</span> Sub Item 2--}}
-                    {{--</a></li>--}}
-                {{--<li><a class="" href="#">--}}
-                        {{--<span class="fa fa-arrow-right">&nbsp;</span> Sub Item 3--}}
-                    {{--</a></li>--}}
-            {{--</ul>--}}
-        {{--</li>--}}
+        <li class="parent {{ hasUrl(route('admin.analytics', '')) }}">
+            <a data-toggle="collapse" href="#sub-item-1">
+                <em class="fa fa-navicon">&nbsp;</em> Analytics
+                <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right">
+                    <em class="fa fa-plus"></em>
+                </span>
+            </a>
+            <ul class="children {{ hasUrl(route('admin.analytics', '')) ? '' : 'collapse' }}" id="sub-item-1">
+                <li>
+                    <a class="{{ hasUrl(route('admin.analytics', 'vist')) }}" href="{{ route('admin.analytics', 'vist') }}">
+                        <span class="fa fa-arrow-right">&nbsp;</span> vist
+                    </a>
+                </li>
+                <li>
+                    <a class="{{ hasUrl(route('admin.analytics', 'engine')) }}" href="{{ route('admin.analytics', 'engine') }}">
+                        <span class="fa fa-arrow-right">&nbsp;</span> engine
+                    </a></li>
+                <li>
+                    <a class="{{ hasUrl(route('admin.analytics', 'keyword')) }}" href="{{ route('admin.analytics', 'keyword') }}">
+                        <span class="fa fa-arrow-right">&nbsp;</span> keyword
+                    </a>
+                </li>
+                <li>
+                    <a class="{{ hasUrl(route('admin.analytics', 'os')) }}" href="{{ route('admin.analytics', 'os') }}">
+                        <span class="fa fa-arrow-right">&nbsp;</span> os
+                    </a>
+                </li>
+            </ul>
+        </li>
         <li><a href="{{ route('logout') }}"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
     </ul>
 </div><!--/.sidebar-->
