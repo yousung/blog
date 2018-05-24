@@ -129,6 +129,7 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Curl' => Ixudra\Curl\Facades\Curl::class,
         'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
+        'HTMLMin' => HTMLMin\HTMLMin\Facades\HTMLMin::class,
     ],
 
 ];

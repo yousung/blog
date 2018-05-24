@@ -43,4 +43,6 @@
 
 </body>
 
+@stack('last')
+
 </html>
