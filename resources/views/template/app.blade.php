@@ -15,8 +15,6 @@
 	<link href='{{ mix('/css/clean-blog.css') }}' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="/favicon.ico">
 
-
-
 	{!! SEO::generate() !!}
 	@stack('style')
 	@yield('style')
@@ -24,6 +22,7 @@
 	@include('seo.google')
 </head>
 <body>
+	@include('seo.ad')
 
 <!-- Navigation -->
 @include('template.nav')
