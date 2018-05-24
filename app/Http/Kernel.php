@@ -36,7 +36,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
 //            \App\Http\Middleware\ChangSlugParamMiddleWare::class,
-            \Matthewbdaly\ETagMiddleware\ETag::class
+            \App\Http\Middleware\EtagMiddleware::class,
 
         ],
 
