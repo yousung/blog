@@ -24,11 +24,6 @@
             <a href="{{ route('admin.post.index') }}"><em class="fa fa-file">&nbsp;</em> Posts</a>
         </li>
 
-
-        <li class="{{ hasUrl(route('admin.setting.edit', 1)) }}">
-            <a href="{{ route('admin.setting.edit', 1) }}"><em class="fa fa-cogs">&nbsp;</em> Setting</a>
-        </li>
-
         <li class="parent {{ hasUrl(route('admin.analytics', '')) }}">
             <a data-toggle="collapse" href="#sub-item-1">
                 <em class="fa fa-navicon">&nbsp;</em> Analytics
@@ -58,6 +53,11 @@
                 </li>
             </ul>
         </li>
+
+        <li class="{{ hasUrl(route('admin.setting.edit', 1)) }}">
+            <a href="{{ route('admin.setting.edit', 1) }}"><em class="fa fa-cogs">&nbsp;</em> Setting</a>
+        </li>
+
         <li><a href="{{ route('logout') }}"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
     </ul>
 </div><!--/.sidebar-->
