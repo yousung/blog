@@ -13,7 +13,7 @@
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-11 col-md-11 mx-auto text-word">
+				<div class="col-lg-10 col-md-10 mx-auto text-word">
 					<div class="post-heading">
 						<h1>{{ $post->title }}</h1>
 						<h2 class="subheading">{{ $post->subTitle }}</h2>
@@ -29,7 +29,7 @@
 	<article>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-11 col-md-11 mx-auto text-word">
+				<div class="col-lg-10 col-md-10 mx-auto text-word">
 					{!! $post->context !!}
 					<p>
 						@foreach($post->tags as $tag)
