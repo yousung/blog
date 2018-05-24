@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.23 on 2018-05-24 17:59:01.
+ * Generated for Laravel 5.6.23 on 2018-05-24 18:23:23.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -2019,6 +2019,40 @@ namespace Illuminate\Support\Facades {
     class Blade {
         
         /**
+         * Minifies the output before saving it.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */ 
+        public static function compileMinify($value)
+        {
+            return \HTMLMin\HTMLMin\Compilers\MinifyCompiler::compileMinify($value);
+        }
+        
+        /**
+         * Return the compilers.
+         *
+         * @return string[] 
+         * @static 
+         */ 
+        public static function getCompilers()
+        {
+            return \HTMLMin\HTMLMin\Compilers\MinifyCompiler::getCompilers();
+        }
+        
+        /**
+         * Return the blade minifier instance.
+         *
+         * @return \HTMLMin\HTMLMin\Minifiers\BladeMinifier 
+         * @static 
+         */ 
+        public static function getBladeMinifier()
+        {
+            return \HTMLMin\HTMLMin\Compilers\MinifyCompiler::getBladeMinifier();
+        }
+        
+        /**
          * Compile the view at the given path.
          *
          * @param string $path
@@ -2027,7 +2061,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function compile($path = null)
         {
-            \Illuminate\View\Compilers\BladeCompiler::compile($path);
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            \HTMLMin\HTMLMin\Compilers\MinifyCompiler::compile($path);
         }
         
         /**
@@ -2038,7 +2073,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getPath()
         {
-            return \Illuminate\View\Compilers\BladeCompiler::getPath();
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            return \HTMLMin\HTMLMin\Compilers\MinifyCompiler::getPath();
         }
         
         /**
@@ -2050,7 +2086,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function setPath($path)
         {
-            \Illuminate\View\Compilers\BladeCompiler::setPath($path);
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            \HTMLMin\HTMLMin\Compilers\MinifyCompiler::setPath($path);
         }
         
         /**
@@ -2062,7 +2099,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function compileString($value)
         {
-            return \Illuminate\View\Compilers\BladeCompiler::compileString($value);
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            return \HTMLMin\HTMLMin\Compilers\MinifyCompiler::compileString($value);
         }
         
         /**
@@ -2074,7 +2112,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function stripParentheses($expression)
         {
-            return \Illuminate\View\Compilers\BladeCompiler::stripParentheses($expression);
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            return \HTMLMin\HTMLMin\Compilers\MinifyCompiler::stripParentheses($expression);
         }
         
         /**
@@ -2086,7 +2125,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function extend($compiler)
         {
-            \Illuminate\View\Compilers\BladeCompiler::extend($compiler);
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            \HTMLMin\HTMLMin\Compilers\MinifyCompiler::extend($compiler);
         }
         
         /**
@@ -2097,7 +2137,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getExtensions()
         {
-            return \Illuminate\View\Compilers\BladeCompiler::getExtensions();
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            return \HTMLMin\HTMLMin\Compilers\MinifyCompiler::getExtensions();
         }
         
         /**
@@ -2110,7 +2151,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function if($name, $callback)
         {
-            \Illuminate\View\Compilers\BladeCompiler::if($name, $callback);
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            \HTMLMin\HTMLMin\Compilers\MinifyCompiler::if($name, $callback);
         }
         
         /**
@@ -2123,7 +2165,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function check($name, $parameters = null)
         {
-            return \Illuminate\View\Compilers\BladeCompiler::check($name, $parameters);
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            return \HTMLMin\HTMLMin\Compilers\MinifyCompiler::check($name, $parameters);
         }
         
         /**
@@ -2136,7 +2179,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function component($path, $alias = null)
         {
-            \Illuminate\View\Compilers\BladeCompiler::component($path, $alias);
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            \HTMLMin\HTMLMin\Compilers\MinifyCompiler::component($path, $alias);
         }
         
         /**
@@ -2149,7 +2193,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function include($path, $alias = null)
         {
-            \Illuminate\View\Compilers\BladeCompiler::include($path, $alias);
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            \HTMLMin\HTMLMin\Compilers\MinifyCompiler::include($path, $alias);
         }
         
         /**
@@ -2162,7 +2207,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function directive($name, $handler)
         {
-            \Illuminate\View\Compilers\BladeCompiler::directive($name, $handler);
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            \HTMLMin\HTMLMin\Compilers\MinifyCompiler::directive($name, $handler);
         }
         
         /**
@@ -2173,7 +2219,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getCustomDirectives()
         {
-            return \Illuminate\View\Compilers\BladeCompiler::getCustomDirectives();
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            return \HTMLMin\HTMLMin\Compilers\MinifyCompiler::getCustomDirectives();
         }
         
         /**
@@ -2185,7 +2232,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function setEchoFormat($format)
         {
-            \Illuminate\View\Compilers\BladeCompiler::setEchoFormat($format);
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            \HTMLMin\HTMLMin\Compilers\MinifyCompiler::setEchoFormat($format);
         }
         
         /**
@@ -2196,7 +2244,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function withDoubleEncoding()
         {
-            \Illuminate\View\Compilers\BladeCompiler::withDoubleEncoding();
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            \HTMLMin\HTMLMin\Compilers\MinifyCompiler::withDoubleEncoding();
         }
         
         /**
@@ -2207,7 +2256,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function withoutDoubleEncoding()
         {
-            \Illuminate\View\Compilers\BladeCompiler::withoutDoubleEncoding();
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            \HTMLMin\HTMLMin\Compilers\MinifyCompiler::withoutDoubleEncoding();
         }
         
         /**
@@ -2220,7 +2270,7 @@ namespace Illuminate\Support\Facades {
         public static function getCompiledPath($path)
         {
             //Method inherited from \Illuminate\View\Compilers\Compiler            
-            return \Illuminate\View\Compilers\BladeCompiler::getCompiledPath($path);
+            return \HTMLMin\HTMLMin\Compilers\MinifyCompiler::getCompiledPath($path);
         }
         
         /**
@@ -2233,7 +2283,7 @@ namespace Illuminate\Support\Facades {
         public static function isExpired($path)
         {
             //Method inherited from \Illuminate\View\Compilers\Compiler            
-            return \Illuminate\View\Compilers\BladeCompiler::isExpired($path);
+            return \HTMLMin\HTMLMin\Compilers\MinifyCompiler::isExpired($path);
         }
         
         /**
@@ -2245,7 +2295,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function compileEchoDefaults($value)
         {
-            return \Illuminate\View\Compilers\BladeCompiler::compileEchoDefaults($value);
+            //Method inherited from \Illuminate\View\Compilers\BladeCompiler            
+            return \HTMLMin\HTMLMin\Compilers\MinifyCompiler::compileEchoDefaults($value);
         }
          
     }

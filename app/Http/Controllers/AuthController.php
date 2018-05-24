@@ -11,10 +11,13 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function store(AuthReqeust $reqeust)
+    public function store(AuthReqeust $request)
     {
-        if (\Auth::attempt($reqeust->only('email', 'password'), $reqeust->has('remember'))) {
-            // TODO : alert
+        if (\Auth::attempt($request->only('email', 'password'), $request->has('remember'))) {
+            \Auth::logoutOtherDevices($request->input('password'));
+
+            \Alert::success('관리자님 환영합니다', '로그인 성공')->autoclose(5000);
+
             return redirect(route('admin.admin'));
         }
     }
