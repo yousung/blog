@@ -58,10 +58,12 @@ class Controller extends BaseController
                 $image = $img[0];
             }
         }
+        $person = Schema::person()->name('Lovizu')->image('/images/yousung.jpg')
+            ;
 
         return Schema::article()->name($post->title)
             ->headline($post->subTitle)
-            ->publisher(optional($post->user)->name)
+            ->publisher($person)
             ->author(optional($post->user)->name)
             ->datePublished($post->created_at->toDateString())
             ->image($image)
