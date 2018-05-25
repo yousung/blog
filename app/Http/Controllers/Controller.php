@@ -72,7 +72,7 @@ class Controller extends BaseController
         return Schema::article()->name($post->title)
             ->headline($post->subTitle)
             ->publisher($person)
-            ->mainEntity(\URL::full())
+            ->mainEntityOfPage(\URL::full())
             ->author(optional($post->user)->name)
             ->datePublished($post->created_at->toDateString())
             ->image($image)
