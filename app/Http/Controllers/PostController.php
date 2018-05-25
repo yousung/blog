@@ -29,6 +29,7 @@ class PostController extends Controller implements Cacheble
         $query = Post::Filter($filter);
 
         $posts = $this->cache(cache_key(), $query, 'simplePaginate', 15);
+        $this->postList($posts);
 
         return view('post.index', compact('posts'));
     }

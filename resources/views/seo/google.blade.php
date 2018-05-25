@@ -21,3 +21,4 @@
 {{--</script>--}}
 
 {!! isset($itemSchma) ? $itemSchma->toScript() : '' !!}
+{!! isset($itemListSchma) ? $itemListSchma->toScript() : '' !!}

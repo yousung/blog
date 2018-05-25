@@ -51,11 +51,24 @@ class Controller extends BaseController
         }
     }
 
+    protected function postList($posts)
+    {
+        $item = [];
+        foreach ($posts as $idx => $post) {
+            $item[] = Schema::listItem()
+                ->position($idx + 1)
+                ->item(Schema::thing()->name($post->title)->image(get_images($post)));
+        }
+
+        $itemListSchma = Schema::breadcrumbList()->itemListElement($item);
+
+        view()->share(compact('itemListSchma'));
+    }
+
     protected function schema(Post $post = null)
     {
         $image = get_images($post);
         $person = $this->schemePerson();
-
 
         $itemSchma = $post
             ? Schema::blog()->name($post->title)
