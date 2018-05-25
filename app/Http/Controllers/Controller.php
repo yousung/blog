@@ -53,12 +53,18 @@ class Controller extends BaseController
     protected function schema(Post $post)
     {
         $image = \URL::to('/').'/images/yousung.jpg';
+
+        $logo = Schema::imageObject()->url($image)
+                    ->name('Lovizu')
+                    ->height('640')
+                    ->width('640');
+
         if ($post->context) {
             if ($img = get_images($post)) {
                 $image = $img;
             }
         }
-        $logo = Schema::imageObject()->url('/images/yousung.jpg')->name('Lovizu')->height(640)->width(640);
+
         $person = Schema::organization()
                         ->name('Lovizu')
                         ->logo($logo);
