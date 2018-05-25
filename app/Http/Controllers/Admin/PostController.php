@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Events\DelTagsChange;
+use App\Events\EmailSender;
 use App\Events\ModelChange;
 use App\filters\PostFilter;
 use App\Http\Controllers\Cacheble;
@@ -43,6 +44,7 @@ class PostController extends Controller implements Cacheble
         $post = Post::create($request->getData());
 
         $this->common('작성', $request, $post);
+        EmailSender::dispatch($post);
 
         return redirect(route('admin.post.show', $post->id));
     }

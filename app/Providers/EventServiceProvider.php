@@ -20,6 +20,10 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\DelTagsChange' => [
             'App\Listeners\DelTagsListener',
         ],
+
+        'App\Events\EmailSender' => [
+            'App\Listeners\EmailSenderListener',
+        ],
     ];
 
     /**
