@@ -31,7 +31,7 @@ class NewPost extends Mailable
         $name = $this->userName;
 
         return $this->from('help@lovizu.com')
-            ->subject("[러비쥬|새글] {$post->title}")
+            ->subject("[ 러비쥬 | 새글알림 ] {$post->title}")
             ->markdown('emails.post', compact('post', 'name'));
     }
 }
