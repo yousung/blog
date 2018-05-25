@@ -26,6 +26,7 @@ class PageController extends Controller implements Cacheble
 
         $posts = $this->cache(cache_key('home.index'), $query, 'simplePaginate', 15);
 
-        return view('index', compact('posts'));
+
+        return view('index', compact('posts', 'css'));
     }
 }

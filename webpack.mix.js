@@ -24,6 +24,7 @@ mix
     ], 'public/css/clean-blog.css')
 
     .sass('resources/assets/scss/login.scss', 'public/css')
+    .sass('resources/assets/sass/font.scss', 'public/css')
 
     .styles([
         'resources/assets/css/custom.css',
