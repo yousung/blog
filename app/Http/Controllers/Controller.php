@@ -58,8 +58,10 @@ class Controller extends BaseController
                 $image = $img;
             }
         }
-        $person = Schema::organization()->name('Lovizu')
-                        ->logo('/images/yousung.jpg');
+        $logo = Schema::imageObject()->url('/images/yousung.jpg')->name('Lovizu')->height(640)->width(640);
+        $person = Schema::organization()
+                        ->name('Lovizu')
+                        ->logo($logo);
 
         return Schema::article()->name($post->title)
             ->headline($post->subTitle)
