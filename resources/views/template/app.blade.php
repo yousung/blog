@@ -22,8 +22,6 @@
 	@include('seo.google')
 </head>
 <body>
-	@include('seo.ad')
-
 <!-- Navigation -->
 @include('template.nav')
 
@@ -36,9 +34,8 @@
 @include('template.footer')
 @stack('script')
 @yield('script')
-
 @include('sweet::alert')
-
+@include('seo.ad')
 
 </body>
 
