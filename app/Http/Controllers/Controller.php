@@ -66,7 +66,7 @@ class Controller extends BaseController
             ->datePublished($post->created_at->toDateString())
             ->image($image)
             ->dateModified($post->updated_at->toDateString())
-            ->articleSection('카테고리');
+            ->articleSection(optional($post->series)->name ?? 'post');
     }
 
     protected function seo($title, $description, Post $post = null)
