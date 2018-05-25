@@ -55,7 +55,7 @@ class Controller extends BaseController
         $image = get_images($post);
         $person = $this->schemePerson();
 
-        return Schema::article()->name($post->title)
+        return Schema::blog()->name($post->title)
             ->headline($post->subTitle)
             ->publisher($person)
             ->mainEntityOfPage(\URL::full())
