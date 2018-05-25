@@ -60,9 +60,12 @@ class Controller extends BaseController
         }
 
         return Schema::article()->name($post->title)
+            ->headline($post->subTitle)
+            ->publisher(optional($post->user)->name)
             ->author(optional($post->user)->name)
             ->datePublished($post->created_at->toDateString())
             ->image($image)
+            ->dateModified($post->updated_at->toDateString())
             ->articleSection('카테고리');
     }
 
