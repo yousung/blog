@@ -21,6 +21,7 @@ class PageController extends Controller implements Cacheble
     public function index()
     {
         $this->seo('감성개발자', '코드에서 감성이 묻어나오는 개발자 러비쥬입니다');
+        $this->schema();
 
         $query = Post::with(['user', 'tags', 'series'])->latest();
 

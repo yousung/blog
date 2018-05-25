@@ -177,8 +177,14 @@ if (!function_exists('make_slug')) {
  * Change String Url Slug
  */
 if (!function_exists('get_images')) {
-    function get_images(\App\Post $post)
+    function get_images(\App\Post $post = null)
     {
+        $basicImage = [\URL::to('/images/yousung.jpg')];
+
+        if (!$post) {
+            return $basicImage;
+        }
+
         $images = [];
         if ($post->context) {
             preg_match_all("/<img[^>]*src=[\"']?([^>\"']+)[\"']?[^>]*>/i", $post->context, $item);
@@ -190,7 +196,7 @@ if (!function_exists('get_images')) {
             }
         }
 
-        $images = array_merge($images, [\URL::to('/images/yousung.jpg')]);
+        $images = array_merge($images, $basicImage);
 
         return array_filter($images);
     }

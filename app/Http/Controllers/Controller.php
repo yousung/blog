@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Events\ModelChange;
+use Carbon\Carbon;
 use Spatie\SchemaOrg\Schema;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -50,19 +51,31 @@ class Controller extends BaseController
         }
     }
 
-    protected function schema(Post $post)
+    protected function schema(Post $post = null)
     {
         $image = get_images($post);
         $person = $this->schemePerson();
 
-        return Schema::blog()->name($post->title)
+
+        $itemSchma = $post
+            ? Schema::blog()->name($post->title)
             ->headline($post->subTitle)
             ->publisher($person)
             ->mainEntityOfPage(\URL::full())
             ->author(optional($post->user)->name)
             ->datePublished($post->created_at->toDateString())
             ->image($image)
-            ->dateModified($post->updated_at->toDateString());
+            ->dateModified($post->updated_at->toDateString())
+            : Schema::blog()->name('러비쥬')
+                ->headline('감성 개발자 러비쥬 블로그입니다')
+                ->publisher($person)
+                ->mainEntityOfPage(\URL::full())
+                ->author('러비쥬')
+//                ->datePublished(Carbon::now()->toDateString())
+                ->image($image);
+//                ->dateModified(Carbon::now()->toDateString());
+
+        view()->share(compact('itemSchma'));
     }
 
     protected function seo($title, $description, Post $post = null)

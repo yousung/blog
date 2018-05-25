@@ -36,12 +36,12 @@ class PostController extends Controller implements Cacheble
     public function show($post)
     {
         $this->seo($post->title, $post->subTitle, $post);
-        $itemSchma = $this->schema($post);
+        $this->schema($post);
 
         $series = optional($post->series)->posts ?? [];
 
         $this->hitUp($post);
 
-        return view('post.show', compact('post', 'series', 'itemSchma'));
+        return view('post.show', compact('post', 'series'));
     }
 }
