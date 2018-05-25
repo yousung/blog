@@ -9,16 +9,13 @@
     gtag('config', 'UA-112233205-2');
 </script>
 
-{{--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>--}}
-{{--<!-- 러비쥬 -->--}}
-{{--<ins class="adsbygoogle"--}}
-     {{--style="display:block"--}}
-     {{--data-ad-client="ca-pub-1322828698634218"--}}
-     {{--data-ad-slot="6504831897"--}}
-     {{--data-ad-format="auto"></ins>--}}
-{{--<script>--}}
-    {{--(adsbygoogle = window.adsbygoogle || []).push({});--}}
-{{--</script>--}}
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1322828698634218",
+        enable_page_level_ads: true
+    });
+</script>
 
 {!! isset($itemSchma) ? $itemSchma->toScript() : '' !!}
 {!! isset($itemListSchma) ? $itemListSchma->toScript() : '' !!}
