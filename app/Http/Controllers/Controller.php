@@ -62,8 +62,7 @@ class Controller extends BaseController
             ->author(optional($post->user)->name)
             ->datePublished($post->created_at->toDateString())
             ->image($image)
-            ->dateModified($post->updated_at->toDateString())
-            ->articleSection(optional($post->series)->name ?? 'post');
+            ->dateModified($post->updated_at->toDateString());
     }
 
     protected function seo($title, $description, Post $post = null)
