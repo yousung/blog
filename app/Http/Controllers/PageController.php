@@ -26,6 +26,7 @@ class PageController extends Controller implements Cacheble
         $query = Post::with(['user', 'tags', 'series'])->latest();
 
         $posts = $this->cache(cache_key('home.index'), $query, 'simplePaginate', 15);
+        $this->postList($posts);
 
         return view('index', compact('posts', 'css'));
     }
