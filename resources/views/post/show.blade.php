@@ -64,6 +64,8 @@
 
 					<hr/>
 
+					@include('seo.ad')
+
 					<div id="disqus_thread"></div>
 
 					<script>
