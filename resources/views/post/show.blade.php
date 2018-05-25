@@ -1,10 +1,30 @@
 @extends('template.app')
 
+@section('style')
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1322828698634218",
+            enable_page_level_ads: true
+        });
+	</script>
+@endsection
+
 @section('script')
 	<script id="dsq-count-scr" src="//lovizu-blog.disqus.com/count.js" async></script>
 	@include('template.sytax')
 	<script>
 		console.log('This post is {{ $post->hit }} hit');
+	</script>
+
+	<!-- 포스팅 -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-1322828698634218"
+		 data-ad-slot="6504831897"
+		 data-ad-format="auto"></ins>
+	<script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
 @endsection
 
