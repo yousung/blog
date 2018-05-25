@@ -52,15 +52,8 @@ class Controller extends BaseController
 
     protected function schema(Post $post)
     {
-        $image = \URL::to('/').'/images/yousung.jpg';
-        $logo = $this->schemeLogo($image);
-        $person = $this->schemePerson($logo);
-
-        if ($post->context) {
-            if ($img = get_images($post)) {
-                $image = $img[0];
-            }
-        }
+        $image = get_images($post);
+        $person = $this->schemePerson();
 
         return Schema::article()->name($post->title)
             ->headline($post->subTitle)
@@ -94,16 +87,18 @@ class Controller extends BaseController
         }
     }
 
-    private function schemePerson($logo)
+    private function schemePerson()
     {
+        $logo = $this->schemeLogo();
+
         return Schema::organization()
             ->name('Lovizu')
             ->logo($logo);
     }
 
-    private function schemeLogo($image)
+    private function schemeLogo()
     {
-        return Schema::imageObject()->url($image)
+        return Schema::imageObject()->url(\URL::to('/images/yousung.jpg'))
             ->name('Lovizu')
             ->height('640')
             ->width('640');

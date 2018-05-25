@@ -190,6 +190,8 @@ if (!function_exists('get_images')) {
             }
         }
 
+        $images = array_merge($images, [\URL::to('/images/yousung.jpg')]);
+
         return array_filter($images);
     }
 }
