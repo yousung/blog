@@ -1,7 +1,8 @@
 @extends('template.app')
 
 @section('content')
-	<header class="masthead" style="background-image: url({{ $global->subscribe_bg ?? '/images/subscribe-bg.jpg' }})">
+	{{--<header class="masthead" style="background-image: url({{ $global->subscribe_bg ?? '/images/subscribe-bg.jpg' }})">--}}
+	<header class="masthead" style="background-image: url({{ '/images/subscribe-bg.jpg' }})">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">

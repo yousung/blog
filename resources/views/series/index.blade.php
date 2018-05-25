@@ -2,7 +2,8 @@
 
 @section('content')
 	<!-- Page Header -->
-	<header class="masthead" style="background-image: url({{ $global->series_bg ?? '/images/series-bg.jpg' }})">
+	{{--<header class="masthead" style="background-image: url({{ $global->series_bg ?? '/images/series-bg.jpg' }})">--}}
+	<header class="masthead" style="background-image: url({{ '/images/series-bg.jpg' }})">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">

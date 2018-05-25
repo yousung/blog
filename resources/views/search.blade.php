@@ -2,7 +2,8 @@
 
 @section('content')
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url({{ $global->search_bg ?? '/images/search-bg.jpg' }})">
+    {{--<header class="masthead" style="background-image: url({{ $global->search_bg ?? '/images/search-bg.jpg' }})">--}}
+    <header class="masthead" style="background-image: url({{ '/images/search-bg.jpg' }})">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
