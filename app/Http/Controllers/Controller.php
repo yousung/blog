@@ -8,6 +8,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Spatie\SchemaOrg\Schema;
 
 class Controller extends BaseController
 {
@@ -47,6 +48,11 @@ class Controller extends BaseController
         if (method_exists($this, 'cacheTags')) {
             ModelChange::dispatch($this->cacheTags());
         }
+    }
+
+    protected function schema($title, $description)
+    {
+//        Schema::
     }
 
     protected function seo($title, $description, Post $post = null)
