@@ -55,11 +55,11 @@ class Controller extends BaseController
         $image = \URL::to('/').'/images/yousung.jpg';
         if ($post->context) {
             if ($img = get_images($post)) {
-                $image = $img[0];
+                $image = $img;
             }
         }
-        $person = Schema::person()->name('Lovizu')->image('/images/yousung.jpg')
-            ;
+        $person = Schema::organization()->name('Lovizu')
+                        ->logo('/images/yousung.jpg');
 
         return Schema::article()->name($post->title)
             ->headline($post->subTitle)
