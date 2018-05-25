@@ -1,9 +1,5 @@
 @extends('template.app')
 
-@section('last')
-	@include('seo.ad')
-@endsection
-
 @section('script')
 	<script id="dsq-count-scr" src="//lovizu-blog.disqus.com/count.js" async></script>
 	@include('template.sytax')

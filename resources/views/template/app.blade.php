@@ -39,5 +39,6 @@
 </body>
 
 @yield('last')
+@include('seo.ad')
 
 </html>
