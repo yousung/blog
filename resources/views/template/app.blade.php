@@ -35,10 +35,9 @@
 @stack('script')
 @yield('script')
 @include('sweet::alert')
-@include('seo.ad')
 
 </body>
 
-@stack('last')
+@yield('last')
 
 </html>
