@@ -17,8 +17,10 @@
 	<link rel="stylesheet" media="screen" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
 	<link rel="stylesheet" media="screen" type="text/css" href='https://fonts.googleapis.com/css?family=Nanum+Gothic|Lora:400,700,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'>
 	<link rel="stylesheet" media="screen" type="text/css" href='{{ mix('/css/clean-blog.css') }}'>
+	@include('seo.google')
 </head>
 <body>
+
 <!-- Navigation -->
 @include('template.nav')
 
@@ -32,8 +34,6 @@
 @stack('script')
 @yield('script')
 @include('sweet::alert')
-
-@include('seo.google')
 </body>
 
 </html>

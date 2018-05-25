@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\ModelChange;
 use App\Post;
+use App\Events\ModelChange;
+use Spatie\SchemaOrg\Schema;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Spatie\SchemaOrg\Schema;
 
 class Controller extends BaseController
 {
@@ -50,9 +50,20 @@ class Controller extends BaseController
         }
     }
 
-    protected function schema($title, $description)
+    protected function schema(Post $post)
     {
-//        Schema::
+        $image = \URL::to('/').'/images/yousung.jpg';
+        if ($post->context) {
+            if ($img = get_images($post)) {
+                $image = $img[0];
+            }
+        }
+
+        return Schema::article()->name($post->title)
+            ->author(optional($post->user)->name)
+            ->datePublished($post->created_at->toDateString())
+            ->image($image)
+            ->articleSection('카테고리');
     }
 
     protected function seo($title, $description, Post $post = null)
