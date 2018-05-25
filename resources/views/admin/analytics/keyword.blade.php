@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-        @include('admin.template.nav', ['name' => 'Engine'])
+        @include('admin.template.nav', ['name' => 'Keyword'])
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Engine Vist List
+                        Keyword Vist List
                         @include('admin.analytics.date')
                     </div>
                     <div class="panel-body">
