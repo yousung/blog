@@ -8,6 +8,6 @@ Lovizu New Posting
 Goto Post
 @endcomponent
 
-Thanks,<br>
-Lovizu.
+Thanks, {{ $name }}<br>
+by Lovizu.
 @endcomponent

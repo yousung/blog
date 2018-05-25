@@ -16,7 +16,7 @@ class SubscribeController extends Controller
 
     public function store(SubscribeRequest $request)
     {
-        $subscribe = Subscribe::create($request->all());
+        $subscribe = Subscribe::create($request->getData());
 
         \Alert::success("{$subscribe->name} 님의 구독이 신청되었습니다.", '구독신청완료');
         return redirect(route('home'));
