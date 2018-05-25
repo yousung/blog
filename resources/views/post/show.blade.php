@@ -1,15 +1,5 @@
 @extends('template.app')
 
-@section('style')
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-1322828698634218",
-            enable_page_level_ads: true
-        });
-	</script>
-@endsection
-
 @section('script')
 	<script id="dsq-count-scr" src="//lovizu-blog.disqus.com/count.js" async></script>
 	@include('template.sytax')
@@ -35,6 +25,8 @@
 			</div>
 		</div>
 	</header>
+
+	@include('seo.top')
 
 	<article>
 		<div class="container">
@@ -64,7 +56,7 @@
 
 					<hr/>
 
-					@include('seo.ad')
+					@include('seo.bottom')
 
 					<div id="disqus_thread"></div>
 
