@@ -36,9 +36,9 @@
 @yield('script')
 @include('sweet::alert')
 
-</body>
-
-@yield('last')
 @include('seo.ad')
+</body>
+@yield('last')
+
 
 </html>
