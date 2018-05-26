@@ -45,6 +45,14 @@
 @yield('script')
 @include('sweet::alert')
 
+<span itemscope="" itemtype="http://schema.org/Organization">
+ <link itemprop="url" href="{{ \URL::to('/') }}">
+ <a itemprop="sameAs" href="https://www.facebook.com/nug22"></a>
+ <a itemprop="sameAs" href="https://blog.naver.com/nug22"></a>
+</span>
+
+
+
 </body>
 
 </html>
