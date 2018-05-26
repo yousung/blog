@@ -1,7 +1,7 @@
 <div class="post-preview">
 	@if($post->series)
-		<a href="{{ route('post.index') }}?series={{ $post->series->title }}"
-		   title="{{ $post->series->title }}">[ {{ $post->series->slug }} 시리즈 ]</a>
+		<a href="{{ route('post.index') }}?series={{ $post->series->slug }}"
+		   title="{{ $post->series->title }}">[ {{ $post->series->title }} 시리즈 ]</a>
 	@endif
 	<a href="{{ route('post.show', $post->secret) }}" title="{{ $post->title }}">
 		<h2 class="post-title m-t">
