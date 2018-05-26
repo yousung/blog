@@ -1,3 +1,4 @@
+<br/>
 <!-- 하단 -->
 <ins class="adsbygoogle"
      style="display:block"
@@ -7,3 +8,5 @@
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<br/>
+<hr/>
