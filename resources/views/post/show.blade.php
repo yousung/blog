@@ -54,7 +54,7 @@
 					@endforeach
 					@endif
 
-					@include('seo.google')
+					@include('seo.bottom')
 
 					<div id="disqus_thread"></div>
 
