@@ -1,3 +1,4 @@
+@if(\Agent::isDesktop())
 <!-- 상단 -->
 <ins class="adsbygoogle"
      style="display:block"
@@ -7,4 +8,5 @@
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+@endif
 <br/>

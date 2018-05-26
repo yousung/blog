@@ -77,6 +77,9 @@ return [
         //Minify
         HTMLMin\HTMLMin\HTMLMinServiceProvider::class,
 
+        //Agent
+        Jenssegers\Agent\AgentServiceProvider::class,
+
     ],
 
     /*
@@ -133,6 +136,7 @@ return [
         'Curl' => Ixudra\Curl\Facades\Curl::class,
         'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
         'HTMLMin' => HTMLMin\HTMLMin\Facades\HTMLMin::class,
+        'Agent' => Jenssegers\Agent\Facades\Agent::class,
     ],
 
 ];

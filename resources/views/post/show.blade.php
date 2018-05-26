@@ -8,16 +8,6 @@
 	</script>
 @endsection
 
-@section('style')
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-1322828698634218",
-            enable_page_level_ads: true
-        });
-	</script>
-@endsection
-
 @section('content')
 	<header class="masthead" style="background-image: url({{ $global->post_bg ?? '/images/post-bg.jpg' }})">
 		<div class="overlay"></div>
@@ -81,10 +71,6 @@
                         })();
 					</script>
 					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-					{{--@push('last')--}}
-						{{--<script id="dsq-count-scr" src="//lovizu-blog.disqus.com/count.js" async></script>--}}
-					{{--@endpush--}}
 				</div>
 			</div>
 		</div>
