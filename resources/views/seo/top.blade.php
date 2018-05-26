@@ -1,4 +1,4 @@
-@if(\Agent::isDesktop())
+@if(\Agent::isDesktop() && false)
 <!-- 상단 -->
 <ins class="adsbygoogle"
      style="display:block"

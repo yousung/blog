@@ -20,7 +20,7 @@
 	@include('seo.google')
 
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    @if(!\Agent::isDesktop())
+    @if(!\Agent::isDesktop() || true)
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({
                 google_ad_client: "ca-pub-1322828698634218",
