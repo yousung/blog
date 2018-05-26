@@ -32,7 +32,9 @@
 				<div class="col-lg-10 col-md-10 mx-auto text-word">
 					{{--@include('seo.top')--}}
 
-					{!! $post->context !!}
+					<article>
+						{!! $post->context !!}
+					</article>
 					<p>
 						@foreach($post->tags as $tag)
 							<kbd class="m-r"><a class="text-white" title="{{ $tag->name }}" href="{{ route('post.index') }}?tag={{ $tag->name }}">#{{ $tag->name }}</a></kbd>
