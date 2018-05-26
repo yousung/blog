@@ -31,7 +31,6 @@
 			<div class="row">
 				<div class="col-lg-10 col-md-10 mx-auto text-word">
 					@include('seo.top')
-					<br/>
 
 					{!! $post->context !!}
 					<p>
@@ -55,7 +54,7 @@
 					@endforeach
 					@endif
 
-					@include('seo.bottom')
+					@include('seo.google')
 
 					<div id="disqus_thread"></div>
 
