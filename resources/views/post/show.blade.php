@@ -55,8 +55,6 @@
 					@endforeach
 					@endif
 
-					<hr/>
-
 					@include('seo.bottom')
 
 					<div id="disqus_thread"></div>
