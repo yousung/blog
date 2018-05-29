@@ -3,6 +3,7 @@ $(function () {
 
     if(!is_touch_device){
         $('a').tooltip();
+        $('button.none-btn').tooltip();
     }
 
     var clipboard = new ClipboardJS('.copy-btn');
