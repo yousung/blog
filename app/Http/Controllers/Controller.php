@@ -105,7 +105,7 @@ class Controller extends BaseController
             }
 
             if ($context = $post->context) {
-                foreach (array_reverse(get_images($post)) as $image) {
+                foreach (get_images($post) as $image) {
                     \OpenGraph::addImage($image);
                 }
             }

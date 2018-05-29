@@ -198,6 +198,6 @@ if (!function_exists('get_images')) {
 
         $images = array_merge($images, $basicImage);
 
-        return array_filter($images);
+        return array_reverse(array_filter($images));
     }
 }
