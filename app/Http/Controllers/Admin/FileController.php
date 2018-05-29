@@ -9,29 +9,30 @@ class FileController extends Controller
 {
     public function store(Request $request)
     {
-        if ($file = $request->file('file')) {
-            $fileOriginal = $file->getClientOriginalName();
-            $fileSize = $request->input('fileSize');
-            $fileName = \str_random().filter_var($fileOriginal, FILTER_SANITIZE_URL);
-            $imgPath = image_path($fileName);
-            $thumb = null;
-            $pro = null;
+        if ($request->has('files')) {
+            $files = $request->file('files');
+            $fs = [];
+            foreach ($files as $file) {
+                $fileOriginal = $file->getClientOriginalName();
+                $fileName = \str_random().filter_var($fileOriginal, FILTER_SANITIZE_URL);
+                $imgPath = image_path($fileName);
+                $pro = null;
 
-            $disk = \Storage::disk('s3');
-            $disk->put($imgPath, file_get_contents($file), 'public');
-            $tempImage = \Image::make($disk->url($imgPath));
+                $disk = \Storage::disk('s3');
+                $disk->put($imgPath, file_get_contents($file), 'public');
 
-            $imgUrl = $disk->url($imgPath);
-            $thumb = image_crop($imgUrl, '190x120');
-            $pro = image_crop($imgUrl, $fileSize ?? ($tempImage->width().'x'.$tempImage->height()));
-            $disk->delete($imgPath);
+                $imgUrl = $disk->url($imgPath);
+                $tempImage = \Image::make($imgUrl);
+                $pro = image_crop($imgUrl, $fileSize ?? ($tempImage->width().'x'.$tempImage->height()));
+                $disk->delete($imgPath);
+                $fs[] = $pro;
+            }
 
-            if ($thumb && $pro) {
+            if (count($fs)) {
                 return \response()->json([
                     'code' => 'success',
                     'data' => [
-                        'thumb' => $thumb,
-                        'pro' => $pro,
+                        'pro' => $fs
                     ],
                 ], 200, [], JSON_PRETTY_PRINT);
             } else {
@@ -41,5 +42,10 @@ class FileController extends Controller
                 ], 500, [], JSON_PRETTY_PRINT);
             }
         }
+
+        return \response()->json([
+            'code' => 'error',
+            'msg' => '이미지가 없습니다.',
+        ], 500, [], JSON_PRETTY_PRINT);
     }
 }

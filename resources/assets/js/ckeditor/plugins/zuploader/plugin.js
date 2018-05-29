@@ -12,7 +12,7 @@ CKEDITOR.plugins.add(
                         exec : function (editor)
                         {
                             var action_url = '/admin/file?_token=' + csrfToken;
-                            $('body').append("<form id='myForm' action='"+action_url+"' method='post'><input type='file' name='file' id='myFile'/></form>");
+                            $('body').append("<form id='myForm' action='"+action_url+"' method='post'><input type='file' name='files[]' id='myFile' multiple /></form>");
                             $myForm = $("#myForm");
                             $myFile = $('#myFile');
 
@@ -20,15 +20,19 @@ CKEDITOR.plugins.add(
                                 success: function(res, status){
                                     var data = res.data;
                                     var img = null;
-                                    var url = null;
 
-                                    url = data.pro;
-                                    img = CKEDITOR.dom.element.createFromHtml('<p><img class="img-fluid" src="' + url + '"></p>');
-                                    try {
-                                        CKEDITOR.instances.context.insertElement(img);
-                                    } catch (e) {
-                                        CKEDITOR.instances.context.insertElement(img);
-                                    }
+                                    $.each(data.pro, function(idx, url){
+                                        if(url){
+                                            img = CKEDITOR.dom.element.createFromHtml('<p><img class="img-fluid" src="' + url + '"></p>');
+
+                                            try {
+                                                CKEDITOR.instances.context.insertElement(img);
+                                            } catch (e) {
+                                                CKEDITOR.instances.context.insertElement(img);
+                                            }
+                                            img = null;
+                                        }
+                                    });
 
                                     $myFile.remove();
                                     $myForm.remove();
