@@ -40,6 +40,10 @@ class Controller extends BaseController
 
     protected function hitUp($model)
     {
+        if (\Agent::isRobot()) {
+            return true;
+        }
+
         $key = md5($model->id);
         if (!\Session::has($key)) {
             \Session::put($key, true);
