@@ -137,7 +137,7 @@ class NaverBlogListener implements ShouldQueue
     /*
      * Naver Blog Post Delete & New Post
      */
-    private function edit(Post $post)
+    private function edit($post)
     {
         // 네이버에 작성된 것이 없을 경우 새로 작성으로 변경
         if (!$post->naver) {
