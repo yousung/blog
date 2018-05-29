@@ -16,6 +16,7 @@
 	<link rel="stylesheet" media="screen" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" media="screen" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
 	<link rel="stylesheet" media="screen" type="text/css" href='https://fonts.googleapis.com/css?family=Nanum+Gothic|Lora:400,700,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'>
+	<link rel="stylesheet" media="screen" type="text/css" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 	<link rel="stylesheet" media="screen" type="text/css" href='{{ mix('/css/clean-blog.css') }}'>
 	@include('seo.google')
 

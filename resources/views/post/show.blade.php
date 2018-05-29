@@ -1,9 +1,48 @@
 @extends('template.app')
 
 @section('script')
+	<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js"></script>
+	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 	<script id="dsq-count-scr" src="//lovizu-blog.disqus.com/count.js" async></script>
+
 	@include('template.sytax')
+
 	<script>
+		var sendBtn;
+        $(function(){
+            Kakao.init('{{ env('KKAO_SCRIPT_API') }}');
+            sendBtn = function() {
+                Kakao.Link.sendDefault({
+                    objectType: 'feed',
+                    content: {
+                        title: '{{ $post->title }}',
+                        description: '{{ implode('#', optional($post->tags)->pluck('name')->toArray()) }}',
+                        imageUrl: '{{ get_images($post)[0] }}',
+                        link: {
+                            mobileWebUrl: '{{ Request::fullUrl() }}',
+                            webUrl: '{{ Request::fullUrl() }}'
+                        }
+                    },
+                    buttons: [
+                        {
+                            title: 'Lovizu',
+                            link: {
+                                mobileWebUrl: '{{ Request::fullUrl() }}',
+                                webUrl: '{{ Request::fullUrl() }}'
+                            }
+                        },
+                        {
+                            title: 'N Blog',
+                            link: {
+                                mobileWebUrl: 'https://blog.naver.com/nug22/{{ $post->naver }}',
+                                webUrl: 'https://developers.kakao.com//{{ $post->naver }}'
+                            }
+                        }
+                    ]
+                });
+            }
+        });
+
 		console.log('This post is {{ $post->hit }} hit');
 	</script>
 @endsection
@@ -30,11 +69,21 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-md-10 mx-auto text-word">
-					{{--@include('seo.top')--}}
-
-					<article>
-						{!! $post->context !!}
-					</article>
+					{!! $post->context !!}
+					<p class="pull-right">
+						<button class="copy-btn none-btn" title="URL 복사하기" data-clipboard-text="{{ \Request::fullUrl() }}">
+							<i style="font-size: 2rem;" class="xi xi-file-add-o"></i>
+						</button>
+						<button class="none-btn" onclick="sendBtn();" title="카카오톡으로 보내기">
+							<i style="font-size: 2rem;" class="xi xi-kakaotalk"></i>
+						</button>
+						<a target="_blank" href="https://www.facebook.com/sharer.php?u={{ \Request::fullUrl() }}t={{ $post->title }}" title="페이스북으로 전달">
+							<i style="font-size: 2rem;" class="fa fa-facebook"></i>
+						</a>
+						<a target="_blank" href="https://twitter.com/share?text={{ $post->title }}&url={{ \Request::fullUrl() }}" title="트위터로 전달">
+							<i style="font-size: 2rem;" class="fa fa-twitter"></i>
+						</a>
+					</p>
 					<p>
 						@foreach($post->tags as $tag)
 							<kbd class="m-r"><a class="text-white" title="{{ $tag->name }}" href="{{ route('post.index') }}?tag={{ $tag->name }}">#{{ $tag->name }}</a></kbd>
@@ -56,8 +105,7 @@
 					@endforeach
 					@endif
 
-					<hr />
-					{{--@include('seo.bottom')--}}
+					<hr/>
 
 					<div id="disqus_thread"></div>
 

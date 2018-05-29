@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-05-29 11:59:05.
+    * Generated on 2018-05-29 15:39:10.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -50,7 +50,6 @@ namespace PHPSTORM_META {
         'htmlmin' => \HTMLMin\HTMLMin\HTMLMin::class,
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
-        'agent' => \Jenssegers\Agent\Agent::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
@@ -211,7 +210,6 @@ namespace PHPSTORM_META {
         'htmlmin' => \HTMLMin\HTMLMin\HTMLMin::class,
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
-        'agent' => \Jenssegers\Agent\Agent::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
@@ -372,7 +370,6 @@ namespace PHPSTORM_META {
         'htmlmin' => \HTMLMin\HTMLMin\HTMLMin::class,
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
-        'agent' => \Jenssegers\Agent\Agent::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
@@ -533,7 +530,6 @@ namespace PHPSTORM_META {
         'htmlmin' => \HTMLMin\HTMLMin\HTMLMin::class,
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
-        'agent' => \Jenssegers\Agent\Agent::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
@@ -694,7 +690,6 @@ namespace PHPSTORM_META {
         'htmlmin' => \HTMLMin\HTMLMin\HTMLMin::class,
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
-        'agent' => \Jenssegers\Agent\Agent::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
@@ -855,7 +850,6 @@ namespace PHPSTORM_META {
         'htmlmin' => \HTMLMin\HTMLMin\HTMLMin::class,
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
-        'agent' => \Jenssegers\Agent\Agent::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
@@ -1016,7 +1010,6 @@ namespace PHPSTORM_META {
         'htmlmin' => \HTMLMin\HTMLMin\HTMLMin::class,
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
-        'agent' => \Jenssegers\Agent\Agent::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
