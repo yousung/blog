@@ -89,7 +89,7 @@ class NaverBlogListener implements ShouldQueue
     {
         $postUrl = route('post.show', optimus($post->id));
         $context = preg_replace('/<(pre)([^>]*)>/i', '<pre style="display:none;">', $context);
-        $context = "<h2>{$post->subTitle}</h2>{$context}<br/><br/><a href=\"{$postUrl}\">{$post->title} ({$post->subTitle})</a>";
+        $context = "<h2><a href=\"{$postUrl}\">{$post->subTitle}</a></h2>{$context}<hr />{$postUrl}";
 
         $struct = [
             'title' => new Value($post->title, 'string'),

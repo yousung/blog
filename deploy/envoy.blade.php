@@ -61,8 +61,8 @@ echo 'service reload';
 sudo service nginx restart;
 sudo service php7.1-fpm restart;
 
-{{--echo 'queue restart';--}}
-{{--sudo service supervisor reload;--}}
+echo 'queue restart';
+sudo service supervisor reload;
 
 
 @endtask
