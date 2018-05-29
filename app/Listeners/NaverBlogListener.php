@@ -89,7 +89,6 @@ class NaverBlogListener implements ShouldQueue
     {
         $postUrl = route('post.show', optimus($post->id));
         $context = "<h2>{$post->subTitle}</h2>{$context}<br/><br/><a href=\"{$postUrl}\">{$postUrl}</a>";
-        $context = nl2br($context);
 
         $struct = [
             'title' => new Value($post->title, 'string'),
@@ -160,7 +159,7 @@ class NaverBlogListener implements ShouldQueue
     /*
      * Naver Blog Post Delete
      */
-    private function del(Post $post)
+    private function del($post)
     {
         $method = 'blogger.deletePost';
 
