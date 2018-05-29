@@ -28,7 +28,7 @@
 </footer>
 
 <!-- After Css loader -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet" type="text/css" />
+<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet" type="text/css" />
 <link href="//cdn.jsdelivr.net/highlight.js/8.7/styles/monokai_sublime.min.css" rel="stylesheet" type="text/css">
 
 <script src="//code.jquery.com/jquery-latest.min.js"></script>
@@ -36,6 +36,6 @@
 <script src="{{ mix('/js/app.js') }}"></script>
 <script src="{{ mix('/js/clean-blog.js') }}"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 @include('errors.errors')
 
