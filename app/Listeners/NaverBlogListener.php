@@ -3,7 +3,6 @@
 namespace App\Listeners;
 
 use App\Events\ModelChange;
-use App\Post;
 use PhpXmlRpc\Value;
 use PhpXmlRpc\Client;
 use PhpXmlRpc\Request;
