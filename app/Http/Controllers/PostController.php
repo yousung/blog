@@ -40,10 +40,9 @@ class PostController extends Controller implements Cacheble
         $this->schema($post);
 
         $series = optional($post->series)->posts ?? [];
-        $postUrl = route('post.show', optimus($post->id));
 
         $this->hitUp($post);
 
-        return view('post.show', compact('post', 'series', 'postUrl'));
+        return view('post.show', compact('post', 'series'));
     }
 }
