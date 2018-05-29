@@ -88,9 +88,8 @@ class NaverBlogListener implements ShouldQueue
     private function getStruct($post, $context)
     {
         $postUrl = route('post.show', optimus($post->id));
-        $context = preg_replace('/<(pre)([^>]*)>/i', '<pre><code>', $context);
-        $context = preg_replace('/<(\/pre)([^>]*)>/i', '</pre></code>', $context);
         $context = "<h2>{$post->subTitle}</h2>{$context}<br/><br/><a href=\"{$postUrl}\">{$postUrl}</a>";
+        $context = nl2br($context);
 
         $struct = [
             'title' => new Value($post->title, 'string'),
