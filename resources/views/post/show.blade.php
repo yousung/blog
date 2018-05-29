@@ -16,7 +16,7 @@
                     objectType: 'feed',
                     content: {
                         title: '{{ $post->title }}',
-                        description: '{{ implode('#', optional($post->tags)->pluck('name')->toArray()) }}',
+                        description: '{{ $post->subTitle }}',
                         imageUrl: '{{ get_images($post)[0] }}',
                         link: {
                             mobileWebUrl: '{{ Request::fullUrl() }}',
