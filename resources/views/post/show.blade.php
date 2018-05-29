@@ -19,16 +19,16 @@
                         description: '{{ $post->subTitle }}',
                         imageUrl: '{{ get_images($post)[0] }}',
                         link: {
-                            mobileWebUrl: '{{ Request::fullUrl() }}',
-                            webUrl: '{{ Request::fullUrl() }}'
+                            mobileWebUrl: '{{ $postUrl }}',
+                            webUrl: '{{ $postUrl }}'
                         }
                     },
                     buttons: [
                         {
                             title: 'Lovizu',
                             link: {
-                                mobileWebUrl: '{{ Request::fullUrl() }}',
-                                webUrl: '{{ Request::fullUrl() }}'
+                                mobileWebUrl: '{{ $postUrl }}',
+                                webUrl: '{{ $postUrl }}'
                             }
                         },
                         {
@@ -71,16 +71,16 @@
 				<div class="col-lg-10 col-md-10 mx-auto text-word">
 					{!! $post->context !!}
 					<p class="pull-right">
-						<button class="copy-btn none-btn" title="URL 복사하기" data-clipboard-text="{{ \Request::fullUrl() }}">
+						<button class="copy-btn none-btn" title="URL 복사하기" data-clipboard-text="{{ $postUrl }}">
 							<i style="font-size: 2rem;" class="xi xi-file-add-o"></i>
 						</button>
 						<button class="none-btn" onclick="sendBtn();" title="카카오톡으로 보내기">
 							<i style="font-size: 2rem;" class="xi xi-kakaotalk"></i>
 						</button>
-						<a target="_blank" href="https://www.facebook.com/sharer.php?u={{ urlencode(\Request::fullUrl()) }}t={{ $post->title }}" title="페이스북으로 전달">
+						<a target="_blank" href="https://www.facebook.com/sharer.php?u={{ $postUrl }}t={{ $post->title }}" title="페이스북으로 전달">
 							<i style="font-size: 2rem;" class="fa fa-facebook"></i>
 						</a>
-						<a target="_blank" href="https://twitter.com/share?text={{ $post->title }}&url={{ urlencode(\Request::fullUrl()) }}" title="트위터로 전달">
+						<a target="_blank" href="https://twitter.com/share?text={{ $post->title }}&url={{ $postUrl }}" title="트위터로 전달">
 							<i style="font-size: 2rem;" class="fa fa-twitter"></i>
 						</a>
 					</p>
@@ -111,7 +111,7 @@
 
 					<script>
                         {{--var disqus_config = function () {--}}
-                            {{--this.page.url = '{{ \Request::fullUrl() }}';--}}
+                            {{--this.page.url = '{{ $postUrl }}';--}}
                             {{--this.page.identifier = '{{ \Request::input('page', 1) }}';--}}
                         {{--};--}}
                         (function() {
