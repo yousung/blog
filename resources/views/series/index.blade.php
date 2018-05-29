@@ -25,7 +25,7 @@
 					@include('template.item', [
 						'title' => "{$s->title} [{$s->posts_count}]",
 						'subTitle' => $s->subTitle,
-						'url' => route('post.index')."?series={$s->title}"
+						'url' => route('post.index')."?series={$s->slug}"
 					])
 
 					@if (!$loop->last)

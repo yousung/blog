@@ -30,7 +30,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-md-10 mx-auto text-word">
-					{!! $post->context !!}
+					{{--@include('seo.top')--}}
+
+					<article>
+						{!! $post->context !!}
+					</article>
 					<p>
 						@foreach($post->tags as $tag)
 							<kbd class="m-r"><a class="text-white" title="{{ $tag->name }}" href="{{ route('post.index') }}?tag={{ $tag->name }}">#{{ $tag->name }}</a></kbd>
@@ -52,7 +56,8 @@
 					@endforeach
 					@endif
 
-					<hr/>
+					<hr />
+					{{--@include('seo.bottom')--}}
 
 					<div id="disqus_thread"></div>
 
@@ -69,10 +74,6 @@
                         })();
 					</script>
 					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-					{{--@push('last')--}}
-						{{--<script id="dsq-count-scr" src="//lovizu-blog.disqus.com/count.js" async></script>--}}
-					{{--@endpush--}}
 				</div>
 			</div>
 		</div>
