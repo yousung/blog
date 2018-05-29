@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use App\Events\ModelChange;
 use App\Post;
 use PhpXmlRpc\Value;
 use PhpXmlRpc\Client;
@@ -86,7 +87,11 @@ class NaverBlogListener implements ShouldQueue
      */
     private function getStruct($post, $context)
     {
-        $context = "<h2>{$post->subTitle}</h2>{$context}";
+        $postUrl = route('post.show', optimus($post->id));
+        $context = preg_replace('/<(\/pre|pre)([^>]*)>/gi', '', $context);
+        $context = "<h2>{$post->subTitle}</h2>{$context}<br/><br/>{$postUrl}";
+
+
 
         $struct = [
             'title' => new Value($post->title, 'string'),
@@ -132,6 +137,8 @@ class NaverBlogListener implements ShouldQueue
 
         $post->naver = $result->xml->me['string'] ?? null;
         $post->save();
+
+        ModelChange::dispatch('post');
     }
 
     /*
