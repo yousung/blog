@@ -45,10 +45,13 @@
 @yield('script')
 @include('sweet::alert')
 
+@php
+	$postId =  (!isset($posts) && isset($post)) ? $post->naver : '';
+@endphp
 <span itemscope="" itemtype="http://schema.org/Organization">
  <link itemprop="url" href="{{ \URL::to('/') }}">
  <a itemprop="sameAs" href="https://www.facebook.com/nug22"></a>
- <a itemprop="sameAs" href="https://blog.naver.com/nug22"></a>
+ <a itemprop="sameAs" href="https://blog.naver.com/nug22/{{ $postId }}"></a>
 </span>
 
 
