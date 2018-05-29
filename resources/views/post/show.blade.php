@@ -77,7 +77,7 @@
 						<button class="none-btn" onclick="sendBtn();" title="카카오톡으로 보내기">
 							<i style="font-size: 2rem;" class="xi xi-kakaotalk"></i>
 						</button>
-						<a target="_blank" href="https://www.facebook.com/sharer.php?u={{ $postUrl }}t={{ $post->title }}" title="페이스북으로 전달">
+						<a target="_blank" href="https://www.facebook.com/sharer.php?u={{ $postUrl }}&t={{ $post->title }}" title="페이스북으로 전달">
 							<i style="font-size: 2rem;" class="fa fa-facebook"></i>
 						</a>
 						<a target="_blank" href="https://twitter.com/share?text={{ $post->title }}&url={{ $postUrl }}" title="트위터로 전달">
