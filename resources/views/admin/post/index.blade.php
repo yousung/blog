@@ -25,6 +25,7 @@
                                 <th class="text-center">Sub Title</th>
                                 <th class="text-center">Series</th>
                                 <th class="text-center">Hit</th>
+                                <th class="text-center">Naver</th>
                                 <th class="text-center">Created_at</th>
                             </thead>
                             <tbody>
@@ -39,6 +40,7 @@
                                         </a>
                                     </td>
                                     <td class="text-center">{{ $post->hit }}</td>
+                                    <td class="text-center">{{ $post->naver ? 'Y' : 'N' }}</td>
                                     <td class="text-center">{{ $post->created_at->toDateString() }}</td>
                                 </tr>
                             @endforeach
