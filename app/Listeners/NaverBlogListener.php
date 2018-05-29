@@ -95,7 +95,7 @@ class NaverBlogListener implements ShouldQueue
             'description' => new Value($context, 'string'),
         ];
 
-        if ($category = optional($post->series)->name) {
+        if ($category = optional($post->series)->title) {
             $struct['categories'] = new Value(strip_tags(trim($category)), 'string');
         }
 
