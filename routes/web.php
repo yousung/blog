@@ -31,5 +31,6 @@ Route::get('auth/logout', 'AuthController@logout')->name('logout');
 
 Route::get('clear', function () {
     \Cache::flush();
+
     return 'clear';
 });

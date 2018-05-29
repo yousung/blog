@@ -20,7 +20,9 @@
         "roumen/sitemap": "^2.8",
         "spatie/laravel-analytics": "^3.6",
         "spatie/schema-org": "^1.6",
-        "uxweb/sweet-alert": "^1.4"
+        "uxweb/sweet-alert": "^1.4",
+        "phpxmlrpc/phpxmlrpc":"~4.0",
+        "zendframework/zend-xmlrpc": "^2.6"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.1",

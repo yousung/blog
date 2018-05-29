@@ -24,6 +24,11 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\EmailSender' => [
             'App\Listeners\EmailSenderListener',
         ],
+
+        // 네이버 블로그 관련
+        'App\Events\NaverBlog' => [
+            'App\Listeners\NaverBlogListener'
+        ],
     ];
 
     /**

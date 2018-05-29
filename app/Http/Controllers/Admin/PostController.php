@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Events\DelTagsChange;
 use App\Events\EmailSender;
 use App\Events\ModelChange;
+use App\Events\NaverBlog;
 use App\filters\PostFilter;
 use App\Http\Controllers\Cacheble;
 use App\Http\Requests\PostRequest;
@@ -45,6 +46,7 @@ class PostController extends Controller implements Cacheble
 
         $this->common('작성', $request, $post);
         EmailSender::dispatch($post);
+        NaverBlog::dispatch('new', $post);
 
         return redirect(route('admin.post.show', $post->id));
     }
@@ -59,12 +61,14 @@ class PostController extends Controller implements Cacheble
         $post->update($request->getData());
 
         $this->common('수정', $request, $post);
+        NaverBlog::dispatch('edit', $post);
 
         return redirect(route('admin.post.show', $post->id).query_string('page', 'search'));
     }
 
     public function destroy(Post $post)
     {
+        NaverBlog::dispatch('del', $post);
         $post->delete();
         $this->common('삭제');
 

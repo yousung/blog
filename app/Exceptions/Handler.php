@@ -35,7 +35,7 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $exception)
     {
-        if ($this->shouldReport($exception)) {
+        if ($this->shouldReport($exception) && 'production' === \App::environment()) {
             $this->sendEmail($exception);
         }
 
