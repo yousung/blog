@@ -1,7 +1,6 @@
 @extends('template.app')
 
 @section('script')
-	<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js"></script>
 	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 	<script id="dsq-count-scr" src="//lovizu-blog.disqus.com/count.js" async></script>
 
@@ -79,10 +78,10 @@
 
 					<p class="pull-right col-lg-5 col-md-5">
 						<a class="pull-right " target="_blank" href="https://twitter.com/share?text={{ $post->title }}&url={{ \Request::fullUrl() }}" title="트위터로 전달">
-							<i style="font-size: 2rem;" class="fa fa-twitter"></i>
+							<i style="font-size: 2rem;" class="xi xi-twitter"></i>
 						</a>
 						<a class="pull-right " target="_blank" href="https://www.facebook.com/sharer.php?u={{ \Request::fullUrl() }}&t={{ $post->title }}" title="페이스북으로 전달">
-							<i style="font-size: 2rem;" class="fa fa-facebook"></i>
+							<i style="font-size: 2rem;" class="xi xi-facebook"></i>
 						</a>
 						<button class="pull-right  none-btn" onclick="sendBtn();" title="카카오톡으로 보내기">
 							<i style="font-size: 2rem;" class="xi xi-kakaotalk"></i>
