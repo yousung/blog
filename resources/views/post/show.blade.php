@@ -1,7 +1,6 @@
 @extends('template.app')
 
 @section('script')
-	<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js"></script>
 	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 	<script id="dsq-count-scr" src="//lovizu-blog.disqus.com/count.js" async></script>
 
