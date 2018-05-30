@@ -86,7 +86,7 @@
 					</div>
 					@endif
 
-					<div class="col-md-12 col-lg-12">
+					<div class="col-md-12 col-lg-12" style="height: 100px;">
 						<p class="pull-left col-lg-6 col-md-6">
 							@foreach($post->tags as $tag)
 								<kbd class="m-r"><a class="text-white" title="{{ $tag->name }}" href="{{ route('post.index') }}?tag={{ $tag->name }}">#{{ $tag->name }}</a></kbd>
