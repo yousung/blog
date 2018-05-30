@@ -80,7 +80,7 @@
 
 					@if($post->naver)
 						<hr/>
-							<a href="https://blog.naver.com/nug22/{{ $post->naver }}"><i class="xi xi-naver"><b> 블로그 보러가기</i></b></a>
+							<a target="_blank" href="https://blog.naver.com/nug22/{{ $post->naver }}"><i class="xi xi-naver"><b> 블로그 보러가기</i></b></a>
 						<br/>
 					@endif
 
@@ -106,17 +106,19 @@
 					</p>
 
 					@if($series && count($series) > 1)
-					<h3>관련 포스팅</h3>
-					@foreach($series as $idx => $s)
-						<ul class="list-group">
-							<li class="list-group-item {{ hasUrl(route('post.show', optimus($s->id))) ? 'list-group-item-primary' : '' }}">
-								<a href="{{ route('post.show', optimus($s->id)) }}" title="{{ $s->subTitle }}">
-									<b>{{ $idx+1 }}.</b>
-									{{ $s->title }}
-									<span class="pull-right">[ {{ $s->created_at->toDateString() }} ]</span>
-								</a>
-							</li>
-						</ul>
+					<div class="col-md-12 col-lg-12">
+						<h3>관련 포스팅</h3>
+						@foreach($series as $idx => $s)
+							<ul class="list-group">
+								<li class="list-group-item {{ hasUrl(route('post.show', optimus($s->id))) ? 'list-group-item-primary' : '' }}">
+									<a href="{{ route('post.show', optimus($s->id)) }}" title="{{ $s->subTitle }}">
+										<b>{{ $idx+1 }}.</b>
+										{{ $s->title }}
+										<span class="pull-right">[ {{ $s->created_at->toDateString() }} ]</span>
+									</a>
+								</li>
+							</ul>
+					</div>
 					@endforeach
 					@endif
 
