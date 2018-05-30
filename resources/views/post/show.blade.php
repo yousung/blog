@@ -79,31 +79,35 @@
 					{!! $post->context !!}
 
 					@if($post->naver)
+					<div class="col-md-12 col-lg-12">
 						<hr/>
-							<a target="_blank" href="https://blog.naver.com/nug22/{{ $post->naver }}"><i class="xi xi-naver"><b> 블로그 보러가기</i></b></a>
+						<a target="_blank" href="https://blog.naver.com/nug22/{{ $post->naver }}"><i class="xi xi-naver"><b> 블로그 보러가기</i></b></a>
 						<br/>
+					</div>
 					@endif
 
-					<p class="pull-left col-lg-6 col-md-6">
-						@foreach($post->tags as $tag)
-							<kbd class="m-r"><a class="text-white" title="{{ $tag->name }}" href="{{ route('post.index') }}?tag={{ $tag->name }}">#{{ $tag->name }}</a></kbd>
-						@endforeach
-					</p>
+					<div class="col-md-12 col-lg-12">
+						<p class="pull-left col-lg-6 col-md-6">
+							@foreach($post->tags as $tag)
+								<kbd class="m-r"><a class="text-white" title="{{ $tag->name }}" href="{{ route('post.index') }}?tag={{ $tag->name }}">#{{ $tag->name }}</a></kbd>
+							@endforeach
+						</p>
 
-					<p class="pull-right col-lg-5 col-md-5">
-						<button class="pull-right copy-btn none-btn" title="URL 복사하기" data-clipboard-text="{{ \Request::fullUrl() }}">
-							<i style="font-size: 2rem;" class="xi xi-file-add-o"></i>
-						</button>
-						<button class="pull-right none-btn" onclick="goUrl('https://twitter.com/share?text={{ $post->title }}&url={{ \Request::fullUrl() }}')" title="트위터로 전달">
-							<i style="font-size: 2rem;" class="xi xi-twitter"></i>
-						</button>
-						<button class="pull-right  none-btn" onclick="sendBtn();" title="카카오톡으로 보내기">
-							<i style="font-size: 2rem;" class="xi xi-kakaotalk"></i>
-						</button>
-						<button class="pull-right none-btn" onclick="goUrl('https://www.facebook.com/sharer.php?u={{ \Request::fullUrl() }}&t={{ $post->title }}');" title="페이스북으로 전달">
-							<i style="font-size: 2rem;" class="xi xi-facebook"></i>
-						</button>
-					</p>
+						<p class="pull-right col-lg-5 col-md-5">
+							<button class="pull-right copy-btn none-btn" title="URL 복사하기" data-clipboard-text="{{ \Request::fullUrl() }}">
+								<i style="font-size: 2rem;" class="xi xi-file-add-o"></i>
+							</button>
+							<button class="pull-right none-btn" onclick="goUrl('https://twitter.com/share?text={{ $post->title }}&url={{ \Request::fullUrl() }}')" title="트위터로 전달">
+								<i style="font-size: 2rem;" class="xi xi-twitter"></i>
+							</button>
+							<button class="pull-right  none-btn" onclick="sendBtn();" title="카카오톡으로 보내기">
+								<i style="font-size: 2rem;" class="xi xi-kakaotalk"></i>
+							</button>
+							<button class="pull-right none-btn" onclick="goUrl('https://www.facebook.com/sharer.php?u={{ \Request::fullUrl() }}&t={{ $post->title }}');" title="페이스북으로 전달">
+								<i style="font-size: 2rem;" class="xi xi-facebook"></i>
+							</button>
+						</p>
+					</div>
 
 					@if($series && count($series) > 1)
 					<div class="col-md-12 col-lg-12">
