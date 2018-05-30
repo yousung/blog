@@ -1,6 +1,7 @@
 @extends('template.app')
 
 @section('script')
+	<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js"></script>
 	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 	<script id="dsq-count-scr" src="//lovizu-blog.disqus.com/count.js" async></script>
 
@@ -8,8 +9,15 @@
 
 	<script>
 		var sendBtn;
+		var goUrl;
+        var openWindow;
         $(function(){
             Kakao.init('{{ env('KKAO_SCRIPT_API') }}');
+            goUrl = function(url){
+                openWindow = window.open('about:blank');
+                openWindow.location.href = url;
+            };
+
             sendBtn = function() {
                 Kakao.Link.sendDefault({
                     objectType: 'feed',
@@ -77,19 +85,18 @@
 					</p>
 
 					<p class="pull-right col-lg-5 col-md-5">
-						<a class="pull-right " target="_blank" href="https://twitter.com/share?text={{ $post->title }}&url={{ \Request::fullUrl() }}" title="트위터로 전달">
-							<i style="font-size: 2rem;" class="xi xi-twitter"></i>
-						</a>
-						<a class="pull-right " target="_blank" href="https://www.facebook.com/sharer.php?u={{ \Request::fullUrl() }}&t={{ $post->title }}" title="페이스북으로 전달">
-							<i style="font-size: 2rem;" class="xi xi-facebook"></i>
-						</a>
-						<button class="pull-right  none-btn" onclick="sendBtn();" title="카카오톡으로 보내기">
-							<i style="font-size: 2rem;" class="xi xi-kakaotalk"></i>
-						</button>
 						<button class="pull-right copy-btn none-btn" title="URL 복사하기" data-clipboard-text="{{ \Request::fullUrl() }}">
 							<i style="font-size: 2rem;" class="xi xi-file-add-o"></i>
 						</button>
-
+						<button class="pull-right none-btn" onclick="goUrl('https://twitter.com/share?text={{ $post->title }}&url={{ \Request::fullUrl() }}')" title="트위터로 전달">
+							<i style="font-size: 2rem;" class="xi xi-twitter"></i>
+						</button>
+						<button class="pull-right  none-btn" onclick="sendBtn();" title="카카오톡으로 보내기">
+							<i style="font-size: 2rem;" class="xi xi-kakaotalk"></i>
+						</button>
+						<button class="pull-right none-btn" onclick="goUrl('https://www.facebook.com/sharer.php?u={{ \Request::fullUrl() }}&t={{ $post->title }}');" title="페이스북으로 전달">
+							<i style="font-size: 2rem;" class="xi xi-facebook"></i>
+						</button>
 					</p>
 
 					@if($series && count($series) > 1)
