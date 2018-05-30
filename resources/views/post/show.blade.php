@@ -84,7 +84,7 @@
 						<br/>
 					@endif
 
-					<p class="pull-left col-lg-5 col-md-5">
+					<p class="pull-left col-lg-6 col-md-6">
 						@foreach($post->tags as $tag)
 							<kbd class="m-r"><a class="text-white" title="{{ $tag->name }}" href="{{ route('post.index') }}?tag={{ $tag->name }}">#{{ $tag->name }}</a></kbd>
 						@endforeach
