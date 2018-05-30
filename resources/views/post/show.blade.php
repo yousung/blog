@@ -70,24 +70,27 @@
 			<div class="row">
 				<div class="col-lg-10 col-md-10 mx-auto text-word">
 					{!! $post->context !!}
-					<p class="pull-right">
-						<button class="copy-btn none-btn" title="URL 복사하기" data-clipboard-text="{{ \Request::fullUrl() }}">
-							<i style="font-size: 2rem;" class="xi xi-file-add-o"></i>
-						</button>
-						<button class="none-btn" onclick="sendBtn();" title="카카오톡으로 보내기">
-							<i style="font-size: 2rem;" class="xi xi-kakaotalk"></i>
-						</button>
-						<a target="_blank" href="https://www.facebook.com/sharer.php?u={{ \Request::fullUrl() }}&t={{ $post->title }}" title="페이스북으로 전달">
-							<i style="font-size: 2rem;" class="fa fa-facebook"></i>
-						</a>
-						<a target="_blank" href="https://twitter.com/share?text={{ $post->title }}&url={{ \Request::fullUrl() }}" title="트위터로 전달">
-							<i style="font-size: 2rem;" class="fa fa-twitter"></i>
-						</a>
-					</p>
-					<p>
+
+					<p class="pull-left col-lg-5 col-md-5">
 						@foreach($post->tags as $tag)
 							<kbd class="m-r"><a class="text-white" title="{{ $tag->name }}" href="{{ route('post.index') }}?tag={{ $tag->name }}">#{{ $tag->name }}</a></kbd>
 						@endforeach
+					</p>
+
+					<p class="pull-right col-lg-5 col-md-5">
+						<a class="pull-right " target="_blank" href="https://twitter.com/share?text={{ $post->title }}&url={{ \Request::fullUrl() }}" title="트위터로 전달">
+							<i style="font-size: 2rem;" class="fa fa-twitter"></i>
+						</a>
+						<a class="pull-right " target="_blank" href="https://www.facebook.com/sharer.php?u={{ \Request::fullUrl() }}&t={{ $post->title }}" title="페이스북으로 전달">
+							<i style="font-size: 2rem;" class="fa fa-facebook"></i>
+						</a>
+						<button class="pull-right  none-btn" onclick="sendBtn();" title="카카오톡으로 보내기">
+							<i style="font-size: 2rem;" class="xi xi-kakaotalk"></i>
+						</button>
+						<button class="pull-right copy-btn none-btn" title="URL 복사하기" data-clipboard-text="{{ \Request::fullUrl() }}">
+							<i style="font-size: 2rem;" class="xi xi-file-add-o"></i>
+						</button>
+
 					</p>
 
 					@if($series && count($series) > 1)
