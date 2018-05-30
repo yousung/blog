@@ -51,6 +51,20 @@
 
 		console.log('This post is {{ $post->hit }} hit');
 	</script>
+
+	<script>
+		{{--var disqus_config = function () {--}}
+			{{--this.page.url = '{{ \Request::fullUrl() }}';--}}
+			{{--this.page.identifier = '{{ \Request::input('page', 1) }}';--}}
+			{{--};--}}
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://lovizu-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 @endsection
 
 @section('content')
@@ -85,7 +99,7 @@
 					</div>
 					@endif
 
-					<div class="col-md-12 col-lg-12" style="height: 100px;">
+					<div style="height: 150px;">
 						<p class="pull-left col-lg-6 col-md-6">
 							@foreach($post->tags as $tag)
 								<kbd class="m-r"><a class="text-white" title="{{ $tag->name }}" href="{{ route('post.index') }}?tag={{ $tag->name }}">#{{ $tag->name }}</a></kbd>
@@ -121,27 +135,16 @@
 									</a>
 								</li>
 							</ul>
+
+						@endforeach
 					</div>
-					@endforeach
 					@endif
 
 					<hr/>
-
-					<div id="disqus_thread"></div>
-
-					<script>
-                        {{--var disqus_config = function () {--}}
-                            {{--this.page.url = '{{ \Request::fullUrl() }}';--}}
-                            {{--this.page.identifier = '{{ \Request::input('page', 1) }}';--}}
-                        {{--};--}}
-                        (function() {
-                            var d = document, s = d.createElement('script');
-                            s.src = 'https://lovizu-blog.disqus.com/embed.js';
-                            s.setAttribute('data-timestamp', +new Date());
-                            (d.head || d.body).appendChild(s);
-                        })();
-					</script>
-					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+					<div class="col-md-12 col-lg-12">
+						<br/>
+						<div id="disqus_thread"></div>
+					</div>
 				</div>
 			</div>
 		</div>
