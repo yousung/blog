@@ -79,9 +79,11 @@
 					{!! $post->context !!}
 
 					@if($post->naver)
-					<a href="https://blog.naver.com/nug22/{{ $post->naver }}"><i class="xi xi-naver"><b> 블로그 보러가기</i></b></a>
+						<hr/>
+							<a href="https://blog.naver.com/nug22/{{ $post->naver }}"><i class="xi xi-naver"><b> 블로그 보러가기</i></b></a>
+						<br/>
 					@endif
-					<hr>
+
 					<p class="pull-left col-lg-5 col-md-5">
 						@foreach($post->tags as $tag)
 							<kbd class="m-r"><a class="text-white" title="{{ $tag->name }}" href="{{ route('post.index') }}?tag={{ $tag->name }}">#{{ $tag->name }}</a></kbd>
