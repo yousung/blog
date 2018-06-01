@@ -9,7 +9,7 @@ return [
             'title' => '러비쥬', // set false to total remove
             'description' => '감성 개발자 러비쥬 블로그입니다', // set false to total remove
             'separator' => ' - ',
-            'keywords' => ['개발', '감성', '기술&테크', '블로그', '감성블로그', '감성개발자', '러비쥬', 'Love Visual'],
+            'keywords' => ['개발', '감성', '기술&테크', '블로그', '감성블로그', '감성개발자', '감성 개발자', '러비쥬', 'Love Visual'],
             'canonical' => null, // Set null for using Url::current(), set false to total remove
         ],
 
