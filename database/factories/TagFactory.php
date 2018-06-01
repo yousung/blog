@@ -7,6 +7,6 @@ $factory->define(\App\Tag::class, function (Faker $faker) {
 
     return [
         'name' => $tag,
-        'slug' => make_slug($tag)
+        'slug' => make_slug($tag),
     ];
 });

@@ -27,19 +27,15 @@ class EventServiceProvider extends ServiceProvider
 
         // 네이버 블로그 관련
         'App\Events\NaverBlog' => [
-            'App\Listeners\NaverBlogListener'
+            'App\Listeners\NaverBlogListener',
         ],
     ];
 
     /**
      * Register any events for your application.
-     *
-     * @return void
      */
     public function boot()
     {
         parent::boot();
-
-        //
     }
 }

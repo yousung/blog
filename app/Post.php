@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Post extends Model
 {
     use SoftDeletes;
-    protected $fillable =['title', 'subTitle', 'context', 'user_id', 'series_id'];
+    protected $fillable = ['title', 'subTitle', 'context', 'user_id', 'series_id'];
 
     public function getSecretAttribute()
     {

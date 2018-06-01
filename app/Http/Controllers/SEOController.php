@@ -45,7 +45,6 @@ class SEOController extends Controller implements Cacheble
                     ];
                 }
 
-
                 $sitemap->add(
                     route('post.show', optimus($post->id)),
                     Carbon::parse($post->updated_at),

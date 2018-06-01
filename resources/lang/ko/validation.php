@@ -2,11 +2,10 @@
 
 /**
  * The file downloaded from
- * https://github.com/caouecs/Laravel-lang/blob/master/ko/validation.php
+ * https://github.com/caouecs/Laravel-lang/blob/master/ko/validation.php.
  */
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -17,8 +16,8 @@ return [
     | such as the size rules. Feel free to tweak each of these messages.
     |
     */
-    'after_or_equal'       => ':attribute 은 :date 보다 빠르거나 같아야 합니다.',
-    'before_or_equal'      => ':attribute 은 :date 보다 늦거나 같아야 합니다.',
+    'after_or_equal' => ':attribute 은 :date 보다 빠르거나 같아야 합니다.',
+    'before_or_equal' => ':attribute 은 :date 보다 늦거나 같아야 합니다.',
 
     'accepted' => ':attribute을(를) 동의하지 않았습니다.',
     'active_url' => ':attribute 값이 유효한 URL이 아닙니다.',
@@ -98,7 +97,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -124,10 +123,9 @@ return [
         'email' => '이메일',
         'password' => '비밀번호',
         'password_confirmation' => '비밀번호 확인',
-        'code'=> '제품 ID',
-        'price'=> '가격',
-        'context'=> '상세설명',
-        'phone'=> '연락처',
-        //
+        'code' => '제품 ID',
+        'price' => '가격',
+        'context' => '상세설명',
+        'phone' => '연락처',
     ],
 ];

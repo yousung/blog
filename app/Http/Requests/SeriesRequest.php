@@ -33,6 +33,7 @@ class SeriesRequest extends FormRequest
     {
         $this['slug'] = make_slug($this->input('title'));
         $this['user_id'] = \Auth::user()->id;
+
         return $this->all();
     }
 }

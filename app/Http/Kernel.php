@@ -37,7 +37,6 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
 //            \App\Http\Middleware\ChangSlugParamMiddleWare::class,
             \App\Http\Middleware\EtagMiddleware::class,
-
         ],
 
         'api' => [

@@ -40,6 +40,7 @@ class NaverBlogListener implements ShouldQueue
     /**
      * @param $method
      * @param $data
+     *
      * @return $result
      */
     private function result($method, $data)
@@ -58,6 +59,7 @@ class NaverBlogListener implements ShouldQueue
 
     /**
      * @param $context
+     *
      * @return string image url Change context
      */
     private function getImages($context)
@@ -82,6 +84,7 @@ class NaverBlogListener implements ShouldQueue
     /**
      * @param $post
      * @param $context
+     *
      * @return array struct
      */
     private function getStruct($post, $context)

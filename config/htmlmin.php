@@ -11,7 +11,6 @@
  */
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Automatic Blade Optimizations
@@ -67,5 +66,4 @@ return [
         'resources/views/vendor/markdown',
         'resources/views/vendor/sweet',
     ],
-
 ];

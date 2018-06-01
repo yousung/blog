@@ -11,8 +11,8 @@ class NewError extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-
-    private $content, $url;
+    private $content;
+    private $url;
 
     public function __construct($content, $url)
     {
@@ -28,6 +28,7 @@ class NewError extends Mailable implements ShouldQueue
     public function build()
     {
         $url = $this->url;
+
         return $this
             ->subject("[ 러비쥬 | ERROR ] {$url}")
             ->view('emails.exception')->with('content', $this->content);

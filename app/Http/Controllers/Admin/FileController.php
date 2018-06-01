@@ -32,7 +32,7 @@ class FileController extends Controller
                 return \response()->json([
                     'code' => 'success',
                     'data' => [
-                        'pro' => $fs
+                        'pro' => $fs,
                     ],
                 ], 200, [], JSON_PRETTY_PRINT);
             } else {

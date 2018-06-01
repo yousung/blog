@@ -6,7 +6,6 @@ class SeriesFilter extends Filter
 {
     protected $filters = ['query', 'search'];
 
-
     protected function query($query)
     {
         $this->builder->where('slug', make_slug($query));

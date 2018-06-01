@@ -10,6 +10,5 @@ $factory->define(\App\Series::class, function (Faker $faker) {
         'title' => $name,
         'subTitle' => $faker->realText(30),
         'slug' => make_slug($name),
-
     ];
 });

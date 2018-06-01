@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'driver' => 'smtp',
     'host' => 'smtp.daum.net',
     'port' => 465,
@@ -22,5 +21,4 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
-
 ];

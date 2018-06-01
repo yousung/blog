@@ -9,7 +9,8 @@ class TagResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return array
      */
     public function toArray($request)
@@ -17,7 +18,7 @@ class TagResource extends JsonResource
         return [
             'text' => $this->name,
             'weight' => $this->posts_count,
-            'link' => route('post.index').'?tag='.$this->name
+            'link' => route('post.index').'?tag='.$this->name,
         ];
     }
 }

@@ -47,7 +47,7 @@ class PageController extends Controller
         return array_merge($data, [
             'weekCnt' => number_format($weekCnt),
             'lastCnt' => number_format($lastCnt),
-            'week' => $date
+            'week' => $date,
         ]);
     }
 }

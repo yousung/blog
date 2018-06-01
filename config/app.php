@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'name' => env('APP_NAME', '러비뷰 블로그'),
     'env' => env('APP_ENV', 'production'),
     'debug' => env('APP_DEBUG', false),
@@ -15,7 +14,6 @@ return [
     'cipher' => 'AES-256-CBC',
 
     'providers' => [
-
         /*
          * Laravel Framework Service Providers...
          */
@@ -79,7 +77,6 @@ return [
 
         //Agent
         Jenssegers\Agent\AgentServiceProvider::class,
-
     ],
 
     /*
@@ -94,7 +91,6 @@ return [
     */
 
     'aliases' => [
-
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
@@ -138,5 +134,4 @@ return [
         'HTMLMin' => HTMLMin\HTMLMin\Facades\HTMLMin::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
     ],
-
 ];

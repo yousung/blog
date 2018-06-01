@@ -19,17 +19,16 @@ class SubscribeController extends Controller
         $subscribe = Subscribe::create($request->getData());
 
         \Alert::success("{$subscribe->name} 님의 구독이 신청되었습니다.", '구독신청완료');
+
         return redirect(route('home'));
     }
 
     public function destory($code, $email)
     {
-
         $where = [
             'id' => optimus()->decode($code),
-            'email' => $email
+            'email' => $email,
         ];
-
 
         if ($subscribe = Subscribe::where($where)->first()) {
             $subscribe->delete();

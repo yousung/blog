@@ -25,15 +25,15 @@ class SubscribeRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'email'
+            'email' => 'email',
         ];
     }
-    
+
     public function attributes()
     {
         return [
             'name' => '닉네임',
-            'email' => '이메일'
+            'email' => '이메일',
         ];
     }
 
@@ -41,6 +41,7 @@ class SubscribeRequest extends FormRequest
     {
         $this['email'] = encrypt($this->input('email'));
         $this['name'] = encrypt($this->input('name'));
+
         return $this->all();
     }
 }
