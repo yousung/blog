@@ -1,5 +1,5 @@
 @php
-    \SEO::setTitle('404 잘못된 URL 접근입니다.');
+    \SEO::setTitle('404 | 잘못된 URL 접근입니다.');
     \SEO::setDescription(noTag('잘못된 접근입니다 주소를 다시 확인하여주세요.'));
 @endphp
 

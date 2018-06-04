@@ -1,5 +1,5 @@
 @php
-    \SEO::setTitle('500 서버 내부 오류');
+    \SEO::setTitle('500 | 서버 내부 오류');
     \SEO::setDescription(noTag('서버내부 오류, 잠시 후에 다시 시도해주세요 지속적인 문제가 있을경우 관리자에게 알려주세요'));
 @endphp
 

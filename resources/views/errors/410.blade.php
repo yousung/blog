@@ -1,5 +1,5 @@
 @php
-    \SEO::setTitle('삭제되었거나 확인할 수 없는 경로입니다.');
+    \SEO::setTitle('410 | 삭제되었거나 확인할 수 없는 경로입니다.');
     \SEO::setDescription(noTag('잘못된 접근입니다 주소를 다시 확인하여주세요.'));
 @endphp
 

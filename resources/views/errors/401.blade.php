@@ -1,5 +1,5 @@
 @php
-    \SEO::setTitle('401 접근권한이 없습니다.');
+    \SEO::setTitle('401 | 접근권한이 없습니다.');
     \SEO::setDescription(noTag('잘못된 접근입니다 주소를 다시 확인하여주세요.'));
 @endphp
 

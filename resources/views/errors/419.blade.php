@@ -1,5 +1,5 @@
 @php
-    \SEO::setTitle('419 페이지가 만료되었습니다');
+    \SEO::setTitle('419 | 페이지가 만료되었습니다');
     \SEO::setDescription(noTag('페이지가 만료되었습니다. 다시 시도하여주세요'));
 @endphp
 
