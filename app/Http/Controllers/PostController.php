@@ -22,6 +22,10 @@ class PostController extends Controller implements Cacheble
     {
         if ($search = \Request::input('search')) {
             $this->seo("'{$search}' 검색결과", "'{$search}' 로 포스트 제목, 부제목, 태그, 시리즈를 검색합니다");
+        } elseif ($tag = \Request::input('tag')) {
+            $this->seo("'{$tag}' 검색결과", "'{$tag}' 로 태그 검색합니다");
+        } elseif ($series = \Request::input('series')) {
+            $this->seo("'{$series}' 검색결과", "'{$series}' 리스트 입니다");
         } else {
             $this->seo('포스트 전체보기', '작성된 모든 포스트를 확인할 수 있습니다.');
         }
