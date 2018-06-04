@@ -37,7 +37,8 @@ CKEDITOR.plugins.add(
                                     $myFile.remove();
                                     $myForm.remove();
                                 },
-                                error: function(){
+                                error: function(err){
+                                    console.log(err);
                                     alert('error');
                                 },
                             });

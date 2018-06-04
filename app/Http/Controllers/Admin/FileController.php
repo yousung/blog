@@ -13,23 +13,19 @@ class FileController extends Controller
             $files = $request->file('files');
             $fs = [];
             foreach ($files as $file) {
-               try{
-                   $fileOriginal = $file->getClientOriginalName();
-                   $fileName = \str_random().filter_var($fileOriginal, FILTER_SANITIZE_URL);
-                   $imgPath = image_path($fileName);
-                   $pro = null;
+                $fileOriginal = $file->getClientOriginalName();
+                $fileName = \str_random().filter_var($fileOriginal, FILTER_SANITIZE_URL);
+                $imgPath = image_path($fileName);
+                $pro = null;
 
-                   $disk = \Storage::disk('s3');
-                   $disk->put($imgPath, file_get_contents($file), 'public');
+                $disk = \Storage::disk('s3');
+                $disk->put($imgPath, file_get_contents($file), 'public');
 
-                   $imgUrl = $disk->url($imgPath);
-                   $tempImage = \Image::make($imgUrl);
-                   $pro = image_crop($imgUrl, $fileSize ?? ($tempImage->width().'x'.$tempImage->height()));
-                   $disk->delete($imgPath);
-                   $fs[] = $pro;
-               }catch (\Exception $e){
-                   return response()->json(['msg' => $e->getMessage()], $e->getCode(), JSON_PRETTY_PRINT;
-               }
+                $imgUrl = $disk->url($imgPath);
+                $tempImage = \Image::make($imgUrl);
+                $pro = image_crop($imgUrl, $fileSize ?? ($tempImage->width().'x'.$tempImage->height()));
+                $disk->delete($imgPath);
+                $fs[] = $pro;
             }
 
             if (count($fs)) {
