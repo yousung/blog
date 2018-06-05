@@ -3,8 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
+use lovizu\LaravelNaverXmlRpc\NaverBlogModel;
 
-class Post extends Model
+class Post extends Model implements NaverBlogModel
 {
     use SoftDeletes;
     protected $fillable = ['title', 'subTitle', 'context', 'user_id', 'series_id'];
@@ -27,5 +28,47 @@ class Post extends Model
     public function series()
     {
         return $this->belongsTo(Series::class);
+    }
+
+    public function getPostId()
+    {
+        return $this->naver ?? null;
+    }
+
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    public function getSecret()
+    {
+        return 'production' === \App::environment();
+    }
+
+    public function getCategory()
+    {
+        return optional($this->series)->title;
+    }
+
+    public function getContext()
+    {
+        $postUrl = route('post.show', optimus($this->id));
+        $context = nl2br($this->context);
+        $context = str_replace('<code', '<pre', $context);
+        $context = str_replace('</code>', '</pre>', $context);
+
+        $views = [];
+        $views[] = "<h2>{$this->subTitle}</h2>{$context}";
+        $views[] = '자세한 이야기 보러가기';
+        $views[] = "<a target='_blank' href=\"{$postUrl}\">{$postUrl}</a>";
+
+        return implode('<br/>', $views);
+    }
+
+    public function getTags()
+    {
+        return count($this->tags)
+            ? implode(',', optional($this->tags)->pluck('name')->toArray())
+            : [];
     }
 }

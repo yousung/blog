@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.23 on 2018-06-05 17:58:21.
+ * Generated for Laravel 5.6.24 on 2018-06-05 19:13:43.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -1745,13 +1745,13 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
-         * Invalid other sessions for the current user.
+         * Invalidate other sessions for the current user.
          * 
          * The application must be using the AuthenticateSession middleware.
          *
          * @param string $password
          * @param string $attribute
-         * @return $this 
+         * @return null|bool 
          * @static 
          */ 
         public static function logoutOtherDevices($password, $attribute = 'password')
@@ -7687,6 +7687,18 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * 
+         *
+         * @internal 
+         * @static 
+         */ 
+        public static function setSessionFactory($factory)
+        {
+            //Method inherited from \Symfony\Component\HttpFoundation\Request            
+            return \Illuminate\Http\Request::setSessionFactory($factory);
+        }
+        
+        /**
          * Returns the client IP addresses.
          * 
          * In the returned array the most trusted IP address is first, and the
@@ -8640,7 +8652,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Determine if the request contains any of the given inputs.
          *
-         * @param string|array $key
+         * @param string|array $keys
          * @return bool 
          * @static 
          */ 
@@ -13637,6 +13649,7 @@ namespace Intervention\Image\Facades {
          * Overrides configuration settings
          *
          * @param array $config
+         * @return self 
          * @static 
          */ 
         public static function configure($config = array())
@@ -13659,8 +13672,8 @@ namespace Intervention\Image\Facades {
         /**
          * Creates an empty image canvas
          *
-         * @param integer $width
-         * @param integer $height
+         * @param int $width
+         * @param int $height
          * @param mixed $background
          * @return \Intervention\Image\Image 
          * @static 
@@ -13675,7 +13688,7 @@ namespace Intervention\Image\Facades {
          * (requires additional package intervention/imagecache)
          *
          * @param \Closure $callback
-         * @param integer $lifetime
+         * @param int $lifetime
          * @param boolean $returnObj
          * @return \Image 
          * @static 
@@ -14491,6 +14504,44 @@ namespace Jenssegers\Agent\Facades {
         {
             //Method inherited from \Mobile_Detect            
             return \Jenssegers\Agent\Agent::mobileGrade();
+        }
+         
+    }
+ 
+}
+
+namespace lovizu\LaravelNaverXmlRpc\Facades { 
+
+    class NaverBlog {
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function newBlog($blog)
+        {
+            return \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::newBlog($blog);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function delBlog($blog)
+        {
+            return \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::delBlog($blog);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function editBlog($blog)
+        {
+            return \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::editBlog($blog);
         }
          
     }
@@ -16617,6 +16668,61 @@ namespace  {
             }
          
             /**
+             * Add a "where JSON contains" clause to the query.
+             *
+             * @param string $column
+             * @param mixed $value
+             * @param string $boolean
+             * @param bool $not
+             * @return $this 
+             * @static 
+             */ 
+            public static function whereJsonContains($column, $value, $boolean = 'and', $not = false)
+            {    
+                return \Illuminate\Database\Query\Builder::whereJsonContains($column, $value, $boolean, $not);
+            }
+         
+            /**
+             * Add a "or where JSON contains" clause to the query.
+             *
+             * @param string $column
+             * @param mixed $value
+             * @return $this 
+             * @static 
+             */ 
+            public static function orWhereJsonContains($column, $value)
+            {    
+                return \Illuminate\Database\Query\Builder::orWhereJsonContains($column, $value);
+            }
+         
+            /**
+             * Add a "where JSON not contains" clause to the query.
+             *
+             * @param string $column
+             * @param mixed $value
+             * @param string $boolean
+             * @return $this 
+             * @static 
+             */ 
+            public static function whereJsonDoesntContain($column, $value, $boolean = 'and')
+            {    
+                return \Illuminate\Database\Query\Builder::whereJsonDoesntContain($column, $value, $boolean);
+            }
+         
+            /**
+             * Add a "or where JSON not contains" clause to the query.
+             *
+             * @param string $column
+             * @param mixed $value
+             * @return $this 
+             * @static 
+             */ 
+            public static function orWhereJsonDoesntContain($column, $value)
+            {    
+                return \Illuminate\Database\Query\Builder::orWhereJsonDoesntContain($column, $value);
+            }
+         
+            /**
              * Handles dynamic "where" clauses to the query.
              *
              * @param string $method
@@ -17353,6 +17459,8 @@ namespace  {
     class HTMLMin extends \HTMLMin\HTMLMin\Facades\HTMLMin {}
 
     class Agent extends \Jenssegers\Agent\Facades\Agent {}
+
+    class NaverBlog extends \lovizu\LaravelNaverXmlRpc\Facades\NaverBlog {}
 
     class Twitter extends \Artesaos\SEOTools\Facades\TwitterCard {}
 

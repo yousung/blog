@@ -4,6 +4,7 @@ namespace App\Listeners;
 
 use App\Events\NaverBlog;
 use App\Events\ModelChange;
+use App\Post;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class NaverBlogListener implements ShouldQueue
@@ -28,18 +29,14 @@ class NaverBlogListener implements ShouldQueue
     /*
      * Naver Blog New Post
      */
-    private function new($post)
+    private function new(Post $post)
     {
         // 이미 naver에 작성된 상황이면 수정으로 변경
-        if ($post->naver) {
-            return $this->edit($post);
+        if ($postId = $post->getPostId()) {
+            return $this->edit($postId);
         }
 
-        $context = $this->changeContext($post);
-        $category = optional($post->series)->title;
-        $tags = count($post->tags) ? implode(',', optional($post->tags)->pluck('name')->toArray()) : [];
-        //$this->naverBlog->newBlog($post->title, $context, $category, $tags);
-        $postId = \NaverBlog::NewBlog($this->isSecret, $post->title, $context, $category, $tags);
+        $postId = \NaverBlog::NewBlog($post);
 
         $post->naver = $postId ?? null;
         $post->save();
@@ -47,28 +44,13 @@ class NaverBlogListener implements ShouldQueue
         ModelChange::dispatch('post');
     }
 
-    private function changeContext($post)
-    {
-        $postUrl = route('post.show', optimus($post->id));
-        $context = nl2br($post->context);
-        $context = str_replace('<code', '<pre', $context);
-        $context = str_replace('</code>', '</pre>', $context);
-
-        $views = [];
-        $views[] = "<h2>{$post->subTitle}</h2>{$context}";
-        $views[] = '자세한 이야기 보러가기';
-        $views[] = "<a target='_blank' href=\"{$postUrl}\">{$postUrl}</a>";
-
-        return implode('<br/>', $views);
-    }
-
     /*
      * Naver Blog Post Delete & New Post
      */
-    private function edit($post)
+    private function edit(Post $post)
     {
         // 네이버에 작성된 것이 없을 경우 새로 작성으로 변경
-        if (!$post->naver) {
+        if (!$post->getPostId()) {
             return $this->new($post);
         }
 
@@ -80,13 +62,13 @@ class NaverBlogListener implements ShouldQueue
         $this->new($post);
     }
 
-    private function del($post)
+    private function del(Post $post)
     {
         // 등록된 네이버 블로그가 없는 경우 취소
-        if (!$post->naver) {
+        if (!$post->getPostId()) {
             return false;
         }
 
-        \NaverBlog::DelBlog($post->naver);
+        \NaverBlog::DelBlog($post);
     }
 }
