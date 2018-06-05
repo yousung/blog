@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90e5d8a12d9b62c20505bcc44a1a7b36",
+    "content-hash": "ec3981d4bc25c435e765f20da04acbc8",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -1673,17 +1673,73 @@
             "time": "2018-03-27T20:33:59+00:00"
         },
         {
-            "name": "lovizu/naver-blog-xmlrpc",
-            "version": "v0.1.2",
+            "name": "lovizu/laravel-naver-blog-xmlrpc",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yousung/naver-blog-xmlrpc.git",
-                "reference": "6692a82043ba827e5800a62e12e8f9ed7cef4ce5"
+                "url": "https://github.com/yousung/laravel-naver-blog-xmlrpc.git",
+                "reference": "b8b73543a394d7e102179f1c951db8453f070bcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yousung/naver-blog-xmlrpc/zipball/6692a82043ba827e5800a62e12e8f9ed7cef4ce5",
-                "reference": "6692a82043ba827e5800a62e12e8f9ed7cef4ce5",
+                "url": "https://api.github.com/repos/yousung/laravel-naver-blog-xmlrpc/zipball/b8b73543a394d7e102179f1c951db8453f070bcb",
+                "reference": "b8b73543a394d7e102179f1c951db8453f070bcb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.5",
+                "lovizu/naver-blog-xmlrpc": "^0.2",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "lovizu\\LaravelNaverXmlRpc\\LaravelNaverXmlRpcServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "lovizu\\LaravelNaverXmlRpc\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "lovizu",
+                    "email": "help@lovizu.com",
+                    "homepage": "https://www.lovizu.com"
+                }
+            ],
+            "description": "Larvel Naver Blog Xmlprc API",
+            "keywords": [
+                "api",
+                "blog",
+                "laravel",
+                "naver",
+                "xmlprc"
+            ],
+            "time": "2018-06-05T08:26:16+00:00"
+        },
+        {
+            "name": "lovizu/naver-blog-xmlrpc",
+            "version": "0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yousung/naver-blog-xmlrpc.git",
+                "reference": "d79fc9102d32d876bacf9e207170d5ebc8a1bdef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yousung/naver-blog-xmlrpc/zipball/d79fc9102d32d876bacf9e207170d5ebc8a1bdef",
+                "reference": "d79fc9102d32d876bacf9e207170d5ebc8a1bdef",
                 "shasum": ""
             },
             "require": {
@@ -1710,10 +1766,11 @@
             "description": "Naver Blog Xmlprc API",
             "keywords": [
                 "api",
+                "blog",
                 "naver",
                 "xmlprc"
             ],
-            "time": "2018-06-05T03:27:07+00:00"
+            "time": "2018-06-05T08:01:15+00:00"
         },
         {
             "name": "madewithlove/illuminate-psr-cache-bridge",

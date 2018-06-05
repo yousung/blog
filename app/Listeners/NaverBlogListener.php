@@ -4,17 +4,15 @@ namespace App\Listeners;
 
 use App\Events\NaverBlog;
 use App\Events\ModelChange;
-use Lovizu\NaverXmlRpc\NaverBlogXml;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class NaverBlogListener implements ShouldQueue
 {
-    private $naverBlog;
+    private $isSecret;
 
     public function __construct()
     {
-        $isSecret = app()->environment() === 'production';
-        $this->naverBlog = new NaverBlogXml(env('NAVER-BLOG-ID'), env('NAVER-BLOG-PASSWORD'), $isSecret);
+        $this->isSecret = 'production' === \App::environment();
     }
 
     public function handle(NaverBlog $event)
@@ -40,7 +38,8 @@ class NaverBlogListener implements ShouldQueue
         $context = $this->changeContext($post);
         $category = optional($post->series)->title;
         $tags = count($post->tags) ? implode(',', optional($post->tags)->pluck('name')->toArray()) : [];
-        $postId = $this->naverBlog->newBlog($post->title, $context, $category, $tags);
+        //$this->naverBlog->newBlog($post->title, $context, $category, $tags);
+        $postId = \NaverBlog::NewBlog($this->isSecret, $post->title, $context, $category, $tags);
 
         $post->naver = $postId ?? null;
         $post->save();
@@ -57,7 +56,7 @@ class NaverBlogListener implements ShouldQueue
 
         $views = [];
         $views[] = "<h2>{$post->subTitle}</h2>{$context}";
-        $views[] = "자세한 이야기 보러가기";
+        $views[] = '자세한 이야기 보러가기';
         $views[] = "<a target='_blank' href=\"{$postUrl}\">{$postUrl}</a>";
 
         return implode('<br/>', $views);
@@ -88,6 +87,6 @@ class NaverBlogListener implements ShouldQueue
             return false;
         }
 
-        $this->naverBlog->delBlog($post->naver);
+        \NaverBlog::DelBlog($post->naver);
     }
 }

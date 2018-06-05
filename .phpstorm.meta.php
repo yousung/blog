@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-06-05 13:42:24.
+    * Generated on 2018-06-05 17:58:21.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -51,6 +51,7 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
         'agent' => \Jenssegers\Agent\Agent::class,
+        'naver-blog' => \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
@@ -212,6 +213,7 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
         'agent' => \Jenssegers\Agent\Agent::class,
+        'naver-blog' => \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
@@ -373,6 +375,7 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
         'agent' => \Jenssegers\Agent\Agent::class,
+        'naver-blog' => \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
@@ -534,6 +537,7 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
         'agent' => \Jenssegers\Agent\Agent::class,
+        'naver-blog' => \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
@@ -695,6 +699,7 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
         'agent' => \Jenssegers\Agent\Agent::class,
+        'naver-blog' => \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
@@ -856,6 +861,7 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
         'agent' => \Jenssegers\Agent\Agent::class,
+        'naver-blog' => \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
@@ -1017,6 +1023,7 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'Curl' => \Ixudra\Curl\CurlService::class,
         'agent' => \Jenssegers\Agent\Agent::class,
+        'naver-blog' => \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::class,
         'Spatie\Analytics\AnalyticsClient' => \Spatie\Analytics\AnalyticsClient::class,
         'Spatie\Analytics\Analytics' => \Spatie\Analytics\Analytics::class,
         'UxWeb\SweetAlert\SessionStore' => \UxWeb\SweetAlert\LaravelSessionStore::class,
