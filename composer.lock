@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d585be3ee3e3be00198265820507d89e",
+    "content-hash": "90e5d8a12d9b62c20505bcc44a1a7b36",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -1671,6 +1671,49 @@
             ],
             "description": "Flysystem adapter for the AWS S3 SDK v3.x",
             "time": "2018-03-27T20:33:59+00:00"
+        },
+        {
+            "name": "lovizu/naver-blog-xmlrpc",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yousung/naver-blog-xmlrpc.git",
+                "reference": "6692a82043ba827e5800a62e12e8f9ed7cef4ce5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yousung/naver-blog-xmlrpc/zipball/6692a82043ba827e5800a62e12e8f9ed7cef4ce5",
+                "reference": "6692a82043ba827e5800a62e12e8f9ed7cef4ce5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0",
+                "phpxmlrpc/phpxmlrpc": "^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lovizu\\NaverXmlRpc\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "lovizu",
+                    "email": "help@lovizu.com",
+                    "homepage": "https://www.lovizu.com"
+                }
+            ],
+            "description": "Naver Blog Xmlprc API",
+            "keywords": [
+                "api",
+                "naver",
+                "xmlprc"
+            ],
+            "time": "2018-06-05T03:27:07+00:00"
         },
         {
             "name": "madewithlove/illuminate-psr-cache-bridge",
