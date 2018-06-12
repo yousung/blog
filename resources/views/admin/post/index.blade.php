@@ -1,5 +1,27 @@
 @extends('admin.template.app')
 
+@section('script')
+    <script>
+        function naverSync(postId, obj){
+            var elId = '#post-'+postId;
+
+            $(elId).loading({
+                onStart: function(loading) {
+                    loading.overlay.slideDown(400);
+                },
+                onStop: function(loading) {
+                    loading.overlay.slideUp(400);
+                }
+            });
+
+            axios.post('/admin/naver/' + postId).then(function(data){
+                $(elId).loading('stop');
+                $(obj).text('Y')
+            });
+        }
+    </script>
+@endsection
+
 @section('content')
     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
         @include('admin.template.nav', ['name' => 'Posts'])
@@ -30,7 +52,7 @@
                             </thead>
                             <tbody>
                             @foreach($posts as $post)
-                                <tr class="text-center">
+                                <tr class="text-center" id="post-{{ $post->id }}">
                                     <td class="text-center">{{ $post->id }}</td>
                                     <td><a class="none" href="{{ route('admin.post.show', $post->id) }}{{ query_string('page', 'search') }}" title="{{ $post->title }}">{{ $post->title }}</a></td>
                                     <td><a class="none" href="{{ route('admin.post.show', $post->id) }}{{ query_string('page', 'search') }}" title="{{ $post->title }}">{{ $post->subTitle }}</a></td>
@@ -39,7 +61,13 @@
                                             {{ optional($post->series)->title ?? '-' }}
                                         </a>
                                     </td>
-                                    <td class="text-center">{{ $post->naver ? 'Y' : 'N' }}</td>
+                                    <td class="text-center">
+                                        @if($post->naver)
+                                            <button class="btn" onclick="naverSync('{{ $post->id }}', this)">Y</button>
+                                        @else
+                                            <button class="btn" onclick="naverSync('{{ $post->id }}', this)">N</button>
+                                        @endif
+                                    </td>
                                     <td class="text-center">{{ $post->hit }}</td>
                                     <td class="text-center">{{ $post->created_at->toDateString() }}</td>
                                 </tr>

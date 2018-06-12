@@ -13,6 +13,7 @@ let mix = require('laravel-mix');
 
 mix
     .js('resources/assets/js/app.js', 'public/js')
+
     .combine([
         'resources/assets/js/clean-blog.js',
         'resources/assets/js/common.js'

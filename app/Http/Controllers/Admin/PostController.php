@@ -46,7 +46,6 @@ class PostController extends Controller implements Cacheble
 
         $this->common('작성', $request, $post);
         EmailSender::dispatch($post);
-        NaverBlog::dispatch('new', $post);
 
         return redirect(route('admin.post.show', $post->id));
     }
@@ -61,7 +60,6 @@ class PostController extends Controller implements Cacheble
         $post->update($request->getData());
 
         $this->common('수정', $request, $post);
-        NaverBlog::dispatch('edit', $post);
 
         return redirect(route('admin.post.show', $post->id).query_string('page', 'search'));
     }
