@@ -11,6 +11,6 @@ class NaverController extends Controller
     public function store(Post $post)
     {
         NaverBlog::dispatch('new', $post);
-        return response()->json(['data' => '123'], 200, [], JSON_PRETTY_PRINT);
+        return response()->json(['data' => $post], 200, [], JSON_PRETTY_PRINT);
     }
 }
