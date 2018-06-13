@@ -2,12 +2,12 @@
 
 namespace App\Listeners;
 
+use App\Post;
 use App\Events\NaverBlog;
 use App\Events\ModelChange;
-use App\Post;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
-class NaverBlogListener implements ShouldQueue
+
+class NaverBlogListener
 {
     private $isSecret;
 
