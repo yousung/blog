@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.24 on 2018-06-05 19:13:43.
+ * Generated for Laravel 5.6.25 on 2018-06-13 11:38:23.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -1929,6 +1929,17 @@ namespace Illuminate\Support\Facades {
         public static function authenticate()
         {
             return \Illuminate\Auth\SessionGuard::authenticate();
+        }
+        
+        /**
+         * Determine if the guard has a user instance.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasUser()
+        {
+            return \Illuminate\Auth\SessionGuard::hasUser();
         }
         
         /**
@@ -10801,12 +10812,12 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $name
          * @param mixed $disk
-         * @return void 
+         * @return $this 
          * @static 
          */ 
         public static function set($name, $disk)
         {
-            \Illuminate\Filesystem\FilesystemManager::set($name, $disk);
+            return \Illuminate\Filesystem\FilesystemManager::set($name, $disk);
         }
         
         /**
@@ -13716,148 +13727,6 @@ namespace Ixudra\Curl\Facades {
         public static function to($url)
         {
             return \Ixudra\Curl\CurlService::to($url);
-        }
-         
-    }
- 
-}
-
-namespace Spatie\Analytics { 
-
-    class AnalyticsFacade {
-        
-        /**
-         * 
-         *
-         * @param string $viewId
-         * @return $this 
-         * @static 
-         */ 
-        public static function setViewId($viewId)
-        {
-            return \Spatie\Analytics\Analytics::setViewId($viewId);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function fetchVisitorsAndPageViews($period)
-        {
-            return \Spatie\Analytics\Analytics::fetchVisitorsAndPageViews($period);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function fetchTotalVisitorsAndPageViews($period)
-        {
-            return \Spatie\Analytics\Analytics::fetchTotalVisitorsAndPageViews($period);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function fetchMostVisitedPages($period, $maxResults = 20)
-        {
-            return \Spatie\Analytics\Analytics::fetchMostVisitedPages($period, $maxResults);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function fetchTopReferrers($period, $maxResults = 20)
-        {
-            return \Spatie\Analytics\Analytics::fetchTopReferrers($period, $maxResults);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function fetchUserTypes($period)
-        {
-            return \Spatie\Analytics\Analytics::fetchUserTypes($period);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function fetchTopBrowsers($period, $maxResults = 10)
-        {
-            return \Spatie\Analytics\Analytics::fetchTopBrowsers($period, $maxResults);
-        }
-        
-        /**
-         * Call the query method on the authenticated client.
-         *
-         * @param \Spatie\Analytics\Period $period
-         * @param string $metrics
-         * @param array $others
-         * @return array|null 
-         * @static 
-         */ 
-        public static function performQuery($period, $metrics, $others = array())
-        {
-            return \Spatie\Analytics\Analytics::performQuery($period, $metrics, $others);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function getAnalyticsService()
-        {
-            return \Spatie\Analytics\Analytics::getAnalyticsService();
-        }
-        
-        /**
-         * Register a custom macro.
-         *
-         * @param string $name
-         * @param object|callable $macro
-         * @return void 
-         * @static 
-         */ 
-        public static function macro($name, $macro)
-        {
-            \Spatie\Analytics\Analytics::macro($name, $macro);
-        }
-        
-        /**
-         * Mix another object into the class.
-         *
-         * @param object $mixin
-         * @return void 
-         * @throws \ReflectionException
-         * @static 
-         */ 
-        public static function mixin($mixin)
-        {
-            \Spatie\Analytics\Analytics::mixin($mixin);
-        }
-        
-        /**
-         * Checks if macro is registered.
-         *
-         * @param string $name
-         * @return bool 
-         * @static 
-         */ 
-        public static function hasMacro($name)
-        {
-            return \Spatie\Analytics\Analytics::hasMacro($name);
         }
          
     }
@@ -16942,7 +16811,7 @@ namespace  {
              * Constrain the query to the next "page" of results after a given ID.
              *
              * @param int $perPage
-             * @param int $lastId
+             * @param int|null $lastId
              * @param string $column
              * @return \Illuminate\Database\Query\Builder|static 
              * @static 
@@ -17453,8 +17322,6 @@ namespace  {
     class Image extends \Intervention\Image\Facades\Image {}
 
     class Curl extends \Ixudra\Curl\Facades\Curl {}
-
-    class Analytics extends \Spatie\Analytics\AnalyticsFacade {}
 
     class HTMLMin extends \HTMLMin\HTMLMin\Facades\HTMLMin {}
 

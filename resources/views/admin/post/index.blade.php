@@ -19,6 +19,7 @@
                 $(elId).loading('stop');
                 $(obj).text('Y')
             }).catch(function(err){
+                $(elId).loading('stop');
                 console.log(err);
             });
         }
