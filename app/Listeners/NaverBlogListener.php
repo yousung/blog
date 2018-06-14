@@ -44,6 +44,8 @@ class NaverBlogListener
             $this->naver->setSecret();
         }
 
-        return $this->naver->post($post->naver);
+        $post->naver = $this->naver->post($post->naver);
+        $post->save();
+        return $post;
     }
 }
