@@ -15,11 +15,6 @@ class NaverBlog
 
     public function __construct($type, $post)
     {
-        \Log::info('------------------------------------------');
-        \Log::info($type);
-        \Log::info('------------------------------------------');
-        \Log::info($post);
-        \Log::info('------------------------------------------');
         $this->type = $type;
         $this->post = $post;
     }
