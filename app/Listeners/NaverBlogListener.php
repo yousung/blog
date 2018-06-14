@@ -6,7 +6,6 @@ use App\Post;
 use App\Events\NaverBlog;
 use App\Events\ModelChange;
 
-
 class NaverBlogListener
 {
     private $isSecret;
@@ -20,6 +19,11 @@ class NaverBlogListener
     {
         $type = $event->type;
         $post = $event->post;
+
+        if (!$post instanceof \App\Post) {
+            \Log::warning('Not Post');
+            return false;
+        }
 
         if (method_exists($this, $type)) {
             $this->{$type}($post);

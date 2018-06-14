@@ -58,6 +58,7 @@ class PostController extends Controller implements Cacheble
     public function update(PostRequest $request, Post $post)
     {
         $post->update($request->getData());
+        NaverBlog::dispatch('edit', $post);
 
         $this->common('수정', $request, $post);
 
