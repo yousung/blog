@@ -11,7 +11,7 @@ class NaverController extends Controller
     public function store(Post $post)
     {
         $type = $post->naver ? 'edit' : 'new';
-        NaverBlog::dispatch($type, $post);
+        NaverBlog::dispatch($type, $post->id);
 
         return response()->json(['data' => $post], 200, [], JSON_PRETTY_PRINT);
     }

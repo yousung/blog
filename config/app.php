@@ -77,9 +77,6 @@ return [
 
         //Agent
         Jenssegers\Agent\AgentServiceProvider::class,
-
-        //Naver Blog
-        lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpcServiceProvider::class,
     ],
 
     /*
@@ -136,6 +133,5 @@ return [
         'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
         'HTMLMin' => HTMLMin\HTMLMin\Facades\HTMLMin::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
-        'NaverBlog' => \lovizu\LaravelNaverXmlRpc\Facades\NaverBlog::class,
     ],
 ];

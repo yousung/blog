@@ -2,13 +2,14 @@
 
 namespace App\Listeners;
 
-use App\Post;
 use App\Events\NaverBlog;
-use App\Events\ModelChange;
+use App\Post;
+use Lovizu\NaverXmlRpc\NaverBlogXml;
 
 class NaverBlogListener
 {
     private $isSecret;
+    private $naver;
 
     public function __construct()
     {
@@ -18,61 +19,31 @@ class NaverBlogListener
     public function handle(NaverBlog $event)
     {
         $type = $event->type;
-        $post = $event->post;
+        $post = Post::findOrFail($event->post);
 
-        if (!$post instanceof \App\Post) {
-            \Log::warning('Not Post');
-            return false;
+        $this->naver = new NaverBlogXml(env('NAVER-BLOG-ID'), env('NAVER-BLOG-PASS'));
+
+        if ('del' === $type) {
+            return $this->naver->delBlog($post->naver);
         }
 
-        if (method_exists($this, $type)) {
-            $this->{$type}($post);
-        }
-    }
+        $this->naver->setItem($post->title, $post->postContext);
 
-    /*
-     * Naver Blog New Post
-     */
-    private function new(Post $post)
-    {
-        // 이미 naver에 작성된 상황이면 수정으로 변경
-        if ($postId = $post->getPostId()) {
-            return $this->edit($postId);
+        // 카테고리
+        if ($category = $post->postCategory) {
+            $this->naver->setCategory($category);
         }
 
-        $postId = \NaverBlog::NewBlog($post);
-
-        $post->naver = $postId ?? null;
-        $post->save();
-
-        ModelChange::dispatch('post');
-    }
-
-    /*
-     * Naver Blog Post Delete & New Post
-     */
-    private function edit(Post $post)
-    {
-        // 네이버에 작성된 것이 없을 경우 새로 작성으로 변경
-        if (!$post->getPostId()) {
-            return $this->new($post);
+        // 태그
+        if ($tags = $post->postTags) {
+            $this->naver->setTags($tags);
         }
 
-        //삭제
-        $this->del($post);
-        $post->naver = null;
-        $post->save();
-
-        $this->new($post);
-    }
-
-    private function del(Post $post)
-    {
-        // 등록된 네이버 블로그가 없는 경우 취소
-        if (!$post->getPostId()) {
-            return false;
+        // 비공개
+        if ('local' === \App::environment()) {
+            $this->naver->setSecret();
         }
 
-        \NaverBlog::DelBlog($post);
+        return $this->naver->post($post->naver);
     }
 }

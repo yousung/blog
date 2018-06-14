@@ -66,7 +66,7 @@ class PostController extends Controller implements Cacheble
 
     public function destroy(Post $post)
     {
-        NaverBlog::dispatch('del', $post);
+        NaverBlog::dispatch('del', $post->id);
         $post->delete();
         $this->common('삭제');
 

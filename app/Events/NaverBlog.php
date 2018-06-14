@@ -2,7 +2,6 @@
 
 namespace App\Events;
 
-use App\Post;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -14,8 +13,13 @@ class NaverBlog
     public $type;
     public $post;
 
-    public function __construct($type = 'new', Post $post)
+    public function __construct($type, $post)
     {
+        \Log::info('------------------------------------------');
+        \Log::info($type);
+        \Log::info('------------------------------------------');
+        \Log::info($post);
+        \Log::info('------------------------------------------');
         $this->type = $type;
         $this->post = $post;
     }

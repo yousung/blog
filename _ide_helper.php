@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.25 on 2018-06-14 10:20:34.
+ * Generated for Laravel 5.6.25 on 2018-06-14 11:14:27.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -14521,44 +14521,6 @@ namespace Jenssegers\Agent\Facades {
  
 }
 
-namespace lovizu\LaravelNaverXmlRpc\Facades { 
-
-    class NaverBlog {
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function newBlog($blog)
-        {
-            return \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::newBlog($blog);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function delBlog($blog)
-        {
-            return \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::delBlog($blog);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function editBlog($blog)
-        {
-            return \lovizu\LaravelNaverXmlRpc\LaravelNaverXmlRpc::editBlog($blog);
-        }
-         
-    }
- 
-}
-
 namespace Barryvdh\Debugbar { 
 
     class Facade {
@@ -17470,8 +17432,6 @@ namespace  {
     class HTMLMin extends \HTMLMin\HTMLMin\Facades\HTMLMin {}
 
     class Agent extends \Jenssegers\Agent\Facades\Agent {}
-
-    class NaverBlog extends \lovizu\LaravelNaverXmlRpc\Facades\NaverBlog {}
 
     class Twitter extends \Artesaos\SEOTools\Facades\TwitterCard {}
 
