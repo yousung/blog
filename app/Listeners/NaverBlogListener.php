@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use App\Events\ModelChange;
 use App\Events\NaverBlog;
 use App\Post;
 use Lovizu\NaverXmlRpc\NaverBlogXml;
@@ -46,6 +47,9 @@ class NaverBlogListener
 
         $post->naver = $this->naver->post($post->naver);
         $post->save();
+
+        ModelChange::dispatch('post');
+
         return $post;
     }
 }
