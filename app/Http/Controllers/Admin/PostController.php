@@ -44,6 +44,7 @@ class PostController extends Controller implements Cacheble
     {
         $post = Post::create($request->getData());
 
+
         $this->common('작성', $request, $post);
         EmailSender::dispatch($post);
 
@@ -58,7 +59,6 @@ class PostController extends Controller implements Cacheble
     public function update(PostRequest $request, Post $post)
     {
         $post->update($request->getData());
-
         $this->common('수정', $request, $post);
 
         return redirect(route('admin.post.show', $post->id).query_string('page', 'search'));

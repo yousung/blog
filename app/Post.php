@@ -37,9 +37,7 @@ class Post extends Model
     public function getPostContextAttribute()
     {
         $postUrl = route('post.show', optimus($this->id));
-        $context = nl2br($this->context);
-        $context = str_replace('<code', '<pre', $context);
-        $context = str_replace('</code>', '</pre>', $context);
+//        $context = nl2br($this->context);
 
         $views = [];
         $views[] = "<h2>{$this->subTitle}</h2>{$context}";
