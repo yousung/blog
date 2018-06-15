@@ -14,8 +14,7 @@
                 }
             });
 
-            axios.post('/admin/naver/' + postId).then(function(data){
-                console.log(data.data.data);
+            axios.post('/admin/naver/' + postId).then(function(){
                 $(elId).loading('stop');
                 $(obj).text('Y')
             }).catch(function(err){

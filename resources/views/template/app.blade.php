@@ -10,8 +10,6 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 
 	{!! SEO::generate() !!}
-	@stack('style')
-	@yield('style')
 
 	<link rel="stylesheet" media="screen" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" media="screen" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
@@ -21,14 +19,9 @@
 	@include('seo.google')
 
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    @if(env('AD', 'false') == 'true')
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({
-                google_ad_client: "ca-pub-1322828698634218",
-                enable_page_level_ads: true
-            });
-        </script>
-    @endif
+	@stack('style')
+	@yield('style')
+
 </head>
 <body>
 

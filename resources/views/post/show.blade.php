@@ -1,5 +1,16 @@
 @extends('template.app')
 
+@section('style')
+	@if(env('AD', 'false') == 'true')
+		<script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-1322828698634218",
+                enable_page_level_ads: true
+            });
+		</script>
+	@endif
+@endsection
+
 @section('script')
 	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 	<script id="dsq-count-scr" src="//lovizu-blog.disqus.com/count.js" async></script>
