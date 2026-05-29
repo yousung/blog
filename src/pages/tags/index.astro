@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { SITE_TITLE } from '../../consts';
+
+const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const tagSlug = (tag: string) => tag.replace(/\//g, '-');
+
+const posts = (await getCollection('posts')).filter((e) => e.data.status === 'published');
+
+const tagMap = posts.reduce<Record<string, number>>((acc, post) => {
+  for (const tag of post.data.tags) {
+    acc[tag] = (acc[tag] ?? 0) + 1;
+  }
+  return acc;
+}, {});
+
+const tagList = Object.entries(tagMap)
+  .map(([tag, count]) => ({ tag, count }))
+  .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag, 'ko-KR'));
+---
+
+<BaseLayout title={`태그 | ${SITE_TITLE}`} description="태그별 글 목록을 확인하세요.">
+  <section class="taxonomy-page">
+    <header class="page-header">
+      <h1>태그</h1>
+      <p class="page-meta">{tagList.length}개 태그 · 전체 {posts.length}개 글</p>
+    </header>
+    <ul class="tag-cloud" aria-label="태그 목록">
+      {tagList.map(({ tag, count }) => (
+        <li>
+          <a href={`${basePath}tags/${tagSlug(tag)}/`} class="tag-chip">
+            {tag}
+            <span class="tag-count">{count}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .taxonomy-page {
+    max-width: 48rem;
+  }
+
+  .page-header {
+    padding: clamp(2rem, 6vw, 4rem) 0 var(--space-8);
+    border-bottom: 1px solid var(--border-default);
+    margin-bottom: var(--space-8);
+  }
+
+  .page-header h1 {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    line-height: var(--lh-tight);
+  }
+
+  .page-meta {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+  }
+
+  .tag-cloud {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .tag-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--accent-primary);
+    text-decoration: none;
+    background: color-mix(in srgb, var(--accent-primary) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent-primary) 20%, transparent);
+    border-radius: var(--radius-sm);
+    transition: background var(--motion-fast), border-color var(--motion-fast);
+  }
+
+  .tag-chip:hover {
+    background: color-mix(in srgb, var(--accent-primary) 15%, transparent);
+    border-color: var(--accent-primary);
+  }
+
+  .tag-count {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    color: var(--text-secondary);
+    background: var(--bg-muted);
+    border-radius: 999px;
+    padding: 1px 6px;
+  }
+</style>

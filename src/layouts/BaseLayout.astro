@@ -40,6 +40,8 @@ const ogImage = new URL(withBasePath(image ?? '/og/site.svg'), siteOrigin);
 const ogImageAlt = imageAlt ?? `${pageTitle} 대표 이미지`;
 const homeHref = basePath;
 const privacyHref = `${basePath}privacy/`;
+const categoriesHref = `${basePath}categories/`;
+const tagsHref = `${basePath}tags/`;
 const rssHref = new URL(withBasePath('/rss.xml'), siteOrigin).href;
 const websiteUrl = new URL(basePath, siteOrigin).href;
 const robotsContent = noindex
@@ -164,6 +166,8 @@ const jsonLd =
         </form>
         <nav aria-label="주요 메뉴">
           <a href={homeHref}>홈</a>
+          <a href={categoriesHref}>카테고리</a>
+          <a href={tagsHref}>태그</a>
           <a href={privacyHref}>개인정보처리방침</a>
         </nav>
       </div>

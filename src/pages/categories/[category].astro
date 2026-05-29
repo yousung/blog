@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import PostFeed from '../../components/PostFeed.astro';
+import { SITE_TITLE } from '../../consts';
+
+const CATEGORY_MAP: Record<string, string> = {
+  career: '생활',
+  life: '생활',
+  money: '생활',
+  engineering: '기술',
+  legacy: '기술',
+};
+
+const getDir = (post: CollectionEntry<'posts'>): string => {
+  const fp = (post as any).filePath as string | undefined;
+  if (fp) {
+    const match = fp.match(/\/content\/posts\/([^/]+)\//);
+    if (match?.[1]) return match[1];
+  }
+  return 'unknown';
+};
+
+export async function getStaticPaths() {
+  const categoryMap: Record<string, string> = {
+    career: '생활',
+    life: '생활',
+    money: '생활',
+    engineering: '기술',
+    legacy: '기술',
+  };
+  const getDirInner = (post: CollectionEntry<'posts'>): string => {
+    const fp = (post as any).filePath as string | undefined;
+    if (fp) {
+      const match = fp.match(/\/content\/posts\/([^/]+)\//);
+      if (match?.[1]) return match[1];
+    }
+    return 'unknown';
+  };
+  const posts = await getCollection('posts');
+  const categories = [...new Set(posts.map((p) => categoryMap[getDirInner(p)] ?? getDirInner(p)))];
+  return categories.map((category) => ({ params: { category } }));
+}
+
+const { category } = Astro.params;
+const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+
+const posts = (await getCollection('posts'))
+  .filter((e) => e.data.status === 'published' && (CATEGORY_MAP[getDir(e)] ?? getDir(e)) === category)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout title={`${category} | 카테고리 | ${SITE_TITLE}`} description={`'${category}' 카테고리의 글 목록입니다.`}>
+  <section class="category-page">
+    <header class="page-header">
+      <p class="breadcrumb">
+        <a href={`${basePath}categories/`}>카테고리</a>
+        <span aria-hidden="true"> / </span>
+        <span>{category}</span>
+      </p>
+      <h1>{category}</h1>
+      <p class="page-meta">{posts.length}개 글</p>
+    </header>
+    <PostFeed posts={posts} basePath={basePath} />
+  </section>
+</BaseLayout>
+
+<style>
+  .category-page {
+    max-width: 48rem;
+  }
+
+  .page-header {
+    padding: clamp(2rem, 6vw, 4rem) 0 var(--space-8);
+    border-bottom: 1px solid var(--border-default);
+    margin-bottom: var(--space-8);
+  }
+
+  .breadcrumb {
+    margin: 0 0 var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+
+  .breadcrumb a {
+    color: var(--accent-primary);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .page-header h1 {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    line-height: var(--lh-tight);
+  }
+
+  .page-meta {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+  }
+</style>
