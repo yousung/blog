@@ -3,14 +3,6 @@ name: Deploy Astro to GitHub Pages
 on:
   push:
     branches: ['master']
-    paths:
-      - 'astro.config.mjs'
-      - 'package.json'
-      - 'package-lock.json'
-      - 'public/**'
-      - 'scripts/**'
-      - 'src/**'
-      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 permissions:
