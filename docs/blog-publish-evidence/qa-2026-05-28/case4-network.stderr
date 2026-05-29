@@ -1,0 +1,51 @@
+node:internal/errors:983
+  const err = new Error(message);
+              ^
+
+Error: Command failed: git push origin HEAD
+fatal: unable to access 'https://invalid.example.local/yousung/blog.git/': Could not resolve host: invalid.example.local
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at checkExecSyncError (node:child_process:916:11)
+    at execSync (node:child_process:988:15)
+    at runGit (file:///private/tmp/bloa-qa-blog-publish-run/scripts/blog-publish.mjs:68:14)
+    at file:///private/tmp/bloa-qa-blog-publish-run/scripts/blog-publish.mjs:149:3
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    Buffer(0) [Uint8Array] [],
+    Buffer(121) [Uint8Array] [
+      102,  97, 116,  97, 108,  58,  32, 117, 110,  97,  98, 108,
+      101,  32, 116, 111,  32,  97,  99,  99, 101, 115, 115,  32,
+       39, 104, 116, 116, 112, 115,  58,  47,  47, 105, 110, 118,
+       97, 108, 105, 100,  46, 101, 120,  97, 109, 112, 108, 101,
+       46, 108, 111,  99,  97, 108,  47, 121, 111, 117, 115, 117,
+      110, 103,  47,  98, 108, 111, 103,  46, 103, 105, 116,  47,
+       39,  58,  32,  67, 111, 117, 108, 100,  32, 110, 111, 116,
+       32, 114, 101, 115, 111, 108, 118, 101,  32, 104, 111, 115,
+      116,  58,  32, 105,
+      ... 21 more items
+    ]
+  ],
+  pid: 14919,
+  stdout: Buffer(0) [Uint8Array] [],
+  stderr: Buffer(121) [Uint8Array] [
+    102,  97, 116,  97, 108,  58,  32, 117, 110,  97,  98, 108,
+    101,  32, 116, 111,  32,  97,  99,  99, 101, 115, 115,  32,
+     39, 104, 116, 116, 112, 115,  58,  47,  47, 105, 110, 118,
+     97, 108, 105, 100,  46, 101, 120,  97, 109, 112, 108, 101,
+     46, 108, 111,  99,  97, 108,  47, 121, 111, 117, 115, 117,
+    110, 103,  47,  98, 108, 111, 103,  46, 103, 105, 116,  47,
+     39,  58,  32,  67, 111, 117, 108, 100,  32, 110, 111, 116,
+     32, 114, 101, 115, 111, 108, 118, 101,  32, 104, 111, 115,
+    116,  58,  32, 105,
+    ... 21 more items
+  ]
+}
+
+Node.js v22.22.2

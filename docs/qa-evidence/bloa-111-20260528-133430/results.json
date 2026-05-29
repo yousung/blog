@@ -1,0 +1,117 @@
+{
+  "generatedAt": "2026-05-28T04:34:40.665Z",
+  "base": "http://127.0.0.1:4321/blog",
+  "checks": {
+    "brandTitleExpected": "감성개발자의 Blog"
+  },
+  "results": [
+    {
+      "case": "desktop-home",
+      "url": "http://127.0.0.1:4321/blog/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "consoleEntries": [],
+      "title": "감성개발자의 Blog",
+      "h1": "감성개발자의 Blog",
+      "hasPrivacyLink": true,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-20260528-133430/desktop-home.png"
+    },
+    {
+      "case": "mobile-home",
+      "url": "http://127.0.0.1:4321/blog/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "consoleEntries": [],
+      "title": "감성개발자의 Blog",
+      "h1": "감성개발자의 Blog",
+      "hasPrivacyLink": true,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-20260528-133430/mobile-home.png"
+    },
+    {
+      "case": "desktop-post",
+      "url": "http://127.0.0.1:4321/blog/posts/what-this-blog-covers/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "consoleEntries": [],
+      "title": "감성개발자의 Blog는 무엇을 다루는가",
+      "h1": "감성개발자의 Blog는 무엇을 다루는가",
+      "hasPrivacyLink": true,
+      "hasCommentsHeading": true,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": true,
+      "fallbackText": "댓글 위젯 설정이 없거나 형식이 올바르지 않습니다. `.env`의 `PUBLIC_GISCUS_REPO`, `PUBLIC_GISCUS_REPO_ID`, `PUBLIC_GISCUS_CATEGORY`, `PUBLIC_GISCUS_CATEGORY_ID` 값을 확인해 주세요.",
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-20260528-133430/desktop-post.png"
+    },
+    {
+      "case": "mobile-post",
+      "url": "http://127.0.0.1:4321/blog/posts/what-this-blog-covers/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "consoleEntries": [],
+      "title": "감성개발자의 Blog는 무엇을 다루는가",
+      "h1": "감성개발자의 Blog는 무엇을 다루는가",
+      "hasPrivacyLink": true,
+      "hasCommentsHeading": true,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": true,
+      "fallbackText": "댓글 위젯 설정이 없거나 형식이 올바르지 않습니다. `.env`의 `PUBLIC_GISCUS_REPO`, `PUBLIC_GISCUS_REPO_ID`, `PUBLIC_GISCUS_CATEGORY`, `PUBLIC_GISCUS_CATEGORY_ID` 값을 확인해 주세요.",
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-20260528-133430/mobile-post.png"
+    },
+    {
+      "case": "desktop-privacy",
+      "url": "http://127.0.0.1:4321/blog/privacy/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "consoleEntries": [],
+      "title": "개인정보처리방침 | 감성개발자의 Blog",
+      "h1": "개인정보처리방침",
+      "hasPrivacyLink": true,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-20260528-133430/desktop-privacy.png"
+    },
+    {
+      "case": "mobile-privacy",
+      "url": "http://127.0.0.1:4321/blog/privacy/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "consoleEntries": [],
+      "title": "개인정보처리방침 | 감성개발자의 Blog",
+      "h1": "개인정보처리방침",
+      "hasPrivacyLink": true,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-20260528-133430/mobile-privacy.png"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-05-28T04:35:11.679Z",
+  "base": "https://yousung.github.io/blog",
+  "results": [
+    {
+      "case": "desktop-home",
+      "url": "https://yousung.github.io/blog/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "consoleEntries": [],
+      "h1": "BLOA Blog",
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-prod-20260528-133501/desktop-home.png"
+    },
+    {
+      "case": "mobile-home",
+      "url": "https://yousung.github.io/blog/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "consoleEntries": [],
+      "h1": "BLOA Blog",
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-prod-20260528-133501/mobile-home.png"
+    },
+    {
+      "case": "desktop-post",
+      "url": "https://yousung.github.io/blog/posts/what-this-blog-covers/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "consoleEntries": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 ()"
+        }
+      ],
+      "h1": "404",
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-prod-20260528-133501/desktop-post.png"
+    },
+    {
+      "case": "mobile-post",
+      "url": "https://yousung.github.io/blog/posts/what-this-blog-covers/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "consoleEntries": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 ()"
+        }
+      ],
+      "h1": "404",
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-prod-20260528-133501/mobile-post.png"
+    },
+    {
+      "case": "desktop-privacy",
+      "url": "https://yousung.github.io/blog/privacy/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "consoleEntries": [],
+      "h1": "개인정보처리방침",
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-prod-20260528-133501/desktop-privacy.png"
+    }
+  ]
+}

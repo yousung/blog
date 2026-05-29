@@ -1,0 +1,118 @@
+{
+  "generatedAt": "2026-05-28T03:35:17.083Z",
+  "base": "https://yousung.github.io/blog",
+  "results": [
+    {
+      "name": "desktop-home",
+      "width": 1440,
+      "height": 900,
+      "pathname": "/",
+      "url": "https://yousung.github.io/blog/",
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-100-2026-05-28T03-35-05-929Z/desktop-home.png",
+      "title": "BLOA Blog",
+      "hasNav": false,
+      "adSlotCount": 0,
+      "adSlots": [],
+      "hasCommentsSection": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "commentsFallbackBg": null,
+      "commentsFallbackColor": null,
+      "horizontalOverflow": false
+    },
+    {
+      "name": "mobile-home",
+      "width": 390,
+      "height": 844,
+      "pathname": "/",
+      "url": "https://yousung.github.io/blog/",
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-100-2026-05-28T03-35-05-929Z/mobile-home.png",
+      "title": "BLOA Blog",
+      "hasNav": false,
+      "adSlotCount": 0,
+      "adSlots": [],
+      "hasCommentsSection": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "commentsFallbackBg": null,
+      "commentsFallbackColor": null,
+      "horizontalOverflow": false
+    },
+    {
+      "name": "desktop-post",
+      "width": 1440,
+      "height": 900,
+      "pathname": "/posts/blog-publish-sample/",
+      "url": "https://yousung.github.io/blog/posts/blog-publish-sample/",
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-100-2026-05-28T03-35-05-929Z/desktop-post.png",
+      "title": "blog-publish 자동화 샘플",
+      "hasNav": true,
+      "adSlotCount": 5,
+      "adSlots": [
+        {
+          "classes": "ad-slot ad-slot--top",
+          "width": 1120,
+          "height": 120,
+          "y": 101
+        },
+        {
+          "classes": "ad-slot ad-slot--article",
+          "width": 722,
+          "height": 280,
+          "y": 471
+        },
+        {
+          "classes": "ad-slot ad-slot--bottom",
+          "width": 788,
+          "height": 250,
+          "y": 784
+        },
+        {
+          "classes": "ad-slot ad-slot--sidebar",
+          "width": 0,
+          "height": 0,
+          "y": 0
+        },
+        {
+          "classes": "ad-slot ad-slot--sidebar",
+          "width": 300,
+          "height": 600,
+          "y": 221
+        }
+      ],
+      "hasCommentsSection": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": true,
+      "commentsFallbackBg": "rgb(255, 255, 255)",
+      "commentsFallbackColor": "rgb(91, 101, 112)",
+      "horizontalOverflow": false
+    },
+    {
+      "name": "desktop-privacy",
+      "width": 1440,
+      "height": 900,
+      "pathname": "/privacy/",
+      "url": "https://yousung.github.io/blog/privacy/",
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-100-2026-05-28T03-35-05-929Z/desktop-privacy.png",
+      "title": "개인정보처리방침 | BLOA Blog",
+      "hasNav": true,
+      "adSlotCount": 0,
+      "adSlots": [],
+      "hasCommentsSection": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "commentsFallbackBg": null,
+      "commentsFallbackColor": null,
+      "horizontalOverflow": false
+    }
+  ],
+  "darkEvidence": {
+    "backgroundColor": "rgb(11, 18, 32)",
+    "textColor": "rgb(226, 232, 240)",
+    "hasCommentsFallback": true,
+    "commentsFallbackBg": "rgb(18, 24, 31)",
+    "commentsFallbackColor": "rgb(201, 211, 221)",
+    "horizontalOverflow": false
+  },
+  "darkScreenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-100-2026-05-28T03-35-05-929Z/desktop-post-dark.png"
+}

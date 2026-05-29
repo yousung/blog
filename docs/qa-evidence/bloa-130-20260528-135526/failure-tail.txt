@@ -1,0 +1,2 @@
+::error file=/tmp/bloa130-fail-posts/engineering/2026-05-28-what-this-blog-covers.md,title=Tag violation::tag "invalid-tag-for-test" is not allowed (update src/content/taxonomy.json first)
+::error title=Frontmatter validation failed::Fix schema violations before deploy

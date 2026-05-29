@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>Serverless로 AWS 이미지 최적화 시스템 구축하기 | 감성개발자의 Blog</title><meta name="description" content="AWS 서버리스 아키텍처를 활용한 온디멘드 이미지 최적화 시스템 구축 가이드. Serverless Framework, TypeScript, Lambda, S3를 통합하여 이미지 업로드 시 자동 최적화 및 변환 파이프라인을 구현합니다. 인프라 구성부터 배포까지 완전한 실전 예제를 제공합니다."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/serverless-image-optimizer/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="Serverless로 AWS 이미지 최적화 시스템 구축하기 | 감성개발자의 Blog"><meta property="og:description" content="AWS 서버리스 아키텍처를 활용한 온디멘드 이미지 최적화 시스템 구축 가이드. Serverless Framework, TypeScript, Lambda, S3를 통합하여 이미지 업로드 시 자동 최적화 및 변환 파이프라인을 구현합니다. 인프라 구성부터 배포까지 완전한 실전 예제를 제공합니다."><meta property="og:url" content="https://blog.lovizu.com/posts/serverless-image-optimizer/"><meta property="og:image" content="https://blog.lovizu.com/og/serverless-image-optimizer.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/serverless-image-optimizer.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Serverless로 AWS 이미지 최적화 시스템 구축하기 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Serverless로 AWS 이미지 최적화 시스템 구축하기 | 감성개발자의 Blog"><meta name="twitter:description" content="AWS 서버리스 아키텍처를 활용한 온디멘드 이미지 최적화 시스템 구축 가이드. Serverless Framework, TypeScript, Lambda, S3를 통합하여 이미지 업로드 시 자동 최적화 및 변환 파이프라인을 구현합니다. 인프라 구성부터 배포까지 완전한 실전 예제를 제공합니다."><meta name="twitter:image" content="https://blog.lovizu.com/og/serverless-image-optimizer.svg"><meta name="twitter:image:alt" content="Serverless로 AWS 이미지 최적화 시스템 구축하기 대표 이미지"><meta property="article:published_time" content="2023-06-04T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="AWS"><meta property="article:tag" content="Serverless"><meta property="article:tag" content="Lambda"><meta property="article:tag" content="TypeScript"><meta property="article:tag" content="S3"><meta property="article:tag" content="이미지처리"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Serverless로 AWS 이미지 최적화 시스템 구축하기","description":"AWS 서버리스 아키텍처를 활용한 온디멘드 이미지 최적화 시스템 구축 가이드. Serverless Framework, TypeScript, Lambda, S3를 통합하여 이미지 업로드 시 자동 최적화 및 변환 파이프라인을 구현합니다. 인프라 구성부터 배포까지 완전한 실전 예제를 제공합니다.","url":"https://blog.lovizu.com/posts/serverless-image-optimizer/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, AWS, Serverless, Lambda, TypeScript, S3, 이미지처리","datePublished":"2023-06-04T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/serverless-image-optimizer/","image":"https://blog.lovizu.com/og/serverless-image-optimizer.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>Serverless로 AWS 이미지 최적화 시스템 구축하기</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2023-06-04T00:00:00.000Z" data-astro-cid-egg7nqdx>2023. 6. 4.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/AWS/" data-astro-cid-lga65v7i>AWS</a></li><li data-astro-cid-lga65v7i><a href="/search/Serverless/" data-astro-cid-lga65v7i>Serverless</a></li><li data-astro-cid-lga65v7i><a href="/search/Lambda/" data-astro-cid-lga65v7i>Lambda</a></li><li data-astro-cid-lga65v7i><a href="/search/TypeScript/" data-astro-cid-lga65v7i>TypeScript</a></li><li data-astro-cid-lga65v7i><a href="/search/S3/" data-astro-cid-lga65v7i>S3</a></li><li data-astro-cid-lga65v7i><a href="/search/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%B2%98%EB%A6%AC/" data-astro-cid-lga65v7i>이미지처리</a></li> </ul>  </div> <h2 id="서버리스로-이미지-처리-자동화하기">서버리스로 이미지 처리 자동화하기</h2>
+<p>이미지 최적화는 웹 서비스의 성능과 사용자 경험에 직접적인 영향을 미칩니다. 하지만 대량의 이미지를 처리하는 것은 서버 리소스를 많이 소모합니다.</p>
+<p>이 글에서는 <strong>AWS 서버리스 아키텍처</strong>를 이용해 이미지를 자동으로 최적화하는 시스템을 구축하는 방법을 소개합니다.</p>
+<h2 id="프로젝트-목표">프로젝트 목표</h2>
+<p>이 프로젝트를 통해 배울 수 있는 것들입니다:</p>
+<ol>
+<li><strong>AWS 서버리스 아키텍처 이해</strong>: Lambda, S3, API Gateway 등의 서비스 활용</li>
+<li><strong>Serverless Framework 숙달</strong>: 인프라를 코드로 관리 (IaC)</li>
+<li><strong>TypeScript 실전 활용</strong>: 타입 안정성과 함께 백엔드 개발</li>
+<li><strong>이미지 처리 파이프라인</strong>: 온디멘드 방식의 자동화 시스템</li>
+</ol>
+<h2 id="이미지-최적화-아키텍처">이미지 최적화 아키텍처</h2>
+<h3 id="3가지-구현-방식">3가지 구현 방식</h3>
+<h4 id="1-온디멘드-방식-권장">1. 온디멘드 방식 (권장)</h4>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">사용자 요청 → API Gateway → Lambda → 이미지 처리 → S3 저장 → URL 반환
+</code></pre>
+<p><strong>장점:</strong></p>
+<ul>
+<li>필요할 때만 처리 (비용 효율)</li>
+<li>최신 이미지만 처리</li>
+<li>응답 시간 단축</li>
+</ul>
+<h4 id="2-이벤트-직접-호출">2. 이벤트 직접 호출</h4>
+<p>S3 업로드 이벤트가 발생하면 Lambda를 직접 호출합니다.</p>
+<h4 id="3-이벤트-구독-방식">3. 이벤트 구독 방식</h4>
+<p>SNS나 SQS를 통해 비동기 처리합니다.</p>
+<h2 id="필수-설치-사항">필수 설치 사항</h2>
+<h3 id="1단계-aws-cli-설치">1단계: AWS CLI 설치</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># macOS</span>
+brew <span class="token function">install</span> awscli
+
+<span class="token comment"># 또는 pip 사용</span>
+pip <span class="token function">install</span> awscli
+</code></pre>
+<h3 id="2단계-aws-인증-설정">2단계: AWS 인증 설정</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash">aws configure
+</code></pre>
+<p>대화형 프롬프트에 다음 정보를 입력합니다:</p>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">AWS Access Key ID: [AWS Console IAM에서 발급받은 Key ID]
+AWS Secret Access Key: [AWS Console IAM에서 발급받은 Secret Access Key]
+Default region name: ap-northeast-2  # 서울 리전
+Default output format: json
+</code></pre>
+<h3 id="3단계-serverless-framework-설치">3단계: Serverless Framework 설치</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># 전역 설치</span>
+<span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> serverless
+
+<span class="token comment"># 또는 프로젝트 로컬 설치</span>
+<span class="token function">npm</span> <span class="token function">install</span> --save-dev serverless
+</code></pre>
+<h2 id="환경-변수-관리-optional">환경 변수 관리 (Optional)</h2>
+<p>direnv를 사용하면 환경 변수를 편하게 관리할 수 있습니다.</p>
+<h3 id="envrc-파일-생성">.envrc 파일 생성</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">BUCKET_NAME</span><span class="token operator">=</span><span class="token string">"my-image-bucket"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">ROOT_DOMAIN</span><span class="token operator">=</span><span class="token string">"example.com"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">SUB_DOMAIN</span><span class="token operator">=</span><span class="token string">"cdn"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">INFRA_DOMAIN</span><span class="token operator">=</span><span class="token string">"production"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">AWS_ACCESS_KEY_ID</span><span class="token operator">=</span><span class="token string">"YOUR_ACCESS_KEY"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">AWS_SECRET_ACCESS_KEY</span><span class="token operator">=</span><span class="token string">"YOUR_SECRET_KEY"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">AWS_DEFAULT_REGION</span><span class="token operator">=</span><span class="token string">"ap-northeast-2"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">ACM_CERTIFICATE_ARN</span><span class="token operator">=</span><span class="token string">"arn:aws:acm:..."</span>
+</code></pre>
+<p>direnv 활성화:</p>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash">direnv allow
+</code></pre>
+<p>이제 이 디렉토리에 들어오면 자동으로 환경 변수가 로드됩니다.</p>
+<h2 id="프로젝트-구조">프로젝트 구조</h2>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">serverless-image-optimizer/
+├── src/
+│   └── handlers/
+│       ├── uploadImage.ts
+│       ├── optimizeImage.ts
+│       └── getImage.ts
+├── serverless.yml
+├── tsconfig.json
+├── package.json
+└── .envrc
+</code></pre>
+<h2 id="serverless-framework-설정">Serverless Framework 설정</h2>
+<h3 id="serverlessyml-예제">serverless.yml 예제</h3>
+<pre class="language-yaml" data-language="yaml"><code is:raw="" class="language-yaml"><span class="token key atrule">service</span><span class="token punctuation">:</span> image<span class="token punctuation">-</span>optimizer
+
+<span class="token key atrule">provider</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> aws
+  <span class="token key atrule">runtime</span><span class="token punctuation">:</span> nodejs18.x
+  <span class="token key atrule">region</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>env<span class="token punctuation">:</span>AWS_DEFAULT_REGION<span class="token punctuation">,</span> <span class="token string">'ap-northeast-2'</span><span class="token punctuation">}</span>
+  <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+    <span class="token key atrule">BUCKET_NAME</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>env<span class="token punctuation">:</span>BUCKET_NAME<span class="token punctuation">}</span>
+
+<span class="token key atrule">functions</span><span class="token punctuation">:</span>
+  <span class="token key atrule">uploadImage</span><span class="token punctuation">:</span>
+    <span class="token key atrule">handler</span><span class="token punctuation">:</span> src/handlers/uploadImage.handler
+    <span class="token key atrule">events</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">http</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> upload
+          <span class="token key atrule">method</span><span class="token punctuation">:</span> post
+
+  <span class="token key atrule">optimizeImage</span><span class="token punctuation">:</span>
+    <span class="token key atrule">handler</span><span class="token punctuation">:</span> src/handlers/optimizeImage.handler
+    <span class="token key atrule">events</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">s3</span><span class="token punctuation">:</span>
+          <span class="token key atrule">bucket</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>env<span class="token punctuation">:</span>BUCKET_NAME<span class="token punctuation">}</span>
+          <span class="token key atrule">event</span><span class="token punctuation">:</span> s3<span class="token punctuation">:</span>ObjectCreated<span class="token punctuation">:</span>*
+          <span class="token key atrule">rules</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">prefix</span><span class="token punctuation">:</span> uploads/
+
+<span class="token key atrule">resources</span><span class="token punctuation">:</span>
+  <span class="token key atrule">Resources</span><span class="token punctuation">:</span>
+    <span class="token key atrule">ImageBucket</span><span class="token punctuation">:</span>
+      <span class="token key atrule">Type</span><span class="token punctuation">:</span> AWS<span class="token punctuation">:</span><span class="token punctuation">:</span>S3<span class="token punctuation">:</span><span class="token punctuation">:</span>Bucket
+      <span class="token key atrule">Properties</span><span class="token punctuation">:</span>
+        <span class="token key atrule">BucketName</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>env<span class="token punctuation">:</span>BUCKET_NAME<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="주요-명령어">주요 명령어</h2>
+<h3 id="패키징">패키징</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># 배포 전 의존성과 코드를 압축</span>
+serverless package
+<span class="token comment"># 또는</span>
+<span class="token function">npm</span> run package
+</code></pre>
+<h3 id="배포">배포</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># AWS에 배포</span>
+serverless deploy
+<span class="token comment"># 또는</span>
+<span class="token function">npm</span> run deploy
+</code></pre>
+<p>배포 완료 후 출력되는 정보:</p>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">Service Information
+service: image-optimizer
+stage: dev
+region: ap-northeast-2
+endpoints:
+  POST - https://xxxxx.execute-api.ap-northeast-2.amazonaws.com/dev/upload
+
+functions:
+  uploadImage: image-optimizer-dev-uploadImage
+</code></pre>
+<h3 id="함수-테스트">함수 테스트</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash">serverless invoke <span class="token builtin class-name">local</span> <span class="token parameter variable">-f</span> uploadImage <span class="token parameter variable">-d</span> <span class="token string">'{"file": "test.jpg"}'</span>
+</code></pre>
+<h3 id="제거">제거</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># AWS에서 배포된 리소스 모두 삭제</span>
+serverless remove
+<span class="token comment"># 또는</span>
+<span class="token function">npm</span> run remove
+</code></pre>
+<h2 id="주의사항-sls-remove가-안될-때">주의사항: sls remove가 안될 때</h2>
+<p><strong>문제</strong>: S3 버킷에 파일이 남아있으면 삭제 실패</p>
+<p><strong>해결 방법</strong>:</p>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># 1. S3 버킷 비우기</span>
+aws s3 <span class="token function">rm</span> s3://bucket-name <span class="token parameter variable">--recursive</span>
+
+<span class="token comment"># 2. 다시 삭제 시도</span>
+serverless remove
+</code></pre>
+<h2 id="실전-예제-이미지-최적화-lambda-함수">실전 예제: 이미지 최적화 Lambda 함수</h2>
+<h3 id="uploadimagets-이미지-업로드-핸들러">uploadImage.ts (이미지 업로드 핸들러)</h3>
+<pre class="language-typescript" data-language="typescript"><code is:raw="" class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> APIGatewayProxyHandler <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'aws-lambda'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token constant">AWS</span> <span class="token keyword">from</span> <span class="token string">'aws-sdk'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> sharp <span class="token keyword">from</span> <span class="token string">'sharp'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> s3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name"><span class="token constant">AWS</span></span><span class="token punctuation">.</span><span class="token constant">S3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> handler<span class="token operator">:</span> <span class="token function-variable function">APIGatewayProxyHandler</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> body <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>body <span class="token operator">||</span> <span class="token string">'{}'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> filename<span class="token punctuation">,</span> base64Data <span class="token punctuation">}</span> <span class="token operator">=</span> body<span class="token punctuation">;</span>
+
+    <span class="token comment">// Base64 디코딩</span>
+    <span class="token keyword">const</span> buffer <span class="token operator">=</span> Buffer<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>base64Data<span class="token punctuation">,</span> <span class="token string">'base64'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 이미지 최적화 (JPEG로 변환, 품질 80%)</span>
+    <span class="token keyword">const</span> optimized <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">sharp</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">jpeg</span><span class="token punctuation">(</span><span class="token punctuation">{</span> quality<span class="token operator">:</span> <span class="token number">80</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">toBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// S3에 업로드</span>
+    <span class="token keyword">const</span> key <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">optimized/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>filename<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> s3<span class="token punctuation">.</span><span class="token function">putObject</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      Bucket<span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">BUCKET_NAME</span><span class="token operator">!</span><span class="token punctuation">,</span>
+      Key<span class="token operator">:</span> key<span class="token punctuation">,</span>
+      Body<span class="token operator">:</span> optimized<span class="token punctuation">,</span>
+      ContentType<span class="token operator">:</span> <span class="token string">'image/jpeg'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">promise</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      statusCode<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      body<span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        success<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        key<span class="token punctuation">,</span>
+        url<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">BUCKET_NAME</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.s3.ap-northeast-2.amazonaws.com/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      statusCode<span class="token operator">:</span> <span class="token number">500</span><span class="token punctuation">,</span>
+      body<span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span> error<span class="token operator">:</span> <span class="token string">'Upload failed'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="비용-최적화">비용 최적화</h2>
+<p>Serverless를 사용하면:</p>
+<ul>
+<li><strong>비용</strong>: 요청 수와 실행 시간에만 과금</li>
+<li><strong>스케일링</strong>: 자동으로 수평 확장</li>
+<li><strong>유휴 비용 제로</strong>: 실행하지 않으면 비용 없음</li>
+</ul>
+<h3 id="비용-예측">비용 예측</h3>
+<ul>
+<li>Lambda: 100만 요청당 약 $0.20</li>
+<li>S3: GB당 $0.023 (저장료)</li>
+<li>데이터 전송: GB당 $0.05</li>
+</ul>
+<h2 id="프로젝트-저장소">프로젝트 저장소</h2>
+<p>완전한 예제는 다음 저장소에서 확인할 수 있습니다:</p>
+<p><a href="https://github.com/yousung/serverless-study-image-optimizer">GitHub - serverless-study-image-optimizer</a></p>
+<h2 id="다음-단계">다음 단계</h2>
+<p>이 기초 위에서 다음과 같이 확장할 수 있습니다:</p>
+<ol>
+<li><strong>여러 포맷 지원</strong>: WebP, AVIF 등 현대적 이미지 포맷</li>
+<li><strong>이미지 크기별 생성</strong>: 썸네일, 중간 크기, 원본 자동 생성</li>
+<li><strong>CDN 통합</strong>: CloudFront로 글로벌 캐싱</li>
+<li><strong>모니터링</strong>: CloudWatch 로그와 알람 설정</li>
+<li><strong>비용 추적</strong>: 월별 Lambda 실행 비용 모니터링</li>
+</ol>
+<h2 id="마치며">마치며</h2>
+<p>서버리스 아키텍처는 이미지 처리 같은 <strong>배치 작업에 최적</strong>입니다. 인프라 관리 걱정 없이 비즈니스 로직에만 집중할 수 있습니다.</p>
+<p>Serverless Framework를 배우면 AWS의 여러 서비스를 효율적으로 조합할 수 있고, 이는 클라우드 네이티브 개발의 기초가 됩니다.</p>
+<p>지금 바로 시작하세요!</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

@@ -1,0 +1,7 @@
+{
+  "status": "ok",
+  "mode": "update_duplicate_slug",
+  "path": "src/content/posts/engineering/2026-05-28-blog-publish-skill.md",
+  "commitHash": "2b3b8cb0ebe006b3e88cdc20eec82f09f5f28919",
+  "workflowUrl": "https://github.com/yousung/blog/actions/workflows/blog-publish.yml"
+}

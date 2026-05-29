@@ -1,0 +1,7 @@
+{
+  "status": "ok",
+  "mode": "create",
+  "path": "src/content/posts/engineering/2026-05-28-qa-create-20260528.md",
+  "commitHash": "4462593d41740fe985105f44f12ede497f17f995",
+  "workflowUrl": "https://invalid_pat_for_qa@invalid.example.local/yousung/blog/actions/workflows/blog-publish.yml"
+}

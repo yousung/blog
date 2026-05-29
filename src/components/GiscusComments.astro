@@ -1,0 +1,45 @@
+---
+---
+
+<section class="comments" aria-labelledby="comments-heading">
+  <h2 id="comments-heading">댓글</h2>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="yousung/blog"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI="
+    data-category="General"
+    data-category-id="DIC_kwDOCAbOhM4C9_He"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="ko"
+    crossorigin="anonymous"
+    async
+  ></script>
+</section>
+
+<style>
+  .comments {
+    margin-top: var(--space-8);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    background: var(--bg-canvas);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-6);
+  }
+
+  .comments h2 {
+    margin: 0 0 var(--space-4);
+    font-size: var(--text-lg);
+    line-height: var(--lh-tight);
+  }
+
+  @media (max-width: 640px) {
+    .comments {
+      padding: var(--space-4);
+    }
+  }
+</style>

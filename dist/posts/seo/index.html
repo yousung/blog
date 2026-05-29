@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>Laravel SEO 메타 태그 설정 가이드 | 감성개발자의 Blog</title><meta name="description" content="Laravel 프로젝트에 SEOTools 패키지를 사용하여 title, description, Open Graph, Twitter Card 등 필수 메타 태그를 효율적으로 설정하고 관리하는 실무 방법을 다룹니다."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/seo/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="Laravel SEO 메타 태그 설정 가이드 | 감성개발자의 Blog"><meta property="og:description" content="Laravel 프로젝트에 SEOTools 패키지를 사용하여 title, description, Open Graph, Twitter Card 등 필수 메타 태그를 효율적으로 설정하고 관리하는 실무 방법을 다룹니다."><meta property="og:url" content="https://blog.lovizu.com/posts/seo/"><meta property="og:image" content="https://blog.lovizu.com/og/seo.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/seo.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Laravel SEO 메타 태그 설정 가이드 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Laravel SEO 메타 태그 설정 가이드 | 감성개발자의 Blog"><meta name="twitter:description" content="Laravel 프로젝트에 SEOTools 패키지를 사용하여 title, description, Open Graph, Twitter Card 등 필수 메타 태그를 효율적으로 설정하고 관리하는 실무 방법을 다룹니다."><meta name="twitter:image" content="https://blog.lovizu.com/og/seo.svg"><meta name="twitter:image:alt" content="Laravel SEO 메타 태그 설정 가이드 대표 이미지"><meta property="article:published_time" content="2018-08-31T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="Laravel"><meta property="article:tag" content="SEO"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Laravel SEO 메타 태그 설정 가이드","description":"Laravel 프로젝트에 SEOTools 패키지를 사용하여 title, description, Open Graph, Twitter Card 등 필수 메타 태그를 효율적으로 설정하고 관리하는 실무 방법을 다룹니다.","url":"https://blog.lovizu.com/posts/seo/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, Laravel, SEO","datePublished":"2018-08-31T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/seo/","image":"https://blog.lovizu.com/og/seo.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>Laravel SEO 메타 태그 설정 가이드</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2018-08-31T00:00:00.000Z" data-astro-cid-egg7nqdx>2018. 8. 31.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/Laravel/" data-astro-cid-lga65v7i>Laravel</a></li><li data-astro-cid-lga65v7i><a href="/search/SEO/" data-astro-cid-lga65v7i>SEO</a></li> </ul>  </div> <h2 id="개요">개요</h2>
+<p>Laravel 프로젝트에서 검색 엔진 최적화(SEO)의 첫 단계는 기본 메타 태그를 일관되게 설정하는 것입니다. 이 글은 <code>artesaos/seotools</code> 패키지를 사용하여 title, description, Open Graph, Twitter Card 같은 핵심 메타 태그를 빠르게 구성하는 실무 중심의 가이드입니다.</p>
+<p>SEO는 검색 의도 파악과 콘텐츠 품질이 가장 중요하지만, 그 전에 메타 태그 자동화 구조가 잘 갖춰져 있으면 개발과 관리가 훨씬 수월합니다.</p>
+<h2 id="seotools-패키지란">SEOTools 패키지란</h2>
+<p><code>artesaos/seotools</code>는 Laravel 5.8+ 및 Lumen을 지원하는 패키지로, 다음 항목들을 빠르게 관리할 수 있습니다:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>항목</th><th>설명</th></tr></thead><tbody><tr><td><strong>Title/Meta Description</strong></td><td>검색 결과에 표시되는 기본 메타 태그</td></tr><tr><td><strong>Open Graph</strong></td><td>SNS 링크 공유 시 미리보기 정보</td></tr><tr><td><strong>Twitter Card</strong></td><td>트위터 공유 최적화</td></tr><tr><td><strong>JSON-LD</strong></td><td>검색 엔진 구조화 데이터</td></tr></tbody></table>
+<p>다만 sitemap, canonical 태그, RSS 피드 같은 항목은 이 패키지의 범위 밖입니다. SEO 자동화의 기초만 담당하는 도구로 봐야 합니다.</p>
+<h2 id="설치-및-설정">설치 및 설정</h2>
+<h3 id="1단계-패키지-설치">1단계: 패키지 설치</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token function">composer</span> require artesaos/seotools
+</code></pre>
+<h3 id="2단계-프로바이더-등록-필요한-경우만">2단계: 프로바이더 등록 (필요한 경우만)</h3>
+<p>Laravel 5.5+ 는 자동 발견(package discovery)을 지원하므로 수동 등록이 불필요합니다. 그러나 더 오래된 버전이라면:</p>
+<pre class="language-php" data-language="php"><code is:raw="" class="language-php"><span class="token comment">// config/app.php</span>
+<span class="token string single-quoted-string">'providers'</span> <span class="token operator">=></span> <span class="token punctuation">[</span>
+    <span class="token class-name class-name-fully-qualified static-context">Artesaos<span class="token punctuation">\</span>SEOTools<span class="token punctuation">\</span>Providers<span class="token punctuation">\</span>SEOToolsServiceProvider</span><span class="token operator">::</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+<span class="token string single-quoted-string">'aliases'</span> <span class="token operator">=></span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'SEOMeta'</span> <span class="token operator">=></span> <span class="token class-name class-name-fully-qualified static-context">Artesaos<span class="token punctuation">\</span>SEOTools<span class="token punctuation">\</span>Facades<span class="token punctuation">\</span>SEOMeta</span><span class="token operator">::</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+    <span class="token string single-quoted-string">'OpenGraph'</span> <span class="token operator">=></span> <span class="token class-name class-name-fully-qualified static-context">Artesaos<span class="token punctuation">\</span>SEOTools<span class="token punctuation">\</span>Facades<span class="token punctuation">\</span>OpenGraph</span><span class="token operator">::</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+    <span class="token string single-quoted-string">'Twitter'</span> <span class="token operator">=></span> <span class="token class-name class-name-fully-qualified static-context">Artesaos<span class="token punctuation">\</span>SEOTools<span class="token punctuation">\</span>Facades<span class="token punctuation">\</span>TwitterCard</span><span class="token operator">::</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</code></pre>
+<h3 id="3단계-설정-파일-발행">3단계: 설정 파일 발행</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash">php artisan vendor:publish <span class="token parameter variable">--provider</span><span class="token operator">=</span><span class="token string">"Artesaos\SEOTools\Providers\SEOToolsServiceProvider"</span>
+</code></pre>
+<h2 id="실무-적용-전략">실무 적용 전략</h2>
+<p>SEOTools를 효과적으로 사용하려면 다음 단계를 따릅니다:</p>
+<h3 id="1-글로벌-기본값-설정">1) 글로벌 기본값 설정</h3>
+<pre class="language-php" data-language="php"><code is:raw="" class="language-php"><span class="token comment">// config/seotools.php</span>
+<span class="token string single-quoted-string">'defaults'</span> <span class="token operator">=></span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'title'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">'기본 사이트 제목'</span><span class="token punctuation">,</span>
+    <span class="token string single-quoted-string">'description'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">'기본 설명 (150-160자)'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<h3 id="2-페이지별-메타-태그-분기">2) 페이지별 메타 태그 분기</h3>
+<p>게시글, 상품, 문서 같이 구조가 다른 페이지만 메타 태그를 별도로 설정합니다:</p>
+<pre class="language-php" data-language="php"><code is:raw="" class="language-php"><span class="token comment">// 컨트롤러에서</span>
+<span class="token class-name static-context">SEOMeta</span><span class="token operator">::</span><span class="token function">setTitle</span><span class="token punctuation">(</span><span class="token variable">$post</span><span class="token operator">-></span><span class="token property">title</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name static-context">SEOMeta</span><span class="token operator">::</span><span class="token function">setDescription</span><span class="token punctuation">(</span><span class="token variable">$post</span><span class="token operator">-></span><span class="token property">summary</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name static-context">OpenGraph</span><span class="token operator">::</span><span class="token function">setUrl</span><span class="token punctuation">(</span><span class="token function">route</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'post.show'</span><span class="token punctuation">,</span> <span class="token variable">$post</span><span class="token operator">-></span><span class="token property">id</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name static-context">OpenGraph</span><span class="token operator">::</span><span class="token function">addImage</span><span class="token punctuation">(</span><span class="token variable">$post</span><span class="token operator">-></span><span class="token property">image_url</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="3-html에서-렌더링">3) HTML에서 렌더링</h3>
+<pre class="language-html" data-language="html"><code is:raw="" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>head</span><span class="token punctuation">></span></span>
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>head</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="주의할-점">주의할 점</h2>
+<p><strong>버전 확인</strong>: Laravel 버전에 따라 프로바이더 등록 방식이 다릅니다. Laravel 11+ 라면 <code>bootstrap/providers.php</code>를 확인하세요.</p>
+<p><strong>메타 문안 품질</strong>: 패키지가 자동화하는 것은 기술적 구조뿐입니다. 각 페이지의 title과 description은 여전히 사람이 신중하게 작성해야 합니다.</p>
+<p><strong>범위의 한계</strong>: sitemap, canonical, trailing slash 처리 같은 SEO 항목은 다른 방식으로 별도 처리해야 합니다.</p>
+<h2 id="검증-체크리스트">검증 체크리스트</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 패키지 설치 완료</li>
+<li class="task-list-item"><input type="checkbox" disabled> 프로바이더 등록 (필요시)</li>
+<li class="task-list-item"><input type="checkbox" disabled> 설정 파일 발행 완료</li>
+<li class="task-list-item"><input type="checkbox" disabled> 글로벌 기본값 설정</li>
+<li class="task-list-item"><input type="checkbox" disabled> 한두 페이지에서 메타 태그 검증 (개발자 도구 → Elements)</li>
+</ul>
+<h2 id="마치며">마치며</h2>
+<p>Laravel 프로젝트의 SEO 시작은 “완벽한 전략”보다 “일관된 기초 구조”가 중요합니다. <code>artesaos/seotools</code>로 메타 태그 자동화를 먼저 확립한 후, 검색 의도와 콘텐츠 품질 개선으로 나아가는 것이 현실적입니다. 메타 태그는 기술 문제이므로 패키지로 빠르게 처리하고, SEO 전략은 마케팅 팀과 함께 검토하는 방식을 권장합니다.</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

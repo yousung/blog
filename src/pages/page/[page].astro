@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import PostFeed from '../../components/PostFeed.astro';
+import { SITE_TITLE } from '../../consts';
+
+const PAGE_SIZE = 10;
+const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+
+const allPosts = (await getCollection('posts'))
+  .filter((entry) => entry.data.status === 'published')
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const [, ...restPosts] = allPosts;
+const totalPages = Math.max(1, Math.ceil(restPosts.length / PAGE_SIZE));
+
+export async function getStaticPaths() {
+  const pageSize = 10;
+  const posts = (await getCollection('posts'))
+    .filter((entry) => entry.data.status === 'published')
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+  const [, ...paginatedPosts] = posts;
+  const pages = Math.max(1, Math.ceil(paginatedPosts.length / pageSize));
+
+  return Array.from({ length: Math.max(0, pages - 1) }, (_, idx) => {
+    const page = idx + 2;
+    return { params: { page: String(page) } };
+  });
+}
+
+const page = Number(Astro.params.page);
+if (!Number.isInteger(page) || page < 2 || page > totalPages) {
+  return Astro.redirect(`${basePath}404`);
+}
+
+const start = (page - 1) * PAGE_SIZE;
+const pagePosts = restPosts.slice(start, start + PAGE_SIZE);
+const prevHref = page === 2 ? basePath : `${basePath}page/${page - 1}/`;
+const nextHref = page < totalPages ? `${basePath}page/${page + 1}/` : null;
+---
+
+<BaseLayout title={`${SITE_TITLE} - ${page}페이지`} description={`${SITE_TITLE} 아카이브 ${page}페이지`}>
+  <section class="home">
+    <header class="home-intro">
+      <p class="kicker">Archive</p>
+      <h1>{SITE_TITLE}</h1>
+      <p class="intro-copy">{page} / {totalPages} 페이지</p>
+    </header>
+
+    <PostFeed posts={pagePosts} basePath={basePath} />
+
+    <nav class="pagination" aria-label="페이지 이동">
+      <a class="pager-link" href={prevHref}>이전</a>
+      <span class="pager-status">{page} / {totalPages}</span>
+      {nextHref ? <a class="pager-link" href={nextHref}>다음</a> : <span class="pager-link disabled">다음</span>}
+    </nav>
+  </section>
+</BaseLayout>
+
+<style>
+  .home {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  .home-intro {
+    display: grid;
+    gap: var(--space-3);
+    padding: var(--space-4) 0;
+    border-left: 3px solid var(--border-default);
+    padding-left: var(--space-4);
+  }
+
+  .kicker {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: var(--text-2xl);
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .intro-copy {
+    margin: 0;
+    color: var(--text-secondary);
+    max-width: 40rem;
+  }
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+  }
+
+  .pager-link {
+    text-decoration: none;
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2) var(--space-4);
+    color: var(--text-primary);
+    background: var(--bg-surface);
+  }
+
+  .pager-link.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .pager-status {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+  }
+</style>

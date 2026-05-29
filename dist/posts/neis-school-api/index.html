@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>공인인증서 우회 NEIS 학교 조회 API 개발 | 감성개발자의 Blog</title><meta name="description" content="공인인증서 요구로 막힌 NEIS 학교 정보 조회를 웹 스크래핑으로 해결한 Node.js 오픈소스 프로젝트. 초등학교부터 대학교까지 학교명 입력으로 실시간 학교 코드와 정보를 조회할 수 있는 NPM 패키지 개발 과정과 사용 방법을 상세히 설명합니다."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/neis-school-api/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="공인인증서 우회 NEIS 학교 조회 API 개발 | 감성개발자의 Blog"><meta property="og:description" content="공인인증서 요구로 막힌 NEIS 학교 정보 조회를 웹 스크래핑으로 해결한 Node.js 오픈소스 프로젝트. 초등학교부터 대학교까지 학교명 입력으로 실시간 학교 코드와 정보를 조회할 수 있는 NPM 패키지 개발 과정과 사용 방법을 상세히 설명합니다."><meta property="og:url" content="https://blog.lovizu.com/posts/neis-school-api/"><meta property="og:image" content="https://blog.lovizu.com/og/neis-school-api.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/neis-school-api.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="공인인증서 우회 NEIS 학교 조회 API 개발 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="공인인증서 우회 NEIS 학교 조회 API 개발 | 감성개발자의 Blog"><meta name="twitter:description" content="공인인증서 요구로 막힌 NEIS 학교 정보 조회를 웹 스크래핑으로 해결한 Node.js 오픈소스 프로젝트. 초등학교부터 대학교까지 학교명 입력으로 실시간 학교 코드와 정보를 조회할 수 있는 NPM 패키지 개발 과정과 사용 방법을 상세히 설명합니다."><meta name="twitter:image" content="https://blog.lovizu.com/og/neis-school-api.svg"><meta name="twitter:image:alt" content="공인인증서 우회 NEIS 학교 조회 API 개발 대표 이미지"><meta property="article:published_time" content="2019-02-07T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="Node.js"><meta property="article:tag" content="JavaScript"><meta property="article:tag" content="API"><meta property="article:tag" content="웹스크래핑"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"공인인증서 우회 NEIS 학교 조회 API 개발","description":"공인인증서 요구로 막힌 NEIS 학교 정보 조회를 웹 스크래핑으로 해결한 Node.js 오픈소스 프로젝트. 초등학교부터 대학교까지 학교명 입력으로 실시간 학교 코드와 정보를 조회할 수 있는 NPM 패키지 개발 과정과 사용 방법을 상세히 설명합니다.","url":"https://blog.lovizu.com/posts/neis-school-api/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, Node.js, JavaScript, API, 웹스크래핑","datePublished":"2019-02-07T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/neis-school-api/","image":"https://blog.lovizu.com/og/neis-school-api.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>공인인증서 우회 NEIS 학교 조회 API 개발</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2019-02-07T00:00:00.000Z" data-astro-cid-egg7nqdx>2019. 2. 7.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/Node.js/" data-astro-cid-lga65v7i>Node.js</a></li><li data-astro-cid-lga65v7i><a href="/search/JavaScript/" data-astro-cid-lga65v7i>JavaScript</a></li><li data-astro-cid-lga65v7i><a href="/search/API/" data-astro-cid-lga65v7i>API</a></li><li data-astro-cid-lga65v7i><a href="/search/%EC%9B%B9%EC%8A%A4%ED%81%AC%EB%9E%98%ED%95%91/" data-astro-cid-lga65v7i>웹스크래핑</a></li> </ul>  </div> <h2 id="문제-상황">문제 상황</h2>
+<p>NEIS(National Education Information System)는 한국의 모든 학교 정보를 관리하는 공식 시스템입니다. 과거에는 학교 코드를 쉽게 조회할 수 있는 공개 API가 있었으나, 보안 강화 정책에 따라 공인인증서 인증을 요구하게 되었습니다.</p>
+<h3 id="발생한-문제점">발생한 문제점</h3>
+<ul>
+<li><strong>급식 알림 서비스</strong>: 학교 급식 정보를 제공하는 API들이 학교 코드를 구할 수 없음</li>
+<li><strong>교육용 애플리케이션</strong>: 학교 검색 기능이 필요한 앱들이 정보 업데이트 불가</li>
+<li><strong>데이터 관리</strong>: 엑셀이나 수동 입력으로 학교 정보를 관리해야 함</li>
+</ul>
+<h2 id="해결책-웹-스크래핑-기반-api">해결책: 웹 스크래핑 기반 API</h2>
+<p>이 문제를 해결하기 위해 여전히 접근 가능한 NEIS 웹 인터페이스를 활용하여 자동으로 학교 정보를 조회하는 Node.js 패키지를 개발했습니다.</p>
+<h3 id="기술-스택">기술 스택</h3>
+<ul>
+<li><strong>런타임</strong>: Node.js</li>
+<li><strong>스크래핑</strong>: cheerio, axios</li>
+<li><strong>패키지 관리</strong>: npm</li>
+<li><strong>배포</strong>: npmjs.com</li>
+</ul>
+<h2 id="neis-api-패키지-소개">neis-api 패키지 소개</h2>
+<h3 id="주요-기능">주요 기능</h3>
+<ul>
+<li>학교명으로 검색하여 학교 목록 조회</li>
+<li>학교 코드, 설립 유형, 주소 정보 제공</li>
+<li>동명학교 구별 가능</li>
+<li>실시간 데이터 동기화</li>
+</ul>
+<h3 id="설치-방법">설치 방법</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> neis-api
+</code></pre>
+<h3 id="기본-사용-방법">기본 사용 방법</h3>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">const</span> neisApi <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"neis-api"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 학교명으로 검색</span>
+<span class="token function">neisApi</span><span class="token punctuation">(</span><span class="token string">"고기"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">list</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="응답-데이터-형식">응답 데이터 형식</h3>
+<pre class="language-json" data-language="json"><code is:raw="" class="language-json"><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"고기초등학교"</span><span class="token punctuation">,</span>
+        <span class="token property">"code"</span><span class="token operator">:</span> <span class="token string">"E10001234"</span><span class="token punctuation">,</span>
+        <span class="token property">"founded"</span><span class="token operator">:</span> <span class="token string">"PUBLIC"</span><span class="token punctuation">,</span>
+        <span class="token property">"address"</span><span class="token operator">:</span> <span class="token string">"서울특별시 강남구 테헤란로 123"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"고기중학교"</span><span class="token punctuation">,</span>
+        <span class="token property">"code"</span><span class="token operator">:</span> <span class="token string">"M10005678"</span><span class="token punctuation">,</span>
+        <span class="token property">"founded"</span><span class="token operator">:</span> <span class="token string">"PUBLIC"</span><span class="token punctuation">,</span>
+        <span class="token property">"address"</span><span class="token operator">:</span> <span class="token string">"서울특별시 강남구 테헤란로 456"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<h2 id="고급-사용법">고급 사용법</h2>
+<h3 id="비동기대기-처리">비동기/대기 처리</h3>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">const</span> neisApi <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"neis-api"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">searchSchool</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> results <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">neisApi</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> results<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"검색 실패:"</span><span class="token punctuation">,</span> error<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 사용</span>
+<span class="token function">searchSchool</span><span class="token punctuation">(</span><span class="token string">"서울대학교"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">results</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">검색 결과: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>results<span class="token punctuation">.</span>length<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">개</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="다중-검색">다중 검색</h3>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">const</span> schools <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"서울초"</span><span class="token punctuation">,</span> <span class="token string">"부산중"</span><span class="token punctuation">,</span> <span class="token string">"대구고"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>
+    schools<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">name</span> <span class="token operator">=></span> <span class="token function">neisApi</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">results</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"모든 검색 완료"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="실제-활용-사례">실제 활용 사례</h2>
+<h3 id="1-급식-정보-알림-서비스">1. 급식 정보 알림 서비스</h3>
+<p>학교 코드를 얻은 후 교육청 급식 API와 연동하여 학생들에게 실시간 급식 정보 제공</p>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">const</span> neisApi <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"neis-api"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getSchoolMeal</span><span class="token punctuation">(</span><span class="token parameter">schoolName<span class="token punctuation">,</span> date</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> schools <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">neisApi</span><span class="token punctuation">(</span>schoolName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> schoolCode <span class="token operator">=</span> schools<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>code<span class="token punctuation">;</span>
+    
+    <span class="token comment">// 급식 API 호출</span>
+    <span class="token keyword">const</span> meal <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchMealInfo</span><span class="token punctuation">(</span>schoolCode<span class="token punctuation">,</span> date<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> meal<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="2-교육-관리-시스템">2. 교육 관리 시스템</h3>
+<p>학교 검색 기능이 있는 교육용 소프트웨어에 통합</p>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token comment">// Express.js 라우트</span>
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"/api/schools/search"</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> query <span class="token operator">=</span> req<span class="token punctuation">.</span>query<span class="token punctuation">.</span>q<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> schools <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">neisApi</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>schools<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="3-데이터-마이그레이션">3. 데이터 마이그레이션</h3>
+<p>레거시 시스템의 수동 입력된 학교 정보를 자동으로 검증하고 업데이트</p>
+<h2 id="오픈소스-저장소">오픈소스 저장소</h2>
+<p>이 프로젝트는 MIT 라이선스로 공개되어 있어 누구나 자유롭게 사용, 수정, 배포할 수 있습니다.</p>
+<ul>
+<li><strong>GitHub</strong>: <a href="https://github.com/yousung/neis-school-list">https://github.com/yousung/neis-school-list</a></li>
+<li><strong>NPM 레지스트리</strong>: <a href="https://www.npmjs.com/package/neis-api">https://www.npmjs.com/package/neis-api</a></li>
+</ul>
+<h2 id="기술적-고려사항">기술적 고려사항</h2>
+<h3 id="성능-최적화">성능 최적화</h3>
+<ul>
+<li><strong>캐싱</strong>: 자주 검색되는 학교명 결과를 메모리에 캐시</li>
+<li><strong>시간 제한</strong>: 응답 시간 3초 이내 설정</li>
+<li><strong>동시성 제어</strong>: 대량 요청 시 큐 관리</li>
+</ul>
+<h3 id="안정성">안정성</h3>
+<ul>
+<li><strong>에러 처리</strong>: 네트워크 실패 시 자동 재시도</li>
+<li><strong>버전 관리</strong>: NEIS 웹사이트 변경에 대응하는 버전 업데이트</li>
+<li><strong>로깅</strong>: 요청/응답 로그 기록</li>
+</ul>
+<h2 id="향후-개선-계획">향후 개선 계획</h2>
+<ol>
+<li><strong>TypeScript 지원</strong>: 타입 안정성 강화</li>
+<li><strong>데이터베이스 캐시</strong>: MongoDB/Redis 지원</li>
+<li><strong>GraphQL 인터페이스</strong>: REST API와 함께 제공</li>
+<li><strong>학교별 상세정보</strong>: 교사 수, 학생 수, 시설 정보 등</li>
+</ol>
+<h2 id="마치며">마치며</h2>
+<p>공식 API가 막혀있는 상황에서도 대안을 찾아 개발자 커뮤니티에 기여할 수 있다는 것이 보람됩니다. 이 프로젝트가 급식 알림, 교육 앱, 학사 관리 시스템 등 다양한 분야에서 활용되어 학생들과 교사들의 생활을 더 편하게 만드는 데 도움이 되길 바랍니다.</p>
+<p>오픈소스 프로젝트이므로 버그 리포트, 기능 제안, 코드 기여를 언제든 환영합니다. 함께 이 프로젝트를 발전시켜 나갈 수 있으면 좋겠습니다.</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

@@ -1,0 +1,45 @@
+{
+  "outDir": "docs/qa-evidence/bloa-111-prod-20260528-133501",
+  "checks": [
+    {
+      "case": "desktop-home",
+      "h1": "BLOA Blog",
+      "overflow": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleErrors": 0
+    },
+    {
+      "case": "mobile-home",
+      "h1": "BLOA Blog",
+      "overflow": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleErrors": 0
+    },
+    {
+      "case": "desktop-post",
+      "h1": "404",
+      "overflow": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleErrors": 1
+    },
+    {
+      "case": "mobile-post",
+      "h1": "404",
+      "overflow": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleErrors": 1
+    },
+    {
+      "case": "desktop-privacy",
+      "h1": "개인정보처리방침",
+      "overflow": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleErrors": 0
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "generatedAt": "2026-05-28T03:15:47.817Z",
+  "results": [
+    {
+      "name": "desktop-post",
+      "width": 1440,
+      "height": 900,
+      "pathname": "/posts/blog-publish-sample/",
+      "cls": 0,
+      "slots": [
+        {
+          "classes": "ad-slot ad-slot--top",
+          "width": 1120,
+          "height": 120,
+          "y": 101
+        },
+        {
+          "classes": "ad-slot ad-slot--article",
+          "width": 722,
+          "height": 280,
+          "y": 471
+        },
+        {
+          "classes": "ad-slot ad-slot--bottom",
+          "width": 788,
+          "height": 250,
+          "y": 784
+        },
+        {
+          "classes": "ad-slot ad-slot--sidebar",
+          "width": 0,
+          "height": 0,
+          "y": 0
+        },
+        {
+          "classes": "ad-slot ad-slot--sidebar",
+          "width": 300,
+          "height": 600,
+          "y": 221
+        }
+      ],
+      "sidebars": [
+        {
+          "width": 0,
+          "height": 0,
+          "y": 0,
+          "display": "grid",
+          "visibility": "visible"
+        },
+        {
+          "width": 300,
+          "height": 600,
+          "y": 221,
+          "display": "grid",
+          "visibility": "visible"
+        }
+      ],
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-98-2026-05-28/desktop-post.png"
+    },
+    {
+      "name": "tablet-post",
+      "width": 768,
+      "height": 1024,
+      "pathname": "/posts/blog-publish-sample/",
+      "cls": 0,
+      "slots": [
+        {
+          "classes": "ad-slot ad-slot--top",
+          "width": 736,
+          "height": 120,
+          "y": 101
+        },
+        {
+          "classes": "ad-slot ad-slot--article",
+          "width": 670,
+          "height": 280,
+          "y": 471
+        },
+        {
+          "classes": "ad-slot ad-slot--bottom",
+          "width": 736,
+          "height": 250,
+          "y": 784
+        },
+        {
+          "classes": "ad-slot ad-slot--sidebar",
+          "width": 300,
+          "height": 600,
+          "y": 1066
+        },
+        {
+          "classes": "ad-slot ad-slot--sidebar",
+          "width": 0,
+          "height": 0,
+          "y": 0
+        }
+      ],
+      "sidebars": [
+        {
+          "width": 300,
+          "height": 600,
+          "y": 1066,
+          "display": "grid",
+          "visibility": "visible"
+        },
+        {
+          "width": 0,
+          "height": 0,
+          "y": 0,
+          "display": "grid",
+          "visibility": "visible"
+        }
+      ],
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-98-2026-05-28/tablet-post.png"
+    },
+    {
+      "name": "mobile-post",
+      "width": 390,
+      "height": 844,
+      "pathname": "/posts/blog-publish-sample/",
+      "cls": 0,
+      "slots": [
+        {
+          "classes": "ad-slot ad-slot--top",
+          "width": 358,
+          "height": 110,
+          "y": 161
+        },
+        {
+          "classes": "ad-slot ad-slot--article",
+          "width": 308,
+          "height": 280,
+          "y": 513
+        },
+        {
+          "classes": "ad-slot ad-slot--bottom",
+          "width": 358,
+          "height": 250,
+          "y": 818
+        },
+        {
+          "classes": "ad-slot ad-slot--sidebar",
+          "width": 300,
+          "height": 600,
+          "y": 1100
+        },
+        {
+          "classes": "ad-slot ad-slot--sidebar",
+          "width": 0,
+          "height": 0,
+          "y": 0
+        }
+      ],
+      "sidebars": [
+        {
+          "width": 300,
+          "height": 600,
+          "y": 1100,
+          "display": "grid",
+          "visibility": "visible"
+        },
+        {
+          "width": 0,
+          "height": 0,
+          "y": 0,
+          "display": "grid",
+          "visibility": "visible"
+        }
+      ],
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-98-2026-05-28/mobile-post.png"
+    },
+    {
+      "name": "desktop-home",
+      "width": 1440,
+      "height": 900,
+      "pathname": "/",
+      "cls": 0,
+      "slots": [
+        {
+          "classes": "ad-slot ad-slot--top",
+          "width": 1120,
+          "height": 120,
+          "y": 101
+        }
+      ],
+      "sidebars": [],
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-98-2026-05-28/desktop-home.png"
+    }
+  ],
+  "darkEvidence": {
+    "htmlTheme": "dark",
+    "hasGiscusIframe": false,
+    "commentsFallback": true,
+    "commentsFallbackBg": "rgb(18, 24, 31)",
+    "commentsFallbackColor": "rgb(201, 211, 221)"
+  },
+  "darkScreenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-98-2026-05-28/desktop-post-dark.png"
+}

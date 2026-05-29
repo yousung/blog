@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>Spring 프로젝트 한글 인코딩 설정 | 감성개발자의 Blog</title><meta name="description" content="Java Spring 프로젝트 초기 단계에서 필수인 한글 인코딩(UTF-8) 설정 방법입니다. web.xml에 CharacterEncodingFilter를 등록하여 모든 요청과 응답에 UTF-8을 강제 적용하는 방식을 설명합니다. 이 설정이 없으면 사용자로부터 받은 한글 데이터가 깨질 수 있으므로 프로젝트 초기에 반드시 적용해야 합니다."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/java-spring/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="Spring 프로젝트 한글 인코딩 설정 | 감성개발자의 Blog"><meta property="og:description" content="Java Spring 프로젝트 초기 단계에서 필수인 한글 인코딩(UTF-8) 설정 방법입니다. web.xml에 CharacterEncodingFilter를 등록하여 모든 요청과 응답에 UTF-8을 강제 적용하는 방식을 설명합니다. 이 설정이 없으면 사용자로부터 받은 한글 데이터가 깨질 수 있으므로 프로젝트 초기에 반드시 적용해야 합니다."><meta property="og:url" content="https://blog.lovizu.com/posts/java-spring/"><meta property="og:image" content="https://blog.lovizu.com/og/java-spring.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/java-spring.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Spring 프로젝트 한글 인코딩 설정 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Spring 프로젝트 한글 인코딩 설정 | 감성개발자의 Blog"><meta name="twitter:description" content="Java Spring 프로젝트 초기 단계에서 필수인 한글 인코딩(UTF-8) 설정 방법입니다. web.xml에 CharacterEncodingFilter를 등록하여 모든 요청과 응답에 UTF-8을 강제 적용하는 방식을 설명합니다. 이 설정이 없으면 사용자로부터 받은 한글 데이터가 깨질 수 있으므로 프로젝트 초기에 반드시 적용해야 합니다."><meta name="twitter:image" content="https://blog.lovizu.com/og/java-spring.svg"><meta name="twitter:image:alt" content="Spring 프로젝트 한글 인코딩 설정 대표 이미지"><meta property="article:published_time" content="2019-01-22T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="Java"><meta property="article:tag" content="Spring"><meta property="article:tag" content="UTF-8"><meta property="article:tag" content="web.xml"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Spring 프로젝트 한글 인코딩 설정","description":"Java Spring 프로젝트 초기 단계에서 필수인 한글 인코딩(UTF-8) 설정 방법입니다. web.xml에 CharacterEncodingFilter를 등록하여 모든 요청과 응답에 UTF-8을 강제 적용하는 방식을 설명합니다. 이 설정이 없으면 사용자로부터 받은 한글 데이터가 깨질 수 있으므로 프로젝트 초기에 반드시 적용해야 합니다.","url":"https://blog.lovizu.com/posts/java-spring/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, Java, Spring, UTF-8, web.xml","datePublished":"2019-01-22T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/java-spring/","image":"https://blog.lovizu.com/og/java-spring.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>Spring 프로젝트 한글 인코딩 설정</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2019-01-22T00:00:00.000Z" data-astro-cid-egg7nqdx>2019. 1. 22.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/Java/" data-astro-cid-lga65v7i>Java</a></li><li data-astro-cid-lga65v7i><a href="/search/Spring/" data-astro-cid-lga65v7i>Spring</a></li><li data-astro-cid-lga65v7i><a href="/search/UTF-8/" data-astro-cid-lga65v7i>UTF-8</a></li><li data-astro-cid-lga65v7i><a href="/search/web.xml/" data-astro-cid-lga65v7i>web.xml</a></li> </ul>  </div> <h2 id="도입">도입</h2>
+<p>Java Spring 프로젝트를 시작할 때 가장 먼저 해야 할 설정 중 하나가 <strong>한글 인코딩</strong>입니다. 이 설정을 놓치면 사용자가 입력한 한글 데이터가 깨져서 저장되거나, 데이터베이스에서 조회한 한글이 제대로 표시되지 않는 문제가 발생합니다. 특히 한국 사용자를 대상으로 하는 프로젝트라면 이 설정은 선택이 아닌 필수입니다.</p>
+<h2 id="webxml-필터-설정">web.xml 필터 설정</h2>
+<p><code>web.xml</code> 파일에 다음 코드를 추가하세요. 일반적으로 <code>&#x3C;filter></code> 섹션 뒤에 <code>&#x3C;filter-mapping></code> 섹션을 배치합니다:</p>
+<pre class="language-xml" data-language="xml"><code is:raw="" class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>filter</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>filter-name</span><span class="token punctuation">></span></span>encodingFilter<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>filter-name</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>filter-class</span><span class="token punctuation">></span></span>org.springframework.web.filter.CharacterEncodingFilter<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>filter-class</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>init-param</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>param-name</span><span class="token punctuation">></span></span>encoding<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>param-name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>param-value</span><span class="token punctuation">></span></span>UTF-8<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>param-value</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>init-param</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>init-param</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>param-name</span><span class="token punctuation">></span></span>forceEncoding<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>param-name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>param-value</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>param-value</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>init-param</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>filter</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>filter-mapping</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>filter-name</span><span class="token punctuation">></span></span>encodingFilter<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>filter-name</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>url-pattern</span><span class="token punctuation">></span></span>/*<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>url-pattern</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>filter-mapping</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="설정-항목-상세-설명">설정 항목 상세 설명</h2>
+<h3 id="filter-정의-부분">Filter 정의 부분</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>항목</th><th>설명</th></tr></thead><tbody><tr><td><code>filter-name</code></td><td>필터의 고유 이름 (encodingFilter)</td></tr><tr><td><code>filter-class</code></td><td>Spring 제공 문자 인코딩 필터 클래스</td></tr><tr><td><code>encoding</code></td><td>사용할 인코딩 방식 (UTF-8)</td></tr><tr><td><code>forceEncoding</code></td><td>true: 모든 요청/응답에 강제 적용, false: 기존 설정 우선</td></tr></tbody></table>
+<h3 id="filter-mapping-부분">Filter Mapping 부분</h3>
+<pre class="language-xml" data-language="xml"><code is:raw="" class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>filter-mapping</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>filter-name</span><span class="token punctuation">></span></span>encodingFilter<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>filter-name</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>url-pattern</span><span class="token punctuation">></span></span>/*<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>url-pattern</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>filter-mapping</span><span class="token punctuation">></span></span>
+</code></pre>
+<ul>
+<li><strong>filter-name</strong>: 위에서 정의한 필터의 이름과 동일해야 함</li>
+<li><strong>url-pattern</strong>: 필터 적용 범위 (<code>/*</code>는 모든 요청)</li>
+</ul>
+<h2 id="동작-원리">동작 원리</h2>
+<ol>
+<li><strong>요청 인코딩</strong>: 브라우저에서 보낸 HTTP 요청 데이터를 UTF-8로 해석</li>
+<li><strong>응답 인코딩</strong>: 서버에서 클라이언트로 보내는 응답을 UTF-8로 인코딩</li>
+<li><strong>강제 적용</strong>: <code>forceEncoding=true</code>로 다른 곳에서 설정한 인코딩을 무시하고 UTF-8 강제 사용</li>
+</ol>
+<h2 id="주의사항">주의사항</h2>
+<h3 id="프로젝트-초기에-적용-필수">프로젝트 초기에 적용 필수</h3>
+<p>이 설정은 <strong>반드시 프로젝트 초기에 적용</strong>해야 합니다. 나중에 추가하면 그 이전에 입력된 한글 데이터는 이미 깨져 있어서 설정을 적용해도 회복되지 않습니다.</p>
+<h3 id="forceencoding은-반드시-true">forceEncoding은 반드시 true</h3>
+<pre class="language-xml" data-language="xml"><code is:raw="" class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>param-name</span><span class="token punctuation">></span></span>forceEncoding<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>param-name</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>param-value</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>param-value</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>이 값을 <code>false</code>로 설정하면, 요청이 이미 인코딩을 명시한 경우 그 설정을 우선합니다. 안정적인 한글 처리를 위해서는 항상 <code>true</code>로 설정하세요.</p>
+<h2 id="추가-설정-팁">추가 설정 팁</h2>
+<h3 id="jsp-파일-인코딩">JSP 파일 인코딩</h3>
+<p>JSP 파일 상단에도 다음을 추가하면 더욱 안정적입니다:</p>
+<pre class="language-jsp" data-language="jsp"><code is:raw="" class="language-jsp">&#x3C;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+</code></pre>
+<h3 id="데이터베이스-연결-인코딩">데이터베이스 연결 인코딩</h3>
+<p>MySQL 연결 문자열에도 UTF-8 지정:</p>
+<pre class="language-java" data-language="java"><code is:raw="" class="language-java"><span class="token class-name">String</span> url <span class="token operator">=</span> <span class="token string">"jdbc:mysql://localhost:3306/dbname?useUnicode=true&#x26;characterEncoding=utf8mb4"</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="문제-해결">문제 해결</h2>
+<h3 id="한글이-여전히-깨지는-경우">한글이 여전히 깨지는 경우</h3>
+<ol>
+<li>브라우저 개발자 도구에서 네트워크 탭 확인 - Response Headers에 <code>Content-Type: charset=UTF-8</code> 있는지 확인</li>
+<li>데이터베이스 테이블의 문자 집합 확인: <code>SHOW CREATE TABLE table_name</code></li>
+<li>톰캣의 <code>server.xml</code>에서 Connector에 <code>URIEncoding="UTF-8"</code> 추가</li>
+</ol>
+<h3 id="특정-요청만-인코딩이-안-되는-경우">특정 요청만 인코딩이 안 되는 경우</h3>
+<p><code>url-pattern</code>을 더 구체적으로 지정:</p>
+<pre class="language-xml" data-language="xml"><code is:raw="" class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>url-pattern</span><span class="token punctuation">></span></span>/api/*<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>url-pattern</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="마치며">마치며</h2>
+<p>이 간단한 설정으로 Spring 프로젝트에서 한글 처리 문제를 완벽하게 해결할 수 있습니다. 한국어를 많이 사용하는 프로젝트라면 이 설정은 필수이며, 프로젝트 초기부터 적용하는 것이 향후 많은 문제를 예방할 수 있습니다. Spring Boot를 사용한다면 자동 설정으로 이미 UTF-8이 기본값이지만, 전통적인 Spring MVC 프로젝트에서는 반드시 수동으로 설정해야 합니다.</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

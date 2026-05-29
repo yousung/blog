@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>AWS 계정 해킹 시 신속한 복구 절차와 4단계 대응 가이드 | 감성개발자의 Blog</title><meta name="description" content="AWS 계정이 해킹되었을 때 신속하게 대응하는 방법을 설명합니다. IAM 권한 제거, 비정상 리소스 삭제, 비밀번호 재설정, AWS 지원팀 연락까지 4단계 복구 절차와 실전 팁, 그리고 미래의 피해를 예방하는 실무적 보안 전략을 다룹니다."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/aws/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="AWS 계정 해킹 시 신속한 복구 절차와 4단계 대응 가이드 | 감성개발자의 Blog"><meta property="og:description" content="AWS 계정이 해킹되었을 때 신속하게 대응하는 방법을 설명합니다. IAM 권한 제거, 비정상 리소스 삭제, 비밀번호 재설정, AWS 지원팀 연락까지 4단계 복구 절차와 실전 팁, 그리고 미래의 피해를 예방하는 실무적 보안 전략을 다룹니다."><meta property="og:url" content="https://blog.lovizu.com/posts/aws/"><meta property="og:image" content="https://blog.lovizu.com/og/aws.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/aws.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AWS 계정 해킹 시 신속한 복구 절차와 4단계 대응 가이드 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AWS 계정 해킹 시 신속한 복구 절차와 4단계 대응 가이드 | 감성개발자의 Blog"><meta name="twitter:description" content="AWS 계정이 해킹되었을 때 신속하게 대응하는 방법을 설명합니다. IAM 권한 제거, 비정상 리소스 삭제, 비밀번호 재설정, AWS 지원팀 연락까지 4단계 복구 절차와 실전 팁, 그리고 미래의 피해를 예방하는 실무적 보안 전략을 다룹니다."><meta name="twitter:image" content="https://blog.lovizu.com/og/aws.svg"><meta name="twitter:image:alt" content="AWS 계정 해킹 시 신속한 복구 절차와 4단계 대응 가이드 대표 이미지"><meta property="article:published_time" content="2018-08-27T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="AWS"><meta property="article:tag" content="보안"><meta property="article:tag" content="IAM"><meta property="article:tag" content="클라우드"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AWS 계정 해킹 시 신속한 복구 절차와 4단계 대응 가이드","description":"AWS 계정이 해킹되었을 때 신속하게 대응하는 방법을 설명합니다. IAM 권한 제거, 비정상 리소스 삭제, 비밀번호 재설정, AWS 지원팀 연락까지 4단계 복구 절차와 실전 팁, 그리고 미래의 피해를 예방하는 실무적 보안 전략을 다룹니다.","url":"https://blog.lovizu.com/posts/aws/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, AWS, 보안, IAM, 클라우드","datePublished":"2018-08-27T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/aws/","image":"https://blog.lovizu.com/og/aws.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>AWS 계정 해킹 시 신속한 복구 절차와 4단계 대응 가이드</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2018-08-27T00:00:00.000Z" data-astro-cid-egg7nqdx>2018. 8. 27.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/AWS/" data-astro-cid-lga65v7i>AWS</a></li><li data-astro-cid-lga65v7i><a href="/search/%EB%B3%B4%EC%95%88/" data-astro-cid-lga65v7i>보안</a></li><li data-astro-cid-lga65v7i><a href="/search/IAM/" data-astro-cid-lga65v7i>IAM</a></li><li data-astro-cid-lga65v7i><a href="/search/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/" data-astro-cid-lga65v7i>클라우드</a></li> </ul>  </div> <h2 id="aws-계정-해킹-황당하지만-대비책은-있습니다">AWS 계정 해킹, 황당하지만 대비책은 있습니다</h2>
+<p>AWS 계정이 해킹되는 일은 많은 개발자들이 충분히 신경 써야 할 문제입니다. 특히 개발 초기 단계에서 보안에 소홀했다면 언제든 발생할 수 있습니다. 다행히 신속한 대응으로 피해를 최소화할 수 있습니다. 실제 경험을 바탕으로 AWS 계정 침해 시 취해야 할 조치를 단계별로 설명하겠습니다.</p>
+<h2 id="실제-발생했던-피해-사례">실제 발생했던 피해 사례</h2>
+<p>월평균 13만 원대의 요금을 내던 AWS 계정에서 갑자기 보안 알림이 들어왔습니다. 확인해보니 각 리전별로 고사양의 EC2 인스턴스가 20개씩 무단으로 생성되어 실행 중이었습니다. 단 2주일 만에 요금이 2배 이상 청구될 뻔했습니다. 다행히 발견 후 약 30분 이내에 대응할 수 있었고, AWS 지원팀의 도움으로 손실을 최소화했습니다.</p>
+<h2 id="긴급-복구-4단계-순서가-중요합니다">긴급 복구 4단계: 순서가 중요합니다</h2>
+<h3 id="1단계-iam-권한-즉시-제거">1단계: IAM 권한 즉시 제거</h3>
+<p><strong>가장 먼저 모든 액세스 키와 IAM 권한을 완전히 삭제합니다.</strong></p>
+<p>많은 사람이 실수하는 부분이 인스턴스를 먼저 삭제하려는 것입니다. 하지만 공격자의 권한이 남아있으면 인스턴스 삭제 속도보다 빠르게 새로운 리소스가 생성됩니다. 따라서 액세스 권한부터 차단해야 추가 과금을 방지할 수 있습니다.</p>
+<p>AWS Management Console → IAM → Users/Access Keys 메뉴에서 모든 활성 키를 비활성화하거나 삭제하세요.</p>
+<h3 id="2단계-비정상-리소스-삭제">2단계: 비정상 리소스 삭제</h3>
+<p><strong>각 리전별로 의심스러운 EC2 인스턴스를 모두 종료합니다.</strong></p>
+<p>AWS는 전 세계 여러 리전으로 나뉘어 있습니다. 공격자는 다양한 리전에 인스턴스를 분산시킬 가능성이 높습니다. 리전 선택기를 통해 모든 지역을 꼼꼼히 확인하고, 본인이 생성하지 않은 인스턴스는 즉시 종료(Terminate)하세요. 중지(Stop)가 아닌 종료를 해야 추가 요금이 청구되지 않습니다.</p>
+<p>RDS, S3 버킷, EBS 볼륨 등 다른 리소스도 함께 확인하는 것이 좋습니다.</p>
+<h3 id="3단계-비밀번호와-세션-재설정">3단계: 비밀번호와 세션 재설정</h3>
+<p><strong>AWS Management Console 비밀번호를 변경합니다.</strong></p>
+<p>비밀번호는 단순 변경이 아닌 ‘비밀번호 찾기’ 절차를 통해 재설정하는 것을 AWS에서 권장합니다. 이 방법이 이전 세션의 모든 토큰을 무효화할 수 있기 때문입니다. 또한 Multi-Factor Authentication(MFA)를 반드시 활성화하세요.</p>
+<h3 id="4단계-aws-지원팀에-정식-신고">4단계: AWS 지원팀에 정식 신고</h3>
+<p><strong>보안 사건을 AWS 지원센터에 공식 보고합니다.</strong></p>
+<p>AWS 지원팀은 보안 침해 사건에 대해 첫 발생 시 일정 부분의 요금을 감면해줄 수 있습니다. 신속한 보고가 비용 손실을 줄이는 데 매우 중요합니다.</p>
+<p>콘솔 우측 상단 지원 메뉴 → 지원센터 → 사례 생성에서 침해 상황을 상세히 작성하여 제출하세요. 영문으로 작성하면 더 빠른 응답을 받을 수 있습니다.</p>
+<h2 id="해킹을-예방하는-실무적-보안-전략">해킹을 예방하는 실무적 보안 전략</h2>
+<p>이런 상황을 미연에 방지하기 위해 다음 조치들을 항상 실천해야 합니다.</p>
+<p><strong>첫째, 액세스 키 관리의 철저함</strong></p>
+<ul>
+<li>AWS 액세스 키를 소스 코드나 Git 저장소에 절대 커밋하면 안 됩니다.</li>
+<li>환경 변수나 AWS Secrets Manager 같은 보안 도구를 사용하세요.</li>
+<li>개발/프로덕션 계정은 반드시 분리하세요.</li>
+</ul>
+<p><strong>둘째, IAM 권한의 최소화</strong></p>
+<ul>
+<li>모든 사용자와 역할에 최소 권한 원칙(Principle of Least Privilege)을 적용합니다.</li>
+<li>불필요한 권한은 정기적으로 감사하고 제거합니다.</li>
+<li>Root 계정 사용은 절대 금지하고 IAM 사용자만 사용합니다.</li>
+</ul>
+<p><strong>셋째, 감시와 로깅</strong></p>
+<ul>
+<li>CloudTrail을 반드시 활성화하여 모든 API 활동을 기록합니다.</li>
+<li>CloudWatch를 통해 의심스러운 활동을 자동으로 감지합니다.</li>
+<li>월간 청구 알림을 설정하여 비정상적인 요금 증가를 즉시 감지합니다.</li>
+</ul>
+<p><strong>넷째, MFA와 강력한 비밀번호</strong></p>
+<ul>
+<li>AWS Management Console과 모든 IAM 사용자에 MFA를 활성화합니다.</li>
+<li>비밀번호는 주기적으로 변경하고 강도 있는 것을 사용합니다.</li>
+</ul>
+<h2 id="마치며">마치며</h2>
+<p>AWS 보안은 ‘한 번 설정하고 끝’이 아닙니다. 지속적인 주의와 정기적인 감사가 필요합니다. 만약 지금 AWS를 사용 중이라면 위의 보안 조치들이 제대로 적용되어 있는지 지금 바로 확인해보시길 권장합니다. 혹시 의심스러운 활동이 발견된다면 주저하지 말고 즉시 AWS 지원팀에 연락하세요.</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

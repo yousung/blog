@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>Git Alias로 개발 생산성 2배 높이기 | 감성개발자의 Blog</title><meta name="description" content="매일 반복되는 Git 명령어를 단축어로 등록하여 생산성을 높이는 방법을 소개합니다. 기본 명령어부터 브랜치 관리, 로그 조회, 스테이징, Stash 관리까지 실무에서 자주 사용하는 52개의 alias를 카테고리별로 정리했습니다."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/alias/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="Git Alias로 개발 생산성 2배 높이기 | 감성개발자의 Blog"><meta property="og:description" content="매일 반복되는 Git 명령어를 단축어로 등록하여 생산성을 높이는 방법을 소개합니다. 기본 명령어부터 브랜치 관리, 로그 조회, 스테이징, Stash 관리까지 실무에서 자주 사용하는 52개의 alias를 카테고리별로 정리했습니다."><meta property="og:url" content="https://blog.lovizu.com/posts/alias/"><meta property="og:image" content="https://blog.lovizu.com/og/alias.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/alias.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Git Alias로 개발 생산성 2배 높이기 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Git Alias로 개발 생산성 2배 높이기 | 감성개발자의 Blog"><meta name="twitter:description" content="매일 반복되는 Git 명령어를 단축어로 등록하여 생산성을 높이는 방법을 소개합니다. 기본 명령어부터 브랜치 관리, 로그 조회, 스테이징, Stash 관리까지 실무에서 자주 사용하는 52개의 alias를 카테고리별로 정리했습니다."><meta name="twitter:image" content="https://blog.lovizu.com/og/alias.svg"><meta name="twitter:image:alt" content="Git Alias로 개발 생산성 2배 높이기 대표 이미지"><meta property="article:published_time" content="2021-11-16T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="Git"><meta property="article:tag" content="개발도구"><meta property="article:tag" content="CLI"><meta property="article:tag" content="효율성"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Git Alias로 개발 생산성 2배 높이기","description":"매일 반복되는 Git 명령어를 단축어로 등록하여 생산성을 높이는 방법을 소개합니다. 기본 명령어부터 브랜치 관리, 로그 조회, 스테이징, Stash 관리까지 실무에서 자주 사용하는 52개의 alias를 카테고리별로 정리했습니다.","url":"https://blog.lovizu.com/posts/alias/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, Git, 개발도구, CLI, 효율성","datePublished":"2021-11-16T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/alias/","image":"https://blog.lovizu.com/og/alias.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>Git Alias로 개발 생산성 2배 높이기</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2021-11-16T00:00:00.000Z" data-astro-cid-egg7nqdx>2021. 11. 16.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/Git/" data-astro-cid-lga65v7i>Git</a></li><li data-astro-cid-lga65v7i><a href="/search/%EA%B0%9C%EB%B0%9C%EB%8F%84%EA%B5%AC/" data-astro-cid-lga65v7i>개발도구</a></li><li data-astro-cid-lga65v7i><a href="/search/CLI/" data-astro-cid-lga65v7i>CLI</a></li><li data-astro-cid-lga65v7i><a href="/search/%ED%9A%A8%EC%9C%A8%EC%84%B1/" data-astro-cid-lga65v7i>효율성</a></li> </ul>  </div> <h2 id="git-명령어의-생산성-문제">Git 명령어의 생산성 문제</h2>
+<p>Git은 분명 강력한 도구이지만, 명령어가 길고 복잡합니다. <code>git checkout -b feature/user-auth origin/develop</code>처럼 자주 사용하는 명령어조차 타이핑이 길고 오류가 나기 쉽습니다. 이런 반복적인 명령어를 alias(단축어)로 등록하면 타이핑 횟수를 줄이고 오류를 방지할 수 있습니다.</p>
+<p>Alias는 단순한 편의 기능이 아니라, 개발자의 시간과 집중력을 아끼는 중요한 도구입니다. 하루에 50번 사용하는 명령어라면, alias를 사용했을 때 절약되는 시간은 연간 몇 시간에 달합니다.</p>
+<p>참고: <a href="https://johngrib.github.io/wiki/git-alias/">종립님의 깃 alias</a>를 기반으로 개인 맞춤형으로 수정했다.</p>
+<p>전체 코드: <a href="https://gist.github.com/yousung/515eeec8268544056c1a5664885e754e">gist.github.com/yousung/515eeec8268544056c1a5664885e754e</a></p>
+<h3 id="기본-alias">기본 Alias</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token punctuation">[</span>alias<span class="token punctuation">]</span>
+    alias-basic <span class="token operator">=</span> <span class="token string">"!#----------------------------------------------------------;<span class="token entity" title="\n">\n</span>\
+        git alias | head -7"</span>
+    ci <span class="token operator">=</span> commit
+    co <span class="token operator">=</span> checkout
+    sw <span class="token operator">=</span> switch
+    re <span class="token operator">=</span> restore
+    s <span class="token operator">=</span> status <span class="token parameter variable">-s</span>
+    assume   <span class="token operator">=</span> update-index --assume-unchanged
+    assumed  <span class="token operator">=</span> <span class="token string">"!git ls-files -v | grep ^h | cut -c 3-"</span>
+    unassume <span class="token operator">=</span> update-index --no-assume-unchanged
+</code></pre>
+<h3 id="브랜치-관리">브랜치 관리</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token punctuation">[</span>alias<span class="token punctuation">]</span>
+    blist <span class="token operator">=</span> <span class="token string">"!git branch | grep -v '^<span class="token entity" title="\\">\\</span>*'"</span>
+    blist-merged <span class="token operator">=</span> <span class="token string">"!git branch --merged | grep -v '^<span class="token entity" title="\\">\\</span>*<span class="token entity" title="\\">\\</span>|<span class="token entity" title="\\">\\</span>&#x3C;master$'"</span>
+    bclean <span class="token operator">=</span> <span class="token string">"!# current branch delete.; <span class="token entity" title="\n">\n</span>\
+        f() { \
+            branch=<span class="token variable"><span class="token variable">`</span><span class="token function">git</span> b0<span class="token variable">`</span></span>; \
+            git checkout master; \
+            read -p <span class="token entity" title="\&#x22;">\"</span>Delete local branch <span class="token variable">$branch</span>? [y|n] <span class="token entity" title="\&#x22;">\"</span> -r; \
+            REPLY=<span class="token variable">${<span class="token environment constant">REPLY</span><span class="token operator">:-</span>\"n\"}</span>; \
+            if [ <span class="token environment constant">$REPLY</span> = <span class="token entity" title="\&#x22;">\"</span>y<span class="token entity" title="\&#x22;">\"</span> ]; then \
+                git branch -D <span class="token variable">$branch</span>; \
+            fi; \
+            read -p <span class="token entity" title="\&#x22;">\"</span>Delete origin branch <span class="token variable">$branch</span>? [y|n] <span class="token entity" title="\&#x22;">\"</span> -r; \
+            REPLY=<span class="token variable">${<span class="token environment constant">REPLY</span><span class="token operator">:-</span>\"n\"}</span>; \
+            if [ <span class="token environment constant">$REPLY</span> = <span class="token entity" title="\&#x22;">\"</span>y<span class="token entity" title="\&#x22;">\"</span> ]; then \
+                git push origin --delete <span class="token variable">$branch</span>; \
+            fi; \
+        }; f"</span>
+    b0 <span class="token operator">=</span> <span class="token string">"!# Print current branch.;<span class="token entity" title="\n">\n</span>\
+        git branch | awk '/^<span class="token entity" title="\\">\\</span>*/{print <span class="token variable">$2</span>}'"</span>
+    back <span class="token operator">=</span> <span class="token string">"!# Back up current branch.;<span class="token entity" title="\n">\n</span>\
+        echo created new branch: backup-<span class="token variable"><span class="token variable">`</span><span class="token function">git</span> b0<span class="token variable">`</span></span>;\
+        git branch backup-<span class="token variable"><span class="token variable">`</span><span class="token function">git</span> b0<span class="token variable">`</span></span>"</span>
+    <span class="token keyword">done</span> <span class="token operator">=</span> <span class="token string">"!git branch --merged | grep -v '^<span class="token entity" title="\\">\\</span>*<span class="token entity" title="\\">\\</span>|<span class="token entity" title="\\">\\</span>&#x3C;master$'"</span>
+    bb <span class="token operator">=</span> <span class="token string">"!# Branch tools. Type 'git bb help'.;<span class="token entity" title="\n">\n</span>\
+        f() { <span class="token entity" title="\n">\n</span>\
+            if [ <span class="token variable">$#</span> = 0 ]; then \
+                git branch-select | xargs git checkout; \
+            elif [ <span class="token variable">$1</span> = 'help' ]; then \
+                echo 'git bb           : Select and checkout branch'; \
+                echo 'git bb c, clean  : Clean all merged branches'; \
+                echo 'git bb d, D      : Delete selected branches(D: force)'; \
+                echo 'git bb l, list   : List branches excluding the current branch'; \
+                echo 'git bb m, merged : List merged branches excluding the current and master'; \
+            fi; \
+        }; f"</span>
+    branch-list <span class="token operator">=</span> <span class="token string">"!# List the branches.;<span class="token entity" title="\n">\n</span>\
+        git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD) %(refname:strip=2) | %(committerdate:relative) | %(authorname)' \
+        | column -ts'|' \
+        | sed 's/^ /./'"</span>
+    bl <span class="token operator">=</span> <span class="token string">"!git branch-list"</span>
+    b-s <span class="token operator">=</span> <span class="token string">"!git branch-select"</span>
+    <span class="token function">sync</span> <span class="token operator">=</span> <span class="token string">"!# Sync with a branch with the same name in the remote repo.;<span class="token entity" title="\n">\n</span>\
+        git pull --rebase origin <span class="token variable"><span class="token variable">`</span><span class="token function">git</span> b0<span class="token variable">`</span></span>;"</span>
+</code></pre>
+<h3 id="로그-조회">로그 조회</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token punctuation">[</span>alias<span class="token punctuation">]</span>
+    l <span class="token operator">=</span> <span class="token string">"log \
+        --color --graph --decorate \
+        --date=format:'%Y-%m-%d' \
+        --abbrev-commit \
+        --pretty=format:'%C(red)%h%C(auto)%d %s %C(green)(%cr)%C(bold blue) %an'"</span>
+    ll <span class="token operator">=</span> <span class="token string">"log \
+        --color --graph --decorate \
+        --date=format:'%Y-%m-%d' \
+        --abbrev-commit \
+        --all \
+        --pretty=format:'%C(red)%h%C(auto)%d %s %C(green)(%cr)%C(bold blue) %an'"</span>
+    ranking <span class="token operator">=</span> <span class="token string">"!# List commit counts of contributors;<span class="token entity" title="\n">\n</span>\
+        git shortlog -sn"</span>
+    commit-select <span class="token operator">=</span> <span class="token string">"!# Select a commit hash from log graph.;<span class="token entity" title="\n">\n</span>\
+        git l \
+        | fzf -m --ansi --layout=reverse --preview=<span class="token entity" title="\&#x22;">\"</span>echo {} | sed 's/^[*| ]*//g' | cut -d' ' -f1 | xargs git show --color=always <span class="token entity" title="\&#x22;">\"</span> \
+        | sed 's/^[*| ]*//g' | cut -d' ' -f1"</span>
+    c-s <span class="token operator">=</span> <span class="token string">"!git commit-select"</span>
+    commit-copy <span class="token operator">=</span> <span class="token string">"!# Select &#x26; copy a commit hash from log graph.;<span class="token entity" title="\n">\n</span>\
+        git commit-select | pbcopy &#x26;&#x26; echo Copied : <span class="token variable"><span class="token variable">`</span>pbpaste<span class="token variable">`</span></span>;"</span>
+    c-c <span class="token operator">=</span> <span class="token string">"!git commit-copy"</span>
+</code></pre>
+<h3 id="스테이징-및-diff">스테이징 및 Diff</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token punctuation">[</span>alias<span class="token punctuation">]</span>
+    a <span class="token operator">=</span> <span class="token string">"!# Select files and Add them.;<span class="token entity" title="\n">\n</span>\
+        git diff-select | xargs git add"</span>
+    a-c <span class="token operator">=</span> <span class="token string">"!# Add, Commit.;<span class="token entity" title="\n">\n</span>\
+        git a; git commit"</span>
+    diff-select <span class="token operator">=</span> <span class="token string">"!# Select changed files to add them.;<span class="token entity" title="\n">\n</span>\
+        f() { \
+            git diff-info \
+            | egrep -v '[^?] *STAGED ' \
+            | fzf -m --preview \
+                <span class="token entity" title="\&#x22;">\"</span>if [[ {1} == '??' ]]; then bat {3}; else git diff --color=always {3}; fi<span class="token entity" title="\&#x22;">\"</span> \
+            | awk '{print <span class="token variable">$3</span>}'; \
+        }; f"</span>
+    unstage <span class="token operator">=</span> <span class="token string">"!# Select staged files and Unstage them.;<span class="token entity" title="\n">\n</span>\
+        git diff-unselect | xargs git reset HEAD"</span>
+</code></pre>
+<h3 id="stash-관리">Stash 관리</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token punctuation">[</span>alias<span class="token punctuation">]</span>
+    stash-apply <span class="token operator">=</span> <span class="token string">"!# Select a stash item and Apply it.;<span class="token entity" title="\n">\n</span>\
+        git stash-op apply"</span>
+    s-a <span class="token operator">=</span> <span class="token string">"!git stash-apply"</span>
+    stash-drop <span class="token operator">=</span> <span class="token string">"!# Select the stash items and Drop them.;<span class="token entity" title="\n">\n</span>\
+        for sid in <span class="token variable"><span class="token variable">$(</span><span class="token function">git</span> stash-select <span class="token parameter variable">-m</span><span class="token variable">)</span></span> ; do \
+            git stash drop <span class="token variable">$sid</span>; \
+        done;"</span>
+    s-d <span class="token operator">=</span> <span class="token string">"!git stash-drop"</span>
+    stash-list <span class="token operator">=</span> <span class="token string">"!# List stash items.;<span class="token entity" title="\n">\n</span>\
+        git stash list --pretty=format:<span class="token entity" title="\&#x22;">\"</span>%C(red)%gd%C(reset) %C(green)(%cr) %C(reset)%s<span class="token entity" title="\&#x22;">\"</span>"</span>
+    s-l <span class="token operator">=</span> <span class="token string">"!git stash-list"</span>
+    stash-pop <span class="token operator">=</span> <span class="token string">"!# Select a stash item and Pop it.;<span class="token entity" title="\n">\n</span>\
+        git stash-op pop"</span>
+    s-p <span class="token operator">=</span> <span class="token string">"!git stash-pop"</span>
+    stash-save <span class="token operator">=</span> <span class="token string">"!# Save changes into the stash stack.;<span class="token entity" title="\n">\n</span> \
+        git diff-info; \
+        read -p <span class="token entity" title="\&#x22;">\"</span>save message: <span class="token entity" title="\&#x22;">\"</span> msg; \
+        git stash save <span class="token entity" title="\&#x22;">\"</span><span class="token variable">$msg</span><span class="token entity" title="\&#x22;">\"</span>"</span>
+    s-s <span class="token operator">=</span> <span class="token string">"!git stash-save"</span>
+</code></pre>
+<h3 id="사용-팁">사용 팁</h3>
+<ul>
+<li>fzf 설치: <code>brew install fzf</code> (macOS)</li>
+<li>Pygments 설치: <code>pip3 install Pygments</code></li>
+<li><code>git alias-doctor</code>로 의존성 확인 가능</li>
+</ul>
+<p>이 alias들을 <code>.gitconfig</code>에 추가하면 일상적인 깃 작업이 훨씬 빨라진다.</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

@@ -1,0 +1,159 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import TagList from './TagList.astro';
+
+interface Props {
+  posts: CollectionEntry<'posts'>[];
+  basePath: string;
+  listLabel?: string;
+  searchable?: boolean;
+  searchQuery?: string;
+}
+
+const { posts, basePath, listLabel = '최근 글 목록', searchable = false, searchQuery = '' } = Astro.props;
+const postHref = (slug: string) => `${basePath}posts/${slug}/`;
+const normalize = (value: string) => value.toLocaleLowerCase('ko-KR').trim();
+const getSearchText = (post: CollectionEntry<'posts'>) =>
+  normalize([post.data.title, post.data.oneLineSummary ?? '', post.data.summary ?? '', ...post.data.tags].join(' '));
+const matchesQuery = (post: CollectionEntry<'posts'>, rawQuery: string) => {
+  const normalizedQuery = normalize(rawQuery);
+  const searchText = getSearchText(post);
+  const tokens = normalizedQuery.split(/\s+/).filter(Boolean);
+
+  if (!normalizedQuery) return false;
+  if (searchText.includes(normalizedQuery)) return true;
+  return tokens.length > 1 && tokens.every((token) => searchText.includes(token));
+};
+---
+
+<ul class="post-list" aria-label={listLabel}>
+  {posts.map((post) => (
+    <li
+      class="post-row"
+      data-search-text={searchable ? getSearchText(post) : undefined}
+      hidden={searchable ? !matchesQuery(post, searchQuery) : undefined}
+    >
+      <a class="card-link" href={postHref(post.data.slug)} aria-label={post.data.title}></a>
+      <div class="row-inner">
+        <h3>{post.data.title}</h3>
+        <p class="one-line-summary">{post.data.oneLineSummary ?? post.data.summary}</p>
+        <div class="meta-row">
+          <TagList tags={post.data.tags} basePath={basePath} />
+          <time datetime={post.data.date.toISOString()}>
+            {post.data.date.toISOString().slice(0, 10).replace(/-/g, '.')}
+          </time>
+        </div>
+      </div>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .post-row {
+    position: relative;
+    background: var(--bg-canvas);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: box-shadow var(--motion-base), border-color var(--motion-base), transform var(--motion-base);
+  }
+
+  .post-row:hover {
+    box-shadow: var(--shadow-md);
+    border-color: color-mix(in srgb, var(--accent-primary) 30%, var(--border-default));
+    transform: translateY(-2px);
+  }
+
+  .card-link {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-md);
+    z-index: 2;
+  }
+
+  .row-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    min-height: 100%;
+    padding: var(--space-6);
+    pointer-events: none;
+  }
+
+  .post-row :global(.tag-list a) {
+    position: relative;
+    z-index: 3;
+    pointer-events: auto;
+  }
+
+  .post-row h3 {
+    margin: 0;
+    font-size: var(--text-lg);
+    font-weight: 700;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    transition: color var(--motion-fast);
+  }
+
+  .post-row:hover h3 {
+    color: var(--accent-primary);
+  }
+
+  .meta-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .meta-row :global(.tag-list) {
+    order: 1;
+    margin: 0;
+  }
+
+  .meta-row time {
+    order: 2;
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .one-line-summary {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  @media (min-width: 768px) {
+    .post-list {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: stretch;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .row-inner {
+      padding: var(--space-5, 1.25rem) var(--space-4);
+    }
+
+    .post-row h3 {
+      font-size: var(--text-base);
+    }
+  }
+</style>

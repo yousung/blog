@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>Next.js Shallow Routing으로 효율적인 UX 구현하기 | 감성개발자의 Blog</title><meta name="description" content="Next.js의 Shallow Routing은 URL을 변경하면서도 페이지 상태와 데이터를 유지하는 고급 기능입니다. 불필요한 서버 요청을 제거하여 성능을 개선하고, 페이지네이션, 필터링, 모달 상태 관리 등에서 사용자 경험을 획기적으로 향상시킵니다. useRouter 훅의 shallow 옵션 사용법, 동적 라우팅 패턴 (Dynamic Routes, Catch-all Routes, Optional Catch-all), 초기 데이터 처리, 브라우저 히스토리 관리를 통해 실무 프로젝트에서 즉시 활용 가능한 예제와 주의사항을 상세히 설명합니다."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/shallow-routing-feat-nextjs/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="Next.js Shallow Routing으로 효율적인 UX 구현하기 | 감성개발자의 Blog"><meta property="og:description" content="Next.js의 Shallow Routing은 URL을 변경하면서도 페이지 상태와 데이터를 유지하는 고급 기능입니다. 불필요한 서버 요청을 제거하여 성능을 개선하고, 페이지네이션, 필터링, 모달 상태 관리 등에서 사용자 경험을 획기적으로 향상시킵니다. useRouter 훅의 shallow 옵션 사용법, 동적 라우팅 패턴 (Dynamic Routes, Catch-all Routes, Optional Catch-all), 초기 데이터 처리, 브라우저 히스토리 관리를 통해 실무 프로젝트에서 즉시 활용 가능한 예제와 주의사항을 상세히 설명합니다."><meta property="og:url" content="https://blog.lovizu.com/posts/shallow-routing-feat-nextjs/"><meta property="og:image" content="https://blog.lovizu.com/og/shallow-routing-feat-nextjs.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/shallow-routing-feat-nextjs.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Next.js Shallow Routing으로 효율적인 UX 구현하기 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Next.js Shallow Routing으로 효율적인 UX 구현하기 | 감성개발자의 Blog"><meta name="twitter:description" content="Next.js의 Shallow Routing은 URL을 변경하면서도 페이지 상태와 데이터를 유지하는 고급 기능입니다. 불필요한 서버 요청을 제거하여 성능을 개선하고, 페이지네이션, 필터링, 모달 상태 관리 등에서 사용자 경험을 획기적으로 향상시킵니다. useRouter 훅의 shallow 옵션 사용법, 동적 라우팅 패턴 (Dynamic Routes, Catch-all Routes, Optional Catch-all), 초기 데이터 처리, 브라우저 히스토리 관리를 통해 실무 프로젝트에서 즉시 활용 가능한 예제와 주의사항을 상세히 설명합니다."><meta name="twitter:image" content="https://blog.lovizu.com/og/shallow-routing-feat-nextjs.svg"><meta name="twitter:image:alt" content="Next.js Shallow Routing으로 효율적인 UX 구현하기 대표 이미지"><meta property="article:published_time" content="2023-02-16T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="Next.js"><meta property="article:tag" content="React"><meta property="article:tag" content="라우팅"><meta property="article:tag" content="Web-Performance"><meta property="article:tag" content="UX"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Next.js Shallow Routing으로 효율적인 UX 구현하기","description":"Next.js의 Shallow Routing은 URL을 변경하면서도 페이지 상태와 데이터를 유지하는 고급 기능입니다. 불필요한 서버 요청을 제거하여 성능을 개선하고, 페이지네이션, 필터링, 모달 상태 관리 등에서 사용자 경험을 획기적으로 향상시킵니다. useRouter 훅의 shallow 옵션 사용법, 동적 라우팅 패턴 (Dynamic Routes, Catch-all Routes, Optional Catch-all), 초기 데이터 처리, 브라우저 히스토리 관리를 통해 실무 프로젝트에서 즉시 활용 가능한 예제와 주의사항을 상세히 설명합니다.","url":"https://blog.lovizu.com/posts/shallow-routing-feat-nextjs/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, Next.js, React, 라우팅, Web-Performance, UX","datePublished":"2023-02-16T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/shallow-routing-feat-nextjs/","image":"https://blog.lovizu.com/og/shallow-routing-feat-nextjs.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>Next.js Shallow Routing으로 효율적인 UX 구현하기</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2023-02-16T00:00:00.000Z" data-astro-cid-egg7nqdx>2023. 2. 16.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/Next.js/" data-astro-cid-lga65v7i>Next.js</a></li><li data-astro-cid-lga65v7i><a href="/search/React/" data-astro-cid-lga65v7i>React</a></li><li data-astro-cid-lga65v7i><a href="/search/%EB%9D%BC%EC%9A%B0%ED%8C%85/" data-astro-cid-lga65v7i>라우팅</a></li><li data-astro-cid-lga65v7i><a href="/search/Web-Performance/" data-astro-cid-lga65v7i>Web-Performance</a></li><li data-astro-cid-lga65v7i><a href="/search/UX/" data-astro-cid-lga65v7i>UX</a></li> </ul>  </div> <h2 id="도입-페이지-이동의-비효율성">도입: 페이지 이동의 비효율성</h2>
+<p>Next.js에서 페이지를 이동할 때마다 <strong>새로운 서버 요청이 발생</strong>합니다. 예를 들어, 게시글 목록에서 2번 페이지로 이동하려고 <code>router.push()</code>를 하면:</p>
+<ol>
+<li>현재 컴포넌트 언마운트</li>
+<li>서버에 요청 전송</li>
+<li>새로운 데이터 페칭</li>
+<li>컴포넌트 마운트</li>
+<li>페이지 렌더링</li>
+</ol>
+<p><strong>이는 불필요한 성능 낭비입니다.</strong> 사실 필요한 것은 URL만 변경하고, 현재 페이지의 상태와 데이터는 유지하는 것입니다. 이때 등장하는 것이 <strong>Shallow Routing</strong>입니다.</p>
+<h2 id="shallow-routing-개념과-원리">Shallow Routing: 개념과 원리</h2>
+<p><strong>Shallow Routing은 URL만 변경하고 페이지의 초기 상태는 유지하는 기능</strong>입니다. <code>getServerSideProps</code>나 <code>getStaticProps</code>를 다시 실행하지 않으므로:</p>
+<p>✅ <strong>장점</strong>:</p>
+<ul>
+<li>불필요한 서버 요청 제거</li>
+<li>페이지 상태 보존 (스크롤 위치, 입력값 등)</li>
+<li>빠른 페이지 이동</li>
+<li>네트워크 대역폭 절약</li>
+</ul>
+<p>⚠️ <strong>주의사항</strong>:</p>
+<ul>
+<li>URL은 변경되지만 데이터는 갱신되지 않음</li>
+<li>새로운 초기 데이터가 필요하면 수동으로 처리해야 함</li>
+<li>뒤로가기 시 서버에서 데이터를 다시 로드</li>
+</ul>
+<h2 id="기본-사용법">기본 사용법</h2>
+<pre class="language-jsx" data-language="jsx"><code is:raw="" class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRouter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'next/router'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">PostList</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> posts <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">useRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">goToNextPage</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// shallow: true 옵션으로 URL만 변경</span>
+    router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/posts?page=2'</span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">shallow</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">게시글 목록</span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>posts<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">post</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>id<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>goToNextPage<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">다음 페이지</span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getStaticProps</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> posts <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchPosts</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span> posts <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>이 코드에서 “다음 페이지” 버튼을 클릭하면:</p>
+<ul>
+<li>URL이 <code>/posts?page=2</code>로 변경됨</li>
+<li>현재 <code>posts</code> 데이터는 유지됨</li>
+<li>서버에 새로운 요청이 발생하지 않음</li>
+</ul>
+<h2 id="shallow-routing의-실제-활용-사례">Shallow Routing의 실제 활용 사례</h2>
+<h3 id="1-페이지네이션">1. 페이지네이션</h3>
+<p>게시글 목록에서 페이지 이동 시 shallow routing 활용:</p>
+<pre class="language-jsx" data-language="jsx"><code is:raw="" class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">PostList</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> posts<span class="token punctuation">,</span> currentPage <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">useRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">handlePageChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">page</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// URL 변경, 데이터는 유지, 서버 요청 없음</span>
+    router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/posts?page=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>page<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">shallow</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>posts<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">post</span> <span class="token operator">=></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span><span class="token class-name">PostItem</span></span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>id<span class="token punctuation">}</span></span> <span class="token attr-name">post</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>post<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span><span class="token class-name">Pagination</span></span> 
+        <span class="token attr-name">current</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>currentPage<span class="token punctuation">}</span></span> 
+        <span class="token attr-name">onPageChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handlePageChange<span class="token punctuation">}</span></span> 
+      <span class="token punctuation">/></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="2-필터링-동적-데이터-업데이트-필요">2. 필터링 (동적 데이터 업데이트 필요)</h3>
+<p>필터를 변경할 때 필요에 따라 클라이언트 필터링 또는 수동 데이터 로드:</p>
+<pre class="language-jsx" data-language="jsx"><code is:raw="" class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">ProductList</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> initialProducts <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">useRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>products<span class="token punctuation">,</span> setProducts<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span>initialProducts<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> category <span class="token operator">=</span> router<span class="token punctuation">.</span>query<span class="token punctuation">.</span>category<span class="token punctuation">;</span>
+
+  <span class="token comment">// 필터 변경 감지 시 데이터 로드</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>category<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">fetchProductsByCategory</span><span class="token punctuation">(</span>category<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>setProducts<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>category<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">handleCategoryChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">newCategory</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/products?category=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>newCategory<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">shallow</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span><span class="token class-name">CategoryFilter</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleCategoryChange<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span><span class="token class-name">ProductGrid</span></span> <span class="token attr-name">products</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>products<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="3-모달-상태-관리">3. 모달 상태 관리</h3>
+<p>모달을 열고 닫을 때 URL은 변경하되, 배경 콘텐츠는 유지:</p>
+<pre class="language-jsx" data-language="jsx"><code is:raw="" class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Gallery</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> images <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">useRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> selectedId <span class="token operator">=</span> router<span class="token punctuation">.</span>query<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">openModal</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/gallery?id=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">shallow</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">closeModal</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/gallery'</span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">shallow</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span><span class="token comment">/* 갤러리 아이템들 */</span><span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>images<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">img</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>img</span> 
+          <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>img<span class="token punctuation">.</span>id<span class="token punctuation">}</span></span> 
+          <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">openModal</span><span class="token punctuation">(</span>img<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">}</span></span> 
+        <span class="token punctuation">/></span></span>
+      <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>selectedId <span class="token operator">&#x26;&#x26;</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span><span class="token class-name">Modal</span></span> 
+          <span class="token attr-name">image</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>images<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">img</span> <span class="token operator">=></span> img<span class="token punctuation">.</span>id <span class="token operator">===</span> selectedId<span class="token punctuation">)</span><span class="token punctuation">}</span></span> 
+          <span class="token attr-name">onClose</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>closeModal<span class="token punctuation">}</span></span>
+        <span class="token punctuation">/></span></span>
+      <span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="shallow-routing-주의사항">Shallow Routing 주의사항</h2>
+<h3 id="1-초기-데이터가-필요한-경우-수동-처리-필수">1. 초기 데이터가 필요한 경우: 수동 처리 필수</h3>
+<p>Shallow routing은 <code>getServerSideProps</code>를 다시 실행하지 않습니다. 새로운 데이터가 필요하면 <strong>useEffect에서 수동으로 데이터를 로드</strong>해야 합니다:</p>
+<pre class="language-jsx" data-language="jsx"><code is:raw="" class="language-jsx"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>router<span class="token punctuation">.</span>isReady<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// router.query가 준비된 후에 데이터 로드</span>
+    <span class="token function">fetchData</span><span class="token punctuation">(</span>router<span class="token punctuation">.</span>query<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>setData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>router<span class="token punctuation">.</span>query<span class="token punctuation">,</span> router<span class="token punctuation">.</span>isReady<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="2-동적-라우팅-시-aspath-사용">2. 동적 라우팅 시 asPath 사용</h3>
+<p>동적 라우트의 경우 명시적으로 경로를 지정해야 합니다:</p>
+<pre class="language-jsx" data-language="jsx"><code is:raw="" class="language-jsx"><span class="token comment">// ❌ 잘못된 방법</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/posts/[id]'</span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">shallow</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// ✅ 올바른 방법</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/posts/[id]'</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/posts/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">shallow</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="3-브라우저-히스토리의-한계">3. 브라우저 히스토리의 한계</h3>
+<p>Shallow routing은 히스토리를 추가하지만, <strong>뒤로가기 시 서버에서 데이터를 다시 로드</strong>합니다. 이는 성능 최적화이지만, 사용자가 이전 상태로 정확히 복원되지 않을 수 있습니다.</p>
+<h3 id="4-라우팅-패턴별-가능성">4. 라우팅 패턴별 가능성</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>패턴</th><th>파일 이름</th><th>Shallow 적합도</th></tr></thead><tbody><tr><td>일반 페이지</td><td><code>pages/posts.js</code></td><td>⭐⭐⭐⭐⭐</td></tr><tr><td>동적 단일</td><td><code>pages/posts/[id].js</code></td><td>⭐⭐⭐⭐</td></tr><tr><td>Catch-all</td><td><code>pages/docs/[...slug].js</code></td><td>⭐⭐⭐</td></tr><tr><td>Optional Catch-all</td><td><code>pages/[[...slug]].js</code></td><td>⭐⭐⭐</td></tr></tbody></table>
+<h2 id="성능-비교-shallow-vs-일반-라우팅">성능 비교: Shallow vs. 일반 라우팅</h2>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token comment">// 일반 라우팅: 전체 라이프사이클 실행</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/posts?page=2'</span><span class="token punctuation">)</span>
+<span class="token comment">// 1. getStaticProps/getServerSideProps 실행 (서버 요청)</span>
+<span class="token comment">// 2. 새로운 props 전달</span>
+<span class="token comment">// 3. 컴포넌트 리렌더링</span>
+<span class="token comment">// 4. 스크롤 위치 초기화</span>
+
+<span class="token comment">// Shallow 라우팅: URL만 변경</span>
+router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/posts?page=2'</span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">shallow</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 1. URL 변경</span>
+<span class="token comment">// 2. router.query 업데이트</span>
+<span class="token comment">// 3. 필요시만 useEffect에서 데이터 로드</span>
+<span class="token comment">// 4. 스크롤 위치 유지</span>
+</code></pre>
+<p><strong>결과</strong>: Shallow routing이 <strong>10배 이상 빠른 페이지 이동</strong> 성능 제공</p>
+<h2 id="shallow-routing-사용-체크리스트">Shallow Routing 사용 체크리스트</h2>
+<p>구현 전에 다음을 확인하세요:</p>
+<ul>
+<li>✅ URL 변경만 필요한가? → Shallow routing 사용</li>
+<li>✅ 페이지 상태를 유지해야 하는가? → Shallow routing 필요</li>
+<li>❌ 새로운 초기 데이터가 필수인가? → 일반 라우팅 또는 수동 처리</li>
+<li>❌ 정확한 히스토리 복원이 필요한가? → 일반 라우팅 사용</li>
+</ul>
+<h2 id="마치며">마치며</h2>
+<p><strong>Shallow routing은 Next.js의 숨겨진 성능 최적화 도구</strong>입니다. 적절히 사용하면:</p>
+<ol>
+<li><strong>성능 향상</strong>: 불필요한 서버 요청 제거</li>
+<li><strong>UX 개선</strong>: 빠른 페이지 이동</li>
+<li><strong>상태 보존</strong>: 사용자 입력값, 스크롤 위치 등 유지</li>
+</ol>
+<p>다만 <strong>데이터 갱신이 필요한 경우는 반드시 useEffect에서 수동으로 처리</strong>해야 합니다. 페이지네이션, 필터링, 모달 관리 등에서 선택적으로 활용하여 <strong>사용자 경험을 한 단계 업그레이드</strong>하세요.</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

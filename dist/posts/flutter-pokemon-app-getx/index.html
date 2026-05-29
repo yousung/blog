@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>Flutter로 포켓몬 도감 앱 만들기: GetX 상태 관리 | 감성개발자의 Blog</title><meta name="description" content="Flutter와 GetX를 활용한 포켓몬 도감 앱 개발 경험을 공유합니다. 공개 API(PokéAPI) 통합, 데이터 전처리, GetX 상태 관리 패턴, 실제 마주한 기술적 이슈와 해결책을 담았습니다. 1일 MVP 개발 성공 사례입니다."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/flutter-pokemon-app-getx/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="Flutter로 포켓몬 도감 앱 만들기: GetX 상태 관리 | 감성개발자의 Blog"><meta property="og:description" content="Flutter와 GetX를 활용한 포켓몬 도감 앱 개발 경험을 공유합니다. 공개 API(PokéAPI) 통합, 데이터 전처리, GetX 상태 관리 패턴, 실제 마주한 기술적 이슈와 해결책을 담았습니다. 1일 MVP 개발 성공 사례입니다."><meta property="og:url" content="https://blog.lovizu.com/posts/flutter-pokemon-app-getx/"><meta property="og:image" content="https://blog.lovizu.com/og/flutter-pokemon-app-getx.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/flutter-pokemon-app-getx.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Flutter로 포켓몬 도감 앱 만들기: GetX 상태 관리 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Flutter로 포켓몬 도감 앱 만들기: GetX 상태 관리 | 감성개발자의 Blog"><meta name="twitter:description" content="Flutter와 GetX를 활용한 포켓몬 도감 앱 개발 경험을 공유합니다. 공개 API(PokéAPI) 통합, 데이터 전처리, GetX 상태 관리 패턴, 실제 마주한 기술적 이슈와 해결책을 담았습니다. 1일 MVP 개발 성공 사례입니다."><meta name="twitter:image" content="https://blog.lovizu.com/og/flutter-pokemon-app-getx.svg"><meta name="twitter:image:alt" content="Flutter로 포켓몬 도감 앱 만들기: GetX 상태 관리 대표 이미지"><meta property="article:published_time" content="2023-03-14T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="Flutter"><meta property="article:tag" content="Dart"><meta property="article:tag" content="API"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Flutter로 포켓몬 도감 앱 만들기: GetX 상태 관리","description":"Flutter와 GetX를 활용한 포켓몬 도감 앱 개발 경험을 공유합니다. 공개 API(PokéAPI) 통합, 데이터 전처리, GetX 상태 관리 패턴, 실제 마주한 기술적 이슈와 해결책을 담았습니다. 1일 MVP 개발 성공 사례입니다.","url":"https://blog.lovizu.com/posts/flutter-pokemon-app-getx/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, Flutter, Dart, API","datePublished":"2023-03-14T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/flutter-pokemon-app-getx/","image":"https://blog.lovizu.com/og/flutter-pokemon-app-getx.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>Flutter로 포켓몬 도감 앱 만들기: GetX 상태 관리</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2023-03-14T00:00:00.000Z" data-astro-cid-egg7nqdx>2023. 3. 14.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/Flutter/" data-astro-cid-lga65v7i>Flutter</a></li><li data-astro-cid-lga65v7i><a href="/search/Dart/" data-astro-cid-lga65v7i>Dart</a></li><li data-astro-cid-lga65v7i><a href="/search/API/" data-astro-cid-lga65v7i>API</a></li> </ul>  </div> <h2 id="프로젝트-개요">프로젝트 개요</h2>
+<p>이 프로젝트는 Flutter와 GetX를 활용하여 개발한 포켓몬 도감 앱입니다. PokéAPI라는 무료 공개 API를 활용하여 실제 포켓몬 데이터를 제공합니다.</p>
+<h2 id="앱-특징">앱 특징</h2>
+<ul>
+<li><strong>무료</strong>: 완전 무료로 제공되는 앱</li>
+<li><strong>실시간 데이터</strong>: PokéAPI를 통한 최신 포켓몬 데이터</li>
+<li><strong>모바일 최적화</strong>: iOS와 Android 모두 지원</li>
+</ul>
+<h2 id="개발-경험과-학습-포인트">개발 경험과 학습 포인트</h2>
+<h3 id="pokéapi-사용-경험">PokéAPI 사용 경험</h3>
+<p>PokéAPI는 포켓몬 데이터를 제공하는 좋은 API이지만, 실무 적용 과정에서 몇 가지 어려움을 경험했습니다.</p>
+<p><strong>주요 이슈</strong>:</p>
+<ul>
+<li>포켓몬 리스트 데이터에 한글 지원 부재</li>
+<li>포켓몬 이미지가 모든 항목에서 제공되지 않음</li>
+<li>API 응답 구조가 다양하여 데이터 통합이 복잡함</li>
+</ul>
+<p>이러한 제약을 극복하기 위해 데이터 전처리와 폴백(fallback) 로직을 구현해야 했습니다.</p>
+<h3 id="기술-스택">기술 스택</h3>
+<p><strong>사용 기술</strong>:</p>
+<ul>
+<li><strong>프레임워크</strong>: Flutter</li>
+<li><strong>상태 관리</strong>: GetX</li>
+<li><strong>HTTP 클라이언트</strong>: http 패키지</li>
+<li><strong>API</strong>: PokéAPI (공개 API)</li>
+</ul>
+<h3 id="getx-패턴-경험">GetX 패턴 경험</h3>
+<p>GetX를 사용하여 상태 관리, 라우팅, 의존성 주입을 통합적으로 처리했습니다. GetX의 간편함과 성능이 좋아서 빠른 프로토타입 개발에 적합했습니다.</p>
+<p><strong>GetX 장점</strong>:</p>
+<ul>
+<li>간단한 문법</li>
+<li>뛰어난 성능</li>
+<li>라우팅 통합</li>
+<li>의존성 주입 포함</li>
+</ul>
+<h3 id="향후-개선-계획">향후 개선 계획</h3>
+<p>다음 버전에서는 <strong>BLoC 패턴</strong>으로 상태 관리를 리팩토링할 계획입니다.</p>
+<p><strong>BLoC 도입 이유</strong>:</p>
+<ul>
+<li>비즈니스 로직과 UI의 완전한 분리</li>
+<li>테스트 용이성 향상</li>
+<li>확장성 개선</li>
+<li>팀 프로젝트에서의 일관성</li>
+</ul>
+<h2 id="개발-기간">개발 기간</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>항목</th><th>예상 시간</th><th>실제 소요 시간</th></tr></thead><tbody><tr><td>자료 수집</td><td>-</td><td>일부</td></tr><tr><td>UX/UI 디자인</td><td>-</td><td>일부</td></tr><tr><td>개발</td><td>-</td><td>대부분</td></tr><tr><td><strong>총 개발기간</strong></td><td>-</td><td><strong>1일</strong></td></tr></tbody></table>
+<p>빠른 개발 사이클로 MVP(Minimum Viable Product)를 완성했습니다.</p>
+<h2 id="github-저장소">GitHub 저장소</h2>
+<p>전체 소스 코드는 다음 저장소에서 확인할 수 있습니다:</p>
+<p><a href="https://github.com/yousung/flutter_poketmon">Flutter Pokémon App - GitHub</a></p>
+<h2 id="주요-기능">주요 기능</h2>
+<h3 id="1-포켓몬-리스트-조회">1. 포켓몬 리스트 조회</h3>
+<ul>
+<li>전체 포켓몬 목록 표시</li>
+<li>페이지네이션 지원</li>
+<li>한글 이름 및 이미지 표시</li>
+</ul>
+<h3 id="2-포켓몬-상세-정보">2. 포켓몬 상세 정보</h3>
+<ul>
+<li>포켓몬 기본 정보 (이름, 번호, 타입)</li>
+<li>능력치 표시</li>
+<li>진화 체인 정보</li>
+</ul>
+<h3 id="3-검색-기능">3. 검색 기능</h3>
+<ul>
+<li>포켓몬 이름으로 검색</li>
+<li>타입별 필터링</li>
+</ul>
+<h2 id="기술-구현-하이라이트">기술 구현 하이라이트</h2>
+<h3 id="api-데이터-처리">API 데이터 처리</h3>
+<pre class="language-dart" data-language="dart"><code is:raw="" class="language-dart"><span class="token comment">// PokéAPI 통신 예제</span>
+<span class="token keyword">final</span> response <span class="token operator">=</span> <span class="token keyword">await</span> http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>
+  <span class="token class-name">Uri</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'https://pokeapi.co/api/v2/pokemon/</span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">pokemonId</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="getx-상태-관리-구조">GetX 상태 관리 구조</h3>
+<pre class="language-dart" data-language="dart"><code is:raw="" class="language-dart"><span class="token keyword">class</span> <span class="token class-name">PokemonController</span> <span class="token keyword">extends</span> <span class="token class-name">GetxController</span> <span class="token punctuation">{</span>
+  <span class="token keyword">final</span> <span class="token class-name">RxList</span><span class="token generics"><span class="token punctuation">&#x3C;</span><span class="token class-name">Pokemon</span><span class="token punctuation">></span></span> pokemonList <span class="token operator">=</span> <span class="token generics"><span class="token punctuation">&#x3C;</span><span class="token class-name">Pokemon</span><span class="token punctuation">></span></span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span>obs<span class="token punctuation">;</span>
+  
+  <span class="token metadata function">@override</span>
+  <span class="token keyword">void</span> <span class="token function">onInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">fetchPokemon</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token keyword">void</span> <span class="token function">fetchPokemon</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 데이터 로드 로직</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="배운-점과-결론">배운 점과 결론</h2>
+<p>이 프로젝트를 통해:</p>
+<ol>
+<li>실제 공개 API 활용 경험</li>
+<li>GetX를 통한 효율적인 상태 관리</li>
+<li>API 데이터 전처리 및 에러 처리</li>
+<li>빠른 프로토타입 개발 방법론</li>
+</ol>
+<p>을 배울 수 있었습니다.</p>
+<h2 id="마치며">마치며</h2>
+<p>이 프로젝트를 통해 다음을 경험했습니다:</p>
+<ol>
+<li><strong>빠른 프로토타입 개발</strong>: MVP를 1일 만에 완성하는 효율성</li>
+<li><strong>공개 API 활용</strong>: 실제 데이터 통합의 현실적 문제 해결</li>
+<li><strong>GetX의 강점</strong>: 간단한 문법으로 상태 관리 구현</li>
+<li><strong>확장 가능성</strong>: BLoC 패턴으로의 마이그레이션 경로 확보</li>
+</ol>
+<p>Flutter와 GetX는 빠른 개발이 중요한 프로젝트에 탁월한 선택입니다. 추가로 BLoC 패턴을 도입하면 더욱 강력하고 테스트 가능한 구조로 개선할 수 있습니다.</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

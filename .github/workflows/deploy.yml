@@ -1,0 +1,165 @@
+name: Deploy Astro to GitHub Pages
+
+on:
+  push:
+    branches: ['master']
+    paths:
+      - 'astro.config.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'public/**'
+      - 'scripts/**'
+      - 'src/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate workflow branch policy
+        run: npm run validate:workflow-policy
+
+      - name: Resolve giscus environment
+        env:
+          PUBLIC_GISCUS_REPO_1: ${{ vars.PUBLIC_GISCUS_REPO }}
+          PUBLIC_GISCUS_REPO_2: ${{ secrets.PUBLIC_GISCUS_REPO }}
+          PUBLIC_GISCUS_REPO_3: ${{ vars.GISCUS_REPO }}
+          PUBLIC_GISCUS_REPO_4: ${{ secrets.GISCUS_REPO }}
+          PUBLIC_GISCUS_REPO_ID_1: ${{ vars.PUBLIC_GISCUS_REPO_ID }}
+          PUBLIC_GISCUS_REPO_ID_2: ${{ secrets.PUBLIC_GISCUS_REPO_ID }}
+          PUBLIC_GISCUS_REPO_ID_3: ${{ vars.GISCUS_REPO_ID }}
+          PUBLIC_GISCUS_REPO_ID_4: ${{ secrets.GISCUS_REPO_ID }}
+          PUBLIC_GISCUS_CATEGORY_1: ${{ vars.PUBLIC_GISCUS_CATEGORY }}
+          PUBLIC_GISCUS_CATEGORY_2: ${{ secrets.PUBLIC_GISCUS_CATEGORY }}
+          PUBLIC_GISCUS_CATEGORY_3: ${{ vars.GISCUS_CATEGORY }}
+          PUBLIC_GISCUS_CATEGORY_4: ${{ secrets.GISCUS_CATEGORY }}
+          PUBLIC_GISCUS_CATEGORY_ID_1: ${{ vars.PUBLIC_GISCUS_CATEGORY_ID }}
+          PUBLIC_GISCUS_CATEGORY_ID_2: ${{ secrets.PUBLIC_GISCUS_CATEGORY_ID }}
+          PUBLIC_GISCUS_CATEGORY_ID_3: ${{ vars.GISCUS_CATEGORY_ID }}
+          PUBLIC_GISCUS_CATEGORY_ID_4: ${{ secrets.GISCUS_CATEGORY_ID }}
+        run: |
+          set -euo pipefail
+          pick_first() {
+            for candidate in "$@"; do
+              if [ -n "${candidate}" ]; then
+                printf '%s' "${candidate}"
+                return 0
+              fi
+            done
+            return 1
+          }
+
+          repo="$(pick_first "${PUBLIC_GISCUS_REPO_1:-}" "${PUBLIC_GISCUS_REPO_2:-}" "${PUBLIC_GISCUS_REPO_3:-}" "${PUBLIC_GISCUS_REPO_4:-}" || true)"
+          repo_id="$(pick_first "${PUBLIC_GISCUS_REPO_ID_1:-}" "${PUBLIC_GISCUS_REPO_ID_2:-}" "${PUBLIC_GISCUS_REPO_ID_3:-}" "${PUBLIC_GISCUS_REPO_ID_4:-}" || true)"
+          category="$(pick_first "${PUBLIC_GISCUS_CATEGORY_1:-}" "${PUBLIC_GISCUS_CATEGORY_2:-}" "${PUBLIC_GISCUS_CATEGORY_3:-}" "${PUBLIC_GISCUS_CATEGORY_4:-}" || true)"
+          category_id="$(pick_first "${PUBLIC_GISCUS_CATEGORY_ID_1:-}" "${PUBLIC_GISCUS_CATEGORY_ID_2:-}" "${PUBLIC_GISCUS_CATEGORY_ID_3:-}" "${PUBLIC_GISCUS_CATEGORY_ID_4:-}" || true)"
+
+          if [ -z "${repo}" ] || [ -z "${repo_id}" ] || [ -z "${category}" ] || [ -z "${category_id}" ]; then
+            echo "Giscus configuration is missing. Falling back to default discussion config for deploy." >&2
+            repo="yousung/blog"
+            repo_id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI="
+            category="General"
+            category_id="DIC_kwDOCAbOhM4C9_He"
+          fi
+
+          echo "PUBLIC_GISCUS_REPO=${repo}" >> "$GITHUB_ENV"
+          echo "PUBLIC_GISCUS_REPO_ID=${repo_id}" >> "$GITHUB_ENV"
+          echo "PUBLIC_GISCUS_CATEGORY=${category}" >> "$GITHUB_ENV"
+          echo "PUBLIC_GISCUS_CATEGORY_ID=${category_id}" >> "$GITHUB_ENV"
+
+      - name: Resolve launch telemetry/monetization environment
+        env:
+          PUBLIC_SITE_URL_1: ${{ vars.PUBLIC_SITE_URL }}
+          PUBLIC_SITE_URL_2: ${{ secrets.PUBLIC_SITE_URL }}
+          PUBLIC_GA_MEASUREMENT_ID_1: ${{ vars.PUBLIC_GA_MEASUREMENT_ID }}
+          PUBLIC_GA_MEASUREMENT_ID_2: ${{ secrets.PUBLIC_GA_MEASUREMENT_ID }}
+          PUBLIC_ADSENSE_CLIENT_1: ${{ vars.PUBLIC_ADSENSE_CLIENT }}
+          PUBLIC_ADSENSE_CLIENT_2: ${{ secrets.PUBLIC_ADSENSE_CLIENT }}
+          PUBLIC_ADSENSE_SLOT_TOP_1: ${{ vars.PUBLIC_ADSENSE_SLOT_TOP }}
+          PUBLIC_ADSENSE_SLOT_TOP_2: ${{ secrets.PUBLIC_ADSENSE_SLOT_TOP }}
+          PUBLIC_ADSENSE_SLOT_FEED_1: ${{ vars.PUBLIC_ADSENSE_SLOT_FEED }}
+          PUBLIC_ADSENSE_SLOT_FEED_2: ${{ secrets.PUBLIC_ADSENSE_SLOT_FEED }}
+          PUBLIC_ADSENSE_SLOT_ARTICLE_1: ${{ vars.PUBLIC_ADSENSE_SLOT_ARTICLE }}
+          PUBLIC_ADSENSE_SLOT_ARTICLE_2: ${{ secrets.PUBLIC_ADSENSE_SLOT_ARTICLE }}
+          PUBLIC_ADSENSE_SLOT_SIDEBAR_1: ${{ vars.PUBLIC_ADSENSE_SLOT_SIDEBAR }}
+          PUBLIC_ADSENSE_SLOT_SIDEBAR_2: ${{ secrets.PUBLIC_ADSENSE_SLOT_SIDEBAR }}
+          PUBLIC_ADSENSE_SLOT_BOTTOM_1: ${{ vars.PUBLIC_ADSENSE_SLOT_BOTTOM }}
+          PUBLIC_ADSENSE_SLOT_BOTTOM_2: ${{ secrets.PUBLIC_ADSENSE_SLOT_BOTTOM }}
+        run: |
+          set -euo pipefail
+          pick_first() {
+            for candidate in "$@"; do
+              if [ -n "${candidate}" ]; then
+                printf '%s' "${candidate}"
+                return 0
+              fi
+            done
+            return 1
+          }
+
+          site_url="$(pick_first "${PUBLIC_SITE_URL_1:-}" "${PUBLIC_SITE_URL_2:-}" "https://blog.lovizu.com" || true)"
+          ga_measurement_id="$(pick_first "${PUBLIC_GA_MEASUREMENT_ID_1:-}" "${PUBLIC_GA_MEASUREMENT_ID_2:-}" || true)"
+          adsense_client="$(pick_first "${PUBLIC_ADSENSE_CLIENT_1:-}" "${PUBLIC_ADSENSE_CLIENT_2:-}" || true)"
+          adsense_slot_top="$(pick_first "${PUBLIC_ADSENSE_SLOT_TOP_1:-}" "${PUBLIC_ADSENSE_SLOT_TOP_2:-}" || true)"
+          adsense_slot_feed="$(pick_first "${PUBLIC_ADSENSE_SLOT_FEED_1:-}" "${PUBLIC_ADSENSE_SLOT_FEED_2:-}" || true)"
+          adsense_slot_article="$(pick_first "${PUBLIC_ADSENSE_SLOT_ARTICLE_1:-}" "${PUBLIC_ADSENSE_SLOT_ARTICLE_2:-}" || true)"
+          adsense_slot_sidebar="$(pick_first "${PUBLIC_ADSENSE_SLOT_SIDEBAR_1:-}" "${PUBLIC_ADSENSE_SLOT_SIDEBAR_2:-}" || true)"
+          adsense_slot_bottom="$(pick_first "${PUBLIC_ADSENSE_SLOT_BOTTOM_1:-}" "${PUBLIC_ADSENSE_SLOT_BOTTOM_2:-}" || true)"
+
+          {
+            echo "PUBLIC_SITE_URL=${site_url}"
+            echo "PUBLIC_GA_MEASUREMENT_ID=${ga_measurement_id}"
+            echo "PUBLIC_ADSENSE_CLIENT=${adsense_client}"
+            echo "PUBLIC_ADSENSE_SLOT_TOP=${adsense_slot_top}"
+            echo "PUBLIC_ADSENSE_SLOT_FEED=${adsense_slot_feed}"
+            echo "PUBLIC_ADSENSE_SLOT_ARTICLE=${adsense_slot_article}"
+            echo "PUBLIC_ADSENSE_SLOT_SIDEBAR=${adsense_slot_sidebar}"
+            echo "PUBLIC_ADSENSE_SLOT_BOTTOM=${adsense_slot_bottom}"
+          } >> "$GITHUB_ENV"
+
+      - name: Validate launch telemetry/monetization signals
+        run: npm run validate:launch-signals
+
+      - name: Build
+        run: npm run build
+
+      - name: Validate sitemap artifact
+        run: npm run validate:sitemap
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

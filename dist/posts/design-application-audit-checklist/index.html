@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>Astro 블로그 디자인 QA 체크리스트 | 감성개발자의 Blog</title><meta name="description" content="배포 후 기본 스타일처럼 보이는 문제를 줄이기 위해 홈, 상세, 모바일에서 확인할 디자인 QA 기준을 정리했다."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/design-application-audit-checklist/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="Astro 블로그 디자인 QA 체크리스트 | 감성개발자의 Blog"><meta property="og:description" content="배포 후 기본 스타일처럼 보이는 문제를 줄이기 위해 홈, 상세, 모바일에서 확인할 디자인 QA 기준을 정리했다."><meta property="og:url" content="https://blog.lovizu.com/posts/design-application-audit-checklist/"><meta property="og:image" content="https://blog.lovizu.com/og/design-application-audit-checklist.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/design-application-audit-checklist.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Astro 블로그 디자인 QA 체크리스트 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Astro 블로그 디자인 QA 체크리스트 | 감성개발자의 Blog"><meta name="twitter:description" content="배포 후 기본 스타일처럼 보이는 문제를 줄이기 위해 홈, 상세, 모바일에서 확인할 디자인 QA 기준을 정리했다."><meta name="twitter:image" content="https://blog.lovizu.com/og/design-application-audit-checklist.svg"><meta name="twitter:image:alt" content="Astro 블로그 디자인 QA 체크리스트 대표 이미지"><meta property="article:published_time" content="2026-04-30T00:00:00.000Z"><meta property="article:modified_time" content="2026-05-28T00:00:00.000Z"><meta property="article:author" content="BLOA Team"><meta property="article:tag" content="Astro"><meta property="article:tag" content="QA"><meta property="article:tag" content="디자인"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Astro 블로그 디자인 QA 체크리스트","description":"배포 후 기본 스타일처럼 보이는 문제를 줄이기 위해 홈, 상세, 모바일에서 확인할 디자인 QA 기준을 정리했다.","url":"https://blog.lovizu.com/posts/design-application-audit-checklist/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"BLOA Team"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"Astro, QA, 디자인","datePublished":"2026-04-30T00:00:00.000Z","dateModified":"2026-05-28T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/design-application-audit-checklist/","image":"https://blog.lovizu.com/og/design-application-audit-checklist.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>Astro 블로그 디자인 QA 체크리스트</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2026-04-30T00:00:00.000Z" data-astro-cid-egg7nqdx>2026. 4. 30.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/Astro/" data-astro-cid-lga65v7i>Astro</a></li><li data-astro-cid-lga65v7i><a href="/search/QA/" data-astro-cid-lga65v7i>QA</a></li><li data-astro-cid-lga65v7i><a href="/search/%EB%94%94%EC%9E%90%EC%9D%B8/" data-astro-cid-lga65v7i>디자인</a></li> </ul>  </div> <p>Astro 블로그를 배포한 뒤 “코드는 맞는데 화면은 어딘가 기본값처럼 보인다”는 순간이 자주 생깁니다. 이 글은 그런 문제를 줄이기 위해, 실제 배포 화면에서 무엇을 먼저 확인해야 하는지 한 번에 정리한 공개형 QA 체크리스트입니다. Google은 좋은 페이지 경험을 만들 때 Core Web Vitals만 보지 말고 모바일 표시, 과도한 광고 여부, 본문과 기타 요소의 구분까지 함께 확인하라고 안내합니다. 따라서 디자인 QA도 단순 미관 점검이 아니라 검색 경험 점검으로 봐야 합니다. (출처: <a href="https://developers.google.com/search/docs/appearance/page-experience">Google Search Central - Understanding page experience in Google Search results</a>, <a href="https://web.dev/articles/vitals?hl=en">web.dev - Web Vitals</a>)</p>
+<blockquote>
+<p>요약</p>
+<ul>
+<li>홈, 상세, 모바일을 따로 보지 않으면 배포 후 누락을 놓치기 쉽습니다.</li>
+<li>좋은 페이지 경험은 속도만이 아니라 본문 가독성, 광고 간섭 최소화, 모바일 표시 품질까지 포함합니다. (출처: <a href="https://developers.google.com/search/docs/appearance/page-experience">Google Search Central - Understanding page experience in Google Search results</a>)</li>
+<li>저는 실제 블로그 QA에서 “홈 1회, 상세 1회, 모바일 1회”를 최소 단위로 묶어 확인합니다.</li>
+</ul>
+</blockquote>
+<p>최종 업데이트: 2026-05-28</p>
+<h2 id="작성-관점">작성 관점</h2>
+<p>저는 정적 사이트를 배포할 때 Lighthouse 점수보다 먼저 실제 렌더링 화면을 봅니다. CSS 번들 누락, 광고 슬롯 순서 꼬임, 모바일 카드 간격 붕괴처럼 사용자가 바로 체감하는 문제는 화면 확인에서 가장 빨리 잡히기 때문입니다.</p>
+<h2 id="1-홈-화면에서-먼저-확인할-것">1. 홈 화면에서 먼저 확인할 것</h2>
+<p>홈에서는 아래 4가지를 한 번에 확인합니다.</p>
+<ol>
+<li>레이아웃: <code>Featured</code> 카드와 글 목록이 분리되어 보이는지</li>
+<li>타이포: 제목/요약/날짜의 크기와 대비가 기본 브라우저 스타일이 아닌지</li>
+<li>네비게이션: 헤더 메뉴(<code>홈</code>, <code>개인정보처리방침</code>)가 일관된 간격으로 보이는지</li>
+<li>광고 슬롯: 상단 슬롯과 피드 슬롯 플레이스홀더가 구분되어 보이는지</li>
+</ol>
+<p>핵심은 “HTML이 보이는가”가 아니라 <strong>의도한 정보 위계가 유지되는가</strong>입니다. Google은 사용자가 메인 콘텐츠와 다른 요소를 쉽게 구분할 수 있어야 하며, 광고가 본문을 방해하지 않아야 한다고 설명합니다. 홈 화면은 그 기준이 가장 먼저 드러나는 경로입니다. (출처: <a href="https://developers.google.com/search/docs/appearance/page-experience">Google Search Central - Understanding page experience in Google Search results</a>)</p>
+<h2 id="2-상세-화면에서-확인할-것">2. 상세 화면에서 확인할 것</h2>
+<p>상세 페이지에서는 본문 구조와 부가 요소 배치가 함께 깨지지 않았는지 확인합니다.</p>
+<ol>
+<li>본문 카드(배경/테두리/패딩)가 적용되는지</li>
+<li>본문 중간 광고 슬롯(<code>In-article</code>)이 표시되는지</li>
+<li>하단 슬롯(<code>Bottom</code>)과 댓글 영역이 순서대로 노출되는지</li>
+<li>데스크톱에서 사이드바 슬롯이 sticky로 동작하는지</li>
+<li>모바일에서 사이드바 슬롯이 하단으로 재배치되는지</li>
+</ol>
+<p>Core Web Vitals는 로딩, 상호작용, 시각적 안정성을 함께 봅니다. 현재 핵심 지표는 LCP, INP, CLS 세 가지이며, 각각이 실제 사용 경험을 대표합니다. 상세 페이지에서 레이아웃이 흔들리거나 광고 영역 때문에 본문이 밀리면 CLS와 체감 품질이 동시에 나빠질 수 있습니다. (출처: <a href="https://web.dev/articles/vitals?hl=en">web.dev - Web Vitals</a>)</p>
+<p>특히 반응형 전환은 스크린샷 1장으로는 놓치기 쉬워서, 최소 데스크톱과 모바일 2개 뷰포트를 각각 확인하는 편이 안전합니다.</p>
+<h2 id="3-배포-품질-게이트-제안">3. 배포 품질 게이트 제안</h2>
+<p>디자인 반영 이슈를 줄이려면 배포 직후 아래 4개 게이트를 통과시키는 방식이 안전합니다.</p>
+<ol>
+<li>URL 게이트: 홈 + 상세 URL의 상태코드 200 확인</li>
+<li>시각 게이트: 홈/상세 핵심 카드와 광고 슬롯이 모두 보이는지 확인</li>
+<li>콘텐츠 게이트: 샘플 slug, 테스트 제목, 임시 문구가 남아 있지 않은지 확인</li>
+<li>기록 게이트: 커밋 SHA, 배포 시각(UTC/KST), 검증 결과를 이슈 코멘트에 남김</li>
+</ol>
+<p>Astro는 정적 사이트를 로컬에서 빌드한 뒤 배포하는 흐름을 기본으로 안내하고, GitHub Pages 배포 시에는 <code>site</code>와 <code>base</code> 설정을 명확히 맞추라고 설명합니다. 배포 설정이 맞더라도 마지막 화면 검증이 없으면 CSS 또는 라우팅 누락이 그대로 운영에 올라갈 수 있습니다. (출처: <a href="https://v4.docs.astro.build/en/guides/deploy/github/">Astro Docs - Deploy your Astro Site to GitHub Pages</a>, <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub Docs - What is GitHub Pages?</a>)</p>
+<h2 id="4-체크리스트를-실제-운영에-붙이는-방법">4. 체크리스트를 실제 운영에 붙이는 방법</h2>
+<p>배포 자동화가 있어도 마지막에 사람이 볼 최소 체크리스트는 남겨두는 편이 좋습니다. 저는 아래 순서로 끝냅니다.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>단계</th><th>확인 질문</th><th>통과 기준</th></tr></thead><tbody><tr><td>홈</td><td>첫 화면에서 이 블로그가 어떤 사이트인지 즉시 보이는가</td><td>제목, Featured, 카드 간격이 정상</td></tr><tr><td>상세</td><td>본문이 메인이고 광고가 보조라는 구조가 유지되는가</td><td>본문 카드 우선, 광고 간섭 없음</td></tr><tr><td>모바일</td><td>글 읽기 흐름이 깨지지 않는가</td><td>카드 폭, 여백, 댓글, 광고 순서 정상</td></tr><tr><td>기록</td><td>다시 확인할 근거가 남는가</td><td>커밋, 배포 시각, 결과 기록 완료</td></tr></tbody></table>
+<h2 id="faq">FAQ</h2>
+<h3 id="lighthouse-점수가-좋으면-디자인-qa를-생략해도-되나요">Lighthouse 점수가 좋으면 디자인 QA를 생략해도 되나요?</h3>
+<p>아닙니다. Google도 좋은 리포트 점수가 상위 노출을 보장하지 않으며, 전체적인 페이지 경험을 함께 봐야 한다고 설명합니다. 실제 시각 구조와 모바일 표시 품질은 별도 확인이 필요합니다. (출처: <a href="https://developers.google.com/search/docs/appearance/page-experience">Google Search Central - Understanding page experience in Google Search results</a>)</p>
+<h3 id="광고-슬롯이-비어-있어도-qa를-해야-하나요">광고 슬롯이 비어 있어도 QA를 해야 하나요?</h3>
+<p>해야 합니다. 광고가 실제 광고 코드 대신 플레이스홀더로 렌더되더라도, 본문을 밀어내거나 순서를 깨지 않는지 먼저 확인해야 합니다. Google 역시 메인 콘텐츠와 기타 요소의 구분, 과도한 광고 방지 여부를 페이지 경험 요소로 봅니다. (출처: <a href="https://developers.google.com/search/docs/appearance/page-experience">Google Search Central - Understanding page experience in Google Search results</a>)</p>
+<h2 id="출처">출처</h2>
+<ul>
+<li><a href="https://developers.google.com/search/docs/appearance/page-experience">Google Search Central - Understanding page experience in Google Search results</a></li>
+<li><a href="https://web.dev/articles/vitals?hl=en">web.dev - Web Vitals</a></li>
+<li><a href="https://v4.docs.astro.build/en/guides/deploy/github/">Astro Docs - Deploy your Astro Site to GitHub Pages</a></li>
+<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub Docs - What is GitHub Pages?</a></li>
+</ul> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

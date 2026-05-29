@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>AWS Lambda에 C 라이브러리 의존성 포함시키기 | 감성개발자의 Blog</title><meta name="description" content="AWS Lambda에서 외부 도구(jpegoptim 등)가 필요할 때 C 라이브러리 의존성을 처리하는 실무 가이드. Docker를 이용한 로컬 테스트, ldd 명령으로 동적 라이브러리 파악, exodus로 자동화된 의존성 수집·패키징까지 단계별로 설명합니다. 맥이나 윈도우에서 리눅스 기반 Lambda 환경 정확히 재현하는 방법."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/lambda-c-library-dependencies/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="AWS Lambda에 C 라이브러리 의존성 포함시키기 | 감성개발자의 Blog"><meta property="og:description" content="AWS Lambda에서 외부 도구(jpegoptim 등)가 필요할 때 C 라이브러리 의존성을 처리하는 실무 가이드. Docker를 이용한 로컬 테스트, ldd 명령으로 동적 라이브러리 파악, exodus로 자동화된 의존성 수집·패키징까지 단계별로 설명합니다. 맥이나 윈도우에서 리눅스 기반 Lambda 환경 정확히 재현하는 방법."><meta property="og:url" content="https://blog.lovizu.com/posts/lambda-c-library-dependencies/"><meta property="og:image" content="https://blog.lovizu.com/og/lambda-c-library-dependencies.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/lambda-c-library-dependencies.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AWS Lambda에 C 라이브러리 의존성 포함시키기 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AWS Lambda에 C 라이브러리 의존성 포함시키기 | 감성개발자의 Blog"><meta name="twitter:description" content="AWS Lambda에서 외부 도구(jpegoptim 등)가 필요할 때 C 라이브러리 의존성을 처리하는 실무 가이드. Docker를 이용한 로컬 테스트, ldd 명령으로 동적 라이브러리 파악, exodus로 자동화된 의존성 수집·패키징까지 단계별로 설명합니다. 맥이나 윈도우에서 리눅스 기반 Lambda 환경 정확히 재현하는 방법."><meta name="twitter:image" content="https://blog.lovizu.com/og/lambda-c-library-dependencies.svg"><meta name="twitter:image:alt" content="AWS Lambda에 C 라이브러리 의존성 포함시키기 대표 이미지"><meta property="article:published_time" content="2023-06-06T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="AWS"><meta property="article:tag" content="Lambda"><meta property="article:tag" content="Docker"><meta property="article:tag" content="C라이브러리"><meta property="article:tag" content="배포"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AWS Lambda에 C 라이브러리 의존성 포함시키기","description":"AWS Lambda에서 외부 도구(jpegoptim 등)가 필요할 때 C 라이브러리 의존성을 처리하는 실무 가이드. Docker를 이용한 로컬 테스트, ldd 명령으로 동적 라이브러리 파악, exodus로 자동화된 의존성 수집·패키징까지 단계별로 설명합니다. 맥이나 윈도우에서 리눅스 기반 Lambda 환경 정확히 재현하는 방법.","url":"https://blog.lovizu.com/posts/lambda-c-library-dependencies/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, AWS, Lambda, Docker, C라이브러리, 배포","datePublished":"2023-06-06T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/lambda-c-library-dependencies/","image":"https://blog.lovizu.com/og/lambda-c-library-dependencies.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>AWS Lambda에 C 라이브러리 의존성 포함시키기</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2023-06-06T00:00:00.000Z" data-astro-cid-egg7nqdx>2023. 6. 6.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/AWS/" data-astro-cid-lga65v7i>AWS</a></li><li data-astro-cid-lga65v7i><a href="/search/Lambda/" data-astro-cid-lga65v7i>Lambda</a></li><li data-astro-cid-lga65v7i><a href="/search/Docker/" data-astro-cid-lga65v7i>Docker</a></li><li data-astro-cid-lga65v7i><a href="/search/C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/" data-astro-cid-lga65v7i>C라이브러리</a></li><li data-astro-cid-lga65v7i><a href="/search/%EB%B0%B0%ED%8F%AC/" data-astro-cid-lga65v7i>배포</a></li> </ul>  </div> <h2 id="도입">도입</h2>
+<p>AWS Lambda 함수를 개발할 때 흔히 마주치는 문제가 있습니다. 로컬 컴퓨터(맥이나 윈도우)에서는 정상 동작하지만, Linux 기반의 Lambda 환경에서는 실패하는 경우입니다. 특히 <code>jpegoptim</code>, <code>imagemagick</code> 같은 외부 도구를 사용할 때 더 심합니다.</p>
+<p>원인은 간단합니다. 이런 도구들은 C 언어로 컴파일된 바이너리로, 각각 많은 동적 라이브러리(.so 파일) 의존성을 가집니다. 도구 자체만 Lambda에 포함시키면 안 되고, 그 도구가 필요로 하는 모든 라이브러리도 함께 포함시켜야 합니다.</p>
+<h2 id="lambda-함수-로컬-테스트하기">Lambda 함수 로컬 테스트하기</h2>
+<p>배포 전에 로컬 환경에서 정확하게 테스트해야 합니다. Lambda는 Linux 기반이므로 Docker를 이용해서 재현합니다.</p>
+<h3 id="lambda-환경-docker로-시뮬레이션">Lambda 환경 Docker로 시뮬레이션</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># Node.js 18 Lambda 환경 실행</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-it</span> <span class="token parameter variable">-p</span> <span class="token number">8080</span>:8080 <span class="token parameter variable">-v</span> <span class="token environment constant">$PWD</span>:/var/task public.ecr.aws/lambda/nodejs:18 app.handler
+
+<span class="token comment"># 로컬에서 테스트</span>
+<span class="token function">curl</span> localhost:8080/2015-03-31/functions/function/invocations <span class="token punctuation">\</span>
+  <span class="token parameter variable">-d</span> <span class="token string">'{"payload": true}'</span>
+</code></pre>
+<p>Python이라면 <code>public.ecr.aws/lambda/python:3.11</code> 이런 식으로 바꾸면 됩니다.</p>
+<h2 id="동적-라이브러리-의존성-파악하기">동적 라이브러리 의존성 파악하기</h2>
+<p>예를 들어 이미지 최적화를 위해 <code>jpegoptim</code>이 필요하다고 하겠습니다. 먼저 필요한 모든 라이브러리를 파악해야 합니다.</p>
+<h3 id="ubuntu-docker에서-확인">Ubuntu Docker에서 확인</h3>
+<p>Lambda 환경과 동일한 Linux 환경을 준비합니다.</p>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># Ubuntu 최신 버전 실행</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-it</span> ubuntu:latest /bin/bash
+
+<span class="token comment"># 컨테이너 내부에서 실행</span>
+<span class="token function">apt</span> update
+<span class="token function">apt</span> <span class="token function">install</span> jpegoptim
+
+<span class="token comment"># jpegoptim이 의존하는 모든 라이브러리 확인</span>
+ldd <span class="token variable"><span class="token variable">$(</span><span class="token function">which</span> jpegoptim<span class="token variable">)</span></span>
+</code></pre>
+<p>출력 예시:</p>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">linux-vdso.so.1 (0x00007fffbffdc000)
+libjpeg.so.8 => /lib/x86_64-linux-gnu/libjpeg.so.8 (0x00007f1234567000)
+libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f1234389000)
+... (더 많은 라이브러리들)
+</code></pre>
+<h3 id="의존성-처리-방식">의존성 처리 방식</h3>
+<p>여기서 두 가지 선택지가 있습니다:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>방식</th><th>장점</th><th>단점</th></tr></thead><tbody><tr><td><strong>동적 라이브러리 함께 패킹</strong></td><td>간단하고 안정적</td><td>파일이 많을 수 있음</td></tr><tr><td><strong>정적 링크로 재컴파일</strong></td><td>파일 수 최소화</td><td>복잡, 빌드 실패 가능</td></tr></tbody></table>
+<p>동적 라이브러리 방식이 더 안전하고 실무적입니다. 문제는 때로 수백 개의 라이브러리를 수동으로 처리해야 한다는 것입니다.</p>
+<h2 id="exodus로-자동화하기">Exodus로 자동화하기</h2>
+<p><code>exodus</code>는 바이너리와 그 의존성을 자동으로 모아주는 Python 도구입니다.</p>
+<h3 id="exodus-설치-및-실행">Exodus 설치 및 실행</h3>
+<p>Ubuntu Docker 내부에서:</p>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># Python과 pip 설치</span>
+<span class="token function">apt</span> <span class="token function">install</span> <span class="token parameter variable">-y</span> python3 python3-pip
+
+<span class="token comment"># exodus 설치</span>
+pip3 <span class="token function">install</span> <span class="token parameter variable">--user</span> exodus-bundler
+
+<span class="token comment"># PATH에 추가</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">"<span class="token variable">${<span class="token environment constant">PATH</span>}</span>:<span class="token variable">${<span class="token environment constant">HOME</span>}</span>/.local/bin"</span>
+
+<span class="token comment"># jpegoptim의 모든 의존성을 자동 수집 및 압축</span>
+exodus <span class="token parameter variable">-t</span> <span class="token parameter variable">-o</span> jpegoptim.tar.gz <span class="token variable"><span class="token variable">$(</span><span class="token function">which</span> jpegoptim<span class="token variable">)</span></span>
+</code></pre>
+<p>이 명령은 <code>jpegoptim.tar.gz</code> 파일을 생성하는데, 여기에 <code>jpegoptim</code> 바이너리와 모든 필요한 라이브러리가 포함되어 있습니다.</p>
+<h3 id="압축-파일을-로컬로-복사">압축 파일을 로컬로 복사</h3>
+<p>Docker 컨테이너에서 생성된 파일을 호스트 머신으로 복사합니다:</p>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># 다른 터미널에서 컨테이너 ID 확인</span>
+<span class="token function">docker</span> <span class="token function">ps</span>
+
+<span class="token comment"># 파일 복사</span>
+<span class="token function">docker</span> <span class="token function">cp</span> <span class="token operator">&#x3C;</span>CONTAINER_ID<span class="token operator">></span>:/root/jpegoptim.tar.gz <span class="token builtin class-name">.</span>
+
+<span class="token comment"># 압축 해제</span>
+<span class="token function">tar</span> xzf jpegoptim.tar.gz
+</code></pre>
+<p>압축을 풀면 <code>exodus</code> 폴더가 생성되고, 그 안의 <code>bin</code> 폴더에 실행 가능한 바이너리들이 있습니다.</p>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">exodus/
+├── bin/
+│   └── jpegoptim    # 실행 가능한 바이너리
+└── lib/
+    ├── libjpeg.so.8
+    ├── libc.so.6
+    └── ... (모든 라이브러리들)
+</code></pre>
+<h2 id="lambda-패키징">Lambda 패키징</h2>
+<p>이제 Lambda 배포 패키지를 구성합니다:</p>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">lambda-package/
+├── app.py           # Lambda 함수 코드
+├── requirements.txt  # Python 의존성
+└── bin/
+    └── jpegoptim    # exodus가 수집한 바이너리와 라이브러리들
+</code></pre>
+<p>Python 코드에서 호출할 때:</p>
+<pre class="language-python" data-language="python"><code is:raw="" class="language-python"><span class="token keyword">import</span> subprocess
+<span class="token keyword">import</span> os
+
+<span class="token keyword">def</span> <span class="token function">lambda_handler</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 현재 디렉토리의 bin 폴더에서 jpegoptim 찾기</span>
+    jpegoptim_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'bin'</span><span class="token punctuation">,</span> <span class="token string">'jpegoptim'</span><span class="token punctuation">)</span>
+    
+    <span class="token comment"># 라이브러리 경로 설정</span>
+    lib_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'lib'</span><span class="token punctuation">)</span>
+    
+    env <span class="token operator">=</span> os<span class="token punctuation">.</span>environ<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    env<span class="token punctuation">[</span><span class="token string">'LD_LIBRARY_PATH'</span><span class="token punctuation">]</span> <span class="token operator">=</span> lib_path
+    
+    <span class="token comment"># jpegoptim 실행</span>
+    result <span class="token operator">=</span> subprocess<span class="token punctuation">.</span>run<span class="token punctuation">(</span>
+        <span class="token punctuation">[</span>jpegoptim_path<span class="token punctuation">,</span> <span class="token string">'--version'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        env<span class="token operator">=</span>env<span class="token punctuation">,</span>
+        capture_output<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+        text<span class="token operator">=</span><span class="token boolean">True</span>
+    <span class="token punctuation">)</span>
+    
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token string">'statusCode'</span><span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+        <span class="token string">'body'</span><span class="token punctuation">:</span> result<span class="token punctuation">.</span>stdout
+    <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="주의사항">주의사항</h2>
+<ul>
+<li><strong>아키텍처 일치</strong>: exodus는 실행하는 OS와 아키텍처에 맞춰 의존성을 수집합니다. Lambda는 항상 Linux/x86_64이므로 반드시 Linux Docker에서 실행하세요.</li>
+<li><strong>버전 호환성</strong>: 호스트 Ubuntu 버전과 Lambda 런타임의 glibc 버전이 맞지 않으면 실패할 수 있습니다. 가능하면 <code>ubuntu:20.04</code> 같은 안정적인 버전을 사용하세요.</li>
+<li><strong>용량 확인</strong>: 패키징 후 전체 크기가 Lambda 제한(250MB)을 초과하지 않는지 확인하세요.</li>
+</ul>
+<h2 id="마치며">마치며</h2>
+<p>Lambda에서 외부 도구를 사용하려면 단순히 바이너리만 포함하면 안 됩니다. C 라이브러리 의존성을 정확히 파악하고 함께 배포해야 합니다. Docker로 로컬 테스트하고 exodus로 의존성을 자동 수집하면, “로컬에서는 되는데 Lambda에서는 안 되는” 좌절스러운 상황을 피할 수 있습니다.</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

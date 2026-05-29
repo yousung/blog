@@ -1,0 +1,27 @@
+{
+  "name": "bloa-blog",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "npm run validate:frontmatter && astro build",
+    "build:sitemap": "npm run build && npm run validate:sitemap",
+    "preview": "astro preview",
+    "check": "astro check",
+    "validate:frontmatter": "node scripts/validate-frontmatter.mjs",
+    "validate:launch-signals": "node scripts/validate-launch-signals.mjs",
+    "validate:workflow-policy": "node scripts/validate-workflow-policy.mjs",
+    "validate:sitemap": "node scripts/validate-sitemap.mjs dist"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.10.0",
+    "sharp": "^0.34.2"
+  },
+  "devDependencies": {
+    "node-addon-api": "^8.8.0",
+    "node-gyp": "^12.3.0"
+  }
+}

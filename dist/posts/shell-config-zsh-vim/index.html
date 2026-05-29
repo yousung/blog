@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>macOS 개발 환경 설정: zshrc, vimrc 최적화 | 감성개발자의 Blog</title><meta name="description" content="신규 맥북 개발 환경 설정 가이드입니다. zshrc 설정을 통한 PATH 관리, oh-my-zsh 플러그인 구성, Node.js/Java/Android/Go 개발 환경 설정, vim의 문법 강조 및 단축키 커스터마이징을 다룹니다. 실무 개발자가 매일 사용하는 설정 파일들의 최적화 방법을 상세히 공유합니다."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/shell-config-zsh-vim/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="macOS 개발 환경 설정: zshrc, vimrc 최적화 | 감성개발자의 Blog"><meta property="og:description" content="신규 맥북 개발 환경 설정 가이드입니다. zshrc 설정을 통한 PATH 관리, oh-my-zsh 플러그인 구성, Node.js/Java/Android/Go 개발 환경 설정, vim의 문법 강조 및 단축키 커스터마이징을 다룹니다. 실무 개발자가 매일 사용하는 설정 파일들의 최적화 방법을 상세히 공유합니다."><meta property="og:url" content="https://blog.lovizu.com/posts/shell-config-zsh-vim/"><meta property="og:image" content="https://blog.lovizu.com/og/shell-config-zsh-vim.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/shell-config-zsh-vim.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="macOS 개발 환경 설정: zshrc, vimrc 최적화 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="macOS 개발 환경 설정: zshrc, vimrc 최적화 | 감성개발자의 Blog"><meta name="twitter:description" content="신규 맥북 개발 환경 설정 가이드입니다. zshrc 설정을 통한 PATH 관리, oh-my-zsh 플러그인 구성, Node.js/Java/Android/Go 개발 환경 설정, vim의 문법 강조 및 단축키 커스터마이징을 다룹니다. 실무 개발자가 매일 사용하는 설정 파일들의 최적화 방법을 상세히 공유합니다."><meta name="twitter:image" content="https://blog.lovizu.com/og/shell-config-zsh-vim.svg"><meta name="twitter:image:alt" content="macOS 개발 환경 설정: zshrc, vimrc 최적화 대표 이미지"><meta property="article:published_time" content="2020-12-07T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="macOS"><meta property="article:tag" content="zsh"><meta property="article:tag" content="vim"><meta property="article:tag" content="개발환경"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"macOS 개발 환경 설정: zshrc, vimrc 최적화","description":"신규 맥북 개발 환경 설정 가이드입니다. zshrc 설정을 통한 PATH 관리, oh-my-zsh 플러그인 구성, Node.js/Java/Android/Go 개발 환경 설정, vim의 문법 강조 및 단축키 커스터마이징을 다룹니다. 실무 개발자가 매일 사용하는 설정 파일들의 최적화 방법을 상세히 공유합니다.","url":"https://blog.lovizu.com/posts/shell-config-zsh-vim/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, macOS, zsh, vim, 개발환경","datePublished":"2020-12-07T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/shell-config-zsh-vim/","image":"https://blog.lovizu.com/og/shell-config-zsh-vim.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>macOS 개발 환경 설정: zshrc, vimrc 최적화</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2020-12-07T00:00:00.000Z" data-astro-cid-egg7nqdx>2020. 12. 7.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/macOS/" data-astro-cid-lga65v7i>macOS</a></li><li data-astro-cid-lga65v7i><a href="/search/zsh/" data-astro-cid-lga65v7i>zsh</a></li><li data-astro-cid-lga65v7i><a href="/search/vim/" data-astro-cid-lga65v7i>vim</a></li><li data-astro-cid-lga65v7i><a href="/search/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/" data-astro-cid-lga65v7i>개발환경</a></li> </ul>  </div> <h2 id="개발-환경-초기-설정의-중요성">개발 환경 초기 설정의 중요성</h2>
+<p>새로운 맥북을 구성할 때 가장 먼저 해야 할 일은 개발 환경을 세팅하는 것입니다. 효율적인 터미널 환경은 생산성을 크게 높입니다.</p>
+<h2 id="zshrc-설정">zshrc 설정</h2>
+<h3 id="기본-path-설정">기본 PATH 설정</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$HOME</span>/bin:/usr/local/bin:<span class="token environment constant">$PATH</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">"<span class="token environment constant">$PATH</span>:<span class="token environment constant">$HOME</span>/.composer/vendor/bin"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">"<span class="token environment constant">$PATH</span>:<span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span>/flutter/bin"</span>
+</code></pre>
+<h3 id="개발-환경-설정">개발 환경 설정</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># oh-my-zsh</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">ZSH</span><span class="token operator">=</span><span class="token string">"/Users/lovizu/.oh-my-zsh"</span>
+
+<span class="token comment"># 언어별 개발 환경</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">NVM_DIR</span><span class="token operator">=</span><span class="token string">"<span class="token environment constant">$HOME</span>/.nvm"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">JAVA_HOME</span><span class="token operator">=</span><span class="token string">"/Library/Java/JavaVirtualMachines/openjdk-14.0.1.jdk/Contents/Home/"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">ANDROID_HOME</span><span class="token operator">=</span><span class="token environment constant">$HOME</span>/Library/Android/sdk
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token variable">$ANDROID_HOME</span>/emulator
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token variable">$ANDROID_HOME</span>/tools
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token variable">$ANDROID_HOME</span>/tools/bin
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token variable">$ANDROID_HOME</span>/platform-tools
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:/usr/local/go/bin
+</code></pre>
+<h3 id="테마-및-플러그인-설정">테마 및 플러그인 설정</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># Pure 테마 적용</span>
+autoload <span class="token parameter variable">-U</span> promptinit<span class="token punctuation">;</span> promptinit
+prompt pure
+
+<span class="token comment"># 문법 강조 및 자동완성</span>
+<span class="token builtin class-name">source</span> /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+<span class="token builtin class-name">source</span> <span class="token string">"<span class="token environment constant">$HOME</span>/.sdkman/bin/sdkman-init.sh"</span>
+
+<span class="token comment"># 플러그인 로드</span>
+<span class="token assign-left variable">plugins</span><span class="token operator">=</span><span class="token punctuation">(</span>
+    <span class="token function">git</span>
+    zsh-syntax-highlighting
+    yarn-autocompletions
+    <span class="token function">docker</span>
+    laravel
+    golang
+<span class="token punctuation">)</span>
+
+<span class="token builtin class-name">source</span> <span class="token variable">$ZSH</span>/oh-my-zsh.sh
+</code></pre>
+<h3 id="에디터-및-nvm-설정">에디터 및 NVM 설정</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># 편집기 선택</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token parameter variable">-n</span> <span class="token variable">$SSH_CONNECTION</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+  <span class="token builtin class-name">export</span> <span class="token assign-left variable">EDITOR</span><span class="token operator">=</span><span class="token string">'vim'</span>
+<span class="token keyword">else</span>
+  <span class="token builtin class-name">export</span> <span class="token assign-left variable">EDITOR</span><span class="token operator">=</span><span class="token string">'mvim'</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># NVM (Node Version Manager)</span>
+<span class="token punctuation">[</span> <span class="token parameter variable">-s</span> <span class="token string">"/usr/local/opt/nvm/nvm.sh"</span> <span class="token punctuation">]</span> <span class="token operator">&#x26;&#x26;</span> <span class="token builtin class-name">.</span> <span class="token string">"/usr/local/opt/nvm/nvm.sh"</span>
+<span class="token punctuation">[</span> <span class="token parameter variable">-s</span> <span class="token string">"/usr/local/opt/nvm/etc/bash_completion"</span> <span class="token punctuation">]</span> <span class="token operator">&#x26;&#x26;</span> <span class="token builtin class-name">.</span> <span class="token string">"/usr/local/opt/nvm/etc/bash_completion"</span>
+</code></pre>
+<h3 id="유용한-별칭alias-설정">유용한 별칭(Alias) 설정</h3>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token builtin class-name">alias</span> <span class="token assign-left variable">dc</span><span class="token operator">=</span><span class="token string">"docker-compose"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">python</span><span class="token operator">=</span><span class="token string">"python3"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">mk</span><span class="token operator">=</span><span class="token string">"mkdir"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">scz</span><span class="token operator">=</span><span class="token string">"source ~/.zshrc"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">rn</span><span class="token operator">=</span><span class="token string">"npx react-native"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">cra</span><span class="token operator">=</span><span class="token string">"npx create-react-app"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">rename</span><span class="token operator">=</span><span class="token string">"npx react-native-rename"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">spro</span><span class="token operator">=</span><span class="token string">"cd ~/project/studiomate"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">art</span><span class="token operator">=</span><span class="token string">"php artisan"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">service</span><span class="token operator">=</span><span class="token string">"brew services"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">gcq</span><span class="token operator">=</span><span class="token string">"git checkout qa"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">gcm</span><span class="token operator">=</span><span class="token string">"git checkout master"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">gcs</span><span class="token operator">=</span><span class="token string">"git checkout staging"</span>
+<span class="token builtin class-name">alias</span> rn-ios<span class="token operator">=</span><span class="token string">"rn run-ios --device 'iPhone' --configuration Release"</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">j14</span><span class="token operator">=</span><span class="token string">"export JAVA_HOME=<span class="token variable"><span class="token variable">`</span>/usr/libexec/java_home <span class="token parameter variable">-v</span> <span class="token number">14</span><span class="token variable">`</span></span>; java -version"</span>
+</code></pre>
+<h2 id="vimrc-설정">vimrc 설정</h2>
+<h3 id="검색-및-표시-설정">검색 및 표시 설정</h3>
+<pre class="language-vim" data-language="vim"><code is:raw="" class="language-vim"><span class="token comment">" 검색어 하이라이트</span>
+<span class="token keyword">set</span> <span class="token builtin">hlsearch</span>
+
+<span class="token comment">" 검색시 대소문자 구분</span>
+<span class="token keyword">set</span> <span class="token builtin">smartcase</span>
+
+<span class="token comment">" 현재 커서 위치 표시</span>
+<span class="token keyword">set</span> <span class="token builtin">ruler</span>
+
+<span class="token comment">" 왼쪽에 줄 번호 표시</span>
+<span class="token keyword">set</span> <span class="token keyword">nu</span>
+</code></pre>
+<h3 id="들여쓰기-설정">들여쓰기 설정</h3>
+<pre class="language-vim" data-language="vim"><code is:raw="" class="language-vim"><span class="token comment">" 자동 들여쓰기</span>
+<span class="token keyword">set</span> <span class="token builtin">autoindent</span>
+<span class="token keyword">set</span> <span class="token builtin">cindent</span>
+
+<span class="token comment">" Tab 너비 (2칸)</span>
+<span class="token keyword">set</span> <span class="token keyword">ts</span><span class="token operator">=</span><span class="token number">2</span>
+
+<span class="token comment">" 자동 들여쓰기 너비</span>
+<span class="token keyword">set</span> <span class="token builtin">shiftwidth</span><span class="token operator">=</span><span class="token number">2</span>
+</code></pre>
+<h3 id="기능-및-스타일-설정">기능 및 스타일 설정</h3>
+<pre class="language-vim" data-language="vim"><code is:raw="" class="language-vim"><span class="token comment">" 마지막 수정 위치에서 커서 시작</span>
+au BufReadPost <span class="token operator">*</span>
+\ <span class="token keyword">if</span> <span class="token function">line</span><span class="token punctuation">(</span><span class="token string">"'\""</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">&#x26;&#x26;</span> <span class="token function">line</span><span class="token punctuation">(</span><span class="token string">"'\""</span><span class="token punctuation">)</span> <span class="token operator">&#x3C;=</span> <span class="token function">line</span><span class="token punctuation">(</span><span class="token string">"$"</span><span class="token punctuation">)</span> |
+\ exe <span class="token string">"norm g`\""</span> |
+\ <span class="token keyword">endif</span>
+
+<span class="token comment">" 문법 강조 활성화</span>
+<span class="token builtin">syntax</span> <span class="token keyword">on</span>
+</code></pre>
+<h2 id="추가-도구-설정">추가 도구 설정</h2>
+<h3 id="brew-php-switcher">Brew PHP Switcher</h3>
+<p>PHP 버전을 쉽게 전환할 수 있는 도구입니다.</p>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token comment"># 설치</span>
+brew <span class="token function">install</span> brew-php-switcher
+
+<span class="token comment"># 사용법</span>
+brew-php-switcher <span class="token number">7.4</span>
+brew-php-switcher <span class="token number">8.0</span>
+</code></pre>
+<p>참고: <a href="https://github.com/philcook/brew-php-switcher">philcook/brew-php-switcher GitHub</a></p>
+<h2 id="마치며">마치며</h2>
+<p>효율적인 개발 환경 설정은 장기적인 생산성을 크게 향상시킵니다. 위의 설정을 기반으로 자신의 워크플로우에 맞게 커스터마이징하길 권장합니다.</p>
+<p>특히 다중 언어를 사용하는 개발자라면 PATH 설정과 별칭(alias) 정의에 시간을 투자하는 것이 좋습니다. 매일 수십 번 입력하는 명령어를 단축할 수 있기 때문입니다.</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>AWS로 프론트엔드 배포하기 (S3 + CloudFront + Certificate + Route53) | 감성개발자의 Blog</title><meta name="description" content="AWS를 이용해 정적 프론트엔드를 프로덕션 환경에 배포하는 완전한 가이드. S3 버킷 생성부터 CloudFront CDN 설정, SSL 인증서 발급, Route53 도메인 연결까지 모든 단계를 설명. CodePipeline을 통한 자동 배포 및 캐시 무효화 전략도 포함."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="AWS로 프론트엔드 배포하기 (S3 + CloudFront + Certificate + Route53) | 감성개발자의 Blog"><meta property="og:description" content="AWS를 이용해 정적 프론트엔드를 프로덕션 환경에 배포하는 완전한 가이드. S3 버킷 생성부터 CloudFront CDN 설정, SSL 인증서 발급, Route53 도메인 연결까지 모든 단계를 설명. CodePipeline을 통한 자동 배포 및 캐시 무효화 전략도 포함."><meta property="og:url" content="https://blog.lovizu.com/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/"><meta property="og:image" content="https://blog.lovizu.com/og/frontend-aws-feat-s3-cloudefront-certificate-route53.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/frontend-aws-feat-s3-cloudefront-certificate-route53.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AWS로 프론트엔드 배포하기 (S3 + CloudFront + Certificate + Route53) 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AWS로 프론트엔드 배포하기 (S3 + CloudFront + Certificate + Route53) | 감성개발자의 Blog"><meta name="twitter:description" content="AWS를 이용해 정적 프론트엔드를 프로덕션 환경에 배포하는 완전한 가이드. S3 버킷 생성부터 CloudFront CDN 설정, SSL 인증서 발급, Route53 도메인 연결까지 모든 단계를 설명. CodePipeline을 통한 자동 배포 및 캐시 무효화 전략도 포함."><meta name="twitter:image" content="https://blog.lovizu.com/og/frontend-aws-feat-s3-cloudefront-certificate-route53.svg"><meta name="twitter:image:alt" content="AWS로 프론트엔드 배포하기 (S3 + CloudFront + Certificate + Route53) 대표 이미지"><meta property="article:published_time" content="2022-03-04T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="AWS"><meta property="article:tag" content="S3"><meta property="article:tag" content="CloudFront"><meta property="article:tag" content="Route53"><meta property="article:tag" content="프론트엔드"><meta property="article:tag" content="배포"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AWS로 프론트엔드 배포하기 (S3 + CloudFront + Certificate + Route53)","description":"AWS를 이용해 정적 프론트엔드를 프로덕션 환경에 배포하는 완전한 가이드. S3 버킷 생성부터 CloudFront CDN 설정, SSL 인증서 발급, Route53 도메인 연결까지 모든 단계를 설명. CodePipeline을 통한 자동 배포 및 캐시 무효화 전략도 포함.","url":"https://blog.lovizu.com/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, AWS, S3, CloudFront, Route53, 프론트엔드, 배포","datePublished":"2022-03-04T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/","image":"https://blog.lovizu.com/og/frontend-aws-feat-s3-cloudefront-certificate-route53.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>AWS로 프론트엔드 배포하기 (S3 + CloudFront + Certificate + Route53)</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2022-03-04T00:00:00.000Z" data-astro-cid-egg7nqdx>2022. 3. 4.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/AWS/" data-astro-cid-lga65v7i>AWS</a></li><li data-astro-cid-lga65v7i><a href="/search/S3/" data-astro-cid-lga65v7i>S3</a></li><li data-astro-cid-lga65v7i><a href="/search/CloudFront/" data-astro-cid-lga65v7i>CloudFront</a></li><li data-astro-cid-lga65v7i><a href="/search/Route53/" data-astro-cid-lga65v7i>Route53</a></li><li data-astro-cid-lga65v7i><a href="/search/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/" data-astro-cid-lga65v7i>프론트엔드</a></li><li data-astro-cid-lga65v7i><a href="/search/%EB%B0%B0%ED%8F%AC/" data-astro-cid-lga65v7i>배포</a></li> </ul>  </div> <h2 id="aws로-프론트엔드-배포하기">AWS로 프론트엔드 배포하기</h2>
+<p>AWS를 이용해 정적 웹사이트를 안전하고 빠르게 배포하는 방법을 다룬다.</p>
+<h3 id="전체-아키텍처">전체 아키텍처</h3>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">도메인(Route53) → CloudFront(CDN) → S3(정적 콘텐츠)
+</code></pre>
+<h3 id="1단계-s3-버킷-생성">1단계: S3 버킷 생성</h3>
+<h4 id="퍼블릭-액세스-설정">퍼블릭 액세스 설정</h4>
+<ul>
+<li><strong>일반 퍼블릭</strong>: CloudFront만 허용하도록 제한</li>
+<li><strong>직접 접근 차단</strong>: S3 URL을 통한 직접 접근 불가능</li>
+</ul>
+<h4 id="버킷-정책">버킷 정책</h4>
+<p>CloudFront의 Origin Access Identity(OAI)를 통해서만 접근 허용한다.</p>
+<h3 id="2단계-codepipeline-설정">2단계: CodePipeline 설정</h3>
+<p>자동 배포를 위한 파이프라인을 구성한다.</p>
+<h4 id="buildspecyaml-예시">buildspec.yaml 예시</h4>
+<pre class="language-yaml" data-language="yaml"><code is:raw="" class="language-yaml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token number">0.2</span>
+
+<span class="token key atrule">env</span><span class="token punctuation">:</span>
+  <span class="token key atrule">variables</span><span class="token punctuation">:</span>
+    <span class="token key atrule">NODE_ENV</span><span class="token punctuation">:</span> <span class="token string">"production"</span>
+
+<span class="token key atrule">phases</span><span class="token punctuation">:</span>
+  <span class="token key atrule">install</span><span class="token punctuation">:</span>
+    <span class="token key atrule">commands</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> yarn add <span class="token punctuation">-</span><span class="token punctuation">-</span>dev typescript @types/react
+      <span class="token punctuation">-</span> yarn install
+  <span class="token key atrule">build</span><span class="token punctuation">:</span>
+    <span class="token key atrule">commands</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> echo Build started on `date`
+      <span class="token punctuation">-</span> echo Compiling the Node.js code
+      <span class="token punctuation">-</span> yarn build
+
+<span class="token key atrule">artifacts</span><span class="token punctuation">:</span>
+  <span class="token key atrule">base-directory</span><span class="token punctuation">:</span> <span class="token string">"dist"</span>
+  <span class="token key atrule">files</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">"**/*"</span>
+</code></pre>
+<h3 id="3단계-cloudfront-연결">3단계: CloudFront 연결</h3>
+<h4 id="원본-설정">원본 설정</h4>
+<ul>
+<li><strong>원본 도메인</strong>: 생성한 S3 버킷 선택</li>
+<li><strong>자동완성 또는 수동입력</strong>: 유니크한 이름 필요</li>
+<li><strong>S3 버킷 액세스</strong>: OAI 사용 (기존 또는 신규 생성)</li>
+</ul>
+<h4 id="설정">설정</h4>
+<ul>
+<li><strong>가격 분류</strong>: 서비스 지역만 사용 (비용 최적화)</li>
+<li><strong>SSL 인증서</strong>: 새로 생성 필수
+<ul>
+<li><strong>주의</strong>: 반드시 <strong>버지니아 북부</strong>(N. Virginia) 리전에서 생성</li>
+<li>(2022.03.04 기준)</li>
+</ul>
+</li>
+</ul>
+<h3 id="4단계-ssl-인증서-생성">4단계: SSL 인증서 생성</h3>
+<p>AWS Certificate Manager에서:</p>
+<ol>
+<li>“인증서 요청” 선택</li>
+<li>도메인명 입력 (예: example.com, *.example.com)</li>
+<li>DNS 검증 선택</li>
+<li>CNAME 레코드 자동 생성</li>
+<li>검증 완료 대기</li>
+</ol>
+<h3 id="5단계-route53-설정">5단계: Route53 설정</h3>
+<h4 id="레코드-생성">레코드 생성</h4>
+<ul>
+<li><strong>레코드 유형</strong>: A (IPv4)</li>
+<li><strong>값</strong>: 별칭 선택
+<ul>
+<li>CloudFront 도메인 이름 검색 및 선택</li>
+</ul>
+</li>
+<li><strong>별칭 대상</strong>: 위에서 생성한 CloudFront 배포</li>
+</ul>
+<h3 id="6단계-s3에서-cloudfront-허용">6단계: S3에서 CloudFront 허용</h3>
+<h4 id="cloudfront-설정-확인">CloudFront 설정 확인</h4>
+<p>생성한 CloudFront 배포 → 원본 항목 → Origin Access Identity 값 확인</p>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">origin-access-identity/cloudfront/[ID값]
+</code></pre>
+<h4 id="s3-버킷-정책-설정">S3 버킷 정책 설정</h4>
+<pre class="language-json" data-language="json"><code is:raw="" class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"Version"</span><span class="token operator">:</span> <span class="token string">"2012-10-17"</span><span class="token punctuation">,</span>
+    <span class="token property">"Statement"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"Sid"</span><span class="token operator">:</span> <span class="token string">"CloudFrontAccess"</span><span class="token punctuation">,</span>
+            <span class="token property">"Effect"</span><span class="token operator">:</span> <span class="token string">"Allow"</span><span class="token punctuation">,</span>
+            <span class="token property">"Principal"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"AWS"</span><span class="token operator">:</span> <span class="token string">"arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity [ID값]"</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">"Action"</span><span class="token operator">:</span> <span class="token string">"s3:GetObject"</span><span class="token punctuation">,</span>
+            <span class="token property">"Resource"</span><span class="token operator">:</span> <span class="token string">"[S3-버킷-ARN]/*"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="7단계-오류-페이지-구성">7단계: 오류 페이지 구성</h3>
+<p>SPA(Single Page Application)를 배포할 때:</p>
+<ul>
+<li><strong>HTTP 403 오류</strong>: <code>/</code> (상태 코드 200)</li>
+<li><strong>HTTP 404 오류</strong>: <code>/index.html</code> (상태 코드 200)</li>
+</ul>
+<p>이렇게 설정하면 모든 라우트가 index.html로 리다이렉트된다.</p>
+<h3 id="문제-해결">문제 해결</h3>
+<h4 id="403-forbidden-오류">403 Forbidden 오류</h4>
+<ul>
+<li>IAM 권한 확인</li>
+<li>S3 OAI ID 값 다시 확인</li>
+<li>CloudFront 배포 업데이트 필요</li>
+</ul>
+<h4 id="404-오류">404 오류</h4>
+<ul>
+<li>빌드 결과물 확인 (dist 폴더)</li>
+<li>S3에 파일이 제대로 업로드되었는지 확인</li>
+<li>CloudFront 캐시 무효화</li>
+</ul>
+<h3 id="캐시-무효화">캐시 무효화</h3>
+<p>배포 후 변경사항이 즉시 반영되지 않으면:</p>
+<ol>
+<li>CloudFront 배포 선택</li>
+<li>“무효화” 탭</li>
+<li>경로 입력: <code>/*</code></li>
+<li>무효화 요청</li>
+</ol>
+<h3 id="성능-최적화">성능 최적화</h3>
+<ul>
+<li><strong>압축 활성화</strong>: 텍스트 파일 자동 압축</li>
+<li><strong>캐시 정책</strong>: CSS, JS는 길게, HTML은 짧게</li>
+<li><strong>버전 관리</strong>: 파일명에 해시값 포함 (자동 캐시 무효화)</li>
+</ul>
+<h3 id="비용-최적화">비용 최적화</h3>
+<ul>
+<li>S3: 저장소 비용 매우 저렴</li>
+<li>CloudFront: 데이터 전송량 기반 청구</li>
+<li>Route53: 호스팅 요금 고정</li>
+</ul>
+<h3 id="배포-완료-체크리스트">배포 완료 체크리스트</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> S3 버킷 생성 및 퍼블릭 액세스 제한</li>
+<li class="task-list-item"><input type="checkbox" disabled> CloudFront 배포 생성</li>
+<li class="task-list-item"><input type="checkbox" disabled> SSL 인증서 생성 (버지니아 북부)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Route53 레코드 생성</li>
+<li class="task-list-item"><input type="checkbox" disabled> S3 버킷 정책에 CloudFront OAI 추가</li>
+<li class="task-list-item"><input type="checkbox" disabled> 오류 페이지 설정 (SPA인 경우)</li>
+<li class="task-list-item"><input type="checkbox" disabled> 도메인에서 정상 접근 확인</li>
+</ul>
+<p>이 아키텍처로 안전하고 빠른 프론트엔드 서빙이 가능하다.</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

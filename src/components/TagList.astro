@@ -1,0 +1,43 @@
+---
+interface Props {
+  tags: string[];
+  basePath?: string;
+}
+const { tags, basePath = '/' } = Astro.props;
+---
+<ul class="tag-list" aria-label="글 태그">
+  {tags.map((tag) => (
+    <li><a href={`${basePath}search/${encodeURIComponent(tag)}/`}>{tag}</a></li>
+  ))}
+</ul>
+
+<style>
+  .tag-list {
+    list-style: none;
+    margin: var(--space-3) 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .tag-list li {
+    display: contents;
+  }
+
+  .tag-list li a {
+    display: inline-block;
+    padding: 2px var(--space-2);
+    font-size: var(--text-xs);
+    color: var(--accent-primary);
+    text-decoration: none;
+    background: color-mix(in srgb, var(--accent-primary) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent-primary) 20%, transparent);
+    border-radius: var(--radius-sm);
+    transition: opacity var(--motion-fast);
+  }
+
+  .tag-list li a:hover {
+    opacity: 0.8;
+  }
+</style>

@@ -1,0 +1,44 @@
+
+> bloa-blog@0.1.0 build
+> npm run validate:frontmatter && astro build
+
+
+> bloa-blog@0.1.0 validate:frontmatter
+> node scripts/validate-frontmatter.mjs
+
+Validated 3 post(s) in src/content/posts
+13:36:10 [content] Syncing content
+13:36:10 [content] Synced content
+13:36:10 [types] Generated 132ms
+13:36:10 [build] output: "static"
+13:36:10 [build] mode: "static"
+13:36:10 [build] directory: /Users/lovizu/project/blog/dist/
+13:36:10 [build] Collecting build info...
+13:36:10 [build] ✓ Completed in 138ms.
+13:36:10 [build] Building static entrypoints...
+13:36:11 [vite] ✓ built in 309ms
+13:36:11 [build] ✓ Completed in 320ms.
+
+ generating static routes 
+13:36:11 ▶ src/pages/404.astro
+13:36:11   └─ /404.html (+3ms) 
+13:36:11 λ src/pages/og/[slug].svg.ts
+13:36:11   ├─ /og/design-application-audit-checklist.svg (+9ms) 
+13:36:11   ├─ /og/astro-content-collections-frontmatter-checklist.svg (+0ms) 
+13:36:11   └─ /og/what-this-blog-covers.svg (+0ms) 
+13:36:11 ▶ src/pages/posts/[...slug].astro
+13:36:11   ├─ /posts/design-application-audit-checklist/index.html (+1ms) 
+13:36:11   ├─ /posts/astro-content-collections-frontmatter-checklist/index.html (+1ms) 
+13:36:11   └─ /posts/what-this-blog-covers/index.html (+0ms) 
+13:36:11 ▶ src/pages/privacy.astro
+13:36:11   └─ /privacy/index.html (+1ms) 
+13:36:11 λ src/pages/rss.xml.ts
+13:36:11   └─ /rss.xml (+6ms) 
+13:36:11 ▶ src/pages/index.astro
+13:36:11   └─ /index.html (+1ms) 
+13:36:11 ✓ Completed in 38ms.
+
+13:36:11 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+13:36:11 [sitemap-xml-compat] Copied sitemap-index.xml -> sitemap.xml for crawler compatibility.
+13:36:11 [build] 6 page(s) built in 505ms
+13:36:11 [build] Complete!

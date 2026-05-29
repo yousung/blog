@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Android 앱 배포: Google Play 네이티브 ...">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <text x="80" y="180" fill="#94a3b8" font-size="36" font-family="Pretendard, Noto Sans KR, sans-serif">감성개발자의 Blog</text>
+  <text x="80" y="330" fill="#f8fafc" font-size="68" font-weight="700" font-family="Pretendard, Noto Sans KR, sans-serif">Android 앱 배포: Google Play 네이티브 ...</text>
+  <text x="80" y="420" fill="#cbd5e1" font-size="34" font-family="Pretendard, Noto Sans KR, sans-serif">Google Play Store 네이티브 디버그 기호 업로드 방법</text>
+</svg>

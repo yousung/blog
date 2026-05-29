@@ -1,0 +1,47 @@
+{
+  "outDir": "docs/qa-evidence/bloa-111-20260528-133332",
+  "results": [
+    {
+      "case": "desktop-home",
+      "overflow": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleCount": 1
+    },
+    {
+      "case": "mobile-home",
+      "overflow": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleCount": 1
+    },
+    {
+      "case": "desktop-post",
+      "overflow": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleCount": 1
+    },
+    {
+      "case": "mobile-post",
+      "overflow": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleCount": 1
+    },
+    {
+      "case": "desktop-privacy",
+      "overflow": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleCount": 1
+    },
+    {
+      "case": "mobile-privacy",
+      "overflow": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleCount": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-05-28T04:31:19.592Z",
+  "base": "http://127.0.0.1:4321/blog",
+  "results": [
+    {
+      "name": "desktop-home",
+      "width": 1440,
+      "height": 900,
+      "pathname": "/",
+      "url": "http://127.0.0.1:4321/blog/",
+      "title": "감성개발자의 Blog",
+      "brandText": "감성개발자의 Blog",
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-108-20260528-133114/desktop-home.png"
+    },
+    {
+      "name": "mobile-home",
+      "width": 390,
+      "height": 844,
+      "pathname": "/",
+      "url": "http://127.0.0.1:4321/blog/",
+      "title": "감성개발자의 Blog",
+      "brandText": "감성개발자의 Blog",
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-108-20260528-133114/mobile-home.png"
+    },
+    {
+      "name": "desktop-privacy",
+      "width": 1440,
+      "height": 900,
+      "pathname": "/privacy/",
+      "url": "http://127.0.0.1:4321/blog/privacy/",
+      "title": "개인정보처리방침 | 감성개발자의 Blog",
+      "brandText": "감성개발자의 Blog",
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-108-20260528-133114/desktop-privacy.png"
+    },
+    {
+      "name": "mobile-privacy",
+      "width": 390,
+      "height": 844,
+      "pathname": "/privacy/",
+      "url": "http://127.0.0.1:4321/blog/privacy/",
+      "title": "개인정보처리방침 | 감성개발자의 Blog",
+      "brandText": "감성개발자의 Blog",
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-108-20260528-133114/mobile-privacy.png"
+    }
+  ]
+}

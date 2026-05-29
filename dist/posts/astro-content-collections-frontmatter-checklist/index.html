@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>Astro Content Collections로 프론트매터 오류를 배포 전에 막는 방법 | 감성개발자의 Blog</title><meta name="description" content="Astro Content Collections와 Zod 스키마를 이용해 블로그 글의 frontmatter 오류를 빌드 전에 차단하는 실무 체크리스트를 정리했다."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/astro-content-collections-frontmatter-checklist/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="Astro Content Collections로 프론트매터 오류를 배포 전에 막는 방법 | 감성개발자의 Blog"><meta property="og:description" content="Astro Content Collections와 Zod 스키마를 이용해 블로그 글의 frontmatter 오류를 빌드 전에 차단하는 실무 체크리스트를 정리했다."><meta property="og:url" content="https://blog.lovizu.com/posts/astro-content-collections-frontmatter-checklist/"><meta property="og:image" content="https://blog.lovizu.com/og/astro-content-collections-frontmatter-checklist.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/astro-content-collections-frontmatter-checklist.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Astro Content Collections로 프론트매터 오류를 배포 전에 막는 방법 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Astro Content Collections로 프론트매터 오류를 배포 전에 막는 방법 | 감성개발자의 Blog"><meta name="twitter:description" content="Astro Content Collections와 Zod 스키마를 이용해 블로그 글의 frontmatter 오류를 빌드 전에 차단하는 실무 체크리스트를 정리했다."><meta name="twitter:image" content="https://blog.lovizu.com/og/astro-content-collections-frontmatter-checklist.svg"><meta name="twitter:image:alt" content="Astro Content Collections로 프론트매터 오류를 배포 전에 막는 방법 대표 이미지"><meta property="article:published_time" content="2026-05-08T00:00:00.000Z"><meta property="article:modified_time" content="2026-05-28T00:00:00.000Z"><meta property="article:author" content="BLOA Team"><meta property="article:tag" content="Astro"><meta property="article:tag" content="프론트매터"><meta property="article:tag" content="유효성검사"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Astro Content Collections로 프론트매터 오류를 배포 전에 막는 방법","description":"Astro Content Collections와 Zod 스키마를 이용해 블로그 글의 frontmatter 오류를 빌드 전에 차단하는 실무 체크리스트를 정리했다.","url":"https://blog.lovizu.com/posts/astro-content-collections-frontmatter-checklist/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"BLOA Team"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"Astro, 프론트매터, 유효성검사","datePublished":"2026-05-08T00:00:00.000Z","dateModified":"2026-05-28T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/astro-content-collections-frontmatter-checklist/","image":"https://blog.lovizu.com/og/astro-content-collections-frontmatter-checklist.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>Astro Content Collections로 프론트매터 오류를 배포 전에 막는 방법</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2026-05-08T00:00:00.000Z" data-astro-cid-egg7nqdx>2026. 5. 8.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/Astro/" data-astro-cid-lga65v7i>Astro</a></li><li data-astro-cid-lga65v7i><a href="/search/%ED%94%84%EB%A1%A0%ED%8A%B8%EB%A7%A4%ED%84%B0/" data-astro-cid-lga65v7i>프론트매터</a></li><li data-astro-cid-lga65v7i><a href="/search/%EC%9C%A0%ED%9A%A8%EC%84%B1%EA%B2%80%EC%82%AC/" data-astro-cid-lga65v7i>유효성검사</a></li> </ul>  </div> <p>Astro 블로그를 운영하다 보면 글 내용보다 frontmatter 누락 때문에 빌드가 깨지는 일이 더 자주 생깁니다. 이 글은 <code>title</code>, <code>slug</code>, <code>date</code>, <code>summary</code>, <code>tags</code>, <code>status</code> 같은 필드를 어떻게 통제하면 좋은지, 그리고 왜 Content Collections가 초반부터 필요한지를 실제 운영 기준으로 정리한 문서입니다. Astro는 콘텐츠 컬렉션 스키마가 frontmatter를 일관되게 검증하고, 스키마를 어긴 파일이 있으면 오류를 보여준다고 설명합니다. (출처: <a href="https://v6.docs.astro.build/en/guides/content-collections">Astro Docs - Content collections</a>, <a href="https://docs.astro.build/en/reference/errors/content-entry-data-error/">Astro Docs - Content entry data does not match schema</a>)</p>
+<blockquote>
+<p>요약 박스</p>
+<ul>
+<li>frontmatter 검증은 글쓰기 편의 기능이 아니라 배포 안정성 장치입니다.</li>
+<li>Astro는 컬렉션 스키마를 정의하면 Zod 기반 검증과 자동 TypeScript 타이핑을 제공합니다. (출처: <a href="https://v6.docs.astro.build/en/guides/content-collections">Astro Docs - Content collections</a>)</li>
+<li>실무에서는 “필수 필드 정의 -> slug 규칙 -> 상태 필드 분리 -> 빌드 전 검사” 순으로 굳히는 편이 빠릅니다.</li>
+</ul>
+</blockquote>
+<p>최종 업데이트: 2026-05-28</p>
+<h2 id="작성-관점">작성 관점</h2>
+<p>저는 블로그 운영에서 가장 아까운 실패가 “좋은 글을 다 써놓고 metadata 실수로 배포가 막히는 경우”라고 봅니다. 그래서 작성자 자유도보다 발행 안정성을 우선하는 스키마를 선호합니다.</p>
+<h2 id="1-content-collections를-먼저-붙여야-하는-이유">1. Content Collections를 먼저 붙여야 하는 이유</h2>
+<p>Astro 문서에 따르면, 스키마는 컬렉션 안의 frontmatter 또는 데이터가 일관된 형태를 가지도록 보장하며, 스키마를 정의하면 TypeScript 인터페이스도 자동 생성됩니다. 즉, 작성 시점과 렌더링 시점 모두에서 오류를 줄일 수 있습니다. (출처: <a href="https://v6.docs.astro.build/en/guides/content-collections">Astro Docs - Content collections</a>)</p>
+<p>운영 관점에서는 장점이 더 단순합니다.</p>
+<ol>
+<li>필수값 누락을 초기에 막을 수 있습니다.</li>
+<li>slug 형식을 강제해 URL 품질을 통일할 수 있습니다.</li>
+<li><code>draft</code>와 <code>published</code>를 구분해 홈, 피드, sitemap 노출을 제어하기 쉬워집니다.</li>
+</ol>
+<h2 id="2-블로그에서-최소로-강제할-필드">2. 블로그에서 최소로 강제할 필드</h2>
+<p>제가 초반부터 고정하는 항목은 아래 정도입니다.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>필드</th><th>왜 필요한가</th><th>체크 기준</th></tr></thead><tbody><tr><td><code>title</code></td><td>목록, 상세, OG 제목 공통 기준</td><td>빈 문자열 금지</td></tr><tr><td><code>slug</code></td><td>URL 일관성</td><td>영문 소문자와 하이픈만 허용</td></tr><tr><td><code>date</code></td><td>정렬, 노출 기준</td><td>날짜 형식 강제</td></tr><tr><td><code>summary</code></td><td>목록 설명, 메타 설명 재사용</td><td>한 줄 요약 필수</td></tr><tr><td><code>tags</code></td><td>주제 분류</td><td>1개 이상</td></tr><tr><td><code>status</code></td><td>초안/공개 제어</td><td><code>draft</code> 또는 <code>published</code></td></tr></tbody></table>
+<p>Astro는 Zod로 이러한 스키마를 정의할 수 있고, 컬렉션 항목이 이를 어기면 오류를 알려줍니다. 공식 오류 문서도 컬렉션 스키마와 비교해 문제를 점검하라고 안내합니다. (출처: <a href="https://v6.docs.astro.build/en/guides/content-collections">Astro Docs - Content collections</a>, <a href="https://docs.astro.build/en/reference/errors/content-entry-data-error/">Astro Docs - Content entry data does not match schema</a>)</p>
+<h2 id="3-실무-체크리스트-빌드-전에-무엇을-보나">3. 실무 체크리스트: 빌드 전에 무엇을 보나</h2>
+<h3 id="3-1-slug는-사람이-아니라-규칙이-결정하게-합니다">3-1. slug는 사람이 아니라 규칙이 결정하게 합니다</h3>
+<p>사람이 직접 slug를 정하면 대문자, 공백, 날짜 중복 같은 실수가 반복됩니다. 그래서 정규식으로 허용 범위를 좁혀두는 편이 낫습니다. Astro가 스키마 기반 검증을 지원하므로, 이 단계는 문서화보다 자동화가 유리합니다. (출처: <a href="https://v6.docs.astro.build/en/guides/content-collections">Astro Docs - Content collections</a>)</p>
+<h3 id="3-2-status가-없으면-초안-관리가-무너집니다">3-2. <code>status</code>가 없으면 초안 관리가 무너집니다</h3>
+<p>초기 블로그일수록 초안과 공개 글이 섞이기 쉽습니다. <code>status</code> 필드를 별도로 두면 홈과 피드에서 <code>published</code>만 필터링하기 쉬워집니다. 이 구분은 발행 과정의 실수를 줄이는 데 효과적입니다.</p>
+<h3 id="3-3-오류는-빌드-전에-보이게-해야-합니다">3-3. 오류는 빌드 전에 보이게 해야 합니다</h3>
+<p>Astro는 스키마 위반 시 빌드 또는 검증 흐름에서 오류를 보여줍니다. 따라서 로컬 또는 CI에서 frontmatter 검사를 먼저 돌리면, 게시 후 수정하는 비용보다 훨씬 적은 비용으로 문제를 막을 수 있습니다. (출처: <a href="https://docs.astro.build/en/reference/errors/content-entry-data-error/">Astro Docs - Content entry data does not match schema</a>)</p>
+<h2 id="4-추천-운영-순서">4. 추천 운영 순서</h2>
+<ol>
+<li><code>src/content.config.ts</code>에 최소 필드를 먼저 고정합니다.</li>
+<li>새 글을 만들 때는 템플릿 frontmatter를 복사해 시작합니다.</li>
+<li>빌드 전에 frontmatter 검사를 먼저 돌립니다.</li>
+<li>공개 전에는 <code>published</code> 상태, 날짜, slug 중복 여부를 마지막으로 확인합니다.</li>
+</ol>
+<h2 id="faq">FAQ</h2>
+<h3 id="필드가-적을수록-좋은가요">필드가 적을수록 좋은가요?</h3>
+<p>초기에는 그렇습니다. 하지만 너무 적으면 요약, 상태, 태그 같은 운영 정보가 빠져 글이 쌓일수록 관리가 어려워집니다. 최소 운영 단위를 커버하는 정도까지는 고정하는 편이 좋습니다.</p>
+<h3 id="mdx나-cms를-써도-같은-원칙이-필요한가요">MDX나 CMS를 써도 같은 원칙이 필요한가요?</h3>
+<p>필요합니다. 저장 형식이 바뀌어도 “필수 메타데이터를 강제하고, 위반 시 조기에 실패하게 한다”는 원칙은 그대로 유효합니다. Astro 공식 문서도 컬렉션 데이터의 예측 가능성을 스키마의 핵심 가치로 설명합니다. (출처: <a href="https://v6.docs.astro.build/en/guides/content-collections">Astro Docs - Content collections</a>)</p>
+<h2 id="출처">출처</h2>
+<ul>
+<li><a href="https://v6.docs.astro.build/en/guides/content-collections">Astro Docs - Content collections</a></li>
+<li><a href="https://docs.astro.build/en/reference/errors/content-entry-data-error/">Astro Docs - Content entry data does not match schema</a></li>
+</ul> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

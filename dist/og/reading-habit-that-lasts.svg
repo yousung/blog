@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="독서 습관을 다시 만드는 가장 현실적인 방법">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <text x="80" y="180" fill="#94a3b8" font-size="36" font-family="Pretendard, Noto Sans KR, sans-serif">감성개발자의 Blog</text>
+  <text x="80" y="330" fill="#f8fafc" font-size="68" font-weight="700" font-family="Pretendard, Noto Sans KR, sans-serif">독서 습관을 다시 만드는 가장 현실적인 방법</text>
+  <text x="80" y="420" fill="#cbd5e1" font-size="34" font-family="Pretendard, Noto Sans KR, sans-serif">책을 한동안 못 읽은 사람이 다시 독서 습관을 만들기 위해 무엇부터 줄이고 어떻게 시작하면 좋은지 ...</text>
+</svg>

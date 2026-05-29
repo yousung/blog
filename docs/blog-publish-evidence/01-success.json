@@ -1,0 +1,7 @@
+{
+  "status": "ok",
+  "mode": "create",
+  "path": "src/content/posts/engineering/2026-05-28-blog-publish-skill.md",
+  "commitHash": "8cb38fcbceb766b753001e0504762cba74b6ed7c",
+  "workflowUrl": "https://github.com/yousung/blog/actions/workflows/blog-publish.yml"
+}

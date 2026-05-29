@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<BaseLayout title={`개인정보처리방침 | ${SITE_TITLE}`} description={`${SITE_TITLE} 개인정보처리방침`} noindex={true}>
+  <article class="privacy">
+    <h1>개인정보처리방침</h1>
+    <p>
+      {SITE_TITLE}는 서비스 운영 과정에서 필요한 최소한의 개인정보를 처리합니다. 본 문서는 어떤 정보를 왜
+      처리하는지, 그리고 이용자의 권리를 어떻게 보장하는지 안내합니다.
+    </p>
+    <h2>수집 항목</h2>
+    <ul>
+      <li>접속 로그: IP 일부, 브라우저 종류, 운영체제, 방문 시각, 참조 URL</li>
+      <li>쿠키/유사 식별자: 방문자 식별, 접속 상태 유지, 광고 성과 측정 목적의 정보</li>
+    </ul>
+    <h2>이용 목적</h2>
+    <ul>
+      <li>콘텐츠 제공, 통계 분석, 서비스 품질 개선</li>
+      <li>비정상 이용 탐지 및 보안 대응</li>
+      <li>광고 노출 최적화 및 성과 측정(예: Google AdSense)</li>
+    </ul>
+    <h2>보관 및 파기</h2>
+    <ul>
+      <li>접속 로그는 관련 법령 또는 서비스 운영 목적 달성 시점까지 보관 후 파기합니다.</li>
+      <li>쿠키는 브라우저 설정 또는 만료 주기에 따라 자동 삭제됩니다.</li>
+    </ul>
+    <h2>제3자 제공 및 처리 위탁</h2>
+    <p>
+      서비스 제공을 위해 일부 기능을 외부 서비스에 의존할 수 있습니다(예: 분석, 광고). 각 서비스의
+      데이터 처리 방식은 해당 제공자의 개인정보처리방침을 따릅니다.
+    </p>
+    <h2>이용자 권리</h2>
+    <ul>
+      <li>이용자는 브라우저 설정에서 쿠키 저장을 거부하거나 삭제할 수 있습니다.</li>
+      <li>개인정보 처리 관련 문의, 열람·정정·삭제 요청은 아래 문의 채널로 접수할 수 있습니다.</li>
+    </ul>
+    <h2>아동의 개인정보</h2>
+    <p>본 서비스는 원칙적으로 만 14세 미만 아동을 대상으로 개인정보를 수집하지 않습니다.</p>
+    <h2>정책 변경</h2>
+    <p>본 방침은 서비스 변경 또는 법령 개정에 따라 수정될 수 있으며, 변경 사항은 본 페이지에 공지합니다.</p>
+    <h2>시행일</h2>
+    <p>본 방침의 시행일은 2026년 5월 28일입니다.</p>
+    <h2>법률 고지</h2>
+    <p>
+      본 방침은 일반적인 운영 정책 안내이며 법률 자문이 아닙니다. 구체적인 법적 판단이 필요한 경우 전문가
+      자문을 권장합니다.
+    </p>
+    <h2>문의</h2>
+    <p>정책 관련 문의는 운영 채널 또는 저장소 이슈를 통해 접수해 주세요.</p>
+  </article>
+</BaseLayout>
+
+<style>
+  .privacy {
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    background: var(--bg-surface);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-8);
+  }
+
+  .privacy h1 {
+    margin: 0 0 var(--space-4);
+    font-size: var(--text-2xl);
+    line-height: var(--lh-tight);
+  }
+
+  .privacy h2 {
+    margin: var(--space-8) 0 var(--space-3);
+    font-size: var(--text-lg);
+  }
+
+  .privacy p,
+  .privacy li {
+    color: var(--text-secondary);
+  }
+
+  .privacy ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+</style>

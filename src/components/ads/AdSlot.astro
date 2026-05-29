@@ -1,0 +1,102 @@
+---
+interface Props {
+  variant: 'top' | 'feed' | 'article' | 'sidebar' | 'bottom';
+  label?: string;
+}
+
+const { variant, label = '광고' } = Astro.props as Props;
+const adSenseClient = import.meta.env.PUBLIC_ADSENSE_CLIENT?.trim() ?? '';
+const adSlots: Record<Props['variant'], string> = {
+  top: import.meta.env.PUBLIC_ADSENSE_SLOT_TOP?.trim() ?? '',
+  feed: import.meta.env.PUBLIC_ADSENSE_SLOT_FEED?.trim() ?? '',
+  article: import.meta.env.PUBLIC_ADSENSE_SLOT_ARTICLE?.trim() ?? '',
+  sidebar: import.meta.env.PUBLIC_ADSENSE_SLOT_SIDEBAR?.trim() ?? '',
+  bottom: import.meta.env.PUBLIC_ADSENSE_SLOT_BOTTOM?.trim() ?? ''
+};
+const adSlot = adSlots[variant];
+const canRenderAd = adSenseClient.length > 0 && adSlot.length > 0;
+---
+
+<aside class={`ad-slot ad-slot--${variant}`} aria-label={`${label} 슬롯`}>
+  <span class="ad-slot__badge">{label}</span>
+  {
+    canRenderAd ? (
+      <>
+        <ins
+          class="adsbygoogle"
+          style="display:block"
+          data-ad-client={adSenseClient}
+          data-ad-slot={adSlot}
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+        <script is:inline>{`(adsbygoogle = window.adsbygoogle || []).push({});`}</script>
+      </>
+    ) : (
+      <p class="ad-slot__copy">광고 영역</p>
+    )
+  }
+</aside>
+
+<style>
+  .ad-slot {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    border: 1px dashed var(--ad-slot-border);
+    border-radius: var(--radius-md);
+    background: var(--ad-slot-bg);
+    color: var(--text-secondary);
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: var(--space-2);
+    text-align: center;
+    padding: var(--space-4);
+  }
+
+  .ad-slot__badge {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid var(--ad-slot-border);
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    padding: 0 var(--space-4);
+    font-size: var(--text-xs);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .ad-slot__copy {
+    margin: 0;
+    font-size: var(--text-sm);
+  }
+
+  .ad-slot--top {
+    min-height: 90px;
+  }
+
+  .ad-slot--feed,
+  .ad-slot--article {
+    min-height: 280px;
+  }
+
+  .ad-slot--bottom {
+    min-height: 250px;
+  }
+
+  .ad-slot--sidebar {
+    min-height: 600px;
+    width: 300px;
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .ad-slot--top {
+      min-height: 120px;
+    }
+  }
+</style>

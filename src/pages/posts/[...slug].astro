@@ -1,0 +1,135 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GiscusComments from '../../components/GiscusComments.astro';
+import TagList from '../../components/TagList.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => data.status === 'published');
+  return posts.map((post) => ({
+    params: { slug: post.data.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const defaultOgPath = `/og/${post.data.slug}.svg`;
+const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.summary}
+  image={post.data.ogImage ?? defaultOgPath}
+  imageAlt={`${post.data.title} 대표 이미지`}
+  type="article"
+  publishedTime={post.data.date.toISOString()}
+  modifiedTime={post.data.updatedDate?.toISOString()}
+  author={post.data.author}
+  tags={post.data.tags}
+>
+  <article class="post">
+    <p class="post-eyebrow">Article</p>
+    <h1>{post.data.title}</h1>
+    <p class="meta">
+      <time datetime={post.data.date.toISOString()}>{post.data.date.toLocaleDateString('ko-KR')}</time>
+    </p>
+    <div class="tags-wrapper">
+      <TagList tags={post.data.tags} basePath={basePath} />
+    </div>
+    <Content />
+  </article>
+  <GiscusComments />
+</BaseLayout>
+
+<style>
+  .post-layout {
+    display: grid;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .post {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .post-eyebrow {
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    color: var(--accent-primary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .post h1 {
+    margin: 0 0 var(--space-4);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    overflow-wrap: anywhere;
+  }
+
+  .meta {
+    margin: 0 0 var(--space-4);
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .tags-wrapper {
+    margin-bottom: var(--space-8);
+  }
+
+  .post :global(p),
+  .post :global(li),
+  .post :global(td),
+  .post :global(th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: var(--lh-base);
+    font-size: var(--text-lg);
+  }
+
+  .post :global(h2),
+  .post :global(h3) {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-3);
+    line-height: var(--lh-tight);
+  }
+
+  .post :global(img),
+  .post :global(video),
+  .post :global(iframe),
+  .post :global(svg) {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .post :global(table) {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .post :global(pre) {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  @media (max-width: 640px) {
+    .post {
+      padding: var(--space-6);
+    }
+  }
+</style>

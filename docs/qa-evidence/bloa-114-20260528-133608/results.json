@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-05-28T04:36:14.054Z",
+  "results": [
+    {
+      "case": "configured",
+      "htmlPath": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-114-20260528-133608/configured/dist/posts/what-this-blog-covers/index.html",
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-114-20260528-133608/configured-post.png",
+      "title": "감성개발자의 Blog는 무엇을 다루는가",
+      "hasGiscusScript": true,
+      "giscusRepo": "yousung/blog",
+      "giscusRepoId": "R_kgDOTest_123",
+      "giscusCategory": "General",
+      "giscusCategoryId": "DIC_kgDOTest_456",
+      "hasFallback": false,
+      "fallbackText": null,
+      "hasCommentsHeading": true
+    },
+    {
+      "case": "missing",
+      "htmlPath": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-114-20260528-133608/missing/dist/posts/what-this-blog-covers/index.html",
+      "screenshot": "/Users/lovizu/project/blog/docs/qa-evidence/bloa-114-20260528-133608/missing-post.png",
+      "title": "감성개발자의 Blog는 무엇을 다루는가",
+      "hasGiscusScript": false,
+      "giscusRepo": null,
+      "giscusRepoId": null,
+      "giscusCategory": null,
+      "giscusCategoryId": null,
+      "hasFallback": true,
+      "fallbackText": "댓글 위젯 설정이 없거나 형식이 올바르지 않습니다. `.env`의 `PUBLIC_GISCUS_REPO`, `PUBLIC_GISCUS_REPO_ID`, `PUBLIC_GISCUS_CATEGORY`, `PUBLIC_GISCUS_CATEGORY_ID` 값을 확인해 주세요.",
+      "hasCommentsHeading": true
+    }
+  ]
+}

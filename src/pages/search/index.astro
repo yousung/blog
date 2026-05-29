@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import PostFeed from '../../components/PostFeed.astro';
+import { SITE_TITLE } from '../../consts';
+
+const basePath = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const allPosts = (await getCollection('posts'))
+  .filter((entry) => entry.data.status === 'published')
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout title={`검색 - ${SITE_TITLE}`} description="블로그 검색" noindex={true}>
+  <section class="search-page">
+    <header class="search-header">
+      <a href="/" class="back-link">홈으로 돌아가기</a>
+      <p class="kicker">Search</p>
+      <h1 id="search-heading">검색</h1>
+      <p class="search-meta" id="search-result-meta">검색어를 입력해 주세요.</p>
+    </header>
+
+    <p class="search-empty" id="search-empty" hidden>검색 결과가 없습니다.</p>
+    <PostFeed posts={allPosts} basePath={basePath} searchable={true} listLabel="검색 결과 목록" />
+  </section>
+</BaseLayout>
+
+<script>
+  (() => {
+    const heading = document.querySelector('#search-heading');
+    const meta = document.querySelector('#search-result-meta');
+    const empty = document.querySelector('#search-empty');
+    const rows = Array.from(document.querySelectorAll('li[data-search-text]')) as HTMLElement[];
+
+    if (!meta || !empty) return;
+
+    const normalize = (v: string) => String(v ?? '').toLocaleLowerCase('ko-KR').trim();
+
+    const matchesQuery = (searchText: string, raw: string) => {
+      const q = normalize(raw);
+      if (!q) return false;
+      const tokens = q.split(/\s+/).filter(Boolean);
+      if (searchText.includes(q)) return true;
+      return tokens.length > 1 && tokens.every((t) => searchText.includes(t));
+    };
+
+    const basePath = (import.meta.env.BASE_URL || '/').endsWith('/')
+      ? import.meta.env.BASE_URL || '/'
+      : `${import.meta.env.BASE_URL}/`;
+
+    const render = (rawQuery: string) => {
+      const q = String(rawQuery ?? '').trim();
+      let matched = 0;
+
+      rows.forEach((row) => {
+        const searchText = row.getAttribute('data-search-text') ?? '';
+        const show = q ? matchesQuery(searchText, q) : false;
+        row.hidden = !show;
+        if (show) matched++;
+      });
+
+      if (heading) heading.textContent = q ? `"${q}" 검색 결과` : '검색';
+      meta.textContent = q ? `${matched}개 글` : '검색어를 입력해 주세요.';
+      (empty as HTMLElement).hidden = !q || matched > 0;
+      document.title = q
+        ? `"${q}" 검색 결과 - ${document.title.split(' - ').pop()}`
+        : `검색 - ${document.title.split(' - ').pop()}`;
+
+      const newPath = q
+        ? `${basePath}search/${encodeURIComponent(q)}/`
+        : `${basePath}search/`;
+      window.history.replaceState(null, '', newPath);
+    };
+
+    const init = () => {
+      const pathMatch = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      let q = pathMatch ? decodeURIComponent(pathMatch[1]) : '';
+      if (!q) {
+        try {
+          const stored = sessionStorage.getItem('__search_q');
+          if (stored) { sessionStorage.removeItem('__search_q'); q = stored; }
+        } catch (_) {}
+      }
+      if (!q) q = new URLSearchParams(window.location.search).get('q') ?? '';
+      const input = document.querySelector('#header-search-input');
+      if (input instanceof HTMLInputElement && q && !input.value) input.value = q;
+      render(q);
+    };
+
+    window.addEventListener('site-search-input', (e) => {
+      const q = e instanceof CustomEvent ? e.detail?.query ?? '' : '';
+      render(q);
+    });
+
+    init();
+  })();
+</script>
+
+<style>
+  .search-page {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  .search-header {
+    display: grid;
+    gap: var(--space-3);
+    padding: clamp(2rem, 7vw, 4.5rem) 0 var(--space-8);
+    border-bottom: 1px solid var(--border-default);
+  }
+
+  .back-link {
+    width: fit-content;
+    font-size: var(--text-sm);
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: opacity var(--motion-fast);
+  }
+
+  .back-link:hover { opacity: 0.7; }
+
+  .kicker {
+    margin: 0;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--accent-primary);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .search-meta,
+  .search-empty {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+  }
+
+  .search-empty { color: var(--accent-primary); }
+</style>

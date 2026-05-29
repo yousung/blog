@@ -1,0 +1,19 @@
+Schema violation:
+{
+  "formErrors": [],
+  "fieldErrors": {
+    "frontmatter": [
+      "Too small: expected string to have >=1 characters",
+      "Too small: expected string to have >=1 characters",
+      "Invalid input",
+      "Invalid input: expected array, received string",
+      "Invalid string: must match pattern /^[a-z0-9]+(?:-[a-z0-9]+)*$/",
+      "Invalid string: must match pattern /^[a-z0-9]+(?:-[a-z0-9]+)*$/",
+      "Invalid string: must match pattern /^\\d{4}-\\d{2}-\\d{2}$/"
+    ],
+    "body": [
+      "Too small: expected string to have >=1 characters"
+    ]
+  }
+}
+Push skipped due to schema violation.

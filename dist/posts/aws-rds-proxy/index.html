@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>AWS RDS Proxy로 데이터베이스 연결 최적화하기 | 감성개발자의 Blog</title><meta name="description" content="AWS RDS Proxy를 통한 데이터베이스 연결 관리 전략. Lambda, PHP, Ruby 등 동적 언어에서의 연결 풀 문제 해결. 서버리스 환경에서 RDS Proxy의 역할과 실제 적용 효과, 비용 최적화 방법."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/aws-rds-proxy/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="AWS RDS Proxy로 데이터베이스 연결 최적화하기 | 감성개발자의 Blog"><meta property="og:description" content="AWS RDS Proxy를 통한 데이터베이스 연결 관리 전략. Lambda, PHP, Ruby 등 동적 언어에서의 연결 풀 문제 해결. 서버리스 환경에서 RDS Proxy의 역할과 실제 적용 효과, 비용 최적화 방법."><meta property="og:url" content="https://blog.lovizu.com/posts/aws-rds-proxy/"><meta property="og:image" content="https://blog.lovizu.com/og/aws-rds-proxy.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/aws-rds-proxy.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AWS RDS Proxy로 데이터베이스 연결 최적화하기 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AWS RDS Proxy로 데이터베이스 연결 최적화하기 | 감성개발자의 Blog"><meta name="twitter:description" content="AWS RDS Proxy를 통한 데이터베이스 연결 관리 전략. Lambda, PHP, Ruby 등 동적 언어에서의 연결 풀 문제 해결. 서버리스 환경에서 RDS Proxy의 역할과 실제 적용 효과, 비용 최적화 방법."><meta name="twitter:image" content="https://blog.lovizu.com/og/aws-rds-proxy.svg"><meta name="twitter:image:alt" content="AWS RDS Proxy로 데이터베이스 연결 최적화하기 대표 이미지"><meta property="article:published_time" content="2023-04-11T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="AWS"><meta property="article:tag" content="RDS"><meta property="article:tag" content="데이터베이스"><meta property="article:tag" content="Lambda"><meta property="article:tag" content="서버리스"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AWS RDS Proxy로 데이터베이스 연결 최적화하기","description":"AWS RDS Proxy를 통한 데이터베이스 연결 관리 전략. Lambda, PHP, Ruby 등 동적 언어에서의 연결 풀 문제 해결. 서버리스 환경에서 RDS Proxy의 역할과 실제 적용 효과, 비용 최적화 방법.","url":"https://blog.lovizu.com/posts/aws-rds-proxy/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, AWS, RDS, 데이터베이스, Lambda, 서버리스","datePublished":"2023-04-11T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/aws-rds-proxy/","image":"https://blog.lovizu.com/og/aws-rds-proxy.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>AWS RDS Proxy로 데이터베이스 연결 최적화하기</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2023-04-11T00:00:00.000Z" data-astro-cid-egg7nqdx>2023. 4. 11.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/AWS/" data-astro-cid-lga65v7i>AWS</a></li><li data-astro-cid-lga65v7i><a href="/search/RDS/" data-astro-cid-lga65v7i>RDS</a></li><li data-astro-cid-lga65v7i><a href="/search/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/" data-astro-cid-lga65v7i>데이터베이스</a></li><li data-astro-cid-lga65v7i><a href="/search/Lambda/" data-astro-cid-lga65v7i>Lambda</a></li><li data-astro-cid-lga65v7i><a href="/search/%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4/" data-astro-cid-lga65v7i>서버리스</a></li> </ul>  </div> <h2 id="rds-proxy-개요">RDS Proxy 개요</h2>
+<p>AWS RDS Proxy는 2019년 12월 출시된 관계형 데이터베이스의 연결 관리 서비스입니다. Java 개발자는 이 기능이 내장되어 있지만, Lambda나 PHP, Ruby 같은 동적 언어 환경에서는 연결 풀 관리가 복잡했습니다.</p>
+<h2 id="도입-배경">도입 배경</h2>
+<p>PHP Laravel을 AWS ECS Fargate 환경에서 실행하는 경우 DB 연결 풀을 관리할 방법이 없었습니다. 이 상황은 서버 스트레스 테스트 결과로 도입이 필요함을 확인했습니다.</p>
+<p><strong>도입 대상:</strong></p>
+<ul>
+<li>대회원용 API (가장 높은 트래픽)</li>
+<li>Lambda 같은 서버리스 환경</li>
+<li>PHP, Ruby 등 비connection-pooling 언어</li>
+</ul>
+<h2 id="성능-개선-지표">성능 개선 지표</h2>
+<p>RDS Proxy 적용 후 DB 메트릭의 주요 변화는 다음과 같습니다.</p>
+<h3 id="db-연결-수-메트릭">DB 연결 수 메트릭</h3>
+<p><img src="/images/posts/aws-rds-proxy/img-01.png" alt="RDS Proxy DB 연결 수 메트릭"></p>
+<p><strong>db.users.Connections.avg 지표에서 눈에 띄는 개선:</strong></p>
+<ul>
+<li>동시 연결 수 감소</li>
+<li>연결 풀의 효율적 관리</li>
+<li>데이터베이스 부하 경감</li>
+</ul>
+<h2 id="lock-대기-성능-모니터링">Lock 대기 성능 모니터링</h2>
+<p><img src="/images/posts/aws-rds-proxy/img-02.png" alt="RDS Proxy Lock 대기 메트릭"></p>
+<p><strong>db.Locks.innodb_row_lock_waits.avg 지표의 변화:</strong></p>
+<ul>
+<li>InnoDB Row Lock 대기 시간 감소</li>
+<li>쿼리 응답 속도 개선</li>
+<li>동시 연결의 효율적 처리</li>
+</ul>
+<h2 id="도입-권장-대상">도입 권장 대상</h2>
+<p>다음과 같은 상황에서 RDS Proxy 도입을 강력히 추천합니다.</p>
+<ul>
+<li>PHP/Ruby 기반 서비스 (연결 풀 미지원)</li>
+<li>Lambda 기반 서버리스 아키텍처</li>
+<li>높은 동시 연결이 필요한 서비스</li>
+<li>연결 성능 문제를 경험하는 환경</li>
+</ul>
+<h2 id="비용-효율성">비용 효율성</h2>
+<p>RDS Proxy는 추가 비용이 발생하지만:</p>
+<ul>
+<li>개발 환경: RDS 인프라 축소로 비용 절감</li>
+<li>운영 환경: 불필요한 RDS 스펙 다운그레이드 가능</li>
+<li>전체적으로 비용 대비 성능 개선 효과 기대</li>
+</ul>
+<h2 id="마치며">마치며</h2>
+<p>연결 관리 문제를 경험하는 PHP, Ruby, Lambda 환경이라면 RDS Proxy 도입을 검토할 가치가 있습니다. 초기 비용 이상의 성능 개선과 인프라 최적화 효과를 기대할 수 있습니다.</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

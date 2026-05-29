@@ -1,0 +1,65 @@
+{
+  "outDir": "docs/qa-evidence/bloa-111-20260528-133430",
+  "checks": [
+    {
+      "case": "desktop-home",
+      "h1": "감성개발자의 Blog",
+      "overflow": false,
+      "hasPrivacyLink": true,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleErrors": 0
+    },
+    {
+      "case": "mobile-home",
+      "h1": "감성개발자의 Blog",
+      "overflow": false,
+      "hasPrivacyLink": true,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleErrors": 0
+    },
+    {
+      "case": "desktop-post",
+      "h1": "감성개발자의 Blog는 무엇을 다루는가",
+      "overflow": false,
+      "hasPrivacyLink": true,
+      "hasCommentsHeading": true,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": true,
+      "consoleErrors": 0
+    },
+    {
+      "case": "mobile-post",
+      "h1": "감성개발자의 Blog는 무엇을 다루는가",
+      "overflow": false,
+      "hasPrivacyLink": true,
+      "hasCommentsHeading": true,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": true,
+      "consoleErrors": 0
+    },
+    {
+      "case": "desktop-privacy",
+      "h1": "개인정보처리방침",
+      "overflow": false,
+      "hasPrivacyLink": true,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleErrors": 0
+    },
+    {
+      "case": "mobile-privacy",
+      "h1": "개인정보처리방침",
+      "overflow": false,
+      "hasPrivacyLink": true,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "consoleErrors": 0
+    }
+  ]
+}

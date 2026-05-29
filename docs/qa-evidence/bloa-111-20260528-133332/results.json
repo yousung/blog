@@ -1,0 +1,149 @@
+{
+  "generatedAt": "2026-05-28T04:34:08.489Z",
+  "base": "http://127.0.0.1:4321",
+  "checks": {
+    "brandTitleExpected": "감성개발자의 Blog",
+    "privacyPath": "/privacy/",
+    "postPath": "/posts/what-this-blog-covers/"
+  },
+  "results": [
+    {
+      "case": "desktop-home",
+      "url": "http://127.0.0.1:4321/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "consoleEntries": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "title": "404: Not Found",
+      "h1": "404:  Not found",
+      "hasPrivacyLink": false,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-20260528-133332/desktop-home.png"
+    },
+    {
+      "case": "mobile-home",
+      "url": "http://127.0.0.1:4321/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "consoleEntries": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "title": "404: Not Found",
+      "h1": "404:  Not found",
+      "hasPrivacyLink": false,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-20260528-133332/mobile-home.png"
+    },
+    {
+      "case": "desktop-post",
+      "url": "http://127.0.0.1:4321/posts/what-this-blog-covers/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "consoleEntries": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "title": "404: Not Found",
+      "h1": "404:  Not found",
+      "hasPrivacyLink": false,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-20260528-133332/desktop-post.png"
+    },
+    {
+      "case": "mobile-post",
+      "url": "http://127.0.0.1:4321/posts/what-this-blog-covers/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "consoleEntries": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "title": "404: Not Found",
+      "h1": "404:  Not found",
+      "hasPrivacyLink": false,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-20260528-133332/mobile-post.png"
+    },
+    {
+      "case": "desktop-privacy",
+      "url": "http://127.0.0.1:4321/privacy/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "consoleEntries": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "title": "404: Not Found",
+      "h1": "404:  Not found",
+      "hasPrivacyLink": false,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-20260528-133332/desktop-privacy.png"
+    },
+    {
+      "case": "mobile-privacy",
+      "url": "http://127.0.0.1:4321/privacy/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "consoleEntries": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "title": "404: Not Found",
+      "h1": "404:  Not found",
+      "hasPrivacyLink": false,
+      "hasCommentsHeading": false,
+      "hasCommentsIframe": false,
+      "hasCommentsFallback": false,
+      "fallbackText": null,
+      "overflow": false,
+      "screenshot": "docs/qa-evidence/bloa-111-20260528-133332/mobile-privacy.png"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="ko" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.2"><title>Laravel 한글 언어팩으로 UX 개선하기 | 감성개발자의 Blog</title><meta name="description" content="Laravel 프레임워크의 검증, 인증, 페이지네이션 메시지를 한글로 완벽 번역. Github 저장소에서 직접 다운로드하거나 Git Clone으로 간단 설치. config/app.php 한 줄 설정만으로 모든 시스템 메시지가 한글로 표시되어 한국 사용자 경험을 극대화합니다."><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="theme-color" content="#ffffff"><meta name="application-name" content="감성개발자의 Blog"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://blog.lovizu.com/posts/laravel-korean-localization/"><link rel="alternate" type="application/rss+xml" title="감성개발자의 Blog RSS" href="https://blog.lovizu.com/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="감성개발자의 Blog"><meta property="og:title" content="Laravel 한글 언어팩으로 UX 개선하기 | 감성개발자의 Blog"><meta property="og:description" content="Laravel 프레임워크의 검증, 인증, 페이지네이션 메시지를 한글로 완벽 번역. Github 저장소에서 직접 다운로드하거나 Git Clone으로 간단 설치. config/app.php 한 줄 설정만으로 모든 시스템 메시지가 한글로 표시되어 한국 사용자 경험을 극대화합니다."><meta property="og:url" content="https://blog.lovizu.com/posts/laravel-korean-localization/"><meta property="og:image" content="https://blog.lovizu.com/og/laravel-korean-localization.svg"><meta property="og:image:secure_url" content="https://blog.lovizu.com/og/laravel-korean-localization.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Laravel 한글 언어팩으로 UX 개선하기 대표 이미지"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Laravel 한글 언어팩으로 UX 개선하기 | 감성개발자의 Blog"><meta name="twitter:description" content="Laravel 프레임워크의 검증, 인증, 페이지네이션 메시지를 한글로 완벽 번역. Github 저장소에서 직접 다운로드하거나 Git Clone으로 간단 설치. config/app.php 한 줄 설정만으로 모든 시스템 메시지가 한글로 표시되어 한국 사용자 경험을 극대화합니다."><meta name="twitter:image" content="https://blog.lovizu.com/og/laravel-korean-localization.svg"><meta name="twitter:image:alt" content="Laravel 한글 언어팩으로 UX 개선하기 대표 이미지"><meta property="article:published_time" content="2018-08-27T00:00:00.000Z"><meta property="article:modified_time" content="2026-04-23T00:00:00.000Z"><meta property="article:author" content="Lovizu"><meta property="article:tag" content="legacy"><meta property="article:tag" content="legacy-migration"><meta property="article:tag" content="Laravel"><meta property="article:tag" content="한글화"><meta property="article:tag" content="다국어"><meta property="article:tag" content="i18n"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Laravel 한글 언어팩으로 UX 개선하기","description":"Laravel 프레임워크의 검증, 인증, 페이지네이션 메시지를 한글로 완벽 번역. Github 저장소에서 직접 다운로드하거나 Git Clone으로 간단 설치. config/app.php 한 줄 설정만으로 모든 시스템 메시지가 한글로 표시되어 한국 사용자 경험을 극대화합니다.","url":"https://blog.lovizu.com/posts/laravel-korean-localization/","inLanguage":"ko-KR","isPartOf":{"@type":"Blog","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"author":{"@type":"Person","name":"Lovizu"},"publisher":{"@type":"Organization","name":"감성개발자의 Blog","url":"https://blog.lovizu.com/"},"keywords":"legacy, legacy-migration, Laravel, 한글화, 다국어, i18n","datePublished":"2018-08-27T00:00:00.000Z","dateModified":"2026-04-23T00:00:00.000Z","mainEntityOfPage":"https://blog.lovizu.com/posts/laravel-korean-localization/","image":"https://blog.lovizu.com/og/laravel-korean-localization.svg"}</script><link rel="stylesheet" href="/_astro/index.DEB-JsT4.css">
+<style>.comments[data-astro-cid-qdzwzgpn]{margin-top:var(--space-8);border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-canvas);box-shadow:var(--shadow-sm);padding:var(--space-6)}.comments[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0 0 var(--space-4);font-size:var(--text-lg);line-height:var(--lh-tight)}@media(max-width:640px){.comments[data-astro-cid-qdzwzgpn]{padding:var(--space-4)}}.post-layout[data-astro-cid-egg7nqdx]{display:grid;gap:var(--space-8);align-items:start}.post[data-astro-cid-egg7nqdx]{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm)}.post-eyebrow[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-2);font-size:var(--text-xs);font-weight:700;color:var(--accent-primary);letter-spacing:.08em;text-transform:uppercase}.post[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}.meta[data-astro-cid-egg7nqdx]{margin:0 0 var(--space-4);color:var(--text-secondary);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em}.tags-wrapper[data-astro-cid-egg7nqdx]{margin-bottom:var(--space-8)}.post[data-astro-cid-egg7nqdx] p,.post[data-astro-cid-egg7nqdx] li,.post[data-astro-cid-egg7nqdx] td,.post[data-astro-cid-egg7nqdx] th{overflow-wrap:anywhere;word-break:break-word;line-height:var(--lh-base);font-size:var(--text-lg)}.post[data-astro-cid-egg7nqdx] h2,.post[data-astro-cid-egg7nqdx] h3{margin-top:var(--space-10);margin-bottom:var(--space-3);line-height:var(--lh-tight)}.post[data-astro-cid-egg7nqdx] img,.post[data-astro-cid-egg7nqdx] video,.post[data-astro-cid-egg7nqdx] iframe,.post[data-astro-cid-egg7nqdx] svg{max-width:100%;height:auto}.post[data-astro-cid-egg7nqdx] table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.post[data-astro-cid-egg7nqdx] pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}@media(max-width:640px){.post[data-astro-cid-egg7nqdx]{padding:var(--space-6)}}
+.tag-list[data-astro-cid-lga65v7i]{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i]{display:contents}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]{display:inline-block;padding:2px var(--space-2);font-size:var(--text-xs);color:var(--accent-primary);text-decoration:none;background:color-mix(in srgb,var(--accent-primary) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent-primary) 20%,transparent);border-radius:var(--radius-sm);transition:opacity var(--motion-fast)}.tag-list[data-astro-cid-lga65v7i] li[data-astro-cid-lga65v7i] a[data-astro-cid-lga65v7i]:hover{opacity:.8}
+</style></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>본문으로 건너뛰기</a> <header class="site-header" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <a class="site-brand" href="/" data-astro-cid-37fxchfa>감성개발자의 Blog</a> <form class="header-search" action="/search/" role="search" data-astro-cid-37fxchfa> <input type="search" id="header-search-input" placeholder="검색..." autocomplete="off" aria-label="글 검색" data-astro-cid-37fxchfa> <button type="submit" aria-label="검색" data-astro-cid-37fxchfa> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-37fxchfa> <circle cx="11" cy="11" r="8" data-astro-cid-37fxchfa></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-37fxchfa></line> </svg> </button> </form> <nav aria-label="주요 메뉴" data-astro-cid-37fxchfa> <a href="/" data-astro-cid-37fxchfa>홈</a> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </nav> </div> </header> <main data-astro-cid-37fxchfa> <div class="site-shell" id="main-content" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-egg7nqdx> <p class="post-eyebrow" data-astro-cid-egg7nqdx>Article</p> <h1 data-astro-cid-egg7nqdx>Laravel 한글 언어팩으로 UX 개선하기</h1> <p class="meta" data-astro-cid-egg7nqdx> <time datetime="2018-08-27T00:00:00.000Z" data-astro-cid-egg7nqdx>2018. 8. 27.</time> </p> <div class="tags-wrapper" data-astro-cid-egg7nqdx> <ul class="tag-list" aria-label="글 태그" data-astro-cid-lga65v7i> <li data-astro-cid-lga65v7i><a href="/search/legacy/" data-astro-cid-lga65v7i>legacy</a></li><li data-astro-cid-lga65v7i><a href="/search/legacy-migration/" data-astro-cid-lga65v7i>legacy-migration</a></li><li data-astro-cid-lga65v7i><a href="/search/Laravel/" data-astro-cid-lga65v7i>Laravel</a></li><li data-astro-cid-lga65v7i><a href="/search/%ED%95%9C%EA%B8%80%ED%99%94/" data-astro-cid-lga65v7i>한글화</a></li><li data-astro-cid-lga65v7i><a href="/search/%EB%8B%A4%EA%B5%AD%EC%96%B4/" data-astro-cid-lga65v7i>다국어</a></li><li data-astro-cid-lga65v7i><a href="/search/i18n/" data-astro-cid-lga65v7i>i18n</a></li> </ul>  </div> <h2 id="도입">도입</h2>
+<p>Laravel 애플리케이션을 개발할 때 가장 흔히 마주치는 문제는 영문 오류 메시지입니다. 사용자가 폼 검증에서 실패하면 “The email must be a valid email address”라는 영문 메시지가 보일 텐데, 한국 사용자 입장에서는 불편합니다. 이를 해결하기 위해 Laravel 한글 언어팩을 제공합니다.</p>
+<h2 id="laravel-다국어화란">Laravel 다국어화란</h2>
+<p>Laravel은 강력한 다국어 지원 기능을 제공합니다. <code>resources/lang/</code> 디렉토리 구조를 통해 각 언어별로 메시지를 관리하고, <code>config/app.php</code>의 <code>locale</code> 설정으로 손쉽게 전환할 수 있습니다. 기본적으로 영어(<code>en</code>)만 포함되므로 한국어(<code>ko</code>) 언어팩이 필요합니다.</p>
+<h2 id="한글-언어팩-구성">한글 언어팩 구성</h2>
+<p>이 언어팩에는 다음 5가지 핵심 번역 파일이 포함됩니다:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>파일명</th><th>용도</th></tr></thead><tbody><tr><td><code>validation.php</code></td><td>폼 검증 규칙 메시지 (required, email, unique 등)</td></tr><tr><td><code>auth.php</code></td><td>로그인/인증 실패 메시지</td></tr><tr><td><code>passwords.php</code></td><td>비밀번호 재설정 안내 메시지</td></tr><tr><td><code>pagination.php</code></td><td>이전/다음 페이지, 페이지 정보 표시</td></tr><tr><td><code>messages.php</code></td><td>기타 일반 메시지</td></tr></tbody></table>
+<h2 id="설치-방법">설치 방법</h2>
+<h3 id="git-clone-권장">Git Clone (권장)</h3>
+<p>프로젝트 루트에서 다음 명령을 실행합니다:</p>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token function">git</span> clone https://github.com/yousung/laravel-lang-ko.git resources/lang/ko
+</code></pre>
+<p>이 방법은 향후 업데이트도 쉽게 적용할 수 있습니다.</p>
+<h3 id="수동-다운로드">수동 다운로드</h3>
+<ol>
+<li>Github 저장소에서 <code>resources/lang/ko/</code> 폴더를 ZIP으로 다운로드</li>
+<li>프로젝트의 <code>resources/lang/</code> 디렉토리에 붙여넣기</li>
+</ol>
+<h2 id="설정-및-적용">설정 및 적용</h2>
+<h3 id="configappphp-수정">config/app.php 수정</h3>
+<pre class="language-php" data-language="php"><code is:raw="" class="language-php"><span class="token string single-quoted-string">'locale'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">'ko'</span><span class="token punctuation">,</span>              <span class="token comment">// 기본 언어를 한글로</span>
+<span class="token string single-quoted-string">'fallback_locale'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">'en'</span><span class="token punctuation">,</span>     <span class="token comment">// 번역이 없으면 영어로 대체</span>
+</code></pre>
+<p>이 설정으로 애플리케이션의 모든 시스템 메시지가 자동으로 한글로 표시됩니다.</p>
+<h2 id="실제-사용-예시">실제 사용 예시</h2>
+<h3 id="컨트롤러에서-검증">컨트롤러에서 검증</h3>
+<pre class="language-php" data-language="php"><code is:raw="" class="language-php"><span class="token variable">$validated</span> <span class="token operator">=</span> <span class="token variable">$request</span><span class="token operator">-></span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'name'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">'required|string|max:255'</span><span class="token punctuation">,</span>
+    <span class="token string single-quoted-string">'email'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">'required|email|unique:users'</span><span class="token punctuation">,</span>
+    <span class="token string single-quoted-string">'password'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">'required|min:8|confirmed'</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>사용자가 <code>email</code> 필드가 비어있으면 “email은 필수입니다”라는 한글 메시지가 자동으로 표시됩니다.</p>
+<h3 id="뷰에서-오류-메시지-렌더링">뷰에서 오류 메시지 렌더링</h3>
+<pre class="language-blade" data-language="blade"><code is:raw="" class="language-blade">@if ($errors->has('email'))
+    <div class="alert alert-danger">
+        {{ $errors->first('email') }}
+    </div>
+@endif
+</code></pre>
+<h3 id="커스텀-메시지-추가">커스텀 메시지 추가</h3>
+<p>기본 번역에 부족한 부분은 <code>resources/lang/ko/validation.php</code>를 수정합니다:</p>
+<pre class="language-php" data-language="php"><code is:raw="" class="language-php"><span class="token keyword">return</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'required'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">':attribute(은)는 필수입니다.'</span><span class="token punctuation">,</span>
+    <span class="token string single-quoted-string">'email'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">':attribute의 형식이 올바르지 않습니다.'</span><span class="token punctuation">,</span>
+    <span class="token string single-quoted-string">'unique'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">'This :attribute is already in use.'</span><span class="token punctuation">,</span>
+    <span class="token string single-quoted-string">'custom'</span> <span class="token operator">=></span> <span class="token punctuation">[</span>
+        <span class="token string single-quoted-string">'email.required'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">'이메일을 입력해주세요.'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="주의사항-및-버전-관리">주의사항 및 버전 관리</h2>
+<ul>
+<li>이 언어팩은 Laravel 5.6 기준으로 작성되었습니다</li>
+<li>Laravel 8 이상을 사용하는 경우 공식 언어팩(laravel-lang/lang) 설치를 권장합니다</li>
+<li>커스텀 메시지는 <code>resources/lang/ko/</code> 내 파일에서 직접 수정하세요</li>
+</ul>
+<h2 id="마치며">마치며</h2>
+<p>한글 언어팩을 적용하면 사용자가 폼 검증 오류를 더 명확히 이해할 수 있고, 애플리케이션의 전문성이 높아집니다. 특히 한국 사용자를 주요 타겟으로 하는 프로젝트라면 다국어화는 필수 요소입니다. Laravel의 강력한 다국어 기능을 활용해 글로벌 서비스로 성장시켜 보세요.</p> </article> <section class="comments" aria-labelledby="comments-heading" data-astro-cid-qdzwzgpn> <h2 id="comments-heading" data-astro-cid-qdzwzgpn>댓글</h2> <script src="https://giscus.app/client.js" data-repo="yousung/blog" data-repo-id="MDEwOlJlcG9zaXRvcnkxMzQ2NjM4MTI=" data-category="General" data-category-id="DIC_kwDOCAbOhM4C9_He" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko" crossorigin="anonymous" async></script> </section>   </div> </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="site-shell" data-astro-cid-37fxchfa> <p data-astro-cid-37fxchfa>© 2026 감성개발자의 Blog</p> <a href="/privacy/" data-astro-cid-37fxchfa>개인정보처리방침</a> </div> </footer> <script>(function(){const basePath = "/";
+
+  (() => {
+    const form = document.querySelector('.header-search');
+    const input = document.querySelector('#header-search-input');
+
+    if (!(form instanceof HTMLFormElement) || !(input instanceof HTMLInputElement)) return;
+
+    const getSearchQueryFromPath = () => {
+      const m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
+      if (m) return decodeURIComponent(m[1]);
+      const searchPath = `${basePath}search/`;
+      if (!window.location.pathname.startsWith(searchPath)) return '';
+      return new URLSearchParams(window.location.search).get('q') ?? '';
+    };
+
+    const toSearchPath = (value) => {
+      const query = value.trim();
+      return query ? `${basePath}search/${encodeURIComponent(query)}/` : basePath;
+    };
+
+    const initialQuery = getSearchQueryFromPath();
+    if (initialQuery && !input.value) {
+      input.value = initialQuery;
+    }
+
+    const syncSearchPath = () => {
+      const nextPath = toSearchPath(input.value);
+      const currentFull = window.location.pathname + window.location.search;
+      if (currentFull !== nextPath) {
+        window.history.replaceState(null, '', nextPath);
+      }
+      window.dispatchEvent(new CustomEvent('site-search-input', { detail: { query: input.value.trim() } }));
+    };
+
+    input.addEventListener('input', syncSearchPath);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = toSearchPath(input.value);
+    });
+  })();
+})();</script> </body></html> 

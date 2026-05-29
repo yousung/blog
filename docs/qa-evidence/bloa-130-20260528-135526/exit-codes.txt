@@ -1,0 +1,2 @@
+success_exit=0
+failure_exit=1

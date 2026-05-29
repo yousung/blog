@@ -1,0 +1,15 @@
+{
+  "frontmatter": {
+    "title": "blog-publish 자동화 샘플",
+    "description": "스킬 검증용 게시물",
+    "pubDate": "2026-05-28",
+    "draft": false,
+    "tags": ["automation", "paperclip"],
+    "ogImage": "https://blog.bloa.example/og/blog-publish.png",
+    "category": "engineering",
+    "slug": "blog-publish-skill",
+    "publishedAt": "2026-05-28"
+  },
+  "body": "# blog-publish\n\n첫 발행 테스트 본문입니다.",
+  "imagePaths": ["public/samples/cover.txt"]
+}

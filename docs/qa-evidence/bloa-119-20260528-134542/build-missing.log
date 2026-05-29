@@ -1,0 +1,47 @@
+
+> bloa-blog@0.1.0 build
+> npm run validate:frontmatter && astro build
+
+
+> bloa-blog@0.1.0 validate:frontmatter
+> node scripts/validate-frontmatter.mjs
+
+Validated 3 post(s) in src/content/posts
+13:45:43 [content] Syncing content
+13:45:44 [content] Synced content
+13:45:44 [types] Generated 191ms
+13:45:44 [build] output: "static"
+13:45:44 [build] mode: "static"
+13:45:44 [build] directory: /Users/lovizu/project/blog/dist/
+13:45:44 [build] Collecting build info...
+13:45:44 [build] ✓ Completed in 198ms.
+13:45:44 [build] Building static entrypoints...
+13:45:44 [vite] ✓ built in 306ms
+13:45:44 [build] ✓ Completed in 321ms.
+
+ generating static routes 
+13:45:44 ▶ src/pages/404.astro
+13:45:44   └─ /404.html (+2ms) 
+13:45:44 λ src/pages/og/[slug].svg.ts
+13:45:44   ├─ /og/design-application-audit-checklist.svg (+1ms) 
+13:45:44   ├─ /og/astro-content-collections-frontmatter-checklist.svg (+0ms) 
+13:45:44   └─ /og/what-this-blog-covers.svg (+0ms) 
+13:45:44 ▶ src/pages/posts/[...slug].astro
+13:45:44   ├─ /posts/design-application-audit-checklist/index.html[Comments] Giscus config is invalid. PUBLIC_GISCUS_REPO (or GISCUS_REPO): owner/repo 형식 | PUBLIC_GISCUS_REPO_ID (or GISCUS_REPO_ID): R_... 형식 | PUBLIC_GISCUS_CATEGORY (or GISCUS_CATEGORY): 영문/숫자 시작 | PUBLIC_GISCUS_CATEGORY_ID (or GISCUS_CATEGORY_ID): DIC_... 형식
+ (+2ms) 
+13:45:44   ├─ /posts/astro-content-collections-frontmatter-checklist/index.html[Comments] Giscus config is invalid. PUBLIC_GISCUS_REPO (or GISCUS_REPO): owner/repo 형식 | PUBLIC_GISCUS_REPO_ID (or GISCUS_REPO_ID): R_... 형식 | PUBLIC_GISCUS_CATEGORY (or GISCUS_CATEGORY): 영문/숫자 시작 | PUBLIC_GISCUS_CATEGORY_ID (or GISCUS_CATEGORY_ID): DIC_... 형식
+ (+1ms) 
+13:45:44   └─ /posts/what-this-blog-covers/index.html[Comments] Giscus config is invalid. PUBLIC_GISCUS_REPO (or GISCUS_REPO): owner/repo 형식 | PUBLIC_GISCUS_REPO_ID (or GISCUS_REPO_ID): R_... 형식 | PUBLIC_GISCUS_CATEGORY (or GISCUS_CATEGORY): 영문/숫자 시작 | PUBLIC_GISCUS_CATEGORY_ID (or GISCUS_CATEGORY_ID): DIC_... 형식
+ (+1ms) 
+13:45:44 ▶ src/pages/privacy.astro
+13:45:44   └─ /privacy/index.html (+1ms) 
+13:45:44 λ src/pages/rss.xml.ts
+13:45:44   └─ /rss.xml (+2ms) 
+13:45:44 ▶ src/pages/index.astro
+13:45:44   └─ /index.html (+1ms) 
+13:45:44 ✓ Completed in 33ms.
+
+13:45:44 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+13:45:44 [sitemap-xml-compat] Copied sitemap-index.xml -> sitemap.xml for crawler compatibility.
+13:45:44 [build] 6 page(s) built in 562ms
+13:45:44 [build] Complete!
