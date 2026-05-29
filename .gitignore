@@ -1,15 +1,30 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
-/.idea
-/.vscode
-/.vagrant
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Astro cache
+.astro/
+
+# Environment
 .env
-/storage/analytics/
+.env.local
+.env.*.local
+
+# Editor
+.idea/
+.vscode/
+
+# Tool state
+.omc/
+.omx/
 .gstack/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-error.log

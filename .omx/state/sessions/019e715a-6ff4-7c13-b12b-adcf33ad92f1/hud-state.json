@@ -1,6 +1,0 @@
-{
-  "last_turn_at": "2026-05-29T02:18:20.541Z",
-  "turn_count": 7,
-  "last_progress_at": "2026-05-29T02:18:20.541Z",
-  "last_agent_output": "커스텀 도메인 기준으로 루트 경로 전환 끝냈습니다.\n\n변경된 핵심은 이렇습니다.\n\n- `astro.config.mjs`: `site`를 `https://blog.lovizu.com"
-}
