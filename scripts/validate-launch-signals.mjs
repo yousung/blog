@@ -1,7 +1,6 @@
 const required = ['PUBLIC_SITE_URL'];
 
 const optional = [
-  'PUBLIC_GA_MEASUREMENT_ID',
   'PUBLIC_ADSENSE_CLIENT',
   'PUBLIC_ADSENSE_SLOT_TOP',
   'PUBLIC_ADSENSE_SLOT_FEED',

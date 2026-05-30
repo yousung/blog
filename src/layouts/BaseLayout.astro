@@ -58,9 +58,6 @@ const websiteUrl = new URL(basePath, siteOrigin).href;
 const robotsContent = noindex
   ? 'noindex, follow'
   : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
-const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim() ?? '';
-const hasGa = gaMeasurementId.length > 0;
-
 const jsonLd =
   type === 'article'
     ? {
@@ -145,16 +142,6 @@ const jsonLd =
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1322828698634218" crossorigin="anonymous"></script>
-    {
-      hasGa && (
-        <>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
-          <script is:inline>
-            {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${gaMeasurementId}');`}
-          </script>
-        </>
-      )
-    }
   </head>
   <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXL65FXF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
