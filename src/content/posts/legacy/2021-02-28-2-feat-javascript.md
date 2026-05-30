@@ -18,7 +18,7 @@ updatedDate: "2026-05-30"
 > - JavaScript 예제를 중심으로 코드 구조 개선 사고를 다룹니다.
 > - 초보 입문서보다는 실무 코드 개선 경험이 있는 개발자에게 더 잘 맞습니다.
 
-![리팩토링 2판 제품 이미지](https://ads-partners.coupang.com/image1/bINYcNAh3mIIsC_LbI4lML-hirXVm_WVjHooy0KZBLAi_H4LSipVdehOqt04QOIVWAoyb47iz5Qu4izVBgRqG2-tPYS9vlwep9z5LIMPtcfUqfcooGQIsBh3fOU2zrzd_MgQbyLHq32XxhKC1PNRMDBNBGquuOPeb8zKrexNVL52kB1FaCyqtCo4X_jqIwn-AQyxMqg7kkgKfeFYDehW4rLLpLFigcW7WeP5mAbHsFJR7A4vXNwAJznH7BJWVUm1UCybO-2g9Isx2LsM9kKNOUpWufosHt6j5zO8emfvcHDS8c4muLo8WUNebdeAeb26QgIvgA==)
+![리팩토링 2판 제품 이미지](/images/posts/coupang/refactoring-2-javascript-8322920484.jpg)
 
 ## 추천 상품 요약표
 

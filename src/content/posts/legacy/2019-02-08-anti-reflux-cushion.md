@@ -18,7 +18,7 @@ updatedDate: "2026-05-30"
 > - 후기에서는 수유 후 잠깐 눕히거나 거실에서 보조 쿠션처럼 쓰기 좋다는 반응이 반복됩니다.
 > - 수면 안전과 장시간 방치 문제는 반드시 별도로 확인해야 합니다.
 
-![로토토베베 역류방지쿠션 제품 이미지](https://ads-partners.coupang.com/image1/12YrpHvw_bAglFjA13HeZ70jdlDZYEB9BARu_96fxxY-DhnuTHuYn6ce-2L5gSfEkLgLBHtm9XVOVsfEvs0TvzdUKEwV2Q5pgWm1k9Y6FdU_u1q7Tly6nrINrR5BYTaDbxfSaJRBqtkOqgPpVRdwXr8It01Hc84_t7sFaProD8k3MfUSMrR9DctGfidufFuIj5Ng0DP-9fU3X34GazuSQJzgcmb_T57EI-7ws6z-jsmkgXSEoOhMhf62dtFwT1U_Pk1zrzGWqqXm2R-wXIQv82_jLQHhv8uZN3v4_JagvbGnytj3DQ==)
+![로토토베베 역류방지쿠션 제품 이미지](/images/posts/coupang/anti-reflux-cushion-8750359338.jpg)
 
 ## 추천 상품 요약표
 
