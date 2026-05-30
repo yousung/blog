@@ -64,6 +64,9 @@ status: "published"
 
 셋째, 구성과 가격대입니다. 상세페이지 기준 텀블러 본체와 뚜껑 구성이며, 쿠폰 적용 여부에 따라 1만원대 후반에서 2만원대 중반까지 가격이 움직입니다. 스탠리 같은 고가 대용량 텀블러와 비교하면 가격 접근성이 좋은 편입니다.
 
+
+![근지 1.2리터 대용량 텀블러 디테일 이미지](/images/posts/coupang/geunji-12l-tumbler-detail.png)
+
 ## 아쉬운 점도 확인해야 합니다
 
 가장 먼저 볼 부분은 크기입니다. 1.2리터는 장점이면서 동시에 단점입니다. 가방에 넣고 매일 들고 다니기에는 부담스러울 수 있고, 작은 책상이나 좁은 차량 컵홀더에서는 공간을 많이 차지할 수 있습니다.
@@ -106,6 +109,8 @@ status: "published"
 근지 1.2리터 대용량 텀블러는 `큰 용량`, `손잡이`, `밀폐형 뚜껑`, `2만원 안팎 가격대`를 우선하는 사람에게 맞는 제품입니다. 책상 위나 차 안에서 물을 넉넉히 두고 마시는 용도라면 후보에 올릴 만합니다.
 
 다만 대용량 제품은 휴대성과 세척 편의성이 작고 단순한 텀블러보다 떨어질 수 있습니다. 구매 전에는 현재 쿠팡 가격, 쿠폰 적용 여부, 컵홀더 호환, 최신 상품평의 누수·세척 관련 반응을 함께 확인하는 것이 좋습니다.
+
+![근지 1.2리터 대용량 텀블러 구성 이미지](/images/posts/coupang/geunji-12l-tumbler-secondary.png)
 
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
   <a href="https://link.coupang.com/a/eacjPzjofQ" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">
