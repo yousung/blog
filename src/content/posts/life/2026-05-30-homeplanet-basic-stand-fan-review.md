@@ -18,7 +18,7 @@ status: "published"
 > - 후기를 보면 조립이 어렵지 않고 가격 대비 바람이 무난하다는 이야기가 자주 보입니다.
 > - 리모컨, 초미풍, 프리미엄 마감보다 `가성비 기본형`을 찾는 사람에게 더 맞습니다.
 
-![홈플래닛 베이직 스탠드 선풍기 제품 이미지](https://cdn-blog.lovizu.com/bloa/coupang/2026/05/homeplanet-basic-stand-fan-7212367661.jpg)
+![홈플래닛 베이직 스탠드 선풍기 제품 이미지](https://cdn-blog.lovizu.com/bloa/coupang/2026/05/homeplanet-basic-stand-fan-7212367661.webp)
 
 ## 먼저 볼 구매 기준
 

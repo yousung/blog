@@ -20,7 +20,7 @@ status: "published"
 > - 확인 시점 기준 가격은 71,400원으로 확인됐고, 가격 추적 페이지에서는 2026년 5월 30일 현재 58,700원으로도 표시됩니다. 실제 결제 전 쿠팡 상품 페이지에서 현재가를 다시 확인해야 합니다.
 > - 후기에서는 대량 구성이라 여러 곳에 나눠 두기 좋다는 이야기가 많고, 개별 용량이 150g이라 넓은 공간 하나를 단독으로 맡기기에는 한계가 있을 수 있습니다.
 
-![물먹는뽀송 스탠드형 제습제 72개 제품 구성](https://cdn-blog.lovizu.com/bloa/coupang/2026/05/mulmeokneun-pposong-dehumidifier-6673431100.png)
+![물먹는뽀송 스탠드형 제습제 72개 제품 구성](https://cdn-blog.lovizu.com/bloa/coupang/2026/05/mulmeokneun-pposong-dehumidifier-6673431100.webp)
 
 ## 먼저 볼 구매 기준
 

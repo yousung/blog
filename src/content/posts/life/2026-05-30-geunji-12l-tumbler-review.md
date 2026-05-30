@@ -20,7 +20,7 @@ status: "published"
 > - 쿠팡 상품 페이지 기준으로 한 달간 1,000명 이상 구매 표시와 상품평 수가 확인됩니다.
 > - 후기 본문은 페이지에서 충분히 확인되지 않아, 보온·보냉 지속 시간이나 누수 체감은 구매 전 최신 상품평을 직접 확인하는 편이 안전합니다.
 
-![근지 1.2리터 대용량 텀블러 제품 이미지](https://cdn-blog.lovizu.com/bloa/coupang/2026/05/geunji-12l-tumbler-9316345380.png)
+![근지 1.2리터 대용량 텀블러 제품 이미지](https://cdn-blog.lovizu.com/bloa/coupang/2026/05/geunji-12l-tumbler-9316345380.webp)
 
 ## 먼저 볼 구매 기준
 
