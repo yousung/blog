@@ -16,12 +16,14 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 const defaultOgPath = `/og/${post.data.slug}.svg`;
 const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const firstMarkdownImage = post.body.match(/!\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/)?.[1];
+const postOgImage = post.data.ogImage ?? firstMarkdownImage ?? defaultOgPath;
 ---
 
 <BaseLayout
   title={post.data.title}
   description={post.data.summary}
-  image={post.data.ogImage ?? defaultOgPath}
+  image={postOgImage}
   imageAlt={`${post.data.title} 대표 이미지`}
   type="article"
   publishedTime={post.data.date.toISOString()}

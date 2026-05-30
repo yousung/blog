@@ -38,6 +38,17 @@ const withBasePath = (value: string) => {
 };
 const ogImage = new URL(withBasePath(image ?? '/og/site.svg'), siteOrigin);
 const ogImageAlt = imageAlt ?? `${pageTitle} 대표 이미지`;
+const socialTitle = type === 'article' ? title : pageTitle;
+const imagePathname = ogImage.pathname.toLowerCase();
+const ogImageType = imagePathname.endsWith('.png')
+  ? 'image/png'
+  : imagePathname.endsWith('.jpg') || imagePathname.endsWith('.jpeg')
+    ? 'image/jpeg'
+    : imagePathname.endsWith('.webp')
+      ? 'image/webp'
+      : imagePathname.endsWith('.gif')
+        ? 'image/gif'
+        : 'image/svg+xml';
 const homeHref = basePath;
 const privacyHref = `${basePath}privacy/`;
 const categoriesHref = `${basePath}categories/`;
@@ -111,18 +122,18 @@ const jsonLd =
     <meta property="og:type" content={type} />
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:site_name" content={SITE_TITLE} />
-    <meta property="og:title" content={pageTitle} />
+    <meta property="og:title" content={socialTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical.href} />
     <meta property="og:image" content={ogImage.href} />
     <meta property="og:image:secure_url" content={ogImage.href} />
-    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:type" content={ogImageType} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={ogImageAlt} />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:title" content={socialTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage.href} />
     <meta name="twitter:image:alt" content={ogImageAlt} />
