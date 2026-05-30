@@ -20,7 +20,7 @@ status: "published"
 > - 옷, 장난감, 이불 주변 소품, 계절용품처럼 부피가 있는 물건을 같은 규격으로 정리하려는 사람에게 맞습니다.
 > - 후기 흐름을 보면 조립 편의성, 뚜껑 또는 적층 안정감, 실제 내부 높이, 플라스틱 마감 상태를 꼭 확인하는 편이 좋습니다.
 
-![Kipnos 폴딩 대용량 리빙박스 제품 이미지](/images/posts/coupang/kipnos-folding-living-box-8837247802.jpg)
+![Kipnos 폴딩 대용량 리빙박스 제품 이미지](https://cdn-blog.lovizu.com/bloa/coupang/2026/05/kipnos-folding-living-box-8837247802.jpg)
 
 ## 먼저 볼 구매 기준
 
