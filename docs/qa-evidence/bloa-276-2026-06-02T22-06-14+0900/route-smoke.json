@@ -1,0 +1,42 @@
+{
+  "target": "https://blog.lovizu.com",
+  "timestamp": "2026-06-02T22:06:14+0900",
+  "result": "pass",
+  "cases": [
+    {
+      "name": "m-entry-korean-hyphen",
+      "requestPath": "/m/entry/%EB%A7%A5%EB%B6%81%EC%97%90%EC%84%9C-%EC%82%AC%EC%A7%84%EC%9D%98-%EB%82%A0%EC%A7%9C-%EB%B0%8F-%EC%9E%A5%EC%86%8C-%EC%9D%BC%EA%B4%84-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0",
+      "expectedPath": "/search/%EB%A7%A5%EB%B6%81%EC%97%90%EC%84%9C%20%EC%82%AC%EC%A7%84%EC%9D%98%20%EB%82%A0%EC%A7%9C%20%EB%B0%8F%20%EC%9E%A5%EC%86%8C%20%EC%9D%BC%EA%B4%84%20%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/",
+      "finalPath": "/search/%EB%A7%A5%EB%B6%81%EC%97%90%EC%84%9C%20%EC%82%AC%EC%A7%84%EC%9D%98%20%EB%82%A0%EC%A7%9C%20%EB%B0%8F%20%EC%9E%A5%EC%86%8C%20%EC%9D%BC%EA%B4%84%20%EB%B3%80%EA%B2%AD%ED%95%98%EA%B8%B0/",
+      "result": "PASS"
+    },
+    {
+      "name": "entry-korean",
+      "requestPath": "/entry/%ED%97%B7%EA%B0%88%EB%A6%AC%EB%8A%94-%EC%98%A4%EB%A6%84%EC%B0%A8%EC%88%9C-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C-ASC-DESC",
+      "expectedPath": "/search/%ED%97%B7%EA%B0%88%EB%A6%AC%EB%8A%94%20%EC%98%A4%EB%A6%84%EC%B0%A8%EC%88%9C%20%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%20ASC%20DESC/",
+      "finalPath": "/search/%ED%97%B7%EA%B0%88%EB%A6%AC%EB%8A%94%20%EC%98%A4%EB%A6%84%EC%B0%A8%EC%88%9C%20%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%20ASC%20DESC/",
+      "result": "PASS"
+    },
+    {
+      "name": "entry-root",
+      "requestPath": "/entry/",
+      "expectedPath": "/",
+      "finalPath": "/",
+      "result": "PASS"
+    },
+    {
+      "name": "m-entry-root",
+      "requestPath": "/m/entry/",
+      "expectedPath": "/",
+      "finalPath": "/",
+      "result": "PASS"
+    },
+    {
+      "name": "unknown-path",
+      "requestPath": "/unknown-path",
+      "expectedPath": "/",
+      "finalPath": "/",
+      "result": "PASS"
+    }
+  ]
+}
