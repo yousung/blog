@@ -6,11 +6,15 @@ const homeHref = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_U
 
 <script is:inline>
   (function () {
+    const homeHref = `${window.location.origin}/`;
+    const searchHref = `${window.location.origin}/search/`;
     var m = window.location.pathname.match(/\/search\/(.+?)\/?$/);
     if (m) {
       try { sessionStorage.setItem('__search_q', decodeURIComponent(m[1])); } catch (_) {}
-      window.location.replace('/search/');
+      window.location.replace(searchHref);
+      return;
     }
+    window.location.replace(homeHref);
   })();
 </script>
 

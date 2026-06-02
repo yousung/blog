@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 
 const page = Number(Astro.params.page);
 if (!Number.isInteger(page) || page < 2 || page > totalPages) {
-  return Astro.redirect(`${basePath}404`);
+  return Astro.redirect(`${basePath}`);
 }
 
 const start = (page - 1) * PAGE_SIZE;
