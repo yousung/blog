@@ -9,13 +9,13 @@ const homeHref = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_U
     const homeHref = `${window.location.origin}/`;
     const searchHref = `${window.location.origin}/search/`;
     if (window.location.pathname === '/entry' || window.location.pathname === '/entry/') {
-      window.location.replace(searchHref);
+      window.location.replace(homeHref);
       return;
     }
     const entryMatch = window.location.pathname.match(/^\/entry\/([^/]+)\/?$/);
     if (entryMatch) {
       try {
-        const topic = decodeURIComponent(entryMatch[1]);
+        const topic = decodeURIComponent(entryMatch[1]).replace(/-/g, ' ');
         if (topic) {
           window.location.replace(`${window.location.origin}/search/${encodeURIComponent(topic)}/`);
           return;
