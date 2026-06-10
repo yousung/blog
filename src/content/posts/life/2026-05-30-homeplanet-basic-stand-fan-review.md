@@ -3,6 +3,7 @@ title: "스탠드 선풍기 추천, 홈플래닛 기본형을 방마다 두기 �
 slug: "homeplanet-basic-stand-fan-review"
 author: "BLOA Team"
 date: "2026-05-30"
+updatedDate: "2026-06-11"
 summary: "홈플래닛 베이직 스탠드 선풍기를 방 하나에 둘 기본형 선풍기로 보고 가격, 바람, 소음, 조립감 중심으로 살펴봤다."
 oneLineSummary: "홈플래닛 베이직 스탠드 선풍기는 리모컨보다 가격과 기본기를 우선하는 사람에게 맞는 2만원대 스탠드형 선풍기다."
 tags: [라이프, 생활정보, 제품리뷰, coupang]
@@ -12,13 +13,15 @@ status: "published"
 
 집 안 선풍기는 결국 `가격`, `바람 세기`, `조립과 이동`, `세척`, `소음`을 따져보게 됩니다. `홈플래닛 베이직 스탠드 선풍기`는 거창한 기능보다 방 하나에 부담 없이 둘 기본형 선풍기를 찾을 때 먼저 보게 되는 제품입니다.
 
+최종 업데이트: 2026-06-11
+
 > **짧게 보면**
 >
 > - 홈플래닛 베이직 스탠드 선풍기는 2만원대 가격과 3단 풍속, 좌우 회전, 높이 조절 같은 기본 기능에 초점이 맞춰진 제품입니다.
 > - 후기를 보면 조립이 어렵지 않고 가격 대비 바람이 무난하다는 이야기가 자주 보입니다.
 > - 리모컨, 초미풍, 프리미엄 마감보다 `가성비 기본형`을 찾는 사람에게 더 맞습니다.
 
-![홈플래닛 베이직 스탠드 선풍기 제품 이미지](https://cdn-blog.lovizu.com/bloa/coupang/2026/05/homeplanet-basic-stand-fan-7212367661.webp)
+![홈플래닛 베이직 스탠드 선풍기 제품 이미지](https://cdn-blog.lovizu.com/bloa/coupang/2026/05/homeplanet-basic-stand-fan-review-preview.webp)
 
 ## 먼저 볼 구매 기준
 
@@ -31,7 +34,7 @@ status: "published"
 | 항목 | 내용 |
 | --- | --- |
 | 상품명 | 홈플래닛 베이직 스탠드 선풍기 |
-| 가격대 | 약 26,190원 기준 |
+| 가격대 | 약 25,870원 기준 |
 | 배송 | 로켓배송 여부 표시 |
 | 핵심 키워드 | 기본형, 스탠드형, 3단 풍속, 높이 조절, 좌우 회전 |
 
@@ -90,7 +93,7 @@ status: "published"
 다만 리모컨, 초미풍, 더 낮은 소음, 프리미엄 마감이 중요하다면 처음부터 상위 모델을 보는 것이 낫습니다. 선풍기는 한 번 사면 여름마다 반복해서 쓰는 물건이라, 잠잘 때 쓸지 거실 보조용으로 쓸지부터 정하고 고르는 편이 실패 확률을 줄입니다.
 
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
-  <a href="https://link.coupang.com/a/eaapTVf4ns" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">
+  <a href="https://link.coupang.com/a/etoHmcBA8i" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">
     👉 홈플래닛 베이직 스탠드 선풍기 쿠팡에서 보기
   </a>
 </div>
