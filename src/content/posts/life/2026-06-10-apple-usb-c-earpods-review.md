@@ -14,8 +14,6 @@ status: "published"
 
 `Apple USB-C 커넥터 EarPods`는 그런 상황에서 가장 먼저 떠올리기 쉬운 유선 이어폰입니다. 아이폰 15 이후 USB-C 기기를 쓰고 있거나, USB-C 포트가 있는 아이패드와 맥북에 꽂아 쓸 가벼운 이어폰을 찾는 사람에게 맞는 제품입니다.
 
-최종 업데이트: 2026년 6월 11일
-
 > **짧게 보면**
 >
 > - USB-C 단자에 바로 연결하는 애플 정품 유선 이어폰입니다.
@@ -38,7 +36,7 @@ USB-C 유선 이어폰은 음질만 보고 고르면 아쉽습니다. 실제로�
 
 Apple USB-C 커넥터 EarPods는 이 장점을 아주 가볍게 가져가는 제품입니다. 별도 어댑터 없이 USB-C 포트에 꽂는 방식이라 아이폰, 아이패드, 맥북을 함께 쓰는 사람에게 특히 편합니다. 케이블 중간에는 리모컨과 마이크가 있어 음악 재생, 볼륨 조절, 통화 응답 같은 기본 조작을 손으로 처리할 수 있습니다.
 
-가격대도 무선 이어폰보다 부담이 적습니다. 2026년 6월 11일 확인 시점에는 쿠팡에서 2만원대 후반 가격으로 보였고, 로켓배송 표시가 붙어 있었습니다. 가격과 배송 조건은 자주 바뀌니 결제 전 현재 옵션과 배송 예정일은 다시 확인하는 것이 좋습니다.
+가격대도 무선 이어폰보다 부담이 적습니다. 확인 시점 기준 쿠팡에서는 2만원대 후반 가격으로 보였고, 로켓배송 표시가 붙어 있었습니다. 가격과 배송 조건은 자주 바뀌니 결제 전 현재 옵션과 배송 예정일은 다시 확인하는 것이 좋습니다.
 
 ## 생활에서 편하게 느껴질 부분
 
@@ -91,7 +89,7 @@ Apple USB-C 커넥터 EarPods는 대단한 기능을 기대하고 사는 제품�
 다만 오픈형 구조의 한계는 분명합니다. 소음이 큰 곳에서 음악에 몰입하고 싶거나, 운동 중에도 귀에 단단히 붙어 있어야 한다면 다른 제품을 같이 보는 편이 낫습니다. 반대로 집, 사무실, 이동 중 가벼운 통화와 영상용으로 쓰려는 목적이라면 부담 없이 후보에 올릴 만합니다.
 
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
-  <a href="https://link.coupang.com/a/etupR1KKhU" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">
+  <a href="https://link.coupang.com/a/erNXiExu0W" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">
     👉 Apple USB-C 커넥터 EarPods 쿠팡에서 보기
   </a>
 </div>
