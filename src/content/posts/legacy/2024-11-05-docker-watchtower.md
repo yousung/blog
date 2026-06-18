@@ -6,7 +6,7 @@ date: '2024-11-05'
 summary: 'Watchtower를 사용하여 Docker 컨테이너를 자동으로 최신 버전으로 업데이트합니다. 수동 재배포 없이 항상 최신 이미지를 유지할 수 있습니다.'
 oneLineSummary: 'Docker 자동 업데이트 설정'
 tags: ['legacy', 'legacy-migration', 'Docker', '자동화', 'DevOps']
-status: 'published'
+status: "draft"
 updatedDate: '2026-04-23'
 ---
 

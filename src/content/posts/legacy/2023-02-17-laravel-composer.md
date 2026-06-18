@@ -6,7 +6,7 @@ date: '2023-02-17'
 summary: 'Laravel 프레임워크의 생산성을 극대화하는 5가지 필수 Composer 패키지 완벽 가이드. IDE Helper로 자동완성 강화, Debugbar로 성능 최적화, Backup으로 자동 백업, Excel로 대량 데이터 처리, Permission으로 권한 관리를 쉽게 구현합니다.'
 oneLineSummary: 'Laravel 개발 생산성 극대화 5가지 Composer 패키지'
 tags: ['legacy', 'legacy-migration', 'Laravel', 'PHP', '개발도구', '개발환경']
-status: 'published'
+status: "draft"
 updatedDate: '2026-04-23'
 ---
 

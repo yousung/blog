@@ -6,7 +6,7 @@ date: '2023-02-16'
 summary: 'Next.js의 Shallow Routing은 URL을 변경하면서도 페이지 상태와 데이터를 유지하는 고급 기능입니다. 불필요한 서버 요청을 제거하여 성능을 개선하고, 페이지네이션, 필터링, 모달 상태 관리 등에서 사용자 경험을 획기적으로 향상시킵니다. useRouter 훅의 shallow 옵션 사용법, 동적 라우팅 패턴 (Dynamic Routes, Catch-all Routes, Optional Catch-all), 초기 데이터 처리, 브라우저 히스토리 관리를 통해 실무 프로젝트에서 즉시 활용 가능한 예제와 주의사항을 상세히 설명합니다.'
 oneLineSummary: 'Next.js Shallow Routing으로 서버 요청 없이 URL 변경하기'
 tags: ['legacy', 'legacy-migration', 'Next.js', 'React', '라우팅', 'Web-Performance', 'UX']
-status: 'published'
+status: "draft"
 updatedDate: '2026-04-23'
 ---
 

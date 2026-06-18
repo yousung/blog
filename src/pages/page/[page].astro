@@ -3,13 +3,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import PostFeed from '../../components/PostFeed.astro';
 import { SITE_TITLE } from '../../consts';
+import { sortPostsByUpdatedDesc } from '../../utils/posts';
 
 const PAGE_SIZE = 10;
 const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
 const allPosts = (await getCollection('posts'))
   .filter((entry) => entry.data.status === 'published')
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+  .sort(sortPostsByUpdatedDesc);
 
 const [, ...restPosts] = allPosts;
 const totalPages = Math.max(1, Math.ceil(restPosts.length / PAGE_SIZE));
@@ -18,7 +19,7 @@ export async function getStaticPaths() {
   const pageSize = 10;
   const posts = (await getCollection('posts'))
     .filter((entry) => entry.data.status === 'published')
-    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+    .sort(sortPostsByUpdatedDesc);
   const [, ...paginatedPosts] = posts;
   const pages = Math.max(1, Math.ceil(paginatedPosts.length / pageSize));
 

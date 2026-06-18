@@ -6,7 +6,7 @@ date: '2018-08-28'
 summary: 'Laravel에서 기본 JavaScript alert를 SweetAlert로 대체해 더 아름답고 사용자 친화적인 알림창을 구현하는 완벽한 가이드. Composer 설치, 설정, 커스터마이징, 실무 활용까지 모든 것을 다룹니다.'
 oneLineSummary: 'Laravel SweetAlert로 맞춤형 알림창 구현하기'
 tags: ['legacy', 'legacy-migration', 'Laravel', 'JavaScript', 'UI']
-status: 'published'
+status: "draft"
 updatedDate: '2026-04-23'
 ---
 

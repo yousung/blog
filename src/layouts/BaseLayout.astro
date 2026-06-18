@@ -12,6 +12,7 @@ interface Props {
   author?: string;
   tags?: string[];
   noindex?: boolean;
+  allowAds?: boolean;
 }
 
 const {
@@ -24,7 +25,8 @@ const {
   modifiedTime,
   author,
   tags = [],
-  noindex = false
+  noindex = false,
+  allowAds
 } = Astro.props as Props;
 
 const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
@@ -50,11 +52,15 @@ const ogImageType = imagePathname.endsWith('.png')
         ? 'image/gif'
         : 'image/svg+xml';
 const homeHref = basePath;
+const aboutHref = `${basePath}about/`;
+const contactHref = `${basePath}contact/`;
+const editorialPolicyHref = `${basePath}editorial-policy/`;
 const privacyHref = `${basePath}privacy/`;
 const categoriesHref = `${basePath}categories/`;
 const tagsHref = `${basePath}tags/`;
 const rssHref = new URL(withBasePath('/rss.xml'), siteOrigin).href;
 const websiteUrl = new URL(basePath, siteOrigin).href;
+const shouldLoadAdsense = allowAds ?? !noindex;
 const robotsContent = noindex
   ? 'noindex, follow'
   : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
@@ -91,6 +97,17 @@ const jsonLd =
         description: SITE_DESCRIPTION,
         url: websiteUrl,
         inLanguage: 'ko-KR',
+        publisher: {
+          '@type': 'Organization',
+          name: SITE_TITLE,
+          url: websiteUrl,
+          contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'customer support',
+            email: 'blog@lovizu.com',
+            availableLanguage: ['ko-KR']
+          }
+        },
         potentialAction: {
           '@type': 'SearchAction',
           target: `${websiteUrl}search/{search_term_string}/`,
@@ -151,7 +168,9 @@ const jsonLd =
     {tags.map((tag) => <meta property="article:tag" content={tag} />)}
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1322828698634218" crossorigin="anonymous"></script>
+    {shouldLoadAdsense && (
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1322828698634218" crossorigin="anonymous"></script>
+    )}
   </head>
   <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXL65FXF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -169,8 +188,11 @@ const jsonLd =
         <div class="header-actions">
           <nav class="desktop-nav" aria-label="주요 메뉴">
             <a href={homeHref}>홈</a>
+            <a href={aboutHref}>소개</a>
             <a href={categoriesHref}>카테고리</a>
             <a href={tagsHref}>태그</a>
+            <a href={editorialPolicyHref}>운영 원칙</a>
+            <a href={contactHref}>문의</a>
             <a href={privacyHref}>개인정보처리방침</a>
           </nav>
           <button class="search-toggle" aria-label="검색 열기" aria-expanded="false" aria-controls="search-overlay">
@@ -192,8 +214,11 @@ const jsonLd =
         <div class="site-shell mobile-menu-inner">
           <nav class="mobile-nav" aria-label="모바일 메뉴">
             <a href={homeHref}>홈</a>
+            <a href={aboutHref}>소개</a>
             <a href={categoriesHref}>카테고리</a>
             <a href={tagsHref}>태그</a>
+            <a href={editorialPolicyHref}>운영 원칙</a>
+            <a href={contactHref}>문의</a>
             <a href={privacyHref}>개인정보처리방침</a>
           </nav>
         </div>
@@ -234,8 +259,11 @@ const jsonLd =
         <p class="footer-copy">© {new Date().getFullYear()} {SITE_TITLE}</p>
         <nav class="footer-links" aria-label="푸터 메뉴">
           <a href={homeHref}>홈</a>
+          <a href={aboutHref}>소개</a>
           <a href={categoriesHref}>카테고리</a>
           <a href={tagsHref}>태그</a>
+          <a href={editorialPolicyHref}>운영 원칙</a>
+          <a href={contactHref}>문의</a>
           <a href={privacyHref}>개인정보처리방침</a>
         </nav>
       </div>

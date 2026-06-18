@@ -1,6 +1,7 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { sortPostsByUpdatedDesc } from '../utils/posts';
 
 export async function GET(context: { site: URL }) {
   const basePath = import.meta.env.BASE_URL.endsWith('/')
@@ -8,7 +9,7 @@ export async function GET(context: { site: URL }) {
     : import.meta.env.BASE_URL;
   const posts = (await getCollection('posts'))
     .filter((entry) => entry.data.status === 'published')
-    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+    .sort(sortPostsByUpdatedDesc);
 
   return rss({
     title: SITE_TITLE,

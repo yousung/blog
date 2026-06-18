@@ -6,7 +6,7 @@ date: '2023-02-16'
 summary: 'Next.js의 Link 컴포넌트를 활용한 클라이언트 사이드 라우팅 완벽 가이드. 자동 prefetching, 동적 라우팅, SEO 최적화, 그리고 <a> 태그와의 차이점을 이해하고 실무에 바로 적용할 수 있는 실제 예제들을 담았습니다.'
 oneLineSummary: 'Link 컴포넌트로 빠르고 효율적인 라우팅 구현'
 tags: ['legacy', 'legacy-migration', 'Next.js', 'React', '라우팅']
-status: 'published'
+status: "draft"
 updatedDate: '2026-04-23'
 ---
 
