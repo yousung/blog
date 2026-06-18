@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import TagList from './TagList.astro';
-import { getPostDisplayDate } from '../utils/posts';
 
 interface Props {
   posts: CollectionEntry<'posts'>[];
@@ -28,29 +27,25 @@ const matchesQuery = (post: CollectionEntry<'posts'>, rawQuery: string) => {
 ---
 
 <ul class="post-list" aria-label={listLabel}>
-  {posts.map((post) => {
-    const displayDate = getPostDisplayDate(post);
-
-    return (
-      <li
-        class="post-row"
-        data-search-text={searchable ? getSearchText(post) : undefined}
-        hidden={searchable ? !matchesQuery(post, searchQuery) : undefined}
-      >
-        <a class="card-link" href={postHref(post.data.slug)} aria-label={post.data.title}></a>
-        <div class="row-inner">
-          <h3>{post.data.title}</h3>
-          <p class="one-line-summary">{post.data.oneLineSummary ?? post.data.summary}</p>
-          <div class="meta-row">
-            <TagList tags={post.data.tags} basePath={basePath} />
-            <time datetime={displayDate.date.toISOString()}>
-              {displayDate.label} : {displayDate.text}
-            </time>
-          </div>
+  {posts.map((post) => (
+    <li
+      class="post-row"
+      data-search-text={searchable ? getSearchText(post) : undefined}
+      hidden={searchable ? !matchesQuery(post, searchQuery) : undefined}
+    >
+      <a class="card-link" href={postHref(post.data.slug)} aria-label={post.data.title}></a>
+      <div class="row-inner">
+        <h3>{post.data.title}</h3>
+        <p class="one-line-summary">{post.data.oneLineSummary ?? post.data.summary}</p>
+        <div class="meta-row">
+          <TagList tags={post.data.tags} basePath={basePath} />
+          <time datetime={post.data.date.toISOString()}>
+            {post.data.date.toISOString().slice(0, 10).replace(/-/g, '.')}
+          </time>
         </div>
-      </li>
-    );
-  })}
+      </div>
+    </li>
+  ))}
 </ul>
 
 <style>

@@ -1,10 +1,9 @@
 import { getCollection } from 'astro:content';
-import { sortPostsByUpdatedDesc } from '../utils/posts';
 
 export async function GET() {
   const posts = (await getCollection('posts'))
     .filter((p) => p.data.status === 'published')
-    .sort(sortPostsByUpdatedDesc)
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
     .map((p) => ({
       slug: p.data.slug,
       title: p.data.title,

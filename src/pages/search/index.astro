@@ -3,7 +3,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import PostFeed from '../../components/PostFeed.astro';
 import { SITE_TITLE } from '../../consts';
-import { sortPostsByUpdatedDesc } from '../../utils/posts';
 
 const basePath = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
@@ -11,7 +10,7 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
 
 const allPosts = (await getCollection('posts'))
   .filter((entry) => entry.data.status === 'published')
-  .sort(sortPostsByUpdatedDesc);
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <BaseLayout title={`검색 - ${SITE_TITLE}`} description="블로그 검색" noindex={true}>

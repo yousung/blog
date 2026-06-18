@@ -6,7 +6,7 @@ date: "2019-02-08"
 summary: "로토토베베 유아용 역류방지쿠션 세트를 수유 후 보조 쿠션, 커버 관리, 안전 사용 기준 중심으로 살펴봤다."
 oneLineSummary: "역류방지쿠션은 소재, 경사감, 세탁, 사용 시간 기준을 함께 봐야 한다."
 tags: [legacy, legacy-migration, 육아, 아기용품, 수면교육, 제품리뷰, coupang]
-status: "draft"
+status: "published"
 updatedDate: "2026-05-30"
 ---
 

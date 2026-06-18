@@ -6,7 +6,7 @@ date: '2024-09-26'
 summary: 'JetBrains IDE(IntelliJ, WebStorm, PyCharm 등)에서 한글 언어팩을 활성화했는데도 인터페이스가 영어로 표시되는 문제의 완벽한 해결책. 플러그인 설정과 시스템 언어 설정을 함께 변경해야 하는 이유를 설명하고, 캐시 문제, 업데이트, 재설치 등 모든 상황에 대한 구체적인 트러블슈팅 방법을 제시합니다.'
 oneLineSummary: 'JetBrains 한글 언어팩 완벽 설정: 플러그인 + 시스템 설정'
 tags: ['legacy', 'legacy-migration', 'JetBrains', 'IDE', '개발도구', 'IntelliJ']
-status: "draft"
+status: 'published'
 updatedDate: '2026-04-23'
 ---
 

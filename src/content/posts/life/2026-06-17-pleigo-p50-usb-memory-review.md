@@ -7,7 +7,7 @@ summary: "PLEIGO USB 메모리 P50을 문서 이동, 사진 백업, 차량 음�
 oneLineSummary: "PLEIGO USB 메모리 P50은 저렴한 가격과 작은 메탈 바디를 우선하는 사람에게 맞지만, USB 2.0 기반이라 대용량 파일 전송 속도와 차량 호환성은 확인이 필요하다."
 tags: [라이프, 생활정보, 제품리뷰, coupang, 장비]
 category: "생활"
-status: "draft"
+status: "published"
 ogImage: "https://cdn-blog.lovizu.com/bloa/coupang/2026/06/pleigo-p50-usb-memory-review-preview.webp"
 ---
 

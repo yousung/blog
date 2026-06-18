@@ -4,7 +4,6 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import PostFeed from '../../components/PostFeed.astro';
 import { SITE_TITLE } from '../../consts';
-import { sortPostsByUpdatedDesc } from '../../utils/posts';
 
 const CATEGORY_MAP: Record<string, string> = {
   career: '생활',
@@ -39,7 +38,7 @@ export async function getStaticPaths() {
     }
     return 'unknown';
   };
-  const posts = await getCollection('posts', ({ data }) => data.status === 'published');
+  const posts = await getCollection('posts');
   const categories = [...new Set(posts.map((p) => categoryMap[getDirInner(p)] ?? getDirInner(p)))];
   return categories.map((category) => ({ params: { category } }));
 }
@@ -49,7 +48,7 @@ const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_U
 
 const posts = (await getCollection('posts'))
   .filter((e) => e.data.status === 'published' && (CATEGORY_MAP[getDir(e)] ?? getDir(e)) === category)
-  .sort(sortPostsByUpdatedDesc);
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <BaseLayout title={`${category} | 카테고리 | ${SITE_TITLE}`} description={`'${category}' 카테고리의 글 목록입니다.`}>

@@ -6,7 +6,7 @@ date: '2020-10-17'
 summary: '데이터베이스 페이지네이션에서 가장 많이 사용되는 Offset 방식의 성능 문제를 분석합니다. 대량 데이터셋에서의 쿼리 성능 저하와 실시간 데이터 변경 시 발생하는 중복 데이터 문제를 실제 예제와 함께 설명하고, 커서 기반 페이지네이션의 구현 방법과 장점을 소개합니다.'
 oneLineSummary: 'Offset 페이지네이션의 문제점과 커서 기반 대안 솔루션'
 tags: ['legacy', 'legacy-migration', '데이터베이스', '페이지네이션', '성능최적화', 'SQL']
-status: "draft"
+status: 'published'
 updatedDate: '2026-04-23'
 ---
 

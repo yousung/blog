@@ -9,7 +9,7 @@ export default defineConfig({
   output: 'static',
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/search/') && !page.includes('/og/')
+      filter: (page) => !page.includes('/search/') && !page.includes('/og/') && !page.endsWith('/privacy/')
     }),
     {
       name: 'sitemap-xml-compat',

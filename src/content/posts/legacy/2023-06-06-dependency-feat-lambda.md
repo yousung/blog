@@ -6,7 +6,7 @@ date: '2023-06-06'
 summary: 'AWS Lambda에서 외부 도구(jpegoptim 등)가 필요할 때 C 라이브러리 의존성을 처리하는 실무 가이드. Docker를 이용한 로컬 테스트, ldd 명령으로 동적 라이브러리 파악, exodus로 자동화된 의존성 수집·패키징까지 단계별로 설명합니다. 맥이나 윈도우에서 리눅스 기반 Lambda 환경 정확히 재현하는 방법.'
 oneLineSummary: 'Lambda의 C 라이브러리 의존성을 exodus로 자동 수집하기'
 tags: ['legacy', 'legacy-migration', 'AWS', 'Lambda', 'Docker', 'C라이브러리', '배포']
-status: "draft"
+status: 'published'
 updatedDate: '2026-04-23'
 ---
 

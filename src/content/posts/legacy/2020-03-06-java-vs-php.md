@@ -6,7 +6,7 @@ date: '2020-03-06'
 summary: '언어의 기술적 우수성이 아닌 한국의 개발자 생태계 관점에서 Java와 PHP를 비교합니다. 초기 경력의 Spring 개발부터 후기의 Laravel 경험을 바탕으로 개발 문화, 업무 환경, 연봉 및 대우의 현실을 분석합니다.'
 oneLineSummary: 'Java vs PHP: 한국 개발자가 선택해야 할 언어'
 tags: ['legacy', 'legacy-migration', 'Java', 'PHP', '백엔드', '커리어', 'Spring', 'Laravel']
-status: "draft"
+status: 'published'
 updatedDate: '2026-04-23'
 ---
 

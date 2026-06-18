@@ -7,7 +7,7 @@ summary: "엡손 LW-K200BL 라벨프린터기를 집안 정리, 아이 물건 �
 oneLineSummary: "엡손 LW-K200BL은 스마트폰 연결 없이 바로 입력해 뽑는 단순한 라벨프린터기를 찾는 사람에게 잘 맞지만, 백라이트 없는 화면과 테이프 여백, 건전지 사용 방식은 미리 봐야 한다."
 tags: [라이프, 생활정보, 제품리뷰, coupang, 프린터]
 category: "생활"
-status: "draft"
+status: "published"
 ogImage: "https://cdn-blog.lovizu.com/bloa/coupang/2026/06/epson-lw-k200bl-label-printer-review-preview.webp"
 ---
 

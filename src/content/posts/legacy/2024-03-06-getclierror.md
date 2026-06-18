@@ -6,7 +6,7 @@ date: '2024-03-06'
 summary: 'Flutter GetX CLI에서 발생하는 "Synchronous waiting using dart:cli waitFor" 에러를 완전히 해결합니다. 최신 Dart 버전에서 동기 대기 기능이 deprecated되면서 발생하는 문제의 원인을 파악하고, 공식 해결 방법과 임시 해결 방법을 모두 제시합니다.'
 oneLineSummary: 'GetX CLI waitFor 에러 완벽 해결 가이드'
 tags: ['legacy', 'legacy-migration', 'Flutter', 'Dart', 'GetX', 'troubleshooting']
-status: "draft"
+status: 'published'
 updatedDate: '2026-04-23'
 ---
 

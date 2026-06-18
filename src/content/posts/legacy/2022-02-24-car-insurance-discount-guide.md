@@ -6,7 +6,7 @@ date: '2022-02-24'
 summary: '자동차 보험료를 결정하는 할인 할증 요인을 정확히 이해하고 관리하는 방법. 사고 기록, 법규 위반에 따른 할증률 계산부터 범칙금과 과태료의 중요한 차이까지 설명합니다. 한국 운전자를 위한 실용적인 보험료 절약 전략 완벽 가이드.'
 oneLineSummary: '범칙금 vs 과태료: 이 차이를 아는 것이 돈입니다'
 tags: ['legacy', 'legacy-migration', '자동차', '보험', '생활정보', '금융']
-status: "draft"
+status: 'published'
 updatedDate: '2026-04-23'
 ---
 

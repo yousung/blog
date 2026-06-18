@@ -4,14 +4,12 @@ import { getCollection } from 'astro:content';
 import PostFeed from '../components/PostFeed.astro';
 import TagList from '../components/TagList.astro';
 import { SITE_TITLE } from '../consts';
-import { getPostDisplayDate, sortPostsByUpdatedDesc } from '../utils/posts';
 
 const PAGE_SIZE = 10;
 const posts = (await getCollection('posts'))
   .filter((entry) => entry.data.status === 'published')
-  .sort(sortPostsByUpdatedDesc);
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 const [featured, ...rest] = posts;
-const featuredDisplayDate = featured ? getPostDisplayDate(featured) : null;
 const firstPagePosts = rest.slice(0, PAGE_SIZE);
 const totalPages = Math.max(1, Math.ceil(rest.length / PAGE_SIZE));
 const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
@@ -38,11 +36,7 @@ const initialCount = posts.length;
             <p>{featured.data.oneLineSummary ?? featured.data.summary}</p>
             <div class="featured-meta-row">
               <TagList tags={featured.data.tags} basePath={basePath} />
-              {featuredDisplayDate && (
-                <time datetime={featuredDisplayDate.date.toISOString()}>
-                  {featuredDisplayDate.label} : {featuredDisplayDate.text}
-                </time>
-              )}
+              <time datetime={featured.data.date.toISOString()}>{featured.data.date.toLocaleDateString('ko-KR')}</time>
             </div>
           </div>
         </article>
