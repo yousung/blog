@@ -106,10 +106,10 @@ const jsonLd =
 <!doctype html>
 <html lang="ko" data-theme="light">
   <head>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WXL65FXF');</script>
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;if(f&&f.parentNode){f.parentNode.insertBefore(j,f);}})(window,document,'script','dataLayer','GTM-WXL65FXF');</script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5MVZZDBHM"></script>
-    <script>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-R5MVZZDBHM"></script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -154,8 +154,8 @@ const jsonLd =
     {author && <meta property="article:author" content={author} />}
     {tags.map((tag) => <meta property="article:tag" content={tag} />)}
 
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-    {shouldLoadAdSense && <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1322828698634218" crossorigin="anonymous"></script>}
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    {shouldLoadAdSense && <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1322828698634218" crossorigin="anonymous"></script>}
   </head>
   <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXL65FXF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -255,8 +255,8 @@ const jsonLd =
         </nav>
       </div>
     </footer>
-    <script type="text/javascript" src="//wcs.pstatic.net/wcslog.js"></script>
-    <script type="text/javascript">
+    <script is:inline type="text/javascript" src="//wcs.pstatic.net/wcslog.js"></script>
+    <script is:inline type="text/javascript">
       if(!wcs_add) var wcs_add = {};
       wcs_add["wa"] = "12f71a2fc18bd8";
       if(window.wcs) {
@@ -266,7 +266,7 @@ const jsonLd =
   </body>
 </html>
 
-<script define:vars={{ basePath }}>
+<script is:inline define:vars={{ basePath }}>
   (() => {
     // Hamburger toggle
     const toggle = document.querySelector('.menu-toggle');
@@ -328,7 +328,7 @@ const jsonLd =
       e.preventDefault();
       const query = overlayInput?.value.trim();
       if (query) {
-        window.location.href = `${basePath}search/${encodeURIComponent(query)}/`;
+        window.location.href = `${basePath}search/?q=${encodeURIComponent(query)}`;
       }
     });
   })();

@@ -68,7 +68,7 @@ const allPosts = getAdSenseReadyPosts(await getCollection('posts'));
         : `검색 - ${document.title.split(' - ').pop()}`;
 
       const newPath = q
-        ? `${basePath}search/${encodeURIComponent(q)}/`
+        ? `${basePath}search/?q=${encodeURIComponent(q)}`
         : `${basePath}search/`;
       window.history.replaceState(null, '', newPath);
     };

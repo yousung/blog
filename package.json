@@ -21,7 +21,9 @@
     "sharp": "^0.34.2"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
     "node-addon-api": "^8.8.0",
-    "node-gyp": "^12.3.0"
+    "node-gyp": "^12.3.0",
+    "typescript": "^5.9.3"
   }
 }

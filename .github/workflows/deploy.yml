@@ -134,6 +134,9 @@ jobs:
       - name: Validate launch telemetry/monetization signals
         run: npm run validate:launch-signals
 
+      - name: Astro typecheck
+        run: npm run check
+
       - name: Build
         run: npm run build
 

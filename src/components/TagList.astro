@@ -4,10 +4,11 @@ interface Props {
   basePath?: string;
 }
 const { tags, basePath = '/' } = Astro.props;
+const tagHref = (tag: string) => `${basePath}tags/${encodeURIComponent(tag.replace(/\//g, '-'))}/`;
 ---
 <ul class="tag-list" aria-label="글 태그">
   {tags.map((tag) => (
-    <li><a href={`${basePath}search/${encodeURIComponent(tag)}/`}>{tag}</a></li>
+    <li><a href={tagHref(tag)}>{tag}</a></li>
   ))}
 </ul>
 

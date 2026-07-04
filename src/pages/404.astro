@@ -22,7 +22,7 @@ const homeHref = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_U
       try {
         const topic = decodeURIComponent(entryMatch[1]).replace(/-/g, ' ');
         if (topic) {
-          window.location.replace(`${window.location.origin}/search/${encodeURIComponent(topic)}/`);
+          window.location.replace(`${window.location.origin}/search/?q=${encodeURIComponent(topic)}`);
           return;
         }
       } catch (_) {}
