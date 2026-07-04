@@ -4,11 +4,10 @@ import { getCollection } from 'astro:content';
 import PostFeed from '../components/PostFeed.astro';
 import TagList from '../components/TagList.astro';
 import { SITE_TITLE } from '../consts';
+import { getAdSenseReadyPosts } from '../lib/posts';
 
 const PAGE_SIZE = 10;
-const posts = (await getCollection('posts'))
-  .filter((entry) => entry.data.status === 'published')
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const posts = getAdSenseReadyPosts(await getCollection('posts'));
 const [featured, ...rest] = posts;
 const firstPagePosts = rest.slice(0, PAGE_SIZE);
 const totalPages = Math.max(1, Math.ceil(rest.length / PAGE_SIZE));

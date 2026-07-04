@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<BaseLayout
+  title={`문의 | ${SITE_TITLE}`}
+  description={`${SITE_TITLE} 운영자에게 문의하거나 오류를 제보하는 방법입니다.`}
+>
+  <article class="policy-page">
+    <p class="eyebrow">Contact</p>
+    <h1>문의</h1>
+    <p>
+      블로그 글의 오류 제보, 출처 보완 요청, 개인정보 관련 문의, 광고·제휴 표기 관련 문의는 아래 채널로
+      접수할 수 있습니다. 확인 후 필요한 경우 본문 수정 또는 공개 상태 조정을 진행합니다.
+    </p>
+
+    <h2>문의 채널</h2>
+    <ul>
+      <li>운영자: 감성개발자</li>
+      <li>GitHub 저장소: <a href="https://github.com/yousung/blog" rel="me noopener noreferrer">yousung/blog</a></li>
+      <li>오류 제보: <a href="https://github.com/yousung/blog/issues" rel="noopener noreferrer">GitHub Issues</a></li>
+    </ul>
+
+    <h2>문의 시 포함하면 좋은 정보</h2>
+    <ul>
+      <li>문제가 있는 글 주소</li>
+      <li>수정이 필요한 문장 또는 자료 위치</li>
+      <li>확인 가능한 공식 출처 또는 참고 링크</li>
+    </ul>
+
+    <p>
+      광고 심사, 검색 노출, 개인정보 처리와 관련된 요청은 우선순위를 높여 확인합니다.
+    </p>
+  </article>
+</BaseLayout>
+
+<style>
+  .policy-page {
+    max-width: 48rem;
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    background: var(--bg-surface);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-8);
+  }
+  .eyebrow {
+    margin: 0 0 var(--space-2);
+    color: var(--accent-primary);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .policy-page h1 {
+    margin: 0 0 var(--space-4);
+    font-size: var(--text-2xl);
+    line-height: var(--lh-tight);
+  }
+  .policy-page h2 {
+    margin: var(--space-8) 0 var(--space-3);
+    font-size: var(--text-lg);
+  }
+  .policy-page p,
+  .policy-page li {
+    color: var(--text-secondary);
+  }
+  .policy-page ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+</style>

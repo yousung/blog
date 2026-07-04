@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<BaseLayout
+  title={`소개 | ${SITE_TITLE}`}
+  description={`${SITE_TITLE} 운영자와 블로그의 편집 기준을 소개합니다.`}
+>
+  <article class="policy-page">
+    <p class="eyebrow">About</p>
+    <h1>소개</h1>
+    <p>
+      {SITE_TITLE}는 개발 실무에서 얻은 경험, 생활 속 체크리스트, 경제·건강 관리에 관한 내용을
+      독자가 바로 실행할 수 있는 형태로 정리하는 개인 블로그입니다.
+    </p>
+    <p>
+      운영자는 실제 사용 경험과 공개적으로 확인 가능한 자료를 바탕으로 글을 작성하며, 단순한 요약보다
+      문제를 이해하고 다음 행동을 결정하는 데 도움이 되는 정보를 우선합니다.
+    </p>
+
+    <h2>다루는 주제</h2>
+    <ul>
+      <li>소프트웨어 개발, 클라우드, 자동화, 운영 경험</li>
+      <li>일상 관리, 가정·생활 체크리스트, 습관 만들기</li>
+      <li>개인 재무, 예산, 비상금, 금융 생활의 기본 점검</li>
+      <li>건강·운동·수면 등 생활 개선을 위한 일반 정보</li>
+    </ul>
+
+    <h2>운영 원칙</h2>
+    <p>
+      모든 글은 독자가 글의 출처와 맥락을 이해할 수 있도록 작성합니다. 오래된 글은 필요에 따라 수정하거나
+      검색 노출에서 제외하며, 광고 심사 기간에는 얇거나 제휴성이 강한 콘텐츠보다 독립적인 정보성 글을
+      우선 공개합니다.
+    </p>
+  </article>
+</BaseLayout>
+
+<style>
+  .policy-page {
+    max-width: 48rem;
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    background: var(--bg-surface);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-8);
+  }
+  .eyebrow {
+    margin: 0 0 var(--space-2);
+    color: var(--accent-primary);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .policy-page h1 {
+    margin: 0 0 var(--space-4);
+    font-size: var(--text-2xl);
+    line-height: var(--lh-tight);
+  }
+  .policy-page h2 {
+    margin: var(--space-8) 0 var(--space-3);
+    font-size: var(--text-lg);
+  }
+  .policy-page p,
+  .policy-page li {
+    color: var(--text-secondary);
+  }
+  .policy-page ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+</style>

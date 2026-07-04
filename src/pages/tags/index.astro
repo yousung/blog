@@ -2,11 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { SITE_TITLE } from '../../consts';
+import { getAdSenseReadyPosts } from '../../lib/posts';
 
 const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const tagSlug = (tag: string) => tag.replace(/\//g, '-');
 
-const posts = (await getCollection('posts')).filter((e) => e.data.status === 'published');
+const posts = getAdSenseReadyPosts(await getCollection('posts'));
 
 const tagMap = posts.reduce<Record<string, number>>((acc, post) => {
   for (const tag of post.data.tags) {

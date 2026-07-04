@@ -1,14 +1,13 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { getAdSenseReadyPosts } from '../lib/posts';
 
 export async function GET(context: { site: URL }) {
   const basePath = import.meta.env.BASE_URL.endsWith('/')
     ? import.meta.env.BASE_URL.slice(0, -1)
     : import.meta.env.BASE_URL;
-  const posts = (await getCollection('posts'))
-    .filter((entry) => entry.data.status === 'published')
-    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+  const posts = getAdSenseReadyPosts(await getCollection('posts'));
 
   return rss({
     title: SITE_TITLE,

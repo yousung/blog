@@ -3,9 +3,10 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import GiscusComments from '../../components/GiscusComments.astro';
 import TagList from '../../components/TagList.astro';
+import { getAdSenseReadyPosts } from '../../lib/posts';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('posts', ({ data }) => data.status === 'published');
+  const posts = getAdSenseReadyPosts(await getCollection('posts'));
   return posts.map((post) => ({
     params: { slug: post.data.slug },
     props: { post }

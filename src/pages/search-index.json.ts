@@ -1,9 +1,8 @@
 import { getCollection } from 'astro:content';
+import { getAdSenseReadyPosts } from '../lib/posts';
 
 export async function GET() {
-  const posts = (await getCollection('posts'))
-    .filter((p) => p.data.status === 'published')
-    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  const posts = getAdSenseReadyPosts(await getCollection('posts'))
     .map((p) => ({
       slug: p.data.slug,
       title: p.data.title,

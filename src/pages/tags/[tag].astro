@@ -3,10 +3,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import PostFeed from '../../components/PostFeed.astro';
 import { SITE_TITLE } from '../../consts';
+import { getAdSenseReadyPosts } from '../../lib/posts';
 
 export async function getStaticPaths() {
   const slugify = (tag: string) => tag.replace(/\//g, '-');
-  const posts = await getCollection('posts');
+  const posts = getAdSenseReadyPosts(await getCollection('posts'));
   const allTags = [...new Set(posts.flatMap((p) => p.data.tags))];
   return allTags.map((tag) => ({ params: { tag: slugify(tag) }, props: { tag } }));
 }
@@ -20,9 +21,8 @@ interface Props {
 const { tag } = Astro.props;
 const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
-const posts = (await getCollection('posts'))
-  .filter((e) => e.data.status === 'published' && e.data.tags.includes(tag))
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const posts = getAdSenseReadyPosts(await getCollection('posts'))
+  .filter((e) => e.data.tags.includes(tag));
 ---
 
 <BaseLayout title={`#${tag} | 태그 | ${SITE_TITLE}`} description={`'${tag}' 태그가 붙은 글 목록입니다.`}>
