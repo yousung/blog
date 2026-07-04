@@ -97,7 +97,7 @@ const jsonLd =
         inLanguage: 'ko-KR',
         potentialAction: {
           '@type': 'SearchAction',
-          target: `${websiteUrl}search/{search_term_string}/`,
+          target: `${websiteUrl}search/?q={search_term_string}`,
           'query-input': 'required name=search_term_string'
         }
       };

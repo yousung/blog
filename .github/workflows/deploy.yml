@@ -111,7 +111,7 @@ jobs:
             return 1
           }
 
-          site_url="$(pick_first "${PUBLIC_SITE_URL_1:-}" "${PUBLIC_SITE_URL_2:-}" "https://blog.lovizu.com" || true)"
+          site_url="$(pick_first "${PUBLIC_SITE_URL_1:-}" "${PUBLIC_SITE_URL_2:-}" "https://lovizu.com" || true)"
           ga_measurement_id="$(pick_first "${PUBLIC_GA_MEASUREMENT_ID_1:-}" "${PUBLIC_GA_MEASUREMENT_ID_2:-}" || true)"
           adsense_client="$(pick_first "${PUBLIC_ADSENSE_CLIENT_1:-}" "${PUBLIC_ADSENSE_CLIENT_2:-}" || true)"
           adsense_slot_top="$(pick_first "${PUBLIC_ADSENSE_SLOT_TOP_1:-}" "${PUBLIC_ADSENSE_SLOT_TOP_2:-}" || true)"

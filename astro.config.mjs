@@ -5,7 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export default defineConfig({
-  site: 'https://blog.lovizu.com',
+  site: 'https://lovizu.com',
   output: 'static',
   integrations: [
     sitemap({
