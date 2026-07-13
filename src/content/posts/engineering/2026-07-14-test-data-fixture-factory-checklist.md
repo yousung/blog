@@ -7,9 +7,12 @@ summary: "테스트 코드가 늘어날수록 테스트 데이터 관리가 더 
 oneLineSummary: "테스트 데이터는 전역 Fixture로 쌓기보다 테스트 목적에 맞게 Factory, Builder, seed 데이터를 나눠야 유지보수가 쉬워진다."
 tags: [테스트코드, 개발팁, QA, TDD]
 status: "published"
+ogImage: "/images/posts/test-data-fixture-factory-checklist/hero.png"
 ---
 
 # 테스트 데이터는 Fixture와 Factory 중 무엇으로 만들까
+
+![Fixture와 Factory 기반 테스트 데이터 구조를 추상적으로 표현한 삽화](/images/posts/test-data-fixture-factory-checklist/hero.png)
 
 테스트가 깨졌는데 원인이 코드인지 데이터인지 모르면, 그 테스트는 이미 절반쯤 빚이 됩니다. 처음에는 `users.json` 하나, `products.yml` 하나로 충분해 보입니다. 그런데 케이스가 늘어나면 "이 사용자는 왜 admin이지?", "이 주문은 어느 테스트가 바꿨지?", "전체 테스트를 돌릴 때만 실패하는 이유가 뭐지?" 같은 질문이 따라옵니다.
 
