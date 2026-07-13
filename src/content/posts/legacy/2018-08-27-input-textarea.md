@@ -6,7 +6,7 @@ date: '2018-08-27'
 summary: 'Laravel 폼 유효성 검사 실패 시 입력 필드의 테두리 색상을 동적으로 변경하여 사용자에게 오류를 시각적으로 표시하는 방법입니다. 부트스트랩 스타일의 커스텀 헬퍼 함수를 활용한 구현 예시를 제시합니다.'
 oneLineSummary: 'Laravel 폼 검증 실패 시 입력창 색상 변경으로 오류 표시'
 tags: ['legacy', 'legacy-migration', 'Laravel', 'PHP', '폼 검증', 'CSS']
-status: 'published'
+status: "draft"
 updatedDate: '2026-04-23'
 ---
 

@@ -6,7 +6,7 @@ date: '2023-09-18'
 summary: 'Flutter와 Dart로 개발한 농장 배송 및 창고 관리 시스템 모바일 앱 프로젝트입니다. 배송관리, 계사 관리, 농장 운영 통합 시스템을 2주간의 기획과 UX/UI 설계를 거쳐 개발했습니다. 실제 개발 경험과 기술적 학습 내용을 상세히 공유합니다.'
 oneLineSummary: '농장 배송 관리 앱: Flutter 프로젝트 사례'
 tags: ['legacy', 'legacy-migration', 'Flutter', 'Dart', '모바일앱', '농업']
-status: 'published'
+status: "draft"
 updatedDate: '2026-04-23'
 ---
 

@@ -7,7 +7,7 @@ summary: "아이리버 25W 2포트 초고속 충전기와 CtoC 케이블 세트�
 oneLineSummary: "아이리버 25W 2포트 충전기 세트는 C타입과 USB-A를 함께 쓰고 싶은 사람에게 실용적이지만, 두 기기 동시 충전 속도와 초기 불량 가능성은 구매 전 확인이 필요하다."
 tags: [라이프, 생활정보, 제품리뷰, coupang, 장비]
 category: "생활"
-status: "published"
+status: "draft"
 ogImage: "https://cdn-blog.lovizu.com/bloa/coupang/2026/06/iriver-25w-2port-charger-review-preview.webp"
 ---
 

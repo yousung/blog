@@ -7,7 +7,7 @@ updatedDate: "2026-07-11"
 summary: "책상 아래와 TV장 뒤에 방치된 멀티탭을 안전하게 쓰기 위해 먼지, 과부하, 전선 손상, 열 나는 가전 연결 여부를 어떤 순서로 확인해야 하는지 정리했다."
 oneLineSummary: "멀티탭은 빈 콘센트를 늘리는 물건이 아니라 전기 사용량과 먼지, 전선 상태를 함께 관리해야 하는 생활 도구다."
 tags: [life, household, checklist, tip]
-status: "published"
+status: "draft"
 ---
 
 # 멀티탭 먼지와 과부하, 집에서 먼저 봐야 할 전기 안전 체크리스트

@@ -7,7 +7,7 @@ updatedDate: "2026-05-28"
 summary: "운동 습관이 없는 사람이 하루 30분 걷기 루틴을 무리 없이 시작하기 위한 현실적인 기준과 체크리스트를 정리했다."
 oneLineSummary: "운동 습관이 없는 사람이 하루 30분 걷기 루틴을 무리 없이 시작하기 위한 현실적인 기준과 체크리스트를 정리했다."
 tags: [라이프, 걷기, 루틴]
-status: "published"
+status: "draft"
 ---
 
 하루 30분 걷기는 가장 단순한 건강 습관처럼 보이지만, 실제로는 '얼마나'보다 '어떻게 지속할지'가 더 중요합니다. WHO는 성인에게 주당 최소 150분의 중등도 신체활동을 권하고, 걷기는 대표적인 중등도 활동 예시 중 하나로 제시합니다. 또한 신체활동은 운동 시간뿐 아니라 이동, 가사, 일상 움직임을 포함한다고 설명합니다. 즉, 걷기 루틴은 운동선수가 아니어도 일상에 붙일 수 있는 가장 현실적인 시작점입니다. (출처: [WHO - Physical activity](https://www.who.int/health-topics/noncommunicable-diseases/physical-activity), [WHO Fact Sheet - Physical activity](https://www.who.int/news-room/fact-sheets/detail/physical-activity%E2%80%AF%E2%80%AF))

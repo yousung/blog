@@ -6,7 +6,7 @@ date: '2022-09-02'
 summary: 'Laravel에서 vyuldashev/laravel-openapi와 darkaonline/l5-swagger를 사용하여 API 문서를 체계적으로 작성합니다. PHP 8 Attributes로 선언형 API 정의, 복잡한 주석 제거, Schema 재사용 등 모던 개발 방식으로 유지보수 가능한 API 스펙을 관리합니다.'
 oneLineSummary: 'Laravel API: OpenAPI 속성으로 우아하고 재사용 가능하게'
 tags: ['legacy', 'legacy-migration', 'Laravel', 'PHP', 'API', 'OpenAPI', 'Backend']
-status: 'published'
+status: "draft"
 updatedDate: '2026-04-23'
 ---
 ## 전통적 Swagger 주석의 문제점

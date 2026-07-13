@@ -6,7 +6,7 @@ date: '2020-04-27'
 summary: 'RDS MariaDB에서 Aurora로 대량의 데이터를 마이그레이션할 때 적용한 최적화된 백업과 복원 방법을 설명합니다. --no-autocommit, --single-transaction, --extended-insert 옵션의 역할과 AWS 환경에서의 추가 팁을 포함합니다.'
 oneLineSummary: '대용량 데이터베이스 백업을 4시간에서 1시간 이내로 단축하기'
 tags: ['legacy', 'legacy-migration', 'MariaDB', 'MySQL', 'AWS', 'RDS', '데이터베이스']
-status: 'published'
+status: "draft"
 updatedDate: '2026-04-23'
 ---
 

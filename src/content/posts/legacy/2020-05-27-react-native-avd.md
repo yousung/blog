@@ -6,7 +6,7 @@ date: '2020-05-27'
 summary: 'React Native에서 yarn android 실행 시 안드로이드 가상머신(AVD) 연결 실패 에러가 발생합니다. Gradle이 설치되지 않았을 때 나타나는 증상과 해결 방법, 그리고 빌드 캐시 초기화 등 추가 트러블슈팅 방법을 설명합니다.'
 oneLineSummary: 'React Native Android 빌드 실패는 Gradle 설치로 해결하기'
 tags: ['legacy', 'legacy-migration', 'React Native', 'Android', 'Gradle', '개발환경']
-status: 'published'
+status: "draft"
 updatedDate: '2026-04-23'
 ---
 

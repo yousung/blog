@@ -7,7 +7,7 @@ updatedDate: "2026-05-28"
 summary: "비상금 통장을 몇 개월치로 잡아야 하는지, 그리고 왜 생활비 구조에 맞춰 따로 운영해야 하는지 현실적인 기준을 정리했다."
 oneLineSummary: "비상금 통장을 몇 개월치로 잡아야 하는지, 그리고 왜 생활비 구조에 맞춰 따로 운영해야 하는지 현실적인 기준을 정리했다."
 tags: [머니, 비상금, 저축]
-status: "published"
+status: "draft"
 ---
 
 비상금 통장은 "많을수록 좋다"는 말로 끝낼 수 있지만, 실제로는 소득 안정성, 고정비, 부양가족 여부에 따라 목표액이 달라집니다. MyMoney.gov는 투자 전에 최소 3개월치 생활비를 비상자금으로 마련하라고 안내하고, FDIC는 많은 재무 전문가가 최소 6개월치 생활비를 권한다고 설명합니다. 동시에 FDIC는 자동이체처럼 작은 반복 저축이 비상금 형성에 효과적이라고 강조합니다. (출처: [MyMoney.gov - Save and Invest](https://www.mymoney.gov/saveandinvest), [FDIC - Saving for the Unexpected and Your Future](https://www.fdic.gov/consumer-resource-center/2025-01/saving-unexpected-and-your-future))

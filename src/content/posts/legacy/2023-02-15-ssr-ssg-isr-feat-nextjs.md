@@ -6,7 +6,7 @@ date: '2023-02-15'
 summary: 'Next.js는 SSR(서버 사이드 렌더링), SSG(정적 사이트 생성), CSR(클라이언트 사이드 렌더링), ISR(증분 정적 재생성) 등 다양한 렌더링 방식을 지원합니다. 각 방식의 특징, 장단점, 구현 방법을 비교하여 프로젝트 요구사항에 맞는 최적의 렌더링 전략을 선택할 수 있습니다.'
 oneLineSummary: 'Next.js의 4가지 렌더링 방식 완벽 이해하기'
 tags: ['legacy', 'legacy-migration', 'Next.js', 'React', 'SEO', '렌더링']
-status: 'published'
+status: "draft"
 updatedDate: '2026-04-23'
 ---
 

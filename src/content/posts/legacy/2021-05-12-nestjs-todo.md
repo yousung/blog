@@ -3,7 +3,7 @@ title: 'NestJS: TODO API 완벽 구현 가이드'
 slug: 'nestjs-todo'
 author: 'Lovizu'
 date: '2021-05-12'
-status: 'published'
+status: "draft"
 summary: 'NestJS로 CRUD 기능이 완전한 TODO REST API를 구현하는 단계별 가이드입니다. 프로젝트 생성, Entity/DTO 설계, 유효성 검사, 서비스와 컨트롤러 작성까지 실무 패턴을 적용한 예제를 다룹니다.'
 oneLineSummary: 'NestJS로 TODO API 만들기 (CRUD, 유효성 검사, 상태 관리)'
 tags: ['legacy', 'legacy-migration', 'NestJS', 'TypeScript', 'Backend']
