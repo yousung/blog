@@ -7,7 +7,7 @@ summary: "USB-C 유선 이어폰이 왜 필요한지, 어떤 기준으로 고르
 oneLineSummary: "Apple USB-C EarPods는 충전이 필요 없는 간편형 유선 이어폰을 찾는 사람에게 맞지만, 차음성과 고정감은 직접 사용 환경에 따라 체감이 갈린다."
 tags: [라이프, 생활정보, 제품리뷰, coupang]
 category: "생활"
-status: "published"
+status: "draft"
 ---
 
 무선 이어폰을 쓰더라도 USB-C 유선 이어폰을 쓰고 싶은 순간은 생각보다 자주 옵니다. 특히 배터리 충전 체크가 귀찮을 때, 회의 전에 케이스를 찾는 동선이 번거로울 때입니다. 그중에서도 가장 먼저 떠올리기 쉬운 선택지가 Apple USB-C EarPods입니다.

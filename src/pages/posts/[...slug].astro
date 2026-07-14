@@ -19,6 +19,10 @@ const defaultOgPath = `/og/${post.data.slug}.svg`;
 const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const firstMarkdownImage = post.body?.match(/!\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/)?.[1];
 const postOgImage = post.data.ogImage ?? firstMarkdownImage ?? defaultOgPath;
+// The public blog uses a single operating byline. Legacy source entries may
+// retain their historical "BLOA Team" metadata, but should not make the live
+// site's operator identity look inconsistent with its About and Contact pages.
+const authorName = post.data.author === 'BLOA Team' ? '감성개발자' : post.data.author;
 ---
 
 <BaseLayout
@@ -29,7 +33,7 @@ const postOgImage = post.data.ogImage ?? firstMarkdownImage ?? defaultOgPath;
   type="article"
   publishedTime={post.data.date.toISOString()}
   modifiedTime={post.data.updatedDate?.toISOString()}
-  author={post.data.author}
+  author={authorName}
   tags={post.data.tags}
 >
   <article class="post">
@@ -37,6 +41,8 @@ const postOgImage = post.data.ogImage ?? firstMarkdownImage ?? defaultOgPath;
     <h1>{post.data.title}</h1>
     <p class="meta">
       <time datetime={post.data.date.toISOString()}>{post.data.date.toLocaleDateString('ko-KR')}</time>
+      <span aria-hidden="true"> · </span>
+      <span>작성: {authorName}</span>
     </p>
     <div class="tags-wrapper">
       <TagList tags={post.data.tags} basePath={basePath} />

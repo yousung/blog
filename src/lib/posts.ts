@@ -13,7 +13,10 @@ const ADSENSE_QUARANTINE_TAGS = new Set([
   '분유포트',
   '에어프라이어'
 ]);
-const ADSENSE_QUARANTINE_PATTERN = /(coupang|쿠팡|파트너스|제휴|상품|review|리뷰|추천)/i;
+// Product-review quarantine is tag-led. Text matching `review`/`리뷰` would
+// also quarantine legitimate technical terms such as `security-review` and
+// `preview`, so retain only clear affiliate/product signals here.
+const ADSENSE_QUARANTINE_PATTERN = /(?:^|[\s/_-])coupang(?:$|[\s/_-])|쿠팡|파트너스|제휴|상품|추천/i;
 
 export function getPostDirectory(post: BlogPost): string {
   const fp = (post as unknown as { filePath?: string }).filePath;
