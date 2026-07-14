@@ -1,6 +1,7 @@
 ---
 title: ".env 파일 관리, 깃에 한 번 올리면 비밀번호는 이미 샌 겁니다"
 slug: "env-secret-management-guide"
+ogImage: "/images/posts/env-secret-management-guide/hero.png"
 author: "BLOA Team"
 date: "2026-06-16"
 summary: "API 키와 비밀번호를 담은 .env 파일을 어떻게 다뤄야 하는지 실무 기준으로 정리했다. .gitignore로 막는 법, 이미 깃에 올라간 비밀을 처리하는 순서, 그리고 히스토리에서 지우는 것보다 먼저 해야 할 일까지 다룬다."
@@ -8,6 +9,8 @@ oneLineSummary: ".env를 깃에 올렸다면 히스토리 삭제보다 키 교�
 tags: [보안, Git, 개발팁, 12-factor, tip]
 status: "published"
 ---
+
+![환경변수와 시크릿 관리 구조를 표현한 기술 일러스트](/images/posts/env-secret-management-guide/hero.png)
 
 `.env` 파일을 다루다 한 번쯤은 같은 실수를 합니다. 급하게 작업하다가 `git add .`을 치고, 며칠 뒤에야 API 키가 통째로 깃허브에 올라가 있는 걸 발견하는 겁니다. 이때 가장 흔한 반응은 "커밋을 지우면 되겠지"인데, 사실 그 순서가 틀렸습니다. 한 번 push된 비밀은 누가 봤는지 알 수 없기 때문에, 지우는 것보다 **그 키를 못 쓰게 만드는 일**이 먼저입니다.
 
