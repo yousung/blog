@@ -1,6 +1,7 @@
 ---
 title: "GitHub Actions 캐시, 언제 넣어야 빨라질까? CI 속도 개선 체크리스트"
 slug: "github-actions-cache-checklist"
+ogImage: "/images/posts/github-actions-cache-checklist/hero.png"
 author: "BLOA Team"
 date: "2026-06-30"
 summary: "GitHub Actions 워크플로가 느릴 때 무작정 캐시를 추가하면 오히려 원인 파악이 어려워질 수 있다. 의존성 설치, 빌드 산출물, 캐시 키, restore-keys, 비용까지 실무 기준으로 정리했다."
@@ -8,6 +9,8 @@ oneLineSummary: "GitHub Actions 캐시는 느린 CI의 만능 처방이 아니�
 tags: [GitHub, "CI/CD", DevOps, 개발팁]
 status: "published"
 ---
+
+![GitHub Actions 캐시 설계를 표현한 기술 일러스트](/images/posts/github-actions-cache-checklist/hero.png)
 
 CI가 느려지면 가장 먼저 떠오르는 처방이 캐시입니다. `node_modules`를 저장하면 빨라질 것 같고, 빌드 폴더를 통째로 올리면 다음 실행이 금방 끝날 것 같습니다. 그런데 캐시는 잘못 넣으면 속도보다 혼란을 먼저 만듭니다. 오래된 의존성이 살아나거나, 캐시 복구 시간 때문에 오히려 느려지거나, 키가 자주 바뀌어 매번 새 캐시만 쌓이는 식입니다.
 

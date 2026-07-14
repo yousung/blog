@@ -1,6 +1,7 @@
 ---
 title: "JWT를 localStorage에 넣어도 될까? 쿠키와 세션을 고르는 기준"
 slug: "jwt-localstorage-vs-cookie"
+ogImage: "/images/posts/jwt-localstorage-vs-cookie/hero.png"
 author: "BLOA Team"
 date: "2026-06-23"
 summary: "브라우저 로그인 상태를 설계할 때 JWT를 localStorage에 저장할지, HttpOnly 쿠키나 세션으로 처리할지 헷갈리는 경우가 많다. JWT 자체의 역할, localStorage의 한계, 쿠키 옵션과 CSRF 대응까지 실무 기준으로 정리했다."
@@ -8,6 +9,8 @@ oneLineSummary: "JWT는 저장 전략이 아니라 토큰 형식이다. 브라�
 tags: [보안, HTTP, API, 개발팁]
 status: "published"
 ---
+
+![브라우저 토큰 보안 경계를 표현한 기술 일러스트](/images/posts/jwt-localstorage-vs-cookie/hero.png)
 
 로그인 붙인 웹앱을 만들다 보면 거의 비슷한 순간이 옵니다. 백엔드는 JWT를 발급했고, 프론트는 그 값을 어디엔가 넣어야 합니다. 이때 가장 많이 나오는 말이 "요즘은 JWT니까 localStorage에 넣으면 되지 않나?"인데, 여기서 한 번 방향을 잘못 잡으면 나중에 XSS, 로그아웃 처리, CSRF, 서브도메인 쿠키 범위 같은 문제가 한꺼번에 따라옵니다.
 
