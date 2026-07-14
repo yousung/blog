@@ -1,6 +1,7 @@
 ---
 title: "SQLite 운영 적용 전 체크리스트, PostgreSQL로 넘어가야 하는 순간"
 slug: "sqlite-production-checklist"
+ogImage: "/images/posts/sqlite-production-checklist/hero.png"
 author: "BLOA Team"
 date: "2026-07-07"
 summary: "SQLite를 개발용 임시 데이터베이스로만 볼 필요는 없지만, 모든 서비스에 맞는 선택도 아니다. 운영 적용 전 확인해야 할 트래픽, 동시 쓰기, 백업, 배포 구조, PostgreSQL 전환 신호를 실무 체크리스트로 정리했다."
@@ -8,6 +9,8 @@ oneLineSummary: "SQLite는 작은 서비스와 단일 서버에는 좋은 선택
 tags: [SQLite, Database, 데이터베이스, 백엔드, 체크리스트]
 status: "published"
 ---
+
+![SQLite와 서버형 데이터베이스 전환 기준을 표현한 기술 일러스트](/images/posts/sqlite-production-checklist/hero.png)
 
 SQLite를 쓰면 처음에는 일이 빨라집니다. 서버를 띄우지 않아도 되고, 로컬 파일 하나로 테스트가 끝나고, 작은 관리자 도구나 내부 앱은 생각보다 오래 버팁니다. 문제는 "작아서 편하다"는 장점이 운영에 들어간 뒤에는 그대로 제약이 될 수 있다는 점입니다. 특히 여러 사용자가 동시에 쓰고, 서버가 여러 대로 늘고, 백업을 자동화해야 하는 순간부터는 선택 기준을 다시 봐야 합니다.
 
