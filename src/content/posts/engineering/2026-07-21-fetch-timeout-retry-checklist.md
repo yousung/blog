@@ -106,6 +106,8 @@ async function search(keyword) {
 
 ## HTTP 오류는 catch에 안 들어올 수 있습니다
 
+![네트워크 실패는 부서져 catch 그물에 걸리지만, 404나 500 같은 HTTP 오류 응답은 봉인된 채 그물을 지나 도착 지점에 정상 도달하는 모습을, 금이 간 채 배달된 봉투와 그물에 걸린 파편의 대비로 보여주는 도식.](/images/posts/fetch-timeout-retry-checklist/figure.png)
+
 `fetch`를 처음 다룰 때 자주 놓치는 부분이 있습니다. 네트워크 요청 자체가 성공하면 HTTP 상태 코드가 `404`나 `500`이어도 `fetch` Promise는 응답으로 resolve될 수 있습니다. web.dev 가이드도 `429 Too Many Requests` 같은 상태 코드는 `catch` 블록으로 가지 않으며, `Response.ok`나 `Response.status`로 직접 확인해야 한다고 설명합니다. (출처: [web.dev - Implement error handling when using the Fetch API](https://web.dev/articles/fetch-api-error-handling))
 
 그래서 아래처럼 최소한의 래퍼를 두는 편이 낫습니다.

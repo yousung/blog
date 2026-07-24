@@ -97,6 +97,8 @@ GitHub 공식 문서는 캐시 키에 Actions context, 함수, 문자열을 조�
 
 ## `restore-keys`는 편하지만, 오래된 캐시를 불러올 수도 있습니다
 
+![정확한 캐시 키가 없을 때 restore-keys가 더 넓은 접두어로 오래된 캐시를 대신 불러오는 과정을 담은 도식. 정밀하게 맞는 빈 슬롯 옆에서 헐거운 칸에 놓인 낡고 어긋난 블록이 끌려 나와 받는 자리에 어긋난 틈을 남기는 모습을 보여준다.](/images/posts/github-actions-cache-checklist/figure.png)
+
 `restore-keys`는 정확한 키가 없을 때 더 넓은 prefix로 캐시를 찾아주는 기능입니다. 예를 들어 `package-lock.json`이 바뀌어 정확한 키가 없더라도, 같은 OS와 Node 버전의 이전 npm 캐시를 가져올 수 있습니다. 의존성 다운로드를 줄이는 데는 꽤 유용합니다.
 
 다만 이 기능은 "정확히 같은 결과를 보장한다"는 뜻이 아닙니다. `actions/cache` 문서는 `cache-hit` 출력이 primary key로 정확히 복구됐을 때 `true`가 되고, `restore-keys`나 캐시 미스에서는 `false`가 된다고 설명합니다. 로그에 캐시가 복구됐다고 나오더라도, 정확한 키가 맞은 건 아닐 수 있습니다. (출처: [actions/cache README](https://github.com/actions/cache))

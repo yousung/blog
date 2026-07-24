@@ -67,6 +67,8 @@ WHERE created_at >= '2026-03-10 00:00:00'
 
 ## 복합 인덱스는 컬럼 순서가 설계다
 
+![왼쪽 기준부터 차례로 정렬된 한 줄의 칸들에서, 맨 앞 기준으로 조건을 걸면 인접한 구간이 하나로 이어져 통째로 잡히지만, 중간 기준만으로 찾으면 해당하는 칸들이 줄 전체에 흩어져 이어지지 않는 모습을 나란히 대비해 보여주는 도식.](/images/posts/sql-index-when-to-add/figure.png)
+
 조건이 두 개 이상이라면 컬럼별 단독 인덱스보다 복합 인덱스가 효과적인 경우가 많습니다. 이때 핵심 규칙은 하나입니다. **복합 인덱스는 왼쪽 컬럼부터 순서대로만 쓰입니다.** MySQL 문서는 이를 leftmost prefix 규칙으로 설명합니다. `(user_id, status, created_at)` 인덱스가 있다면 `user_id` 단독, `user_id + status`, 세 컬럼 전부는 인덱스를 탈 수 있지만, `status` 단독이나 `created_at` 단독 조건은 이 인덱스를 쓰지 못합니다. (출처: [MySQL 8.0 Reference Manual - Multiple-Column Indexes](https://dev.mysql.com/doc/refman/8.0/en/multiple-column-indexes.html))
 
 순서를 정하는 실무 기준은 이렇습니다.

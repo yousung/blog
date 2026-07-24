@@ -37,6 +37,8 @@ status: "published"
 
 ## localStorage가 편해 보여도 기본값으로 잡기 어려운 이유
 
+![자바스크립트가 접근할 수 있는 열린 저장소와 봉인된 저장소를 나란히 비교한 도식. 왼쪽 열린 저장소에서는 악성 스크립트를 상징하는 집게 손이 토큰을 집어 브라우저 경계 밖의 공격자에게 빼내 가지만, 오른쪽 봉인된 저장소에서는 같은 손이 방어막에 막혀 토큰에 닿지 못한다.](/images/posts/jwt-localstorage-vs-cookie/figure.png)
+
 localStorage는 다루기 쉽습니다. 새로고침 뒤에도 값이 남고, `Authorization: Bearer ...` 헤더에 붙이기도 간단합니다. 그래서 초기에 구현 속도만 보면 매력적입니다.
 
 문제는 브라우저 보안 모델입니다. MDN에 따르면 `localStorage`는 같은 origin의 모든 문서가 공유하고, 브라우저를 닫아도 유지됩니다. (출처: [MDN Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)) 그리고 OWASP는 이 저장소에 session identifier를 넣지 말라고 분명히 권합니다. 이유는 단순합니다. **자바스크립트가 읽을 수 있기 때문입니다.** XSS가 한 번 나면 토큰 탈취가 바로 이어질 수 있습니다. (출처: [OWASP HTML5 Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html))

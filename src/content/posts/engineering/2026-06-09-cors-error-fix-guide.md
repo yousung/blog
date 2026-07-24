@@ -59,6 +59,8 @@ Access-Control-Allow-Origin: https://app.example.com
 
 ## preflight 요청이 따로 뜨는 경우
 
+![실제 본 요청 전에 작은 사전 확인 요청이 먼저 건너가 서버의 허용 조건과 맞춰지는 preflight 과정을 나타낸 도식. 큰 본 요청은 승인 전까지 차단막 뒤에서 대기하고, 조건 하나가 맞지 않아 강조된 지점에서 사전 확인 단계가 막히는 실패 모드를 형태 대비로 보여준다.](/images/posts/cors-error-fix-guide/figure.png)
+
 개발자 도구 네트워크 탭을 보면 실제 요청 전에 `OPTIONS` 메서드 요청이 한 번 더 가는 걸 볼 때가 있습니다. 이게 preflight(사전 확인) 요청입니다. 브라우저가 "이런 요청을 보내도 되는지" 서버에 먼저 물어보는 절차입니다.
 
 모든 요청이 preflight를 거치진 않습니다. 단순 요청(GET, 일부 POST 등 특정 조건을 만족하는 요청)은 바로 갑니다. 하지만 다음 같은 경우엔 브라우저가 먼저 `OPTIONS`로 확인합니다.

@@ -18,6 +18,8 @@ status: "published"
 
 ## OFFSET이 느려지는 이유
 
+![OFFSET 페이지네이션 도중 목록 위쪽에 새 행이 추가되어 전체가 아래로 밀리는 상황을 두 시점의 세로 스택으로 나란히 보여주는 도식. 고정된 위치의 선택 프레임은 그대로 있는데 스택이 내려가면서, 앞 시점에서 프레임 위에 있던 같은 항목이 뒤 시점 프레임 안으로 들어와 두 번 잡히고 중복으로 강조된다.](/images/posts/pagination-offset-vs-cursor/figure.png)
+
 `OFFSET`은 건너뛰는 것처럼 보이지만, 데이터베이스 입장에서는 건너뛸 행도 일단 만들어야 합니다. PostgreSQL 공식 문서는 `OFFSET`으로 건너뛰는 행 역시 서버 내부에서 계산되어야 하므로, 큰 OFFSET은 비효율적일 수 있다고 명시합니다. (출처: [PostgreSQL Documentation - LIMIT and OFFSET](https://www.postgresql.org/docs/current/queries-limit.html))
 
 ```sql

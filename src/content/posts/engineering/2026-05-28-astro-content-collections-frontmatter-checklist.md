@@ -50,6 +50,8 @@ Astro는 Zod로 이러한 스키마를 정의할 수 있고, 컬렉션 항목이
 
 ## 3. 실무 체크리스트: 빌드 전에 무엇을 보나
 
+![여러 문서 카드가 정해진 형틀 모양의 검사 관문을 통과해 오른쪽의 정돈되고 밝게 모인 발행 영역으로 흘러가는 가운데, 가장자리 한 조각이 빠지고 모양이 어긋난 카드 하나만 관문에 걸려 통과하지 못하고 되돌려지는 모습을 담은 도식.](/images/posts/astro-content-collections-frontmatter-checklist/figure.png)
+
 ### 3-1. slug는 사람이 아니라 규칙이 결정하게 합니다
 
 사람이 직접 slug를 정하면 대문자, 공백, 날짜 중복 같은 실수가 반복됩니다. 팀에 새 사람이 글을 올릴 때마다 가장 먼저 깨지던 게 이 부분이라, 저는 정규식으로 허용 범위를 좁혀 사람이 아니라 규칙이 결정하게 둡니다. Astro가 스키마 기반 검증을 지원하므로, 이 단계는 문서화보다 자동화가 확실히 유리합니다. (출처: [Astro Docs - Content collections](https://v6.docs.astro.build/en/guides/content-collections))

@@ -66,6 +66,8 @@ Cache-Control: no-store                 # 저장 자체 금지
 
 ## 재검증의 실체: ETag와 Last-Modified
 
+![내용이 같은 여러 서버가 서로 다른 버전 표식을 붙이는 탓에 클라이언트의 재검증 대조가 어긋나, 가벼운 미변경 응답 대신 전체 응답을 매번 다시 내려받게 되는 실패 흐름을 형태의 같음과 다름 대비로 보여주는 도식.](/images/posts/http-cache-headers-guide/figure.png)
+
 재검증이 동작하려면 서버가 "버전 표식"을 응답에 실어줘야 합니다. 두 가지 방식이 있습니다.
 
 **`Last-Modified` + `If-Modified-Since`.** 서버가 리소스의 최종 수정 시각을 보내면, 브라우저는 다음 요청에 `If-Modified-Since`로 그 시각을 되돌려 보냅니다. 초 단위 정밀도라 1초 안에 여러 번 바뀌는 리소스는 놓칠 수 있습니다.
