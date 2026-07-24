@@ -1,6 +1,7 @@
 ---
 title: "감성개발자의 Blog는 무엇을 다루는가"
 slug: "what-this-blog-covers"
+ogImage: "/images/posts/what-this-blog-covers/hero.png"
 author: "감성개발자"
 date: "2026-03-01"
 updatedDate: "2026-05-28"
@@ -9,6 +10,8 @@ oneLineSummary: "이 블로그가 다루는 주제와 글 공개 기준, 그 배
 tags: [블로그, Astro, SEO]
 status: "published"
 ---
+
+![블로그가 다루는 실무 여정을 표현한 기술 일러스트](/images/posts/what-this-blog-covers/hero.png)
 
 11년 동안 여러 웹에이전시에서 마감에 쫓기며 프로젝트를 만들었고, 남이 짜둔 코드를 인수했고, 중견기업을 거쳐 지금은 중소기업에서 CTO로 일합니다. 그 시간 동안 반복해서 확인한 게 하나 있습니다. "멋진 생각의 저장소"로 남긴 글은 반년만 지나면 나조차 다시 열지 않는다는 것. 오래 살아남는 건 언제나 팀과 내가 나중에 다시 찾아보는 운영 문서 쪽이었습니다.
 

@@ -1,6 +1,7 @@
 ---
 title: "Astro Content Collections로 프론트매터 오류를 배포 전에 막는 방법"
 slug: "astro-content-collections-frontmatter-checklist"
+ogImage: "/images/posts/astro-content-collections-frontmatter-checklist/hero.png"
 author: "감성개발자"
 date: "2026-05-08"
 updatedDate: "2026-05-28"
@@ -9,6 +10,8 @@ oneLineSummary: "Astro Content Collections와 Zod로 frontmatter 오류를 배�
 tags: [Astro, 프론트매터, 유효성검사]
 status: "published"
 ---
+
+![frontmatter 검증 과정을 표현한 기술 일러스트](/images/posts/astro-content-collections-frontmatter-checklist/hero.png)
 
 좋은 글을 다 써놓고 배포 버튼을 눌렀는데, 빌드 로그에 빨간 줄이 뜹니다. 원인은 로직이 아니라 `slug` 오타 하나, 혹은 빠뜨린 `date` 필드입니다. 에이전시에서 여러 프로젝트를 동시에 굴리던 시절부터 지금까지, 나를 가장 자주 붙잡은 건 복잡한 코드가 아니라 이런 사소한 metadata 실수였습니다. 그래서 저는 작성자 자유도보다 발행 안정성을 먼저 두는 스키마를 기본값으로 잡습니다.
 

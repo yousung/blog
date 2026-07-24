@@ -1,6 +1,7 @@
 ---
 title: "Git merge와 rebase, 언제 무엇을 써야 할까"
 slug: "git-merge-vs-rebase-when-to-use"
+ogImage: "/images/posts/git-merge-vs-rebase-when-to-use/hero.png"
 author: "감성개발자"
 date: "2026-06-02"
 summary: "Git merge와 rebase 중 무엇을 쓸지 헷갈릴 때 기준은 하나다. 그 커밋을 남이 봤는가. 둘의 차이부터 협업에서 절대 하면 안 되는 rebase, 상황별 선택과 충돌 대처까지 실무 기준으로 짚는다."
@@ -8,6 +9,8 @@ oneLineSummary: "merge냐 rebase냐, '그 커밋을 남이 봤는가' 하나로 
 tags: [Git, GitHub, tip]
 status: "published"
 ---
+
+![merge의 얽힌 히스토리와 rebase의 일직선 히스토리를 대비한 기술 일러스트](/images/posts/git-merge-vs-rebase-when-to-use/hero.png)
 
 merge와 rebase를 두고 고민하는 시점은 대개 비슷합니다. 내 브랜치가 작업하는 동안 `main`이 앞서 나갔고, 이걸 어떻게 합칠지 결정해야 할 때입니다. 이때 잘못 고르면 커밋 히스토리가 지저분해지거나, 더 나쁘게는 같이 일하는 사람의 작업을 꼬이게 만듭니다. 결론부터 말하면 선택 기준은 취향이 아니라 "그 커밋을 다른 사람이 봤는가"입니다.
 

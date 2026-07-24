@@ -1,6 +1,7 @@
 ---
 title: "타임존 버그, 저장은 UTC 표시할 때 변환이 기본이다"
 slug: "timezone-utc-handling"
+ogImage: "/images/posts/timezone-utc-handling/hero.png"
 author: "감성개발자"
 date: "2026-05-18"
 summary: "날짜가 하루 밀려 보이거나 서버와 화면의 시각이 어긋나는 타임존 버그. 저장은 UTC로 통일하고 표시 시점에 변환하는 원칙, 날짜만 다루는 값의 함정, JavaScript에서 안전하게 다루는 법을 실무 관점에서 풀었다."
@@ -8,6 +9,8 @@ oneLineSummary: "시각은 UTC로 저장하고 표시할 때 사용자 타임존
 tags: [JavaScript, Database, 백엔드, 개발팁]
 status: "published"
 ---
+
+![UTC 허브와 각 지역 시계 변환을 표현한 기술 일러스트](/images/posts/timezone-utc-handling/hero.png)
 
 "생일이 하루 전으로 보여요." "밤 11시에 쓴 글이 다음 날짜로 나와요." 이런 제보는 거의 항상 타임존 처리에서 나옵니다. 공통점이 하나 있습니다. 재현하려면 브라우저나 서버의 타임존을 바꿔야 해서 정작 개발 중에는 잘 안 보이고, 해외 사용자나 새벽 시간대 사용자에게서 먼저 터진다는 것입니다. 국내만 보고 만든 기능이 서버 리전을 옮긴 뒤에야 어긋나는 걸, 나도 여러 번 겪었습니다.
 

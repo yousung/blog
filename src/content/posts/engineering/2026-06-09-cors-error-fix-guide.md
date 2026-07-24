@@ -1,6 +1,7 @@
 ---
 title: "CORS 에러, 프론트가 아니라 서버에서 풀어야 하는 이유"
 slug: "cors-error-fix-guide"
+ogImage: "/images/posts/cors-error-fix-guide/hero.png"
 author: "감성개발자"
 date: "2026-06-09"
 summary: "콘솔에 뜨는 CORS 에러를 프론트엔드 코드만 고쳐서 해결하려다 시간을 버리는 경우가 많다. CORS가 누구를 막는 규칙인지, 왜 서버가 응답 헤더로 허용해야 하는지, preflight와 쿠키 인증까지 상황별로 어떻게 풀어야 하는지 짚어봤다."
@@ -8,6 +9,8 @@ oneLineSummary: "CORS 에러는 브라우저가 만드는 제약이라 프론트
 tags: [HTTP, API, js-css-javascript, tip]
 status: "published"
 ---
+
+![서로 다른 출처 사이 CORS 허용 관문을 표현한 기술 일러스트](/images/posts/cors-error-fix-guide/hero.png)
 
 ```text
 Access to fetch at 'https://api.example.com/users' from origin

@@ -1,6 +1,7 @@
 ---
 title: "ORM N+1 쿼리, 발견하는 법과 고치는 기준"
 slug: "orm-n-plus-one-query"
+ogImage: "/images/posts/orm-n-plus-one-query/hero.png"
 author: "감성개발자"
 date: "2026-04-20"
 summary: "ORM으로 목록 하나를 그리는 데 쿼리가 수십 개 나가는 N+1 문제. 왜 생기는지, 개발 단계에서 어떻게 발견하는지, eager loading으로 고칠 때의 기준과 모든 관계를 미리 부르는 과적재의 부작용까지 실무에서 쓰는 판단으로 적었다."
@@ -8,6 +9,8 @@ oneLineSummary: "N+1은 지연 로딩의 기본 동작에서 나온다. 쿼리 �
 tags: [ORM, Database, Laravel, 성능최적화]
 status: "published"
 ---
+
+![N+1 쿼리 분산과 eager loading 묶음을 대비한 기술 일러스트](/images/posts/orm-n-plus-one-query/hero.png)
 
 느려진 목록 화면을 붙잡고 쿼리 로그를 열었더니, `SELECT * FROM users WHERE id = ?`가 바인딩 값만 바꿔 스무 줄 넘게 이어져 있었습니다. 게시글 20개를 가져오는 쿼리 1개에, 각 게시글의 작성자를 가져오는 쿼리 20개가 그대로 따라붙은 그림입니다. 데이터가 적을 때는 티가 안 나다가 목록이 길어지고 관계가 중첩될수록 쿼리 수가 곱셈으로 늘어납니다. 개발 환경에서는 멀쩡하던 화면이 운영에서만 느려지는 흔한 원인이 바로 이 N+1입니다.
 

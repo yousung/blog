@@ -1,6 +1,7 @@
 ---
 title: "페이지네이션, OFFSET과 커서 방식 중 무엇을 쓸까"
 slug: "pagination-offset-vs-cursor"
+ogImage: "/images/posts/pagination-offset-vs-cursor/hero.png"
 author: "감성개발자"
 date: "2026-04-06"
 summary: "목록 API에서 OFFSET 기반과 커서 기반 페이지네이션을 어떻게 고를지 화면 성격으로 갈라본다. OFFSET이 깊은 페이지에서 느려지는 이유, 목록이 밀려 중복·누락이 생기는 문제, 커서 방식의 구현과 제약까지 현장에서 갈리는 지점으로 짚는다."
@@ -8,6 +9,8 @@ oneLineSummary: "페이지 번호 UI가 꼭 필요하면 OFFSET, 무한 스크�
 tags: [SQL, Database, API, 페이지네이션]
 status: "published"
 ---
+
+![OFFSET 순차 스캔과 커서 점프 방식을 대비한 기술 일러스트](/images/posts/pagination-offset-vs-cursor/hero.png)
 
 목록 API를 처음 만들 때는 대부분 `LIMIT 20 OFFSET 40` 형태로 시작합니다. 구현이 단순하고 페이지 번호와 1:1로 맞아떨어지기 때문입니다. 문제는 서비스가 커진 뒤에 나타납니다. 뒤쪽 페이지로 갈수록 응답이 느려지고, 목록을 넘기는 중에 새 데이터가 들어오면 같은 항목이 두 번 보이거나 건너뛰어집니다. 결론부터 말하면 **페이지 번호로 임의 위치에 점프하는 UI가 꼭 필요할 때만 OFFSET을 쓰고, 무한 스크롤이나 대용량 목록은 커서(keyset) 방식을 기본값으로 잡는 것이 안전합니다.**
 

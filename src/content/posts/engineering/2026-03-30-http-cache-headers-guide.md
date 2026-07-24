@@ -1,6 +1,7 @@
 ---
 title: "HTTP 캐싱 헤더, Cache-Control부터 ETag까지 실무 기준"
 slug: "http-cache-headers-guide"
+ogImage: "/images/posts/http-cache-headers-guide/hero.png"
 author: "감성개발자"
 date: "2026-03-30"
 summary: "브라우저와 CDN의 캐시 동작을 좌우하는 Cache-Control, ETag, Last-Modified 헤더를 현장 감각으로 풀어본다. 정적 자산과 API 응답에 각각 어떤 정책을 줘야 하는지, 재검증이 어떻게 304로 이어지는지 짚는다."
@@ -8,6 +9,8 @@ oneLineSummary: "캐싱은 파일 종류별로 정책을 나누는 것이 핵심
 tags: [HTTP, 캐싱, Web-Performance, 개발팁]
 status: "published"
 ---
+
+![브라우저와 서버 사이 캐시 계층과 재검증을 표현한 기술 일러스트](/images/posts/http-cache-headers-guide/hero.png)
 
 배포를 했는데 사용자 화면에는 예전 버전이 그대로 보인다는 제보. 반대로 매 요청마다 같은 파일을 다시 받아 트래픽이 새는 상황. 겉보기엔 정반대지만 원인은 하나입니다. 캐싱 정책을 명시하지 않았거나, 파일 성격과 맞지 않는 정책을 줬기 때문입니다.
 

@@ -1,6 +1,7 @@
 ---
 title: "fetch 타임아웃과 재시도, API 호출이 멈출 때 먼저 볼 기준"
 slug: "fetch-timeout-retry-checklist"
+ogImage: "/images/posts/fetch-timeout-retry-checklist/hero.png"
 author: "감성개발자"
 date: "2026-07-21"
 summary: "브라우저와 Node.js에서 fetch 호출이 오래 멈추거나 실패할 때 타임아웃, AbortController, HTTP 상태 코드, 재시도 기준을 어떻게 나눠 봐야 하는지 실무에서 쓰는 체크리스트로 풀었다."
@@ -10,6 +11,8 @@ status: "published"
 ---
 
 # fetch 타임아웃과 재시도, API 호출이 멈출 때 먼저 볼 기준
+
+![fetch 타임아웃, 취소, 재시도 흐름을 표현한 기술 일러스트](/images/posts/fetch-timeout-retry-checklist/hero.png)
 
 API 호출이 느릴 때 가장 답답한 순간은 에러가 아니라 침묵입니다. 버튼은 로딩 중이고, 서버 로그에는 요청이 보이지 않거나 늦게 찍히고, 사용자는 다시 클릭합니다. 이때 `catch`에 로그 하나 더 넣는 것으로는 부족합니다. 먼저 정해야 할 것은 "언제 포기할지", "무엇을 실패로 볼지", "다시 보내도 되는 요청인지"입니다.
 

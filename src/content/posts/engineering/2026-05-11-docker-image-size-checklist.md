@@ -1,6 +1,7 @@
 ---
 title: "Docker 이미지 크기 줄이기, 순서대로 점검하는 체크리스트"
 slug: "docker-image-size-checklist"
+ogImage: "/images/posts/docker-image-size-checklist/hero.png"
 author: "감성개발자"
 date: "2026-05-11"
 summary: "Docker 이미지가 수 GB로 불어났을 때, 효과가 큰 순서대로 손대는 법. 멀티 스테이지 빌드, 베이스 이미지 선택, .dockerignore, 레이어 캐시를 살리는 명령 순서까지 실무 체크리스트로 짚는다."
@@ -8,6 +9,8 @@ oneLineSummary: "이미지 크기는 멀티 스테이지 빌드와 베이스 이
 tags: [Docker, DevOps, CI/CD, 체크리스트]
 status: "published"
 ---
+
+![도커 이미지 레이어를 다듬는 과정을 표현한 기술 일러스트](/images/posts/docker-image-size-checklist/hero.png)
 
 처음에는 아무도 이미지 크기를 신경 쓰지 않습니다. 그러다 배포가 느려지고, 레지스트리 용량 경고가 오고, 오토스케일링으로 새 인스턴스가 뜰 때마다 수 GB를 당겨오는 걸 보고 나서야 Dockerfile을 다시 열게 됩니다. 몇 번 이 순서를 반복하고 내린 기준은 단순합니다. **이미지 크기의 대부분은 "빌드 도구가 최종 이미지에 남아 있는가"와 "베이스 이미지가 무엇인가" 두 가지에서 결정됩니다.** 멀티 스테이지 빌드와 베이스 이미지 교체가 효과의 8할이고, 나머지는 레이어 정리입니다.
 

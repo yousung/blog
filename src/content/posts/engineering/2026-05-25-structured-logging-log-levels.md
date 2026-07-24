@@ -1,6 +1,7 @@
 ---
 title: "로그 레벨과 구조화 로깅, 운영에서 쓸 수 있는 로그의 기준"
 slug: "structured-logging-log-levels"
+ogImage: "/images/posts/structured-logging-log-levels/hero.png"
 author: "감성개발자"
 date: "2026-05-25"
 summary: "장애 때 검색되지 않는 로그는 없는 것과 같다. 로그 레벨을 나누는 실무 기준, JSON 구조화 로깅으로 바꿀 때 지켜야 할 필드 규칙, 요청 ID로 로그를 잇는 방법, 민감정보 마스킹까지 운영에서 쓸 로그의 기준을 세운다."
@@ -8,6 +9,8 @@ oneLineSummary: "로그는 레벨 기준을 팀이 합의하고, 사람이 읽�
 tags: [DevOps, Node.js, 백엔드, 디버깅]
 status: "published"
 ---
+
+![로그 스트림이 레벨별 채널로 정리되는 모습을 표현한 기술 일러스트](/images/posts/structured-logging-log-levels/hero.png)
 
 장애가 난 새벽 두 시, 로그를 열었더니 `처리 완료`, `에러 발생!` 같은 문장만 수만 줄 쌓여 있었습니다. 이러면 로그가 있어도 없는 것과 같습니다. 어느 요청에서 난 에러인지, 같은 사용자의 바로 앞뒤 로그가 무엇인지 이을 방법이 없기 때문입니다. 정작 급할 때 검색이 안 되는 로그를 몇 번 붙잡아 보고 나서, 로그를 대하는 기준이 바뀌었습니다.
 

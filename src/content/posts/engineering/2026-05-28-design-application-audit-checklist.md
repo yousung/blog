@@ -1,6 +1,7 @@
 ---
 title: "Astro 블로그 디자인 QA 체크리스트"
 slug: "design-application-audit-checklist"
+ogImage: "/images/posts/design-application-audit-checklist/hero.png"
 author: "감성개발자"
 date: "2026-04-30"
 updatedDate: "2026-05-28"
@@ -9,6 +10,8 @@ oneLineSummary: "홈·상세·모바일 세 화면에서 배포 후 디자인 �
 tags: [Astro, QA, 디자인]
 status: "published"
 ---
+
+![UI 시안 검수와 측정 과정을 표현한 기술 일러스트](/images/posts/design-application-audit-checklist/hero.png)
 
 디자인 시안대로 화면이 나왔는지, 배포한 뒤에는 누가 확인하나요? Astro 블로그를 올리고 나면 "코드는 맞는데 화면은 어딘가 기본값처럼 보인다"는 순간이 꼭 한 번은 옵니다. 점수는 멀쩡한데 눈으로 보면 뭔가 빠져 있는 상태 말입니다.
 

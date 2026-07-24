@@ -1,6 +1,7 @@
 ---
 title: "느린 쿼리에 인덱스부터 걸기 전에 봐야 할 기준"
 slug: "sql-index-when-to-add"
+ogImage: "/images/posts/sql-index-when-to-add/hero.png"
 author: "감성개발자"
 date: "2026-03-16"
 summary: "쿼리가 느릴 때 인덱스를 걸지 말지 판단하는 순서를 짚어본다. 실행 계획으로 원인을 확인하는 방법, 인덱스가 효과 없는 패턴, 복합 인덱스 컬럼 순서, 인덱스를 늘렸을 때 치르는 쓰기 비용까지 현장 기준으로 본다."
@@ -8,6 +9,8 @@ oneLineSummary: "인덱스는 실행 계획으로 풀스캔을 확인한 뒤에 
 tags: [SQL, Database, MySQL, 성능, 개발팁]
 status: "published"
 ---
+
+![인덱스 탐색과 풀스캔 비용 차이를 표현한 기술 일러스트](/images/posts/sql-index-when-to-add/hero.png)
 
 에이전시 시절 유지보수로 넘겨받은 프로젝트에는 공통점이 하나 있었습니다. 느려졌다는 화면을 열어보면 WHERE에 쓰인 컬럼마다 인덱스가 덕지덕지 붙어 있는데, 그런데도 여전히 느렸습니다. 앞사람이 "일단 인덱스부터 걸어보자"로 대응한 흔적이었습니다. 운이 좋으면 빨라지지만, 대개는 아무 변화가 없거나 쓰기 성능만 축났습니다.
 
