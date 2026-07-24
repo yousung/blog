@@ -1,7 +1,7 @@
 ---
 title: 'MariaDB/MySQL 빠르게 백업과 복원하기'
 slug: 'beat-mariadb-mysql'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2020-04-27'
 summary: 'RDS MariaDB에서 Aurora로 대량의 데이터를 마이그레이션할 때 적용한 최적화된 백업과 복원 방법을 설명합니다. --no-autocommit, --single-transaction, --extended-insert 옵션의 역할과 AWS 환경에서의 추가 팁을 포함합니다.'
 oneLineSummary: '대용량 데이터베이스 백업을 4시간에서 1시간 이내로 단축하기'

@@ -1,7 +1,7 @@
 ---
 title: "저렴한 USB 메모리 추천, PLEIGO P50을 고를 때 볼 장단점"
 slug: "pleigo-p50-usb-memory-review"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-17"
 summary: "PLEIGO USB 메모리 P50을 문서 이동, 사진 백업, 차량 음악 저장 같은 일상 용도 기준으로 살펴봤다."
 oneLineSummary: "PLEIGO USB 메모리 P50은 저렴한 가격과 작은 메탈 바디를 우선하는 사람에게 맞지만, USB 2.0 기반이라 대용량 파일 전송 속도와 차량 호환성은 확인이 필요하다."

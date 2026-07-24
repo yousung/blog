@@ -1,7 +1,7 @@
 ---
 title: "폭염에 걷기·운동해도 될까: 나가기 전 확인할 안전 기준"
 slug: "heatwave-walking-exercise-safety"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-07-02"
 updatedDate: "2026-07-02"
 summary: "폭염 속 걷기와 야외 운동은 의지만으로 밀어붙이면 위험하다. 낮 시간대, 습도, 몸의 이상 신호, 물·그늘·휴식 기준을 공식 자료를 바탕으로 정리했다."

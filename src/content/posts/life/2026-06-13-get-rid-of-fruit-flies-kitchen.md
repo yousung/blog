@@ -1,7 +1,7 @@
 ---
 title: "초파리 없애는 법, 사과식초 트랩보다 먼저 끊어야 할 것"
 slug: "get-rid-of-fruit-flies-kitchen"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-13"
 updatedDate: "2026-06-13"
 summary: "여름이면 어디선가 생기는 초파리. 트랩부터 만들기 전에 발생원을 끊어야 빨리 사라진다. 번식처별 확인법과 제대로 된 사과식초 트랩, 배수구 초파리 대처까지 출처와 함께 정리했다."

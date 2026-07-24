@@ -1,7 +1,7 @@
 ---
 title: 'Composer 기반 PHP 버전 자동 전환 설정하기'
 slug: 'php-version-feat-php-monitor'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2023-03-23'
 summary: 'Laravel Valet과 PHP Monitor를 사용하는 개발자들을 위한 자동화 가이드. Composer.json의 PHP 버전을 읽어 프로젝트 진입 시 자동으로 PHP 버전을 전환하는 zsh 훅 스크립트를 구성하는 방법. Mac 환경에서 jq, Valet, PHP Monitor를 활용한 개발 환경 최적화.'
 oneLineSummary: "프로젝트 진입 시 자동으로 PHP 버전을 전환하는 zsh 스크립트 설정"

@@ -1,7 +1,7 @@
 ---
 title: "대부도 당일치기 나들이, 물때보다 먼저 정해야 할 5가지"
 slug: "daebudo-day-trip-tide-checklist"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-07-12"
 updatedDate: "2026-07-12"
 summary: "서울·수도권에서 대부도 당일치기 나들이를 준비할 때 물때, 주차, 걷는 거리, 더위, 백업 코스를 어떤 순서로 확인해야 하는지 정리했다."

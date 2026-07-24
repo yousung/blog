@@ -1,7 +1,7 @@
 ---
 title: "냉장고 식재료 버리는 일을 줄이는 체크리스트: 장보기 전 10분이면 충분합니다"
 slug: "fridge-food-waste-checklist"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-05-30"
 summary: "냉장고 속 식재료를 덜 버리기 위해 장보기 전, 보관 직후, 주말 정리 때 확인할 수 있는 실용 체크리스트를 정리했다."
 oneLineSummary: "식재료 낭비는 장보기 전 냉장고를 10분만 확인해도 줄일 수 있다."

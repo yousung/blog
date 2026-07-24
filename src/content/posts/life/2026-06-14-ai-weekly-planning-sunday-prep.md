@@ -1,7 +1,7 @@
 ---
 title: "일요일 30분, 다음 주를 AI로 준비하는 법: '계획 짜줘'로는 안 되는 이유"
 slug: "ai-weekly-planning-sunday-prep"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-14"
 updatedDate: "2026-06-14"
 summary: "AI에게 '다음 주 계획 짜줘'라고 하면 뻔한 답이 나옵니다. 진짜 시간을 아끼는 건 내 일정과 제약을 먼저 넘기는 30분짜리 일요일 준비 루틴입니다. 따라 할 수 있는 순서와 AI가 약한 지점까지 정리했습니다."

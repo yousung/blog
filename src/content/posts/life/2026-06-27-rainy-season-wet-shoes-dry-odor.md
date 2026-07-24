@@ -1,7 +1,7 @@
 ---
 title: "장마철 젖은 신발 말리는 법: 냄새 나기 전에 순서부터 바꾸세요"
 slug: "rainy-season-wet-shoes-dry-odor"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-27"
 updatedDate: "2026-06-27"
 summary: "장마철에 젖은 운동화와 신발장 냄새를 줄이려면 드라이어보다 물기 제거, 깔창 분리, 공기 흐름, 신발장 습도 관리 순서가 먼저다. 소재별 주의점과 오늘 바로 할 수 있는 체크리스트를 정리했다."

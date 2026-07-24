@@ -1,7 +1,7 @@
 ---
 title: "역류방지쿠션 추천, 로토토베베를 수유 후 보조쿠션으로 볼 때"
 slug: "anti-reflux-cushion"
-author: "Lovizu"
+author: "감성개발자"
 date: "2019-02-08"
 summary: "로토토베베 유아용 역류방지쿠션 세트를 수유 후 보조 쿠션, 커버 관리, 안전 사용 기준 중심으로 살펴봤다."
 oneLineSummary: "역류방지쿠션은 소재, 경사감, 세탁, 사용 시간 기준을 함께 봐야 한다."

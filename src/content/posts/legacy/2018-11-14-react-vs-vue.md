@@ -1,7 +1,7 @@
 ---
 title: 'React vs Vue: 프레임워크 선택 가이드'
 slug: 'react-vs-vue'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2018-11-14'
 summary: 'JavaScript 프론트엔드 개발자라면 React와 Vue 중 어떤 것을 배워야 할까요? 학습곡선, 생태계 규모, 실무 활용도, 커뮤니티 지원을 비교하며 각 프레임워크의 장단점을 분석합니다. 실무 개발자의 관점에서 현실적인 선택 기준을 제시합니다.'
 oneLineSummary: '2018년 React와 Vue 프레임워크 선택 기준과 비교'

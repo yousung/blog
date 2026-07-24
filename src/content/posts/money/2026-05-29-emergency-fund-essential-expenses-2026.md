@@ -1,7 +1,7 @@
 ---
 title: "기준금리 동결기, 비상금은 월급보다 월 필수지출로 다시 계산해야 한다"
 slug: "emergency-fund-essential-expenses-2026"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-05-29"
 summary: "2026년 5월 28일 한국은행 기준금리 동결과 2026년 1분기 가계동향 수치를 바탕으로, 직장인이 월 필수지출 기준으로 비상금 목표액을 다시 정하는 방법을 정리했다."
 oneLineSummary: "비상금은 월급이 아니라 월 필수지출 기준으로 다시 계산해야 한다."

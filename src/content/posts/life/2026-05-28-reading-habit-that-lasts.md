@@ -1,7 +1,7 @@
 ---
 title: "독서 습관을 다시 만드는 가장 현실적인 방법"
 slug: "reading-habit-that-lasts"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-04-19"
 updatedDate: "2026-05-28"
 summary: "책을 한동안 못 읽은 사람이 다시 독서 습관을 만들기 위해 무엇부터 줄이고 어떻게 시작하면 좋은지 최신 독서 실태를 바탕으로 정리했다."

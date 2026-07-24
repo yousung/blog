@@ -1,7 +1,7 @@
 ---
 title: "USB-C 이어폰 추천, 배터리 충전 부담을 줄이고 싶을 때는?"
 slug: "apple-usb-c-earpods-review"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-07-14"
 summary: "USB-C 유선 이어폰이 왜 필요한지, 어떤 기준으로 고르면 되는지, Apple 이어폰 기준 체크포인트를 정리했다."
 oneLineSummary: "Apple USB-C EarPods는 충전이 필요 없는 간편형 유선 이어폰을 찾는 사람에게 맞지만, 차음성과 고정감은 직접 사용 환경에 따라 체감이 갈린다."

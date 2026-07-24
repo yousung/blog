@@ -1,7 +1,7 @@
 ---
 title: 'Ollama로 로컬 AI 코파일럿 구축하기'
 slug: 'feat-ollama'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2024-06-13'
 summary: 'Ollama를 사용하여 로컬 머신에서 무료로 실행할 수 있는 AI 코파일럿 환경을 구축합니다. Continue IDE 플러그인과의 연동으로 VSCode, JetBrains IDE에서 직접 AI 어시스턴트를 사용할 수 있으며, 별도의 API 키나 온라인 서비스 비용이 없습니다.'
 oneLineSummary: '무료로 로컬 LLM 기반 AI 코파일럿 만들기'

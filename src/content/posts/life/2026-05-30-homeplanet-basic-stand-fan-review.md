@@ -1,7 +1,7 @@
 ---
 title: "스탠드 선풍기 추천, 홈플래닛 기본형을 방마다 두기 좋을까"
 slug: "homeplanet-basic-stand-fan-review"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-05-30"
 updatedDate: "2026-06-11"
 summary: "홈플래닛 베이직 스탠드 선풍기를 방 하나에 둘 기본형 선풍기로 보고 가격, 바람, 소음, 조립감 중심으로 살펴봤다."

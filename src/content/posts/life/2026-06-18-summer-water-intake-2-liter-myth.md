@@ -1,7 +1,7 @@
 ---
 title: "여름에 물 하루 2리터? 숫자 채우기 전에 봐야 할 기준"
 slug: "summer-water-intake-2-liter-myth"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-18"
 updatedDate: "2026-06-18"
 summary: "하루 2리터, 여덟 잔 같은 고정 숫자에는 강한 근거가 없다. 더운 여름에 수분을 얼마나, 무엇으로 채워야 하는지 소변 색·갈증 기준과 주의할 경우를 출처와 함께 정리했다."

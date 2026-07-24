@@ -1,7 +1,7 @@
 ---
 title: 'Laravel에서 Spring처럼 Modern한 DTO 구현하기'
 slug: 'laravel-modern-dto-feat'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2022-12-14'
 summary: 'PHP 8의 Attribute 기능으로 Laravel도 Java Spring처럼 우아한 DTO 패턴을 구현할 수 있습니다. Spatie laravel-data와 laravel-route-attributes 패키지를 이용한 선언형 DTO와 라우팅. 유효성 검사를 DTO에서 관리하고 Route 속성으로 등록하는 모던한 개발 경험을 소개합니다.'
 oneLineSummary: 'Laravel: PHP 8 Attribute로 Spring 스타일 DTO 구현'

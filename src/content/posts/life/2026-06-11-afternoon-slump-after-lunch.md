@@ -1,7 +1,7 @@
 ---
 title: "점심만 먹으면 쏟아지는 졸음, 커피보다 먼저 손봐야 할 것"
 slug: "afternoon-slump-after-lunch"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-11"
 updatedDate: "2026-06-11"
 summary: "오후 1~3시에 몰려오는 식곤증은 점심 메뉴 탓만이 아니다. 졸음을 줄이는 점심 구성과 낮잠 길이, 커피 타이밍 기준을 출처와 함께 정리했다."

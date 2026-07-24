@@ -1,7 +1,7 @@
 ---
 title: "장마철 실내 빨래 냄새 줄이는 법: 건조 시간보다 습도와 공기 흐름이 먼저입니다"
 slug: "rainy-season-indoor-laundry-smell"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-05-29"
 summary: "장마철 실내 빨래 냄새를 줄이기 위해 세제보다 먼저 확인해야 할 습도, 간격, 환기, 세탁조 관리 기준을 정리했다."
 oneLineSummary: "장마철 실내 빨래 냄새는 세제보다 습도와 공기 흐름을 먼저 잡아야 줄어든다."

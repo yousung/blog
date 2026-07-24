@@ -1,7 +1,7 @@
 ---
 title: "주말에 몰아서 운동해도 될까: 평일 바쁜 사람에게 필요한 기준"
 slug: "weekend-warrior-exercise-guide"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-25"
 updatedDate: "2026-06-25"
 summary: "평일에는 도저히 시간을 못 내는 사람도 주말 운동만으로 건강 효과를 볼 수 있는지, 주당 운동량과 강도, 근력운동, 주의할 경우를 공식 자료와 연구를 바탕으로 정리했다."

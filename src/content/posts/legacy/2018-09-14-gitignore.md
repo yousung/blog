@@ -1,7 +1,7 @@
 ---
 title: '.gitignore 규칙 적용 안 될 때 해결하기'
 slug: 'gitignore'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2018-09-14'
 summary: '.gitignore는 새로운 파일만 제외합니다. 이미 Git이 추적 중인 파일은 무시되므로, git rm --cached로 Git 인덱스에서 제거하고 다시 추가해야 합니다. 이 문제의 원인과 해결 방법을 단계별로 설명합니다.'
 oneLineSummary: 'Git이 .gitignore를 무시할 때 캐시 초기화로 해결하기'

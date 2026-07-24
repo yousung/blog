@@ -1,7 +1,7 @@
 ---
 title: "아이 방학 독서 계획, 권수보다 먼저 정해야 할 것들"
 slug: "kids-summer-reading-routine"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-28"
 updatedDate: "2026-06-28"
 summary: "아이 방학 독서 계획은 몇 권 읽을지보다 언제, 어디서, 어떤 책을 고를지 먼저 정해야 이어집니다. 부모가 강요하지 않으면서도 매일 15분 독서 루틴을 만들 수 있는 기준과 체크리스트를 정리했습니다."

@@ -1,7 +1,7 @@
 ---
 title: "퇴사 전에 꼭 확인할 체크리스트 7가지"
 slug: "resignation-checklist-korea"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-05-28"
 updatedDate: "2026-05-28"
 summary: "퇴사 직전 가장 많이 놓치는 국민연금, 건강보험, 실업급여, 연차 정산 항목을 한국 기준으로 정리한 실무 체크리스트다."

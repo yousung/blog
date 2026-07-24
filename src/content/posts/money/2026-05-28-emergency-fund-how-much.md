@@ -1,7 +1,7 @@
 ---
 title: "비상금 통장은 얼마가 현실적일까"
 slug: "emergency-fund-how-much"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-03-15"
 updatedDate: "2026-05-28"
 summary: "비상금 통장을 몇 개월치로 잡아야 하는지, 그리고 왜 생활비 구조에 맞춰 따로 운영해야 하는지 현실적인 기준을 정리했다."

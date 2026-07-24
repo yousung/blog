@@ -1,7 +1,7 @@
 ---
 title: "오픈형 노이즈캔슬링 이어폰 추천, 에어팟 4 ANC가 맞는 사람"
 slug: "airpods-4-anc-review"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-03"
 summary: "Apple 2024 에어팟 4 액티브 노이즈 캔슬링을 오픈형 착용감, 아이폰 연동, 노이즈 캔슬링, 배터리 기준으로 살펴봤다."
 oneLineSummary: "에어팟 4 ANC는 커널형 압박감이 싫지만 아이폰에서 노이즈 캔슬링과 편한 연동을 함께 쓰고 싶은 사람에게 맞는 오픈형 이어폰이다."

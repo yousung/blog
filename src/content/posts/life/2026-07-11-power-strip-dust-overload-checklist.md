@@ -1,7 +1,7 @@
 ---
 title: "멀티탭 먼지와 과부하, 집에서 먼저 봐야 할 전기 안전 체크리스트"
 slug: "power-strip-dust-overload-checklist"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-07-11"
 updatedDate: "2026-07-11"
 summary: "책상 아래와 TV장 뒤에 방치된 멀티탭을 안전하게 쓰기 위해 먼지, 과부하, 전선 손상, 열 나는 가전 연결 여부를 어떤 순서로 확인해야 하는지 정리했다."

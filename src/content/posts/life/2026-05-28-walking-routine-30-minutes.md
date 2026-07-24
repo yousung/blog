@@ -1,7 +1,7 @@
 ---
 title: "하루 30분 걷기 루틴, 이렇게 시작하면 덜 실패한다"
 slug: "walking-routine-30-minutes"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-04-08"
 updatedDate: "2026-05-28"
 summary: "운동 습관이 없는 사람이 하루 30분 걷기 루틴을 무리 없이 시작하기 위한 현실적인 기준과 체크리스트를 정리했다."

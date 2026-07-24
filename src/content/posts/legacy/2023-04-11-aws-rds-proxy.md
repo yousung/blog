@@ -1,7 +1,7 @@
 ---
 title: 'AWS RDS Proxy로 데이터베이스 연결 최적화하기'
 slug: 'aws-rds-proxy'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2023-04-11'
 summary: 'AWS RDS Proxy를 통한 데이터베이스 연결 관리 전략. Lambda, PHP, Ruby 등 동적 언어에서의 연결 풀 문제 해결. 서버리스 환경에서 RDS Proxy의 역할과 실제 적용 효과, 비용 최적화 방법.'
 oneLineSummary: "AWS RDS Proxy로 데이터베이스 연결을 효율적으로 관리하다"

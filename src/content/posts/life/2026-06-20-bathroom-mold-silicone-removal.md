@@ -1,7 +1,7 @@
 ---
 title: "욕실 곰팡이 제거, 락스 뿌리기 전에 순서부터 바꿔야 한다"
 slug: "bathroom-mold-silicone-removal"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-20"
 updatedDate: "2026-06-20"
 summary: "장마철 욕실 곰팡이는 락스부터 뿌린다고 사라지지 않는다. 표면 곰팡이와 실리콘 속까지 핀 곰팡이를 구분하고, 습도·환기로 재발을 끊는 순서, 절대 섞으면 안 되는 세제 조합까지 공식 자료를 근거로 정리했다."

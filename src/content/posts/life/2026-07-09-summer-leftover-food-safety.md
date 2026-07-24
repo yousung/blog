@@ -1,7 +1,7 @@
 ---
 title: "여름철 남은 음식 보관, 냉장고에 넣기 전 확인할 기준"
 slug: "summer-leftover-food-safety"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-07-09"
 updatedDate: "2026-07-09"
 summary: "여름철 남은 음식은 냄새보다 시간과 온도를 먼저 봐야 한다. 상온 방치 시간, 냉장고 온도, 소분 보관, 재가열, 버려야 할 신호를 식약처와 CDC·FDA 자료를 바탕으로 정리했다."

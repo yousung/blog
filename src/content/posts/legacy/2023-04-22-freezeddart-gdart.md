@@ -1,7 +1,7 @@
 ---
 title: 'Flutter Freezed 생성 파일을 IDE에서 깔끔하게'
 slug: 'freezeddart-gdart'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2023-04-22'
 summary: 'Flutter 개발에서 Freezed, Drift 등의 패키지 사용 시 생성되는 다중 확장자 파일(.freezed.dart, .g.dart, .gr.dart 등)을 IntelliJ IDEA와 Android Studio의 파일 그룹핑 기능으로 깔끔하게 관리하는 방법입니다.'
 oneLineSummary: "Freezed 생성 파일 3개를 IDE에서 하나로 묶기"

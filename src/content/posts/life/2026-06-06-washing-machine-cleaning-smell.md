@@ -1,7 +1,7 @@
 ---
 title: "빨래에서 쉰내가 난다면 세탁기부터: 통세척 주기와 안전하게 냄새 빼는 법"
 slug: "washing-machine-cleaning-smell"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-06"
 updatedDate: "2026-06-06"
 summary: "갓 빤 옷에서 쉰내가 나는 진짜 원인과, 락스·식초를 잘못 섞으면 위험한 이유까지 정리했다. 세탁기 통세척 주기, 고무패킹·세제통 관리, 장마철 냄새 예방 체크리스트를 출처와 함께 담았다."

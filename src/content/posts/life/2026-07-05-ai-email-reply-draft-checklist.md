@@ -1,7 +1,7 @@
 ---
 title: "AI 이메일 답장 초안, 그대로 보내지 말고 이렇게 고치세요"
 slug: "ai-email-reply-draft-checklist"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-07-05"
 updatedDate: "2026-07-05"
 summary: "AI로 이메일이나 메신저 답장 초안을 만들 때는 원문을 통째로 붙여넣기보다 목적, 톤, 공개해도 되는 정보만 나눠 입력해야 합니다. 그대로 보내기 전에 확인할 3단계 수정 기준과 개인정보 체크리스트를 정리했습니다."

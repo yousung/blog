@@ -1,7 +1,7 @@
 ---
 title: 'AWS CodePipeline과 Slack Bot 완전 자동화 배포'
 slug: 'codepipeline-slack-bot'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2022-02-24'
 status: "draft"
 summary: 'GitHub push부터 Docker 빌드, Slack 승인, 배포 실행까지 전체 파이프라인을 자동화하기. CodePipeline, Lambda, SNS, API Gateway를 활용하여 Slack Bot을 통한 승인 절차를 거친 엔터프라이즈급 배포 워크플로우 구축 방법을 상세히 설명합니다. 실제 YAML 설정과 Lambda 함수 코드 포함.'

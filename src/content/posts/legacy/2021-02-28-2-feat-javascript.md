@@ -1,7 +1,7 @@
 ---
 title: "JavaScript 리팩토링 책 추천, 리팩토링 2판을 꺼낼 때"
 slug: "refactoring-2-javascript-review"
-author: "Lovizu"
+author: "감성개발자"
 date: "2021-02-28"
 summary: "마틴 파울러의 리팩토링 2판을 JavaScript 코드베이스에 적용할 상황과 읽을 때 부담되는 지점 중심으로 풀었다."
 oneLineSummary: "리팩토링 2판은 기법 암기보다 코드 개선 사고방식을 배우려는 개발자에게 맞는다."

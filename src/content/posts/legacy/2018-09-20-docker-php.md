@@ -1,7 +1,7 @@
 ---
 title: 'Docker Compose로 PHP 개발 환경 완벽하게 구축하기'
 slug: 'docker-php'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2018-09-20'
 summary: 'Docker와 Docker Compose를 사용하여 PHP 개발 환경을 빠르게 구축합니다. NGINX, PHP-FPM, MySQL, Redis, Memcached를 yml 파일 하나로 관리하는 방법. 팀 협업 시 동일한 개발 환경을 공유하고 프로덕션과의 차이를 제거하는 실무 가이드.'
 oneLineSummary: 'Docker Compose로 PHP 스택 5분 안에 구성하기'

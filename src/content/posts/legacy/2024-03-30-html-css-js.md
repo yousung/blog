@@ -1,7 +1,7 @@
 ---
 title: 'HTML 의미론적 태그 완벽 정리: em vs i, 올바른 사용법'
 slug: 'html-css-js'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2024-03-30'
 summary: '웹 개발에서 자주 혼동하는 HTML 태그들의 의미론적 차이를 완벽 정리. em vs i, q vs blockquote, caption vs figcaption의 정확한 차이점, 사용 시점, SEO 영향도를 상세히 분석하여 접근성과 검색 최적화를 동시에 달성합니다.'
 oneLineSummary: '헷갈리는 HTML 태그의 정확한 의미론적 차이와 활용법'

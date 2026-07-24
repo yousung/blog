@@ -1,7 +1,7 @@
 ---
 title: "여름휴가 집 비우기 체크리스트: 냉장고보다 먼저 봐야 할 것들"
 slug: "summer-vacation-home-checklist"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-07-04"
 updatedDate: "2026-07-04"
 summary: "여름휴가나 장기 외출 전 집을 비울 때 전기, 가스, 물, 냉장고, 택배와 문단속을 어떤 순서로 확인해야 하는지 정리했다. 출발 직전 허둥대지 않도록 전날과 당일 체크리스트로 나눴다."

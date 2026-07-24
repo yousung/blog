@@ -1,7 +1,7 @@
 ---
 title: 'React Native iOS 실기기 배포 도구 ios-deploy 완벽 가이드'
 slug: 'react-native-iso'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2020-06-09'
 summary: 'React Native iOS 앱을 실제 iPhone/iPad에 배포하고 테스트하는 필수 도구인 ios-deploy를 소개합니다. npm 설치부터 실기기 배포까지 전 과정을 단계별로 설명하고, 개발 인증서 준비, USB 연결 등 주의사항을 다룹니다.'
 oneLineSummary: 'ios-deploy로 React Native 앱을 실기기에 배포하기'

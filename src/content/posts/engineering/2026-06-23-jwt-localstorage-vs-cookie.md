@@ -2,9 +2,9 @@
 title: "JWT를 localStorage에 넣어도 될까? 쿠키와 세션을 고르는 기준"
 slug: "jwt-localstorage-vs-cookie"
 ogImage: "/images/posts/jwt-localstorage-vs-cookie/hero.png"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-23"
-summary: "브라우저 로그인 상태를 설계할 때 JWT를 localStorage에 저장할지, HttpOnly 쿠키나 세션으로 처리할지 헷갈리는 경우가 많다. JWT 자체의 역할, localStorage의 한계, 쿠키 옵션과 CSRF 대응까지 실무 기준으로 정리했다."
+summary: "브라우저 로그인 상태를 설계할 때 JWT를 localStorage에 저장할지, HttpOnly 쿠키나 세션으로 처리할지 헷갈리는 경우가 많다. JWT 자체의 역할, localStorage의 한계, 쿠키 옵션과 CSRF 대응까지 실무 기준으로 따져봤다."
 oneLineSummary: "JWT는 저장 전략이 아니라 토큰 형식이다. 브라우저 웹앱 기본값은 대개 HttpOnly 쿠키가 더 낫고, localStorage는 예외가 분명할 때만 쓰는 편이 안전하다."
 tags: [보안, HTTP, API, 개발팁]
 status: "published"
@@ -12,15 +12,18 @@ status: "published"
 
 ![브라우저 토큰 보안 경계를 표현한 기술 일러스트](/images/posts/jwt-localstorage-vs-cookie/hero.png)
 
-로그인 붙인 웹앱을 만들다 보면 거의 비슷한 순간이 옵니다. 백엔드는 JWT를 발급했고, 프론트는 그 값을 어디엔가 넣어야 합니다. 이때 가장 많이 나오는 말이 "요즘은 JWT니까 localStorage에 넣으면 되지 않나?"인데, 여기서 한 번 방향을 잘못 잡으면 나중에 XSS, 로그아웃 처리, CSRF, 서브도메인 쿠키 범위 같은 문제가 한꺼번에 따라옵니다.
+"요즘은 JWT 시대니까 그냥 localStorage에 넣으면 되지 않나요?" 로그인 붙인 웹앱을 만들다 보면 이 말이 거의 빠지지 않고 나옵니다. 백엔드는 JWT를 발급했고, 프론트는 그 값을 어디엔가 넣어야 하니 손 가는 대로 localStorage를 집는 겁니다.
 
-결론부터 말하면, **브라우저에서 돌아가는 일반적인 웹앱이라면 인증 상태의 기본값은 `HttpOnly` 쿠키나 서버 세션 쪽이 더 안전한 경우가 많습니다.** JWT는 저장소가 아니라 토큰 형식이고, localStorage는 편하지만 자바스크립트가 읽을 수 있다는 약점이 분명하기 때문입니다. 반대로 브라우저가 아닌 모바일 앱, 별도 API 클라이언트, 정말로 헤더 제어가 필요한 구조라면 다른 선택이 맞을 수 있습니다.
+그런데 저는 이 문장을 만나면 대개 반대로 잡습니다. **브라우저에서 돌아가는 일반적인 웹앱이라면 인증 상태의 기본값은 `HttpOnly` 쿠키나 서버 세션 쪽이 더 안전한 경우가 많습니다.** JWT는 저장소가 아니라 토큰 형식이고, localStorage는 편하지만 자바스크립트가 읽을 수 있다는 약점이 분명하기 때문입니다. 여기서 한 번 방향을 잘못 잡으면 나중에 XSS, 로그아웃 처리, CSRF, 서브도메인 쿠키 범위 같은 문제가 한꺼번에 따라옵니다. 넘겨받은 프로젝트에서 이 결정이 초기에 어긋나 있으면, 정작 손대야 할 곳은 인증 코드 한 줄이 아니라 프론트와 백엔드 양쪽 흐름 전체인 경우가 많았습니다. 반대로 브라우저가 아닌 모바일 앱, 별도 API 클라이언트, 정말로 헤더 제어가 필요한 구조라면 다른 선택이 맞을 수 있습니다.
 
-> 요약 박스
->
-> - JWT는 "로그인 저장 방식"이 아니라, 클레임을 담아 전송하는 토큰 형식입니다. RFC 7519도 JWT를 HTTP Authorization 헤더나 URI 파라미터 같은 공간 제약 환경에서 쓰는 claims format으로 설명합니다. (출처: [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519))
-> - OWASP는 session identifier를 localStorage에 저장하지 말라고 권합니다. 자바스크립트로 항상 접근 가능하고, XSS 한 번이면 그대로 털릴 수 있기 때문입니다. (출처: [OWASP HTML5 Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html))
-> - 쿠키를 쓴다면 `HttpOnly`, `Secure`, `SameSite` 같은 속성을 같이 설계해야 합니다. 특히 `HttpOnly`는 자바스크립트에서 쿠키를 읽지 못하게 해 XSS 피해를 줄이는 데 도움이 됩니다. (출처: [MDN Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie), [MDN Secure cookie configuration](https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/Cookies))
+먼저 결론을 표 하나로 놓고 시작하겠습니다. JWT를 쓰든 세션 ID를 쓰든, 그 값을 어디에 담아 언제 보낼지는 별개 결정이고, 조합마다 손이 가는 상황이 다릅니다.
+
+| 조합 | 가능 여부 | 실무 메모 |
+| --- | --- | --- |
+| JWT + HttpOnly 쿠키 | 가능 | 브라우저 웹앱에서 가장 많이 권하는 쪽 |
+| JWT + Authorization 헤더 + 메모리 저장 | 가능 | SPA, 네이티브 앱, BFF 없는 구조에서 종종 사용 |
+| 서버 세션 ID + HttpOnly 쿠키 | 가능 | 가장 전통적이고 운영이 단순한 편 |
+| JWT + localStorage | 가능 | 가능은 하지만 위험과 운영비용을 같이 감수해야 함 |
 
 최종 업데이트: 2026-06-23
 
@@ -30,16 +33,7 @@ status: "published"
 
 혼동이 가장 많이 생기는 지점이 여기입니다. JWT를 쓰면 자동으로 "무상태 인증 + localStorage 저장"까지 따라온다고 생각하는 경우가 많습니다. 그런데 RFC 7519는 JWT를 **클레임을 전달하는 compact format**으로 정의할 뿐, 브라우저 어디에 저장하라고 말하지는 않습니다. 즉, JWT는 저장소가 아니라 포맷입니다. (출처: [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519))
 
-그래서 아래 조합은 모두 가능합니다.
-
-| 조합 | 가능 여부 | 실무 메모 |
-| --- | --- | --- |
-| JWT + HttpOnly 쿠키 | 가능 | 브라우저 웹앱에서 가장 많이 권하는 쪽 |
-| JWT + Authorization 헤더 + 메모리 저장 | 가능 | SPA, 네이티브 앱, BFF 없는 구조에서 종종 사용 |
-| 서버 세션 ID + HttpOnly 쿠키 | 가능 | 가장 전통적이고 운영이 단순한 편 |
-| JWT + localStorage | 가능 | 가능은 하지만 위험과 운영비용을 같이 감수해야 함 |
-
-즉 질문은 "JWT를 쓸까 말까"보다 **브라우저가 인증 값을 어떻게 보관하고 언제 전송할지**를 먼저 정하는 쪽이 맞습니다.
+앞에 놓은 표의 네 조합이 모두 성립하는 것도 그래서입니다. JWT를 쓰든 서버 세션 ID를 쓰든, 그 값을 쿠키에 숨길지 헤더에 실을지 localStorage에 둘지는 그다음에 따로 정하는 선택입니다. 그러니 질문은 "JWT를 쓸까 말까"보다 **브라우저가 인증 값을 어떻게 보관하고 언제 전송할지**를 먼저 정하는 쪽이 맞습니다.
 
 ## localStorage가 편해 보여도 기본값으로 잡기 어려운 이유
 
@@ -49,7 +43,7 @@ localStorage는 다루기 쉽습니다. 새로고침 뒤에도 값이 남고, `A
 
 여기서 중요한 건 "XSS가 나면 어차피 끝 아닌가?"라는 반응을 너무 쉽게 받아들이지 않는 겁니다. 피해 범위는 저장 방식에 따라 달라집니다. `HttpOnly` 쿠키는 자바스크립트에서 값을 직접 읽지 못하지만, localStorage에 들어 있는 토큰은 `localStorage.getItem()` 한 줄로 외부로 빠져나갈 수 있습니다. 공격자가 토큰 값을 복사해 다른 환경에서 재사용하기 쉬워진다는 뜻입니다.
 
-또 하나는 운영 문제입니다. localStorage에 장기 토큰을 넣기 시작하면 로그아웃, 만료 처리, 탭 간 동기화, 토큰 갱신 실패, 기기 분실 대응 같은 일들이 생각보다 지저분해집니다. "브라우저가 알아서 쿠키를 보낸다"는 단순함을 버리는 대신, 애플리케이션이 상태 전송을 직접 책임져야 하기 때문입니다.
+또 하나는 운영 문제입니다. localStorage에 장기 토큰을 넣기 시작하면 로그아웃, 만료 처리, 탭 간 동기화, 토큰 갱신 실패, 기기 분실 대응 같은 일들이 생각보다 지저분해집니다. "브라우저가 알아서 쿠키를 보낸다"는 단순함을 버리는 대신, 애플리케이션이 상태 전송을 직접 책임져야 하기 때문입니다. 이 부분은 구현 시점에는 잘 안 보이다가 운영 몇 달 차에 하나씩 터지는데, 팀에 주니어가 들어올 때마다 나는 이 대목을 먼저 설명합니다.
 
 ## 웹앱 기본값으로 HttpOnly 쿠키를 먼저 보는 이유
 
@@ -114,7 +108,7 @@ localStorage가 항상 틀렸다는 뜻은 아닙니다. 다만 "편해서"가 �
 
 ## 어떤 팀에 어떤 선택이 맞을까
 
-정리하면 아래처럼 보면 됩니다.
+나는 인증 저장 방식을 정할 때 팀이 사고 이후 상태를 얼마나 통제할 수 있는지를 먼저 봅니다. 규모가 작을수록 토큰 무효화나 재발급 흐름을 손수 짤 여력이 없기 때문에, 브라우저가 원래 해 주던 일에 기대는 쪽이 결국 유지보수가 쌉니다. 정리하면 아래처럼 보면 됩니다.
 
 ### 이런 경우라면 쿠키/세션 쪽이 더 낫습니다
 

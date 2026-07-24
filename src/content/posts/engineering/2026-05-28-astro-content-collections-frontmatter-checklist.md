@@ -1,28 +1,24 @@
 ---
 title: "Astro Content Collections로 프론트매터 오류를 배포 전에 막는 방법"
 slug: "astro-content-collections-frontmatter-checklist"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-05-08"
 updatedDate: "2026-05-28"
-summary: "Astro Content Collections와 Zod 스키마를 이용해 블로그 글의 frontmatter 오류를 빌드 전에 차단하는 실무 체크리스트를 정리했다."
-oneLineSummary: "Astro Content Collections와 Zod 스키마를 이용해 블로그 글의 frontmatter 오류를 빌드 전에..."
+summary: "slug 오타 하나로 배포가 막히는 일을 겪고 나서 굳힌 기준. Astro Content Collections와 Zod로 frontmatter 오류를 빌드 전에 걸러내는 실무 순서를 풀었다."
+oneLineSummary: "Astro Content Collections와 Zod로 frontmatter 오류를 배포 전에 막는 실무 순서."
 tags: [Astro, 프론트매터, 유효성검사]
 status: "published"
 ---
 
-Astro 블로그를 운영하다 보면 글 내용보다 frontmatter 누락 때문에 빌드가 깨지는 일이 더 자주 생깁니다. 이 글은 `title`, `slug`, `date`, `summary`, `tags`, `status` 같은 필드를 어떻게 통제하면 좋은지, 그리고 왜 Content Collections가 초반부터 필요한지를 실제 운영 기준으로 정리한 문서입니다. Astro는 콘텐츠 컬렉션 스키마가 frontmatter를 일관되게 검증하고, 스키마를 어긴 파일이 있으면 오류를 보여준다고 설명합니다. (출처: [Astro Docs - Content collections](https://v6.docs.astro.build/en/guides/content-collections), [Astro Docs - Content entry data does not match schema](https://docs.astro.build/en/reference/errors/content-entry-data-error/))
+좋은 글을 다 써놓고 배포 버튼을 눌렀는데, 빌드 로그에 빨간 줄이 뜹니다. 원인은 로직이 아니라 `slug` 오타 하나, 혹은 빠뜨린 `date` 필드입니다. 에이전시에서 여러 프로젝트를 동시에 굴리던 시절부터 지금까지, 나를 가장 자주 붙잡은 건 복잡한 코드가 아니라 이런 사소한 metadata 실수였습니다. 그래서 저는 작성자 자유도보다 발행 안정성을 먼저 두는 스키마를 기본값으로 잡습니다.
 
-> 요약 박스
->
-> - frontmatter 검증은 글쓰기 편의 기능이 아니라 배포 안정성 장치입니다.
-> - Astro는 컬렉션 스키마를 정의하면 Zod 기반 검증과 자동 TypeScript 타이핑을 제공합니다. (출처: [Astro Docs - Content collections](https://v6.docs.astro.build/en/guides/content-collections))
-> - 실무에서는 "필수 필드 정의 -> slug 규칙 -> 상태 필드 분리 -> 빌드 전 검사" 순으로 굳히는 편이 빠릅니다.
+이 글이 결국 말하려는 건 세 가지입니다.
 
-최종 업데이트: 2026-05-28
+1. frontmatter 검증은 글쓰기 편의 기능이 아니라 배포 안정성 장치입니다.
+2. Astro는 컬렉션 스키마를 정의하면 Zod 기반 검증과 자동 TypeScript 타이핑을 함께 제공합니다.
+3. 실무에서는 "필수 필드 정의 → slug 규칙 → 상태 필드 분리 → 빌드 전 검사" 순으로 굳히는 편이 빠릅니다.
 
-## 작성 관점
-
-저는 블로그 운영에서 가장 아까운 실패가 "좋은 글을 다 써놓고 metadata 실수로 배포가 막히는 경우"라고 봅니다. 그래서 작성자 자유도보다 발행 안정성을 우선하는 스키마를 선호합니다.
+`title`, `slug`, `date`, `summary`, `tags`, `status` 같은 필드를 어떻게 통제하는지, 왜 Content Collections가 초반부터 필요한지를 아래에서 순서대로 풉니다. Astro는 콘텐츠 컬렉션 스키마가 frontmatter를 일관되게 검증하고, 스키마를 어긴 파일이 있으면 오류를 보여준다고 설명합니다. (출처: [Astro Docs - Content collections](https://v6.docs.astro.build/en/guides/content-collections), [Astro Docs - Content entry data does not match schema](https://docs.astro.build/en/reference/errors/content-entry-data-error/))
 
 ## 1. Content Collections를 먼저 붙여야 하는 이유
 
@@ -53,22 +49,26 @@ Astro는 Zod로 이러한 스키마를 정의할 수 있고, 컬렉션 항목이
 
 ### 3-1. slug는 사람이 아니라 규칙이 결정하게 합니다
 
-사람이 직접 slug를 정하면 대문자, 공백, 날짜 중복 같은 실수가 반복됩니다. 그래서 정규식으로 허용 범위를 좁혀두는 편이 낫습니다. Astro가 스키마 기반 검증을 지원하므로, 이 단계는 문서화보다 자동화가 유리합니다. (출처: [Astro Docs - Content collections](https://v6.docs.astro.build/en/guides/content-collections))
+사람이 직접 slug를 정하면 대문자, 공백, 날짜 중복 같은 실수가 반복됩니다. 팀에 새 사람이 글을 올릴 때마다 가장 먼저 깨지던 게 이 부분이라, 저는 정규식으로 허용 범위를 좁혀 사람이 아니라 규칙이 결정하게 둡니다. Astro가 스키마 기반 검증을 지원하므로, 이 단계는 문서화보다 자동화가 확실히 유리합니다. (출처: [Astro Docs - Content collections](https://v6.docs.astro.build/en/guides/content-collections))
 
 ### 3-2. `status`가 없으면 초안 관리가 무너집니다
 
-초기 블로그일수록 초안과 공개 글이 섞이기 쉽습니다. `status` 필드를 별도로 두면 홈과 피드에서 `published`만 필터링하기 쉬워집니다. 이 구분은 발행 과정의 실수를 줄이는 데 효과적입니다.
+초기 블로그일수록 초안과 공개 글이 섞이기 쉽습니다. `status` 필드를 별도로 두면 홈과 피드에서 `published`만 필터링하기 쉬워집니다. 혼자 쓰는 블로그라면 폴더 분리로도 버티지만, 여러 명이 글을 올리기 시작하면 이 한 필드가 "실수로 초안이 공개된" 사고를 가장 확실하게 막아줍니다.
 
 ### 3-3. 오류는 빌드 전에 보이게 해야 합니다
 
 Astro는 스키마 위반 시 빌드 또는 검증 흐름에서 오류를 보여줍니다. 따라서 로컬 또는 CI에서 frontmatter 검사를 먼저 돌리면, 게시 후 수정하는 비용보다 훨씬 적은 비용으로 문제를 막을 수 있습니다. (출처: [Astro Docs - Content entry data does not match schema](https://docs.astro.build/en/reference/errors/content-entry-data-error/))
 
-## 4. 추천 운영 순서
+## 다시 볼 때를 위한 메모
 
-1. `src/content.config.ts`에 최소 필드를 먼저 고정합니다.
-2. 새 글을 만들 때는 템플릿 frontmatter를 복사해 시작합니다.
-3. 빌드 전에 frontmatter 검사를 먼저 돌립니다.
-4. 공개 전에는 `published` 상태, 날짜, slug 중복 여부를 마지막으로 확인합니다.
+새 블로그에 스키마를 붙일 때, 혹은 반년 뒤 이 구조를 다시 손볼 때 내가 순서대로 확인하는 것들입니다.
+
+1. `src/content.config.ts`에 최소 필드부터 고정합니다. 늘리는 건 나중에 해도 늦지 않습니다.
+2. 새 글은 맨손으로 쓰지 말고 템플릿 frontmatter를 복사해 시작합니다.
+3. 빌드 전에 frontmatter 검사를 먼저 돌려, 게시 후 고치는 상황을 만들지 않습니다.
+4. 공개 직전에는 `published` 상태, 날짜, slug 중복 여부를 마지막으로 훑습니다.
+
+결국 핵심은 하나입니다. 실수는 사람이 아니라 스키마가 먼저 잡게 두는 것.
 
 ## FAQ
 

@@ -1,7 +1,7 @@
 ---
 title: 'NVM으로 프로젝트별 Node 버전 자동 관리'
 slug: 'node-feat-nvm'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2023-03-22'
 summary: 'NVM(Node Version Manager)을 활용하여 프로젝트별 Node 버전을 자동으로 관리하는 실무 가이드입니다. .nvmrc 파일과 zsh 훅을 조합하여 프로젝트 디렉토리 진입 시 자동으로 적절한 Node 버전이 로드됩니다. 레거시 유지보수와 신규 프로젝트를 동시에 진행할 때 버전 호환성 문제를 근본적으로 해결하는 방법입니다.'
 oneLineSummary: 'NVM으로 다중 프로젝트 Node 버전 자동 관리'

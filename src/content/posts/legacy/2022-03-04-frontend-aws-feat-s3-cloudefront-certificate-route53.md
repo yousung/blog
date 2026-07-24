@@ -1,7 +1,7 @@
 ---
 title: 'AWS로 프론트엔드 배포하기 (S3 + CloudFront + Certificate + Route53)'
 slug: 'frontend-aws-feat-s3-cloudefront-certificate-route53'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2022-03-04'
 status: "draft"
 summary: 'AWS를 이용해 정적 프론트엔드를 프로덕션 환경에 배포하는 완전한 가이드. S3 버킷 생성부터 CloudFront CDN 설정, SSL 인증서 발급, Route53 도메인 연결까지 모든 단계를 설명. CodePipeline을 통한 자동 배포 및 캐시 무효화 전략도 포함.'

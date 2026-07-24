@@ -1,7 +1,7 @@
 ---
 title: "25W 초고속 충전기 추천, 신지모루 오피디 GaN 듀얼포트가 눈에 들어오는 이유"
 slug: "sinjimoru-opd-25w-gan-pd-charger-review"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-01"
 summary: "신지모루 오피디 25W GaN 듀얼포트 PPS 초고속 PD 충전기를 휴대폰과 태블릿 충전 환경 기준으로 살펴봤다."
 oneLineSummary: "신지모루 오피디 25W GaN 듀얼포트 충전기는 1만원 안팎 예산에서 작은 크기, PPS 지원, 듀얼포트를 함께 보고 싶은 사람에게 맞는 충전기다."

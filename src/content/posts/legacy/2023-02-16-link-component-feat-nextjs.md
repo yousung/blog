@@ -1,7 +1,7 @@
 ---
 title: 'Next.js Link 컴포넌트로 페이지 전환 최적화'
 slug: 'link-component-feat-nextjs'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2023-02-16'
 summary: 'Next.js의 Link 컴포넌트를 활용한 클라이언트 사이드 라우팅 완벽 가이드. 자동 prefetching, 동적 라우팅, SEO 최적화, 그리고 <a> 태그와의 차이점을 이해하고 실무에 바로 적용할 수 있는 실제 예제들을 담았습니다.'
 oneLineSummary: 'Link 컴포넌트로 빠르고 효율적인 라우팅 구현'

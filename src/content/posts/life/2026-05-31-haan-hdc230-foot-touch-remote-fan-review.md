@@ -1,7 +1,7 @@
 ---
 title: "리모컨 선풍기 추천, 한경희 초미세풍 발터치 모델이 편한 이유"
 slug: "haan-hdc230-foot-touch-remote-fan-review"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-05-31"
 summary: "한경희생활과학 HAAN-HDC230 초미세풍 발터치 리모컨 선풍기를 침실과 거실에서 쓰는 상황 기준으로 살펴봤다."
 oneLineSummary: "한경희생활과학 HAAN-HDC230은 기본형 선풍기보다 리모컨, 발터치, 초미세풍 같은 생활 편의 기능을 우선하는 사람에게 맞는 스탠드형 선풍기다."

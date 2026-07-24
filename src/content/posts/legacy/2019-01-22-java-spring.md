@@ -1,7 +1,7 @@
 ---
 title: 'Spring 프로젝트 한글 인코딩 설정'
 slug: 'java-spring'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2019-01-22'
 summary: 'Java Spring 프로젝트 초기 단계에서 필수인 한글 인코딩(UTF-8) 설정 방법입니다. web.xml에 CharacterEncodingFilter를 등록하여 모든 요청과 응답에 UTF-8을 강제 적용하는 방식을 설명합니다. 이 설정이 없으면 사용자로부터 받은 한글 데이터가 깨질 수 있으므로 프로젝트 초기에 반드시 적용해야 합니다.'
 oneLineSummary: 'Spring 프로젝트 필수 설정: UTF-8 한글 인코딩'

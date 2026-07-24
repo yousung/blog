@@ -1,7 +1,7 @@
 ---
 title: "옷장 제습제 대량 구매, 물먹는뽀송 72개 구성은 어떤 집에 맞을까"
 slug: "mulmeokneun-pposong-dehumidifier-review"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-05-30"
 summary: "물먹는뽀송 스탠드형 제습제 72개 구성을 옷장, 신발장, 수납장에 나눠 둘 생활용품으로 살펴봤다."
 oneLineSummary: "물먹는뽀송 스탠드형 제습제 72개 구성은 장마철 옷장과 수납장 여러 곳에 한 번에 배치할 대량형 습기제거제를 찾는 사람에게 맞는다."

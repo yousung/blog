@@ -1,7 +1,7 @@
 ---
 title: 'Docker 컨테이너 항상 최신 버전으로 유지하기'
 slug: 'docker-watchtower'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2024-11-05'
 summary: 'Watchtower를 사용하여 Docker 컨테이너를 자동으로 최신 버전으로 업데이트합니다. 수동 재배포 없이 항상 최신 이미지를 유지할 수 있습니다.'
 oneLineSummary: 'Docker 자동 업데이트 설정'

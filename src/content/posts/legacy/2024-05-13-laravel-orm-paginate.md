@@ -1,7 +1,7 @@
 ---
 title: 'Laravel Eloquent paginate() 사용 시 필수: ORDER BY 절'
 slug: 'laravel-orm-paginate'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2024-05-13'
 summary: 'Laravel ORM의 paginate() 메서드 사용 시 ORDER BY 절이 없으면 페이지마다 다른 결과를 받을 수 있습니다. 특히 복수의 읽기 전용 데이터베이스 환경에서 이 문제가 더욱 심각합니다. 원인 분석과 실제 해결 방법을 제시합니다.'
 oneLineSummary: 'paginate() 사용 시 ORDER BY는 필수, 선택이 아닙니다'

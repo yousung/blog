@@ -1,7 +1,7 @@
 ---
 title: "여름철 에어컨 전기요금 줄이는 체크리스트: 끄는 것보다 중요한 건 따로 있습니다"
 slug: "summer-air-conditioner-electricity-checklist"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-05-31"
 summary: "에어컨을 덜 불편하게 쓰면서 전기요금을 줄이는 현실적인 방법을 정리했다. 인버터·정속형 구분, 설정 온도, 바람 방향, 누진 구간 관리까지 상황별 체크리스트로 묶었다."
 oneLineSummary: "에어컨 전기요금은 무조건 끄기보다 우리 집 에어컨 종류와 설정 습관을 먼저 점검할 때 더 줄어든다."

@@ -1,7 +1,7 @@
 ---
 title: 'JetBrains IDE에서 테스트 코드 한글 메서드명 설정하기'
 slug: 'jetbrainphpstorm-tool-method'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2021-04-14'
 summary: 'PhpStorm, IntelliJ 등 JetBrains IDE에서 테스트 코드의 한글 메서드명이나 snake_case 사용 시 발생하는 경고를 제거하는 방법. IDE 검사 설정과 PHP CodeSniffer 설정을 통해 테스트 코드의 명확한 의도를 보존하면서 프로덕션 코드의 규칙을 유지하는 실용적 가이드입니다.'
 oneLineSummary: '테스트 코드에서 한글 메서드명 경고 없애기'

@@ -1,7 +1,7 @@
 ---
 title: "가계부를 오래가는 방식으로 쓰는 법"
 slug: "budgeting-that-lasts"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-03-28"
 updatedDate: "2026-05-28"
 summary: "작심삼일로 끝나는 가계부 대신 실제 지출 구조를 기준으로 오래 유지되는 예산 관리 방법을 정리했다."

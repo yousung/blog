@@ -1,7 +1,7 @@
 ---
 title: 'AWS ECS Fargate 컨테이너 오케스트레이션 완벽 가이드'
 slug: 'ecs-fargate'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2022-02-24'
 status: "draft"
 summary: 'AWS ECS Fargate를 이용한 서버리스 컨테이너 배포 방법. Docker 이미지부터 작업 정의, 클러스터 생성, 로드 밸런서 설정, 오토 스케일링 구성까지 완전한 Fargate 환경을 구축하는 과정. 최소 정상 백분율, 최대 백분율, 커스텀 지표를 활용한 스케일링 전략도 포함.'

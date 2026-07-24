@@ -1,7 +1,7 @@
 ---
 title: 'Laravel 개발을 10배 빠르게 하는 Composer 패키지 5선'
 slug: 'laravel-composer'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2023-02-17'
 summary: 'Laravel 프레임워크의 생산성을 극대화하는 5가지 필수 Composer 패키지 완벽 가이드. IDE Helper로 자동완성 강화, Debugbar로 성능 최적화, Backup으로 자동 백업, Excel로 대량 데이터 처리, Permission으로 권한 관리를 쉽게 구현합니다.'
 oneLineSummary: 'Laravel 개발 생산성 극대화 5가지 Composer 패키지'

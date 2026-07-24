@@ -1,7 +1,7 @@
 ---
 title: "재택근무 생산성을 높이는 체크리스트"
 slug: "remote-work-productivity-checklist"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-05-18"
 updatedDate: "2026-05-28"
 summary: "재택근무에서 집중력과 협업 품질을 함께 지키기 위해 필요한 실무 체크리스트를 OECD와 ILO 자료를 바탕으로 정리했다."

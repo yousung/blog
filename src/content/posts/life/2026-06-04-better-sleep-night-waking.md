@@ -1,7 +1,7 @@
 ---
 title: "밤에 자꾸 깨고 다시 잠들기 어렵다면: 수면의 질을 바꾸는 현실적인 기준"
 slug: "better-sleep-night-waking"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-04"
 updatedDate: "2026-06-04"
 summary: "총 수면 시간만 늘리려다 실패하는 사람을 위해, 자다 깨는 빈도를 줄이고 다시 잠드는 데 도움이 되는 수면 습관 기준과 체크리스트를 출처와 함께 정리했다."

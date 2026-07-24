@@ -1,7 +1,7 @@
 ---
 title: "라벨프린터기 추천, 엡손 LW-K200BL로 집안 정리할 때 볼 장단점"
 slug: "epson-lw-k200bl-label-printer-review"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-06-11"
 updatedDate: "2026-06-18"
 summary: "엡손 LW-K200BL 라벨프린터기를 집안 정리, 아이 물건 이름표, 매장 라벨링 관점에서 살펴봤다."

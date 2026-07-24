@@ -1,7 +1,7 @@
 ---
 title: 'B2B 기업 웹사이트 개발 완성 사례'
 slug: 'packaging-website-case'
-author: 'Lovizu'
+author: "감성개발자"
 date: '2024-11-21'
 summary: '패킹 제조업 기업의 웹사이트를 1개월 만에 완성한 프로젝트 사례입니다. SEO 최적화, 반응형 디자인, 상품 관리 시스템, 성능 최적화를 통해 Google PageSpeed 90점대를 달성했습니다. B2B 기업 웹사이트 개발의 실제 경험과 성과를 공유합니다.'
 oneLineSummary: '소규모 팀의 고성능 B2B 기업 웹사이트 개발 사례'

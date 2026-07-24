@@ -1,7 +1,7 @@
 ---
 title: "옷정리함 수납함 추천, Kipnos 폴딩 리빙박스 4개 세트"
 slug: "kipnos-folding-living-box-review"
-author: "BLOA Team"
+author: "감성개발자"
 date: "2026-05-30"
 summary: "Kipnos 폴딩 대용량 리빙박스 4개 세트를 옷, 장난감, 계절용품 수납 상황에 맞춰 용량과 적층감 중심으로 살펴봤다."
 oneLineSummary: "Kipnos 폴딩 대용량 리빙박스는 옷, 장난감, 계절용품을 한 번에 정리할 접이식 수납함 4개 구성을 찾는 사람에게 맞는다."
