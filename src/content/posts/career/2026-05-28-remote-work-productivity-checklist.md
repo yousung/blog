@@ -2,12 +2,12 @@
 title: "재택근무 생산성을 높이는 체크리스트"
 slug: "remote-work-productivity-checklist"
 author: "감성개발자"
-date: "2026-05-18"
-updatedDate: "2026-05-28"
+date: "2026-08-06"
+updatedDate: "2026-08-06"
 summary: "재택근무에서 집중력과 협업 품질을 함께 지키기 위해 필요한 실무 체크리스트를 OECD와 ILO 자료를 바탕으로 정리했다."
 oneLineSummary: "재택근무에서 집중력과 협업 품질을 함께 지키기 위해 필요한 실무 체크리스트를 OECD와 ILO 자료를 바탕으로 정리했다."
 tags: [커리어, 재택근무, 생산성]
-status: "draft"
+status: "published"
 ---
 
 재택근무 생산성은 "집에서 일하느냐"보다 "집에서 일하는 방식을 어떻게 설계하느냐"에 더 크게 좌우됩니다. OECD는 관리자와 근로자 모두 재택근무를 대체로 긍정적으로 평가했지만, 이상적인 빈도는 주 2~3일 수준이라고 분석했고, 커뮤니케이션과 지식 흐름 저하가 주요 비용이라고 설명합니다. ILO도 재택근무는 유연성을 주지만 일과 사생활의 경계가 흐려지고 장시간 노동과 고립 위험이 커질 수 있다고 지적합니다. (출처: [OECD - The role of telework for productivity during and post-COVID-19](https://www.oecd.org/en/publications/the-role-of-telework-for-productivity-during-and-post-covid-19_7fe47de2-en.html), [ILO - Working from home: From invisibility to decent work](https://files.ilo.org/digitalguides/en-gb/story/working-from-home))
@@ -18,7 +18,7 @@ status: "draft"
 > - OECD는 관리자와 근로자 모두 주 2~3일 정도의 중간 수준 재택근무를 이상적으로 보는 경향이 있다고 설명합니다. (출처: [OECD - The role of telework for productivity during and post-COVID-19](https://www.oecd.org/en/publications/the-role-of-telework-for-productivity-during-and-post-covid-19_7fe47de2-en.html))
 > - ILO는 재택근무가 유연성을 주는 동시에 과로와 고립, 인체공학적 위험을 키울 수 있다고 경고합니다. (출처: [ILO - Working from home: From invisibility to decent work](https://files.ilo.org/digitalguides/en-gb/story/working-from-home))
 
-최종 업데이트: 2026-05-28
+최종 업데이트: 2026-08-06
 
 ## 작성 관점
 
