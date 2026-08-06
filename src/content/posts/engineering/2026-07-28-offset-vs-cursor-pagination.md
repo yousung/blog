@@ -2,14 +2,18 @@
 title: "페이지 번호를 포기해야 할 때, OFFSET과 커서 페이지네이션의 갈림길"
 slug: "offset-vs-cursor-pagination"
 author: "감성개발자"
-date: "2026-07-28"
+date: "2026-08-06"
+updatedDate: "2026-08-06"
 summary: "목록 API가 뒤쪽 페이지에서만 느려질 때 OFFSET의 비용, 커서 방식의 전제 조건, 정렬 키 유일성, COUNT 쿼리, 응답 스펙 변경 비용을 어떤 순서로 따져야 하는지 짚어본다."
 oneLineSummary: "OFFSET과 커서 중 무엇을 쓸지는 데이터 양이 아니라 정렬 키의 유일성과 화면이 요구하는 이동 방식에서 갈린다."
 tags: [페이지네이션, MySQL, Laravel, 쿼리, 성능]
-status: "draft"
+status: "published"
+ogImage: "/images/posts/offset-vs-cursor-pagination-hero.png"
 ---
 
 # 페이지 번호를 포기해야 할 때, OFFSET과 커서 페이지네이션의 갈림길
+
+![OFFSET의 깊은 스캔과 커서 기반 순차 탐색을 비교하는 개발자](/images/posts/offset-vs-cursor-pagination-hero.png)
 
 관리자 목록 화면에서 1페이지는 40ms, 900페이지는 4초가 나오는 상황을 본 적이 있습니다. 쿼리는 똑같습니다. 인덱스도 그대로입니다. 바뀐 건 `OFFSET` 뒤에 붙은 숫자 하나뿐입니다. 이때 개발자가 가장 먼저 손대는 곳은 보통 인덱스인데, 정작 문제는 인덱스가 아니라 "건너뛰기"라는 동작 자체에 있습니다.
 
