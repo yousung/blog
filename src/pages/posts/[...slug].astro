@@ -47,6 +47,7 @@ const authorName = post.data.author === 'BLOA Team' ? '감성개발자' : post.d
     <div class="tags-wrapper">
       <TagList tags={post.data.tags} basePath={basePath} />
     </div>
+    {post.data.tistoryUrl && <a class="tistory-deep-link" href={post.data.tistoryUrl} rel="alternate">티스토리 원문</a>}
     <Content />
   </article>
   <GiscusComments />
@@ -98,6 +99,18 @@ const authorName = post.data.author === 'BLOA Team' ? '감성개발자' : post.d
     margin-bottom: var(--space-8);
     padding-bottom: var(--space-6);
     border-bottom: 1px solid var(--border-default);
+  }
+
+  .tistory-deep-link {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
   /* ─── Prose: paragraphs ─── */

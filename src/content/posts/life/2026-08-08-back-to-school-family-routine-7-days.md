@@ -8,6 +8,7 @@ summary: "방학 끝 무렵 아이 생활 리듬을 무리하게 당기지 않�
 oneLineSummary: "개학 전 마지막 7일은 공부량보다 잠드는 시간, 아침 동선, 미디어 규칙, 준비물 확인을 먼저 맞춰야 덜 흔들린다."
 tags: [라이프, 육아, 루틴, 습관, 체크리스트]
 status: "published"
+tistoryUrl: "https://blog.lovizu.com/entry/back-to-school-family-routine-7-days"
 ---
 
 # 개학 전 생활 리듬, 마지막 7일에 되돌리는 가족 루틴

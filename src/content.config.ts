@@ -13,7 +13,8 @@ const posts = defineCollection({
     tags: z.array(z.string().min(1)).min(1),
     status: z.enum(['draft', 'published']),
     updatedDate: z.coerce.date().optional(),
-    ogImage: z.string().optional()
+    ogImage: z.string().optional(),
+    tistoryUrl: z.string().url().optional()
   })
 });
 
