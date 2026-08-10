@@ -7,6 +7,7 @@ summary: "Node.js 서비스를 컨테이너로 배포할 때 SIGTERM, HTTP 서�
 oneLineSummary: "무중단 배포의 핵심은 새 컨테이너를 빨리 띄우는 것보다 기존 컨테이너가 요청을 끊지 않고 내려가는 기준을 정하는 데 있습니다."
 tags: [Node.js, Docker, ECS, Backend, 체크리스트]
 status: "published"
+tistoryUrl: "https://blog.lovizu.com/entry/nodejs-graceful-shutdown-checklist"
 ---
 
 # Node.js 컨테이너 종료가 느릴 때 먼저 볼 graceful shutdown 기준
