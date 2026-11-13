@@ -31,3 +31,11 @@ yarn-error.log
 
 # Local agent skills/config (not deployed)
 .claude/
+
+# Local-only agent rules & writing guides (not published to GitHub)
+CLAUDE.md
+AGENTS.md
+docs/writing-guides/
+docs/taxonomy-authoring-guide.md
+docs/templates/
+skills/
