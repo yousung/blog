@@ -34,7 +34,7 @@ status: "draft"
 | 항목 | 내용 |
 | --- | --- |
 | 상품명 | 홈플래닛 베이직 스탠드 선풍기 |
-| 가격대 | 약 25,870원 기준 |
+| 가격대 | 23,990원 (최저가 23,990원), 2026-11-14 폴센트 기준 |
 | 배송 | 로켓배송 여부 표시 |
 | 핵심 키워드 | 기본형, 스탠드형, 3단 풍속, 높이 조절, 좌우 회전 |
 
@@ -91,6 +91,8 @@ status: "draft"
 홈플래닛 베이직 스탠드 선풍기는 선풍기 구매 기준이 명확한 사람에게 맞습니다. `2만원대`, `스탠드형`, `3단 풍속`, `좌우 회전`, `높이 조절`, `분리 세척`이면 충분하다면 후보에 올릴 만합니다.
 
 다만 리모컨, 초미풍, 더 낮은 소음, 프리미엄 마감이 중요하다면 처음부터 상위 모델을 보는 것이 낫습니다. 선풍기는 한 번 사면 여름마다 반복해서 쓰는 물건이라, 잠잘 때 쓸지 거실 보조용으로 쓸지부터 정하고 고르는 편이 실패 확률을 줄입니다.
+
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 23,990원 (최저가 23,990원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
 
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
   <a href="https://link.coupang.com/a/etoHmcBA8i" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">

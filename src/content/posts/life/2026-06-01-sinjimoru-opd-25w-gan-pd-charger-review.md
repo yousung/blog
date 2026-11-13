@@ -81,6 +81,8 @@ PPS와 PD를 함께 보는 사람에게도 후보가 됩니다. 최신 스마트
 
 다만 충전기를 오래 쓸 생각이라면 내 기기 구성을 먼저 봐야 합니다. 스마트폰만 빠르게 충전하면 충분한지, 태블릿이나 노트북까지 염두에 두는지에 따라 필요한 출력이 달라집니다. 휴대폰 중심의 일상용 충전기라면 이 제품을 후보에 올려도 좋고, 고출력 기기까지 생각한다면 상위 출력 모델과 비교해보는 편이 낫습니다.
 
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 8,980원 (최저가 6,610원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
+
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
   <a href="https://link.coupang.com/a/ecZCWhIaeO" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">
     👉 신지모루 오피디 25W GaN 듀얼포트 충전기 쿠팡에서 보기

@@ -104,6 +104,8 @@ IPS 패널이라 색감과 시야각도 무난하다. 전문 색 작업을 할 �
 
 구매는 아래 링크에서 확인할 수 있다.
 
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 175,770원 (최저가 158,760원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
+
 [한성컴퓨터 QHD 평면형 27인치 게이밍 모니터 TFG27Q14P2 (쿠팡 최저가 확인)](https://link.coupang.com/a/hx8V1QU0qa)
 
 "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."

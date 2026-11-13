@@ -113,6 +113,8 @@ USB-C 포트가 두 개뿐인 맥북에서 하나를 허브에 쓰면, 남은 �
 
 현재 최저가는 아래에서 확인하실 수 있습니다.
 
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 38,700원 (최저가 35,320원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
+
 👉 [쿠팡에서 코드웨이 8포트 USB-C 허브 최저가 확인하기](https://link.coupang.com/a/gemxcEvTZ6)
 
 다음에는 요즘 써보고 있는 무선 이어폰 이야기를 해볼까 합니다. 출퇴근길에 팟캐스트 듣는 용도인데, 3만 원대에서 쓸 만한 게 있는지 꽤 찾아봤거든요.

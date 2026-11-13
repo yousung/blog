@@ -32,7 +32,7 @@ tistoryUrl: "https://tistory.lovizu.com/entry/homeplanet-metal-laptop-stand-revi
 |---|---|
 | 제품명 | 홈플래닛 메탈 쿨링홀 노트북 거치대 |
 | 색상 | 실버, 블랙 |
-| 가격 | 16,490원 (정가 22,900원에서 27% 할인, 2026-11-14 00시 기준) |
+| 가격 | 16,490원 (최저가 16,490원), 2026-11-14 폴센트 기준 |
 | 제조국 | 중국 (판매 페이지 표기) |
 | 후기 | 8,943개, 최고 86% · 좋음 9% · 보통 3% · 별로 1% · 나쁨 1% |
 | 구조 (후기 기준) | 접이식, 높이·각도 조절, 상판 쿨링홀, 미끄럼 방지 패드, 앞쪽 받침 턱 |
@@ -178,6 +178,8 @@ tistoryUrl: "https://tistory.lovizu.com/entry/homeplanet-metal-laptop-stand-revi
 - 외장 키보드와 마우스가 있는지 (없다면 예산에 같이 넣기)
 - 쿨링은 덤으로 보고, 발열이 심한 작업이면 팬 달린 제품 따로 보기
 - 가격과 배송 조건은 살 때 다시 확인하기
+
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 16,490원 (최저가 16,490원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
 
 <p style="text-align:center;"><a href="https://link.coupang.com/a/iEjrIYKPKK" target="_blank" rel="noopener sponsored" referrerpolicy="unsafe-url"><img src="https://thumbnail8.coupangcdn.com/thumbnails/remote/492x492ex/image/1025_amir_coupang_oct_80k/775a/91bd8d92c0aa9389e54f9c4fe8505e1e391cc69d2fa1ff3f255987623c09.jpg" alt="홈플래닛 메탈 쿨링홀 노트북 거치대 실버" width="492" style="max-width:100%;height:auto;"></a><br><span style="font-size:13px;color:#666;">홈플래닛 메탈 쿨링홀 노트북 거치대 (실버·블랙). 이미지를 누르면 쿠팡 구매 페이지로 이동합니다.</span></p>
 

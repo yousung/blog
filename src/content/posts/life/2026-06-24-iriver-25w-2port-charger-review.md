@@ -98,6 +98,8 @@ ogImage: "https://cdn-blog.lovizu.com/bloa/coupang/2026/06/iriver-25w-2port-char
 
 대신 두 기기를 꽂았을 때의 속도 분산과 초기 불량 가능성은 체크해야 합니다. 수령하자마자 휴대폰, 이어폰, 보조배터리처럼 실제로 쓸 기기를 모두 꽂아 보고 문제가 없으면 침대 옆이나 책상용 서브 충전기로 오래 손이 갈 만한 제품입니다.
 
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 8,800원 (최저가 7,400원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
+
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
   <a href="https://link.coupang.com/a/eO6fqw7kDk" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">
     👉 아이리버 25W 2포트 충전기 세트 쿠팡에서 보기

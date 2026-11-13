@@ -99,6 +99,8 @@ ogImage: "https://cdn-blog.lovizu.com/bloa/coupang/2026/06/epson-lw-k200bl-label
 
 다만 구매 전 기대치는 분명히 잡는 게 좋습니다. 스마트폰 앱으로 예쁘게 꾸미는 최신 라벨기라기보다는, 본체에서 바로 입력해 깔끔한 라벨을 뽑는 실용형 제품입니다. 화면과 여백, 건전지 방식이 괜찮다면 집안 정리와 매장 라벨링용으로 충분히 후보에 올릴 만합니다.
 
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 66,000원 (최저가 55,800원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
+
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
   <a href="https://link.coupang.com/a/eF034FFJKe" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">
     👉 엡손 LW-K200BL 라벨프린터기 쿠팡에서 보기

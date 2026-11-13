@@ -33,7 +33,7 @@ USB-C 이어폰은 기능이 풍부한 무선 이어폰과는 판단 포인트�
 |---|---|
 |상품군|USB-C 유선 이어폰|
 |대표 후보|Apple USB-C 커넥터 EarPods|
-|가격대|2만대 초중반 전후(시점에 따라 변동)|
+| 가격대 | 26,890원 (최저가 26,490원), 2026-11-14 폴센트 기준 |
 |강점|충전·페어링 없이 즉시 사용 가능, 기기 전환이 단순|
 |주의점|차음성·고정감은 오픈형 특성상 기대치 조절 필요|
 |적합 사용자|업무용 회의, 영상 강의, 가벼운 이동 보조 이어폰 필요 시|
@@ -89,6 +89,8 @@ USB-C 이어폰은 기능이 풍부한 무선 이어폰과는 판단 포인트�
 ## 결론
 
 결국 오늘 기준 이 모델은 `고급 음향 기기`보다 `간단한 생활형 보조 이어폰`에 가깝습니다. 배터리 관리 없는 사용감, 기기 전환 속도, 마이크 기반 회의 동선을 중요하게 본다면 우선 검토할 만합니다. 다만 차음과 고정감이 최우선인 루틴에서는 더 넓은 비교가 필요합니다.
+
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 26,890원 (최저가 26,490원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
 
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
   <a href="https://link.coupang.com/a/etwURrJRD2" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">

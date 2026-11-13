@@ -34,7 +34,7 @@ status: "draft"
 | --- | --- |
 | 상품명 | 물먹는뽀송 매일매일이 뽀송한 스탠드형 제습제 본품 |
 | 옵션 | 150g, 72개 |
-| 가격대 | 약 5만원 후반~7만원 초반대 확인 |
+| 가격대 | 71,400원 (최저가 67,830원), 2026-11-14 폴센트 기준 |
 | 배송 | 로켓배송 표시 |
 | 평점/리뷰 수 | 가격 추적 페이지 기준 별점 5.0, 리뷰수 3,381건 표시 |
 | 핵심 키워드 | 스탠드형, 옷장 제습제, 습기제거제, 대량 구성, 염화칼슘 |
@@ -100,6 +100,8 @@ status: "draft"
 물먹는뽀송 스탠드형 제습제 150g 72개 구성은 `방 전체 제습`보다 `수납공간별 습기 관리`에 맞는 제품입니다. 장마철 전에 옷장, 신발장, 서랍장, 팬트리까지 한 번에 정리하려는 사람이라면 대량 구성의 편의성이 큽니다.
 
 다만 150g 개별 제품인 만큼 넓은 공간의 습도를 크게 낮추는 용도로 기대하면 아쉬울 수 있습니다. 구매 전에는 현재 쿠팡 가격, 개당 가격, 보관 공간, 교체 주기를 같이 확인하는 것이 좋습니다.
+
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 71,400원 (최저가 67,830원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
 
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
   <a href="https://link.coupang.com/a/eabOsgN50C" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">

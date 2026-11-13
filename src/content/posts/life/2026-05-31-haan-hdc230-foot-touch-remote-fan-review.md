@@ -88,6 +88,8 @@ status: "draft"
 
 다만 선풍기를 고를 때 소음과 조립감은 개인차가 큽니다. 잠잘 때 정말 조용해야 하거나, 프리미엄 마감을 기대한다면 상위 저소음 모델과 비교해보는 것이 좋습니다. 반대로 3만원대 예산에서 리모컨, 발터치, 높이 조절, 각도 조절을 함께 보고 있다면 충분히 후보에 올릴 만한 제품입니다.
 
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 39,900원 (최저가 31,920원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
+
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
   <a href="https://link.coupang.com/a/ebDaoMsljw" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">
     👉 한경희 초미세풍 발터치 리모컨 선풍기 쿠팡에서 보기

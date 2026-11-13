@@ -32,7 +32,7 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EC%97%AD%EB%A5%98%EB%B0%A9%EC%A7%
 | 항목 | 내용 |
 | --- | --- |
 | 상품명 | 로토토베베 유아용 역류방지쿠션 + 커버 세트 |
-| 가격대 | 약 62,900원 기준 |
+| 가격대 | 62,900원 (최저가 62,900원), 2026-11-14 폴센트 기준 |
 | 카테고리 | 출산/유아 |
 | 배송 | 로켓배송 표시 |
 
@@ -77,6 +77,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EC%97%AD%EB%A5%98%EB%B0%A9%EC%A7%
 ## 나라면 이렇게 고르겠습니다
 
 수유 후 보호자가 옆에서 지켜보는 짧은 시간의 보조 쿠션이 필요하다면 후보에 올릴 만합니다. 다만 이름만 보고 역류나 수면 문제가 해결된다고 기대하기보다, 안전한 사용 시간과 세탁 관리가 가능한지부터 보겠습니다.
+
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 62,900원 (최저가 62,900원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
 
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
   <a href="https://link.coupang.com/a/eacqTzZlca" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">

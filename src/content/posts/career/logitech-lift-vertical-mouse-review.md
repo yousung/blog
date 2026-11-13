@@ -117,6 +117,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/logitech-lift-vertical-mouse-revie
 
 구매는 아래 링크에서 확인할 수 있다. 오늘 기준 68,780원, 로켓배송에 무료 반품이라 그립이 안 맞으면 돌려보내기도 부담이 없다.
 
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 89,900원 (최저가 64,450원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
+
 [👉 로지텍 리프트 버티컬 마우스 최저가 확인하기 (쿠팡)](https://link.coupang.com/a/gt4ryV0AHk)
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.

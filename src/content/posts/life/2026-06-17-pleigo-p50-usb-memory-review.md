@@ -98,6 +98,8 @@ PLEIGO USB 메모리 P50은 고성능 제품을 찾는 사람보다, 부담 없�
 
 다만 USB 2.0이라는 점은 분명히 알고 사야 합니다. 빠른 전송 속도, USB-C 직결, 대용량 영상 이동, 차량 호환성을 중요하게 본다면 다른 제품과 비교하는 편이 좋습니다. 반대로 기본 파일 이동과 간단한 백업이 목적이라면 충분히 후보에 올릴 만한 USB 메모리입니다.
 
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 9,650원 (최저가 9,650원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
+
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
   <a href="https://link.coupang.com/a/eDYihppvzg" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">
     👉 PLEIGO USB 메모리 P50 쿠팡에서 보기

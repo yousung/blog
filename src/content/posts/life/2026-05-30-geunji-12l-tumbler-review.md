@@ -34,7 +34,7 @@ status: "draft"
 | --- | --- |
 | 상품명 | 근지 1.2리터 대용량 차량용 캠핑용 텀블러 밀폐 이중 진공 보온보냉 |
 | 옵션 | 1개, 1200ml, 블랙 |
-| 가격대 | 약 16,900원~24,900원 확인 구간 |
+| 가격대 | 24,900원 (최저가 12,410원), 2026-11-14 폴센트 기준 |
 | 재질 | 스테인레스, 실리콘, PP |
 | 구성품 | 텀블러 본체, 뚜껑 |
 | 크기 | 약 11.2cm x 15cm x 28.3cm |
@@ -112,6 +112,8 @@ status: "draft"
 근지 1.2리터 대용량 텀블러는 `큰 용량`, `손잡이`, `밀폐형 뚜껑`, `2만원 안팎 가격대`를 우선하는 사람에게 맞는 제품입니다. 책상 위나 차 안에서 물을 넉넉히 두고 마시는 용도라면 후보에 올릴 만합니다.
 
 다만 대용량 제품은 휴대성과 세척 편의성이 작고 단순한 텀블러보다 떨어질 수 있습니다. 구매 전에는 현재 쿠팡 가격, 쿠폰 적용 여부, 컵홀더 호환, 최신 상품평의 누수·세척 관련 반응을 함께 확인하는 것이 좋습니다.
+
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 24,900원 (최저가 12,410원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
 
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
   <a href="https://link.coupang.com/a/eacjPzjofQ" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">

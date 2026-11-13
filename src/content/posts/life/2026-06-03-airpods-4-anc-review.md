@@ -83,6 +83,8 @@ status: "draft"
 
 다만 조용함을 최우선으로 보면 이야기가 달라집니다. 소음 차단, 배터리, 고정감까지 모두 강하게 원한다면 에어팟 프로 계열이나 다른 커널형 ANC 이어폰과 비교하는 편이 낫습니다. 반대로 "귀는 편해야 하고, 애플 기기에서는 매끄럽게 붙어야 하고, 적당한 노이즈 캔슬링이면 충분하다"는 기준이라면 에어팟 4 ANC가 잘 맞는 쪽입니다.
 
+<p data-price-check style="text-align:center;margin:1.5rem 0 0.5rem;"><b>💰 185,000원 (최저가 166,780원)</b><br><span style="font-size:12px;color:#777;">2026-11-14 폴센트 기준 · 최저가는 최근 2개월 기록, 구매 전 쿠팡에서 다시 확인하세요</span></p>
+
 <div style="text-align: center; margin: 2rem 0 0.75rem;">
   <a href="https://link.coupang.com/a/egjsV64816" rel="nofollow sponsored noopener" style="display: inline-block; padding: 0.85rem 1.25rem; border-radius: 999px; background: #f97316; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);">
     👉 Apple 2024 에어팟 4 ANC 쿠팡에서 보기
