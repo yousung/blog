@@ -23,7 +23,7 @@ date: "YYYY-MM-DD"
 summary: "목록·메타에 쓰이는 요약"
 oneLineSummary: "한 줄 요약"
 tags: [태그1, 태그2]            # src/content/taxonomy.json의 allowedTags에 있는 값만
-status: "draft"                 # 발행 판단은 사람이 한다. AI는 항상 draft로 생성
+status: "published"             # 2026-11-14부터 새 글은 바로 공개
 updatedDate: "YYYY-MM-DD"       # 옵션
 ogImage: "/images/posts/<slug>/hero.png"  # 옵션
 ---
