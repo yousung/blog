@@ -14,6 +14,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/abortcontroller-fetch-timeout-canc
 
 이 문제의 정석 해법이 AbortController다. 이름은 다들 안다. 그런데 15년 일하면서 느낀 건, 이걸 "fetch 취소하는 거"라고만 알고 실제로는 안 쓰는 개발자가 생각보다 많다는 점이다. 요즘 자바스크립트에서 AbortController는 요청 취소를 넘어 타임아웃, 이벤트 리스너 정리까지 커버하는 범용 취소 도구가 됐다. 오늘은 내가 실무에서 실제로 쓰는 패턴 위주로 정리한다.
 
+![fetch 요청 취소와 타임아웃, AbortController 하나로 끝내기 (15년차 개발자의 실전 패턴과 함정 3가지)](/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/1.jpg)
+
 ## 기본기: 컨트롤러 하나, 시그널 하나, 그리고 일회용이라는 사실
 
 구조는 단순하다. AbortController를 만들면 signal이 딸려 나오고, 이 signal을 비동기 작업에 넘겨둔 뒤 필요할 때 abort()를 호출하면 작업이 중단된다.
@@ -76,6 +78,8 @@ AbortSignal.timeout()은 지정 시간이 지나면 알아서 abort되는 시그
 
 또 하나, 이 타임아웃은 경과 시간이 아니라 "활성 시간" 기준이다. 탭이 bfcache에 들어가거나 워커가 일시 중단되면 타이머도 같이 멈춘다. 사용자가 다른 탭에 갔다 왔다고 애꿎은 타임아웃이 터지지 않는다는 뜻이라, 대부분의 경우 오히려 장점이다.
 
+![fetch 요청 취소와 타임아웃, AbortController 하나로 끝내기 (15년차 개발자의 실전 패턴과 함정 3가지)](/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/2.jpg)
+
 ## 검색 자동완성 레이스 컨디션, 이렇게 끊는다
 
 서두의 버그로 돌아가자. 입력할 때마다 요청을 보내는 자동완성에서, 응답 도착 순서는 요청 순서를 보장하지 않는다. 해법은 간단하다. **새 요청을 보내기 전에 이전 요청을 취소한다.**
@@ -124,6 +128,8 @@ const res = await fetch(url, {
 ## 의외의 활용처: 이벤트 리스너를 한 방에 정리하기
 
 내가 AbortController를 가장 요긴하게 쓰는 곳은 사실 fetch가 아니라 이벤트 리스너 정리다. addEventListener 옵션에 signal을 넘기면, 그 시그널이 abort될 때 **리스너가 자동으로 제거된다.** removeEventListener를 하나하나 짝 맞춰 호출할 필요가 없다.
+
+![fetch 요청 취소와 타임아웃, AbortController 하나로 끝내기 (15년차 개발자의 실전 패턴과 함정 3가지)](/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/3.jpg)
 
 ```javascript
 const controller = new AbortController();

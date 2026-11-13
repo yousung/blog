@@ -12,6 +12,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/mysql-index-not-used-execution-pla
 
 운영 DB에서 특정 화면이 느리다는 제보를 받으면, 나는 제일 먼저 쿼리부터 본다. 그런데 쿼리를 열어보면 십중팔구 이런 반응이 나온다. "어? 이거 인덱스 있는데?" 인덱스가 있다는 것과 인덱스를 탄다는 것은 완전히 다른 얘기다. 이 차이를 모르면 인덱스를 아무리 추가해도 쿼리는 계속 느리다.
 
+![인덱스를 걸었는데도 쿼리가 느린 이유, MySQL 실행계획으로 잡는 실전 정리](/images/tistory/mysql-index-not-used-execution-plan/1.jpg)
+
 이번 글은 실무에서 반복적으로 만난 "인덱스가 있는데도 안 타는" 케이스들을 MySQL 기준으로 정리한 것이다. 대부분 EXPLAIN 한 번이면 원인이 보이는 것들인데, 처음 겪으면 한참 헤매게 되는 유형들이다.
 
 ## 먼저 EXPLAIN 읽는 법부터, 딱 세 컬럼만
@@ -65,6 +67,8 @@ SELECT * FROM members WHERE user_code = '12345'; -- 인덱스 사용
 
 당시엔 배포 후 특정 API만 응답이 3초씩 걸려서 한참 뒤졌는데, 원인은 ORM 쪽에서 파라미터 타입이 int로 바뀐 커밋 하나였다. 이후로 코드 리뷰에서 WHERE 조건의 타입 일치를 습관적으로 본다.
 
+![인덱스를 걸었는데도 쿼리가 느린 이유, MySQL 실행계획으로 잡는 실전 정리](/images/tistory/mysql-index-not-used-execution-plan/2.jpg)
+
 ## 사례 3. 복합 인덱스는 순서가 전부다
 
 복합 인덱스 (a, b, c)는 전화번호부와 같다. 성으로 정렬하고, 같은 성 안에서 이름으로 정렬한 구조다. 그래서 왼쪽 컬럼부터 조건이 있어야 인덱스가 제 역할을 한다.
@@ -108,6 +112,8 @@ EXPLAIN에서 type도 ref고 key도 잘 찍혀 있는데 느린 경우가 있다
 **첫째, 카디널리티가 낮은 컬럼.** status 같은 컬럼에 값이 3종류밖에 없고 그중 'DONE'이 전체의 90%라면, 'DONE'으로 조회할 때 인덱스를 타는 게 오히려 손해일 수 있다. 인덱스로 위치를 찾고 다시 테이블로 가서 행을 읽는 왕복 비용이, 그냥 처음부터 쭉 읽는 것보다 비싸지기 때문이다. 옵티마이저가 알아서 풀스캔을 선택하기도 하는데, 그게 오히려 정상 판단인 경우다.
 
 **둘째, 커버링 인덱스가 아닌 경우의 테이블 왕복.** 조회 컬럼이 전부 인덱스 안에 있으면 테이블까지 안 가고 인덱스만 읽고 끝난다. EXPLAIN의 Extra에 Using index가 뜨면 커버링으로 동작한다는 뜻이다.
+
+![인덱스를 걸었는데도 쿼리가 느린 이유, MySQL 실행계획으로 잡는 실전 정리](/images/tistory/mysql-index-not-used-execution-plan/3.jpg)
 
 ```sql
 -- INDEX (user_id, status, created_at)

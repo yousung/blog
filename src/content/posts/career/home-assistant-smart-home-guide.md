@@ -14,6 +14,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/home-assistant-smart-home-guide"
 
 그래서 작년에 홈어시스턴트(Home Assistant)를 집에 들였다. 결론부터 말하면, 지금은 우리 집 인프라의 중심이 됐고, 아이 셋 키우는 집에서 이게 없던 시절로 돌아가라면 못 돌아간다. 오늘은 개발자 아빠 관점에서 홈어시스턴트 도입기를 정리해본다.
 
+![개발자 아빠의 스마트홈 구축기: 홈어시스턴트(Home Assistant)로 IoT 앱 지옥 탈출한 후기](/images/tistory/home-assistant-smart-home-guide/1.jpg)
+
 ## 홈어시스턴트가 뭔가, 왜 필요한가
 
 홈어시스턴트는 오픈소스 스마트홈 허브 소프트웨어다. 집에 있는 작은 서버(라즈베리파이나 미니PC)에 설치해두면, 제조사가 제각각인 IoT 기기들을 한 화면에서 모아 제어하고 자동화할 수 있다. 샤오미든 스마트싱스든 필립스 휴든 IKEA든, 웬만한 기기는 다 붙는다. 공식 통합구성요소(Integration)가 수천 개 수준이라 "이게 될까?" 싶은 기기도 검색해보면 대부분 누가 이미 붙여놨다.
@@ -50,6 +52,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/home-assistant-smart-home-guide"
 
 **주말** — 첫 자동화 작성. 거창한 것 말고 "해 지면 거실 무드등 켜기" 하나만 만들었다. 작게 시작해서 하나씩 늘리는 게 요령이다. 처음부터 집 전체를 자동화하려고 하면 반드시 어딘가에서 꼬인다. 이건 소프트웨어 프로젝트랑 똑같다.
 
+![개발자 아빠의 스마트홈 구축기: 홈어시스턴트(Home Assistant)로 IoT 앱 지옥 탈출한 후기](/images/tistory/home-assistant-smart-home-guide/2.jpg)
+
 ## 기기 연동: 지그비 동글 하나가 세계를 바꾼다
 
 와이파이 기기는 통합구성요소로 바로 붙는다. 진짜 재미는 지그비(Zigbee)부터다. USB 지그비 동글(코디네이터)을 하나 꽂고 Zigbee2MQTT나 ZHA를 올리면, 제조사 허브 없이 지그비 센서를 직접 붙일 수 있다.
@@ -71,6 +75,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/home-assistant-smart-home-guide"
 **세탁 완료 알림** — 세탁기 플러그의 전력 사용량이 일정 시간 바닥으로 떨어지면 "세탁 끝났습니다" 알림을 부부 폰에 쏜다. 스마트 세탁기가 아니어도 플러그 하나로 스마트 세탁기가 된다.
 
 이런 자동화가 하나씩 쌓이면 어느 순간 집이 알아서 돌아간다. 손으로 하던 일을 시스템이 대신하는 경험, 개발자가 코드로 하던 그 일을 집에서 하는 셈이다.
+
+![개발자 아빠의 스마트홈 구축기: 홈어시스턴트(Home Assistant)로 IoT 앱 지옥 탈출한 후기](/images/tistory/home-assistant-smart-home-guide/3.jpg)
 
 ## HACS, 커스텀의 세계
 

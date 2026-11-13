@@ -14,6 +14,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/rds-too-many-connections-troublesh
 
 RDS를 몇 년 써봤다는 사람도 이 에러 앞에서는 한 번씩 당황한다. 나도 그랬다. 커넥션이 왜 고갈됐는지, 지금 당장 뭘 해야 서비스가 살아나는지, 그리고 다시는 안 터지게 하려면 뭘 고쳐야 하는지가 머릿속에서 한 번에 정리가 안 되기 때문이다. 이 글은 그날 밤 내가 했던 삽질과, 그 뒤에 정리해둔 대응 순서를 기록한 것이다. 같은 에러로 검색해서 들어온 분이라면 긴급 대응 섹션부터 보셔도 된다.
 
+![AWS RDS 커넥션 고갈 장애 해결기: Too many connections 원인부터 RDS Proxy까지](/images/tistory/rds-too-many-connections-troubleshooting/1.jpg)
+
 ## 증상: Too many connections, 그런데 서버는 멀쩡해 보인다
 
 이 장애의 고약한 점은 EC2도 멀쩡하고, RDS CPU도 20%대로 한가해 보인다는 거다. 모니터링 대시보드만 보면 아무 문제가 없다. 그런데 애플리케이션은 DB 커넥션을 못 맺어서 500을 뱉고 있다.
@@ -69,6 +71,8 @@ ORDER BY time DESC;
 10대 = 400개                              → 폭발
 ```
 
+![AWS RDS 커넥션 고갈 장애 해결기: Too many connections 원인부터 RDS Proxy까지](/images/tistory/rds-too-many-connections-troubleshooting/2.jpg)
+
 그날 저녁 마케팅 푸시가 나갔고, 오토스케일링은 설계대로 성실하게 인스턴스를 10대까지 늘렸다. 앱 서버는 늘어나는데 DB 커넥션 상한은 그대로니까, 서버를 늘릴수록 장애가 심해지는 역설이 완성됐다. **오토스케일링의 최대 인스턴스 수 × 서버당 풀 사이즈가 max_connections를 넘는 순간, 그 구성은 시한폭탄이다.** 스프링 부트의 HikariCP든, Node의 pg 풀이든, 장고의 CONN_MAX_AGE든 전부 같은 산수가 적용된다.
 
 ## 원인 2: Lambda가 끼어 있으면 곱셈이 더 가팔라진다
@@ -94,6 +98,8 @@ CALL mysql.rds_kill(프로세스ID);
 **3단계. 커넥션을 뿜어내는 쪽을 잠근다.** 우리는 오토스케일링 최대 대수를 일단 6대로 줄였다. Lambda가 원인이라면 해당 함수의 reserved concurrency를 낮추는 게 같은 역할을 한다. 유입을 줄이는 게 아니라 DB로 가는 수도꼭지를 잠그는 것이다.
 
 이 세 개로 그날 밤은 넘겼다. 11시쯤 애들 재우러 들어갔으니 세 시간짜리 장애였다.
+
+![AWS RDS 커넥션 고갈 장애 해결기: Too many connections 원인부터 RDS Proxy까지](/images/tistory/rds-too-many-connections-troubleshooting/3.jpg)
 
 ## 재발 방지 1: 풀 사이즈를 공식으로 정한다
 

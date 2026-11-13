@@ -14,6 +14,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/modern-css-replaces-javascript"
 
 그런데 요 몇 년 사이에 그 전제가 꽤 많이 무너졌다. 최근에 사내 프로젝트 프론트 코드를 정리하다가, 예전에 자바스크립트로 짜놓은 UI 로직 중 상당수가 이제 CSS 몇 줄로 끝난다는 걸 새삼 확인했다. 실제로 걷어낸 코드가 몇백 줄이다. 오늘은 그 과정에서 실무에 바로 써먹은 모던 CSS 기능들을 정리해본다. 이론 나열이 아니라, "원래 JS로 이렇게 짰는데 지금은 이렇게 바꿨다"는 관점으로 쓴다.
 
+![자바스크립트 없이 되는 요즘 CSS 정리: :has 선택자, 컨테이너 쿼리, popover 실전 후기](/images/tistory/modern-css-replaces-javascript/1.jpg)
+
 ## 1. :has() — 드디어 생긴 부모 선택자
 
 CSS에 부모 선택자가 없다는 건 20년 가까이 개발자들 단골 불평이었다. "자식 상태 보고 부모 스타일 바꾸기"는 무조건 자바스크립트 몫이었다.
@@ -49,6 +51,8 @@ document.querySelectorAll('.form-field input').forEach((input) => {
 ## 2. 컨테이너 쿼리 — 반응형의 기준이 화면에서 부모로
 
 미디어 쿼리의 근본적인 한계는 기준이 항상 뷰포트라는 거다. 같은 카드 컴포넌트가 사이드바에 들어가면 좁게, 본문에 들어가면 넓게 나와야 하는데, 뷰포트 기준으로는 이걸 못 푼다. 그래서 예전엔 ResizeObserver로 부모 너비를 재서 클래스를 붙이는 코드를 짰다.
+
+![자바스크립트 없이 되는 요즘 CSS 정리: :has 선택자, 컨테이너 쿼리, popover 실전 후기](/images/tistory/modern-css-replaces-javascript/2.jpg)
 
 ```css
 /* 지금 방식: 부모를 컨테이너로 선언 */
@@ -131,6 +135,8 @@ HTML의 popover 속성은 이걸 브라우저 기본 동작으로 만들어버�
 **aspect-ratio와 gap** — 썸네일 비율 유지하려고 padding-top으로 비율 잡던 트릭, 기억하는 분 많을 것이다. 이제 `aspect-ratio: 16 / 9;` 한 줄이면 끝이다. flexbox에서도 gap이 동작한 지 오래라, margin과 음수 margin으로 아이템 간격을 잡던 코드는 보이는 대로 정리해도 된다.
 
 **dialog 요소** — 모달도 popover와 같은 맥락이다. `<dialog>`와 `showModal()`을 쓰면 포커스 트랩, 배경 딤 처리(::backdrop), ESC 닫기가 기본으로 따라온다. 모달 라이브러리 하나를 의존성에서 뺄 수 있다.
+
+![자바스크립트 없이 되는 요즘 CSS 정리: :has 선택자, 컨테이너 쿼리, popover 실전 후기](/images/tistory/modern-css-replaces-javascript/3.jpg)
 
 ## 삽질 기록 하나 — :has()와 우선순위 함정
 
