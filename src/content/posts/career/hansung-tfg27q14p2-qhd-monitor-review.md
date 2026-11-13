@@ -6,7 +6,7 @@ date: "2026-10-03"
 summary: "24인치 FHD에서 갈아탄 한성컴퓨터 TFG27Q14P2 27인치 QHD 144Hz IPS 모니터 한 달 실사용 후기. 코딩 작업 공간, 글자 선명도, 듀얼 구성 장점부터 틸트 전용 스탠드, 고주파음·데드픽셀 체크 포인트, 경쟁 제품 비교까지 개발자 관점에서 정리했습니다."
 oneLineSummary: "17만 원대에 27인치 QHD 144Hz IPS 무결점까지, 코딩용 첫 QHD 모니터로 가장 무난한 선택"
 tags: ["제품리뷰", "장비", "모니터", "개발환경", "재택근무", "생산성", "리뷰", "it"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/hansung-tfg27q14p2-qhd-monitor-review"
 ---
 

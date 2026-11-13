@@ -6,7 +6,7 @@ date: "2026-08-27"
 summary: "제조사 앱이 제각각인 IoT 기기를 홈어시스턴트(Home Assistant) 하나로 통합한 실전 후기. 라즈베리파이·미니PC 설치 선택부터 지그비 동글, 아이 셋 집에서 실제로 쓰는 자동화, 외부 접속 보안, 현실적인 비용과 단점까지 개발자 관점에서 정리했습니다."
 oneLineSummary: "스마트홈의 완성은 제어가 아니라, 내가 아무것도 안 해도 알아서 돌아가는 상태다."
 tags: ["스마트홈", "IoT", "홈오토메이션", "자동화", "인프라", "보안", "it"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/home-assistant-smart-home-guide"
 ---
 

@@ -6,7 +6,7 @@ date: "2026-09-09"
 summary: "한국은행이 7월과 8월 두 번 연속 기준금리를 올려 3.00%가 됐습니다. 변동금리 대출 점검, 금리인하요구권, 파킹통장 갈아타기, 만기 분산, 구독료·통신비 다이어트, 교육비 상한선까지 아이 셋 가장이 실제로 한 가계 재정 점검을 정리했습니다."
 oneLineSummary: "금리가 오르는 건 못 막지만, 내 가계의 숫자를 아는 건 내가 할 수 있다"
 tags: ["머니", "예산", "가계부", "저축", "체크리스트"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/base-rate-3percent-household-check"
 ---
 

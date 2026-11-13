@@ -6,7 +6,7 @@ date: "2026-10-17"
 summary: "아이 셋 10년 치 가족 사진 수백 기가, 구글 포토 구독과 시놀로지 NAS 중 뭐가 답일까. 구글 원 요금제 구조, NAS 초기 비용과 하드 가격, 5년 총비용 손익분기, RAID와 3-2-1 백업 원칙, 구글 테이크아웃 마이그레이션까지 직접 겪은 기준으로 비교했습니다."
 oneLineSummary: "사진 200GB 이하면 구글 포토, 1TB 넘고 3년 이상 보면 NAS, 애들 사진은 결국 하이브리드"
 tags: ["사진", "클라우드", "데이터", "네트워크", "장비"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/google-photos-vs-synology-nas-family-backup"
 ---
 

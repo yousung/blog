@@ -1,8 +1,8 @@
 import { getCollection } from 'astro:content';
-import { getAdSenseReadyPosts } from '../lib/posts';
+import { getPublishedPosts } from '../lib/posts';
 
 export async function GET() {
-  const posts = getAdSenseReadyPosts(await getCollection('posts'))
+  const posts = getPublishedPosts(await getCollection('posts'))
     .map((p) => ({
       slug: p.data.slug,
       title: p.data.title,

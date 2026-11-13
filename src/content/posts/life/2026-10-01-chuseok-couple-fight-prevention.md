@@ -6,7 +6,7 @@ date: "2026-10-01"
 summary: "결혼 11년차, 아이 셋 키우는 부부가 명절 부부싸움을 피하려고 지키는 원칙 7가지. 명절 일주일 전 15분 부부회의, 양가 동일 용돈 원칙, 방문 순서 공식, 가사 분담, 귀성길 운전 규칙, 연휴 마지막 날 회복 시간, 30분 정산 대화까지 이번 추석에 실제로 쓴 방법을 정리했습니다."
 oneLineSummary: "명절 부부싸움의 본질은 시댁도 처가도 아니라 '당신은 내 편인가'라는 질문 하나다"
 tags: ["일상", "라이프", "습관", "회고", "생활정보", "체크리스트"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/chuseok-couple-fight-prevention"
 ---
 

@@ -6,7 +6,7 @@ date: "2026-10-12"
 summary: "10월 둘째 주 IT 뉴스 정리. 챗GPT GPT-6 전면 배포와 인텔리전트 UI, 오픈AI 연환산 매출 쇼크와 AI 거품론, 삼성전자 분기 영업이익 107조 돌파, 앤스로픽의 에이전트 통제 이슈와 내부 평가 인터넷 차단, FortiMail 제로데이까지 개발자 관점으로 짚었습니다."
 oneLineSummary: "이번 주 키워드는 검증이다"
 tags: ["AI", "LLM", "보안", "기술트렌드", "개발"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-10-12"
 ---
 

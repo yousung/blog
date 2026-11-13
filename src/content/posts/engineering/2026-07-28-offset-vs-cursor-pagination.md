@@ -9,6 +9,7 @@ oneLineSummary: "OFFSET과 커서 중 무엇을 쓸지는 데이터 양이 아�
 tags: [페이지네이션, MySQL, Laravel, 쿼리, 성능]
 status: "published"
 ogImage: "/images/posts/offset-vs-cursor-pagination-hero.png"
+tistoryUrl: "https://lovizu.tistory.com/entry/%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B2%88%ED%98%B8%EB%A5%BC-%ED%8F%AC%EA%B8%B0%ED%95%B4%EC%95%BC-%ED%95%A0-%EB%95%8C-OFFSET%EA%B3%BC-%EC%BB%A4%EC%84%9C-%ED%8E%98%EC%9D%B4%EC%A7%80%EB%84%A4%EC%9D%B4%EC%85%98%EC%9D%98-%EA%B0%88%EB%A6%BC%EA%B8%B8"
 ---
 
 # 페이지 번호를 포기해야 할 때, OFFSET과 커서 페이지네이션의 갈림길

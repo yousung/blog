@@ -6,7 +6,7 @@ date: "2026-10-08"
 summary: "2026-2027절기 어린이 인플루엔자 국가예방접종이 14세까지 확대됐다. 아이 셋 아빠가 10월 안에 접종을 끝내는 이유 세 가지, 셋을 한 번에 접종시키는 실전 운영법, 그리고 손씻기·습도·환기·수분·수면으로 환절기 감기를 줄이는 우리 집 생활 루틴을 정리했습니다."
 oneLineSummary: "독감 접종은 유행이 시작되기 전인 10월이 골든타임이고, 아이 셋 집의 접종은 운영의 영역이다"
 tags: ["일상", "육아", "건강", "생활정보", "체크리스트"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/kids-flu-shot-october-routine"
 ---
 

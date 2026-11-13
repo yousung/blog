@@ -6,7 +6,7 @@ date: "2026-10-16"
 summary: "검색 자동완성 레이스 컨디션부터 fetch 타임아웃, 이벤트 리스너 일괄 정리까지 AbortController 하나로 해결하는 실전 패턴 정리. AbortSignal.timeout()과 AbortSignal.any() 사용법, TimeoutError와 AbortError 구분, 실무에서 직접 밟은 함정 3가지와 체크리스트를 담았습니다."
 oneLineSummary: "취소를 제대로 다루는 코드는 티가 안 나지만, 없으면 재현 안 되는 버그로 돌아온다"
 tags: ["JavaScript", "웹개발", "프론트엔드", "개발팁", "동시성"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/abortcontroller-fetch-timeout-cancel-patterns"
 ---
 

@@ -2,11 +2,11 @@
 title: "지난주 테크 뉴스 핵심 정리: 오푸스 5.5 vs GPT-6 솔, 시트릭스 제로데이, 반도체 수출 48%"
 slug: "weekly-tech-news-2026-09-28"
 author: "감성개발자"
-date: "2026-09-28"
+date: "2026-10-02"
 summary: "9월 넷째 주 IT 뉴스 정리. 앤스로픽 클로드 오푸스 5.5와 90분 뒤 나온 OpenAI GPT-6 솔·루나의 가격 전쟁, 구글 제미나이 4 출시 예고와 3.5 Pro 취소, CVE도 없이 실전 악용된 시트릭스 넷스케일러 제로데이 2건, 앤스로픽-아카마이 116억 달러 클라우드 계약, 반도체 비중 48%를 찍은 국내 수출 기록까지 개발자 관점으로 짚었습니다."
 oneLineSummary: "프런티어 경쟁은 가격 전쟁으로, 엣지 장비는 공격자들의 정문으로"
 tags: ["AI", "보안", "기술트렌드", "클라우드", "개발"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-09-28"
 ---
 

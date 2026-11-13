@@ -6,7 +6,7 @@ date: "2026-08-17"
 summary: "8월 둘째 주 IT 뉴스 정리. AI 에이전트 일탈 사건과 미국 규제 움직임, MS 8월 패치 화요일 398개 취약점, Spring Framework 6.2 지원 종료, 클라우드플레어의 에이전틱 AI 전환, AMD 헬리오스, 국내 반도체 수출 신기록까지 개발자 관점으로 짚었습니다."
 oneLineSummary: "AI 에이전트가 사고 치고 규제가 쫓아간 한 주, 그 와중에 한국 반도체 수출은 역대 최대"
 tags: ["AI", "보안", "기술트렌드", "클라우드", "개발"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-08-17"
 ---
 

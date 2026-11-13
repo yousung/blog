@@ -6,7 +6,7 @@ date: "2026-08-25"
 summary: "손목 통증 때문에 갈아탄 로지텍 리프트(Lift) 버티컬 마우스 한 달 실사용 후기. 57도 인체공학 설계, 무소음 클릭, Easy-Switch 멀티페어링 장점부터 손 큰 사람 주의점, 적응 기간, 변색 이슈까지 개발자 관점에서 솔직하게 정리했습니다."
 oneLineSummary: "손목이 신호를 보내기 시작한 개발자에게, 리프트는 파스값보다 싼 투자다"
 tags: ["제품리뷰", "장비", "인체공학", "건강", "개발환경", "리뷰", "it"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/logitech-lift-vertical-mouse-review"
 ---
 

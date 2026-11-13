@@ -6,7 +6,7 @@ date: "2026-08-18"
 summary: "가성비 기계식 키보드의 대명사 독거미 AULA F87 회목축(그레이 우드축) 실사용 후기. 도각도각 타건감, 3모드 무선 연결, 배터리, 핫스왑 장점부터 소음, 직구 A/S, 소프트웨어 단점까지 개발자 관점에서 솔직하게 정리했습니다."
 oneLineSummary: "4만 원대 독거미 F87, 키보드에 진심이었던 개발자가 인정한 가성비 반칙"
 tags: ["제품리뷰", "장비", "개발환경", "재택근무", "리뷰", "it"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/aula-f87-dokgeomi-keyboard-review"
 ---
 

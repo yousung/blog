@@ -6,7 +6,7 @@ date: "2026-09-01"
 summary: "AI 코딩 도구가 기본값이 된 시대의 주니어 개발자 성장론. 코드 리뷰 풍경의 변화, '겪음'이 사라진 학습 구조의 문제, 주니어가 지켜야 할 세 가지 원칙과 시니어·회사의 숙제, 그리고 반대편 의견까지 15년차 개발자 관점에서 정리했습니다."
 oneLineSummary: "코드는 AI가 짜줄 수 있어도, 설명할 수 없는 코드에 네 이름을 붙이지 마라."
 tags: ["AI", "개발자", "커리어", "경력개발", "개발철학", "기술트렌드", "career"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/ai-era-junior-developer-growth"
 ---
 

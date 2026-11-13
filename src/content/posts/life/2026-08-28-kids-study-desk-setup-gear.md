@@ -6,7 +6,7 @@ date: "2026-08-28"
 summary: "개학 후 무너진 아이 책상을 되살린 실전 장비 후기. LED 스탠드 고르는 기준, 타임타이머로 공부 습관 만들기, 독서대와 발받침으로 자세 잡기, 책상 정리 규칙까지 아이 셋 키우는 아빠가 10만 원 안쪽으로 정리한 초등학생 책상 셋업 가이드입니다."
 oneLineSummary: "장비는 아이를 공부시키지 못한다. 대신 공부를 방해하는 물리적 핑계를 없애준다."
 tags: ["육아", "일상", "장비", "학습", "습관", "생활정보", "자녀양육"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/kids-study-desk-setup-gear"
 ---
 

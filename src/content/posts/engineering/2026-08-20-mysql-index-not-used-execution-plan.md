@@ -6,7 +6,7 @@ date: "2026-08-20"
 summary: "인덱스가 있어도 안 타는 대표 케이스를 MySQL 실행계획(EXPLAIN) 기준으로 정리했습니다. 컬럼 가공, 암묵적 형변환, 복합 인덱스 순서, LIKE 패턴, 커버링 인덱스와 filesort까지 실무 점검 순서를 담았습니다."
 oneLineSummary: "인덱스가 있다는 것과 인덱스를 탄다는 것은 완전히 다른 얘기다. EXPLAIN 세 컬럼부터 보자."
 tags: ["MySQL", "SQL", "데이터베이스", "쿼리", "성능최적화", "Backend", "troubleshooting", "체크리스트"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/mysql-index-not-used-execution-plan"
 ---
 

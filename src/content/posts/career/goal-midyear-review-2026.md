@@ -6,7 +6,7 @@ date: "2026-08-16"
 summary: "연초에 세운 목표 7개를 8개월 차에 중간 결산했습니다. 살아남은 목표 3개와 폐기한 목표 4개, 그리고 생존한 목표들의 공통점을 숫자 그대로 기록합니다. 40대 아이 셋 아빠 개발자의 결과 중심 회고입니다."
 oneLineSummary: "연초 목표 7개 중 3개 생존, 성공률 43%. 살아남은 목표와 죽은 목표의 차이를 숫자로 결산한 기록"
 tags: ["목표관리", "회고", "습관", "루틴", "생산성", "자기개발"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/goal-midyear-review-2026"
 ---
 

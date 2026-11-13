@@ -3,11 +3,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import PostFeed from '../../components/PostFeed.astro';
 import { SITE_TITLE } from '../../consts';
-import { getAdSenseReadyPosts } from '../../lib/posts';
+import { getPublishedPosts } from '../../lib/posts';
 
 export async function getStaticPaths() {
   const slugify = (tag: string) => tag.replace(/\//g, '-');
-  const posts = getAdSenseReadyPosts(await getCollection('posts'));
+  const posts = getPublishedPosts(await getCollection('posts'));
   const allTags = [...new Set(posts.flatMap((p) => p.data.tags))];
   return allTags.map((tag) => ({ params: { tag: slugify(tag) }, props: { tag } }));
 }
@@ -19,7 +19,7 @@ interface Props {
 const { tag } = Astro.props;
 const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
-const posts = getAdSenseReadyPosts(await getCollection('posts'))
+const posts = getPublishedPosts(await getCollection('posts'))
   .filter((e) => e.data.tags.includes(tag));
 ---
 

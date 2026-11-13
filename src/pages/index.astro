@@ -4,10 +4,10 @@ import { getCollection } from 'astro:content';
 import PostFeed from '../components/PostFeed.astro';
 import TagList from '../components/TagList.astro';
 import { SITE_TITLE } from '../consts';
-import { getAdSenseReadyPosts } from '../lib/posts';
+import { getPublishedPosts } from '../lib/posts';
 
 const PAGE_SIZE = 10;
-const posts = getAdSenseReadyPosts(await getCollection('posts'));
+const posts = getPublishedPosts(await getCollection('posts'));
 const [featured, ...rest] = posts;
 const firstPagePosts = rest.slice(0, PAGE_SIZE);
 const totalPages = Math.max(1, Math.ceil(rest.length / PAGE_SIZE));

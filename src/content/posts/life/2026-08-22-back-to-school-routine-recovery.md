@@ -6,7 +6,7 @@ date: "2026-08-22"
 summary: "방학 동안 무너진 아이 생활 리듬을 개학 전 일주일 만에 되돌리는 실전 가이드입니다. 취침 시간 30분씩 당기기, 등교 리허설, 준비물 점검, 미디어 시간 협상, 방학 숙제 분할, 2학기 스케줄 세팅까지 아이 셋 키우는 아빠의 경험으로 정리했습니다."
 oneLineSummary: "개학 전 일주일을 어떻게 보내느냐가 개학 후 한 달을 결정한다."
 tags: ["육아", "일상", "체크리스트", "루틴", "수면", "생활정보", "부모교육"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/back-to-school-routine-recovery"
 ---
 

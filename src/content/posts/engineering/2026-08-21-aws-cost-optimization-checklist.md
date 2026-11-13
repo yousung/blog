@@ -6,7 +6,7 @@ date: "2026-08-21"
 summary: "AWS 청구서에서 조용히 새는 비용을 잡는 실전 점검 가이드입니다. Cost Explorer 가시화부터 EC2 야간 중지, gp3 전환, NAT Gateway 트래픽, S3 수명주기, CloudWatch 로그 보존, RDS 재검토, Lambda 메모리 튜닝까지 순서대로 정리했습니다."
 oneLineSummary: "AWS 요금은 큰 실수 하나가 아니라 아무도 안 보는 작은 낭비들이 쌓여서 터진다."
 tags: ["AWS", "클라우드", "인프라", "S3", "RDS", "Lambda", "체크리스트"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/aws-cost-optimization-checklist"
 ---
 

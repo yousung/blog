@@ -6,7 +6,7 @@ date: "2026-10-20"
 summary: "앤스로픽의 주니어 기술직 채용 비중이 27%에서 9%로 떨어졌다. 스탠퍼드·ACM·가트너 데이터로 본 주니어 절벽의 실체, AI가 대체한 것과 못한 것, IBM·아마존의 반대 행보, 그리고 15년차 아빠 개발자가 채용 결정권자라면 어떻게 할지 솔직하게 정리했습니다."
 oneLineSummary: "AI는 주니어의 일이 아니라 주니어에게 시키던 기계적인 일을 가져갔다, 다음 시니어는 누가 키우나"
 tags: ["AI", "커리어", "개발자", "취업", "기술트렌드", "경력개발", "개발철학"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/ai-junior-developer-cliff-debate"
 ---
 

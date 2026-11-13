@@ -6,7 +6,7 @@ date: "2026-10-19"
 summary: "10월 셋째 주 IT 뉴스 정리. 마이크로소프트 역대 최대 1,413건 패치와 클로드가 찾아낸 Windows Shell 제로데이, 중국 CXMT 4F² D램 발표발 코스피 급락과 SEDEX 2026 HBM4E 반격, 앤스로픽 3분기 매출 168억 달러와 11월 IPO, Reflection의 501B 오픈웨이트 모델 Beam까지 개발자 관점으로 짚었습니다."
 oneLineSummary: "이번 주 키워드는 기록 경신과 체급 확인이다"
 tags: ["AI", "LLM", "보안", "기술트렌드", "개발"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-10-19"
 ---
 

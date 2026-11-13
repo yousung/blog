@@ -6,7 +6,7 @@ date: "2026-10-10"
 summary: "JWT와 세션 인증을 실무 관점에서 비교한 기록. JWT 로그아웃 불가 문제, 리프레시 토큰 저장 위치(localStorage vs httpOnly 쿠키), 토큰 갱신 레이스 컨디션까지 직접 겪은 함정 3가지와 해결책, 그리고 프로젝트 성격에 따라 세션과 JWT를 고르는 기준을 정리했습니다."
 oneLineSummary: "인증 방식은 유행이 아니라 제약 조건으로 고른다"
 tags: ["인증", "보안", "백엔드", "웹개발", "설계"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/jwt-vs-session-auth-practical-guide"
 ---
 

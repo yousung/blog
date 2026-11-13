@@ -6,7 +6,7 @@ date: "2026-10-04"
 summary: "올해가 88일 남은 시점에서 4분기 목표를 새로 추가하지 않고 3개로 줄인 이유를 정리했습니다. 새벽 운동 주 4회, NAS 백업 3-2-1 구축, 12월 가계 결산 선행까지 각 목표를 숫자 하나로 박고, 매주 일요일 10분 주간 점검으로 굴리는 방식과 남은 100일 목표 점검 체크리스트 7가지를 담았습니다."
 oneLineSummary: "목표의 개수를 줄이는 것 자체가 가장 강력한 목표 달성 기술이다"
 tags: ["목표관리", "자기개발", "습관", "루틴", "체크리스트", "회고"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/last-100-days-2026-three-goals"
 ---
 

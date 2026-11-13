@@ -6,7 +6,7 @@ date: "2026-09-06"
 summary: "도커를 쓰는 서버에서 디스크가 100% 차는 장애를 겪고 정리한 실전 가이드. overlay2가 커지는 이유, docker system prune 옵션별 주의사항, json-file 로그 무제한 문제와 daemon.json 로그 로테이션 설정, 크론 자동 정리와 이미지 경량화까지 순서대로 담았습니다."
 oneLineSummary: "도커는 기본값 그대로 두면 디스크를 다 쓸 때까지 자란다"
 tags: ["Docker", "DevOps", "인프라", "troubleshooting", "시스템-관리"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/docker-disk-full-overlay2-cleanup"
 ---
 

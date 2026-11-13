@@ -6,7 +6,7 @@ date: "2026-08-24"
 summary: "8월 셋째 주 IT 뉴스 정리. 앤스로픽의 분기 매출 OpenAI 첫 추월, OpenAI의 프런티어 훈련 일시 중단, 라자루스 윈도우 커널 제로데이와 CISA 패치 시한, KT 소버린 AI 어플라이언스, 반도체 급락과 SK하이닉스 40조 주주환원, 구글 클라우드 PQC 전환까지 개발자 관점으로 짚었습니다."
 oneLineSummary: "돈은 코딩 AI로 몰리고, 리스크는 에이전트와 커널에서 터진 한 주"
 tags: ["AI", "보안", "기술트렌드", "클라우드", "개발"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-08-24"
 ---
 

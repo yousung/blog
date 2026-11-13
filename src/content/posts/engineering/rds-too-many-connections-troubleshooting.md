@@ -6,7 +6,7 @@ date: "2026-10-07"
 summary: "RDS MySQL의 Too many connections 장애를 실제로 겪고 정리한 대응 기록. max_connections 기본값 공식, 커넥션 풀 산수, Lambda 동시성 문제, rds_kill을 이용한 긴급 대응, wait_timeout 조정, RDS Proxy 도입 판단 기준, CloudWatch 알람 설정까지 순서대로 정리했습니다."
 oneLineSummary: "Too many connections는 DB 장애가 아니라 용량 계획 장애다"
 tags: ["AWS", "RDS", "MySQL", "데이터베이스", "troubleshooting", "인프라", "백엔드"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/rds-too-many-connections-troubleshooting"
 ---
 

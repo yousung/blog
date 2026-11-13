@@ -2,11 +2,11 @@
 title: "지난주 테크 뉴스 핵심 정리: 엔비디아 어닝 서프라이즈, zHBM, 피지컬 AI"
 slug: "weekly-tech-news-2026-08-31"
 author: "감성개발자"
-date: "2026-08-31"
+date: "2026-09-05"
 summary: "8월 넷째 주 IT 뉴스 정리. 엔비디아 2분기 매출 962억 달러와 공급 병목 경고, 핫칩스 2026의 삼성 zHBM·SK하이닉스 패키징 경쟁, 앤스로픽 Model Hardware Standard 프리뷰, Sonnet 5 가격 영구화, CVSS 10점 오라클 WebLogic 취약점까지 개발자 관점으로 짚었습니다."
 oneLineSummary: "공급은 모자라고, 메모리는 똑똑해지고, 에이전트는 몸을 얻는 중"
 tags: ["AI", "보안", "기술트렌드", "클라우드", "개발"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-08-31"
 ---
 

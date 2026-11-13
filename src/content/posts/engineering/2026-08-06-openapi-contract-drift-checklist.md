@@ -7,6 +7,7 @@ summary: "OpenAPI 문서가 Swagger UI용 장식으로만 남지 않게, 실제 
 oneLineSummary: "OpenAPI는 문서가 아니라 프론트엔드와 백엔드가 함께 지켜야 할 API 계약으로 다뤄야 오래 갑니다."
 tags: [OpenAPI, API, 백엔드, QA, 체크리스트]
 status: "published"
+tistoryUrl: "https://lovizu.tistory.com/entry/OpenAPI-%EB%AC%B8%EC%84%9C%EC%99%80-%EC%8B%A4%EC%A0%9C-API%EA%B0%80-%EC%96%B4%EA%B8%8B%EB%82%A0-%EB%95%8C-%EB%A8%BC%EC%A0%80-%EC%9E%A1%EC%9D%84-%EA%B8%B0%EC%A4%80"
 ---
 
 # OpenAPI 문서와 실제 API가 어긋날 때 먼저 잡을 기준

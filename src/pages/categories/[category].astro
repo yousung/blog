@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import PostFeed from '../../components/PostFeed.astro';
 import { SITE_TITLE } from '../../consts';
-import { getAdSenseReadyPosts } from '../../lib/posts';
+import { getPublishedPosts } from '../../lib/posts';
 
 const CATEGORY_MAP: Record<string, string> = {
   career: '생활',
@@ -39,7 +39,7 @@ export async function getStaticPaths() {
     }
     return 'unknown';
   };
-  const posts = getAdSenseReadyPosts(await getCollection('posts'));
+  const posts = getPublishedPosts(await getCollection('posts'));
   const categories = [...new Set(posts.map((p) => categoryMap[getDirInner(p)] ?? getDirInner(p)))];
   return categories.map((category) => ({ params: { category } }));
 }
@@ -47,7 +47,7 @@ export async function getStaticPaths() {
 const { category } = Astro.params;
 const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
-const posts = getAdSenseReadyPosts(await getCollection('posts'))
+const posts = getPublishedPosts(await getCollection('posts'))
   .filter((e) => (CATEGORY_MAP[getDir(e)] ?? getDir(e)) === category);
 ---
 

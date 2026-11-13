@@ -6,7 +6,7 @@ date: "2026-09-03"
 summary: "건강검진 결과에 놀라 시작한 출근 전 30분 새벽 홈트, 석 달의 기록입니다. 맨몸운동 루틴 구성, 월별 체중과 푸시업 개수 변화, 세 번의 고비를 넘긴 방법, 40대가 운동할 때 조심할 점과 새벽 운동 현실 팁 6가지까지 아이 셋 키우는 40대 개발자가 직접 겪은 그대로 정리했습니다."
 oneLineSummary: "석 달을 지켜준 건 의지가 아니라 장치였다. 새벽 30분, 오늘 하고 내일 또 하면 그게 운동 루틴이다."
 tags: ["운동", "건강", "습관", "루틴", "일상", "생활정보"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/40s-morning-workout-3month-log"
 ---
 

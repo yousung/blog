@@ -8,6 +8,7 @@ summary: "택배 상자, 페트병, 비닐, 스티로폼처럼 자주 헷갈리�
 oneLineSummary: "분리배출은 표시보다 비우기, 헹구기, 분리하기, 섞지 않기 순서로 보면 실패가 줄어든다."
 tags: [라이프, 생활정보, 체크리스트, household]
 status: "published"
+tistoryUrl: "https://lovizu.tistory.com/entry/%EB%B6%84%EB%A6%AC%EB%B0%B0%EC%B6%9C-%ED%97%B7%EA%B0%88%EB%A6%B4-%EB%95%8C-%EC%A7%91%EC%97%90%EC%84%9C-%EB%A8%BC%EC%A0%80-%ED%99%95%EC%9D%B8%ED%95%A0-7%EA%B0%80%EC%A7%80-%EA%B8%B0%EC%A4%80"
 ---
 
 # 분리배출 헷갈릴 때, 집에서 먼저 확인할 7가지 기준

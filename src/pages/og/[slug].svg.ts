@@ -1,12 +1,12 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
-import { getAdSenseReadyPosts } from '../../lib/posts';
+import { getPublishedPosts } from '../../lib/posts';
 
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const posts = getAdSenseReadyPosts(await getCollection('posts'));
+  const posts = getPublishedPosts(await getCollection('posts'));
   return [
     {
       params: { slug: 'site' },

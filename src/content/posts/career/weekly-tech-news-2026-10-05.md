@@ -6,7 +6,7 @@ date: "2026-10-05"
 summary: "9월 다섯째 주 IT 뉴스 정리. 구글 제미나이 4 아르곤 공개와 보안 전문가 우선 배포, OpenAI 데브데이의 GPT-6.1 솔과 dots, 클로드 코드 모드(Mods) 도입, 브로드컴의 앤스로픽 420억 달러 대출과 순환 지출 논쟁, AI 기업을 겨냥한 증류 캠페인·사칭 피싱, 퓨리오사AI 8000억 프리IPO까지 개발자 관점으로 짚었습니다."
 oneLineSummary: "모델은 수렴하고, 돈은 발산한다"
 tags: ["AI", "보안", "기술트렌드", "클라우드", "개발"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-10-05"
 ---
 

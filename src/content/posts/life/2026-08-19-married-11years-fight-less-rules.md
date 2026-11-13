@@ -6,7 +6,7 @@ date: "2026-08-19"
 summary: "결혼 11년차, 아이 셋 키우는 부부가 부부싸움을 줄이기 위해 만든 다섯 가지 규칙. 밤 10시 이후 대화 금지, 집안일 담당제, 주 1회 부부 대화 30분, 월 1회 가계 결산, 빠른 사과와 나중 회고까지 실제 효과 본 방법과 실패담을 정리했습니다."
 oneLineSummary: "부부싸움을 줄인 건 애정이 아니라 규칙이었다, 11년차 부부의 운영 노하우"
 tags: ["일상", "라이프", "습관", "루틴", "회고", "생활정보"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/married-11years-fight-less-rules"
 ---
 

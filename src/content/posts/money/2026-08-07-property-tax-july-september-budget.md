@@ -8,6 +8,7 @@ oneLineSummary: "재산세는 한 번 냈는지보다 어떤 재산의 몇 기�
 tags: [머니, 예산, 금융, 체크리스트]
 status: "published"
 updatedDate: "2026-08-07"
+tistoryUrl: "https://lovizu.tistory.com/entry/%EC%9E%AC%EC%82%B0%EC%84%B8-7%EC%9B%94%EC%97%90-%EB%83%88%EB%8A%94%EB%8D%B0-9%EC%9B%94%EC%97%90%EB%8F%84-%EB%98%90-%EB%82%98%EC%98%A4%EB%8A%94-%EC%9D%B4%EC%9C%A0"
 ---
 
 # 재산세 7월에 냈는데 9월에도 또 나오는 이유

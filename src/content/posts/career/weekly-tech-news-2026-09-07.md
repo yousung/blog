@@ -2,11 +2,11 @@
 title: "지난주 테크 뉴스 핵심 정리: GPT-6 아스트라, 제미나이 3.8, 반도체 관세 압박"
 slug: "weekly-tech-news-2026-09-07"
 author: "감성개발자"
-date: "2026-09-07"
+date: "2026-09-08"
 summary: "9월 첫째 주 IT 뉴스 정리. 오픈AI GPT-6 아스트라 출시와 Path to Astra 안전 프레임워크, 구글 제미나이 3.8 플래시와 정부 전용 사이버 모델, 앤스로픽의 350억 달러 람다 계약과 삼성 반도체 설계 적용, 크롬 V8 제로데이부터 JFrog·LiteLLM까지 이어진 보안 이슈, 삼성·SK 겨눈 미국 관세 압박과 중국 CXMT의 D램 추격까지 개발자 관점으로 짚었습니다."
 oneLineSummary: "AI는 컴퓨터를 쓰기 시작했고, 패치 골든타임은 하루로 줄었다"
 tags: ["AI", "보안", "기술트렌드", "클라우드", "개발"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-09-07"
 ---
 

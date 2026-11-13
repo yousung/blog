@@ -6,7 +6,7 @@ date: "2026-10-18"
 summary: "초등 아이 등하교 안전 장비 세 갈래 비교. 갤럭시 스마트태그2 실사용 장단점, 키즈폰 0원 마케팅의 2년 총비용 계산, 자급제 공기계와 패밀리링크 조합까지 아이 셋 키우는 개발자 아빠가 계산기 두드려 정리한 위치 확인 장비 선택 가이드입니다."
 oneLineSummary: "키즈폰은 기기값이 아니라 2년 총비용으로 봐야 한다. 저학년이라면 2만 원짜리 태그부터."
 tags: ["육아", "일상", "장비", "생활정보", "체크리스트", "제품리뷰"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/kids-phone-vs-smarttag-location-safety"
 ---
 

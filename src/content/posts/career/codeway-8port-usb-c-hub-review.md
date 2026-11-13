@@ -6,7 +6,7 @@ date: "2026-08-15"
 summary: "맥북 에어 M2의 포트 부족 문제를 코드웨이 8포트 USB-C 멀티허브로 해결한 6개월간의 실사용 후기. 4K 60Hz 듀얼 모니터, 기가비트 이더넷, PD 충전 패스스루까지 개발자 관점에서 솔직하게 평가합니다."
 oneLineSummary: "맥북 포트 부족을 해결한 코드웨이 8포트 USB-C 허브 6개월 실사용 리뷰"
 tags: ["제품리뷰", "장비", "재택근무", "개발환경", "모니터", "it"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/codeway-8port-usb-c-hub-review"
 ---
 

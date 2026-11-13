@@ -6,7 +6,7 @@ date: "2026-08-26"
 summary: "자바스크립트로 짜던 UI 로직을 모던 CSS로 걷어낸 실전 후기입니다. :has 부모 선택자, 컨테이너 쿼리, popover, scroll-snap, CSS 중첩, text-wrap balance까지 실무 도입 기준과 우선순위 함정 사례를 함께 정리했습니다."
 oneLineSummary: "그건 CSS로 안 되니까 JS로, 라는 반사신경이 이제 꽤 자주 틀린다."
 tags: ["CSS", "JavaScript", "HTML", "프론트엔드", "웹개발", "브라우저", "성능최적화"]
-status: "draft"
+status: "published"
 tistoryUrl: "https://lovizu.tistory.com/entry/modern-css-replaces-javascript"
 ---
 

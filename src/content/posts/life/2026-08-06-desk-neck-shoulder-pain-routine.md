@@ -8,6 +8,7 @@ summary: "하루 종일 컴퓨터 앞에 앉아 목과 어깨가 뻐근한 사�
 oneLineSummary: "목 어깨 통증은 바른 자세를 오래 버티는 문제보다 책상 세팅과 짧은 움직임을 반복하는 문제에 가깝다."
 tags: [라이프, 건강, 인체공학, 체크리스트, 습관]
 status: "published"
+tistoryUrl: "https://lovizu.tistory.com/entry/%EB%AA%A9-%EC%96%B4%EA%B9%A8-%ED%86%B5%EC%A6%9D-%EC%A4%84%EC%9D%B4%EB%8A%94-%EC%B1%85%EC%83%81-%EB%A3%A8%ED%8B%B4-%EC%9E%90%EC%84%B8%EB%B3%B4%EB%8B%A4-%EB%A8%BC%EC%A0%80-%EB%B0%94%EA%BF%80-5%EA%B0%80%EC%A7%80"
 ---
 
 # 목 어깨 통증 줄이는 책상 루틴: 자세보다 먼저 바꿀 5가지
