@@ -1,0 +1,5333 @@
+{
+  "/images/logo.png": {
+    "width": 600,
+    "height": 600,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/logo-400.webp"
+      }
+    ]
+  },
+  "/images/posts/12-factor-app/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/12-factor-app/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/12-factor-app/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/12-factor-app/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/2020-retrospective-q4-review/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/2020-retrospective-q4-review/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/2020-retrospective-q4-review/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/2020-retrospective-q4-review/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/2021-q1-retrospective/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/2021-q1-retrospective/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/2021-q1-retrospective/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/2021-q1-retrospective/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/ai-phone-memo-to-checklist-routine/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/ai-phone-memo-to-checklist-routine/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/ai-phone-memo-to-checklist-routine/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/ai-phone-memo-to-checklist-routine/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/ai/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/ai/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/ai/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/ai/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/air-fryer-buying-guide/img-01.jpg": {
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/air-fryer-buying-guide/img-01-400.webp"
+      }
+    ]
+  },
+  "/images/posts/air-print/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/air-print/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/air-print/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/air-print/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/alias/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/alias/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/alias/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/alias/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/android/img-01.png": {
+    "width": 1280,
+    "height": 333,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/android/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/android/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/android/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/android/img-02.png": {
+    "width": 406,
+    "height": 258,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/android/img-02-400.webp"
+      }
+    ]
+  },
+  "/images/posts/android/img-03.png": {
+    "width": 582,
+    "height": 546,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/android/img-03-400.webp"
+      }
+    ]
+  },
+  "/images/posts/android/img-04.png": {
+    "width": 3680,
+    "height": 1688,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/android/img-04-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/android/img-04-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/android/img-04-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/android/img-05.png": {
+    "width": 3436,
+    "height": 1624,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/android/img-05-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/android/img-05-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/android/img-05-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/aqarag4/img-02.jpg": {
+    "width": 1600,
+    "height": 2133,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/aqarag4/img-02-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/aqarag4/img-02-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/aqarag4/img-02-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/aqarag4/img-03.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/aqarag4/img-03-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/aqarag4/img-03-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/aqarag4/img-03-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/aqarag4/img-04.png": {
+    "width": 1600,
+    "height": 1065,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/aqarag4/img-04-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/aqarag4/img-04-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/aqarag4/img-04-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/asc-desc/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/asc-desc/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/asc-desc/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/asc-desc/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/astro-content-collections-frontmatter-checklist/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/astro-content-collections-frontmatter-checklist/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/astro-content-collections-frontmatter-checklist/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/astro-content-collections-frontmatter-checklist/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/astro-content-collections-frontmatter-checklist/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/astro-content-collections-frontmatter-checklist/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/astro-content-collections-frontmatter-checklist/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/astro-content-collections-frontmatter-checklist/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/aws-dms/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/aws-dms/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/aws-dms/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/aws-dms/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/aws-rds-proxy/img-01.png": {
+    "width": 1980,
+    "height": 240,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/aws-rds-proxy/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/aws-rds-proxy/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/aws-rds-proxy/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/aws-rds-proxy/img-02.png": {
+    "width": 2426,
+    "height": 234,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/aws-rds-proxy/img-02-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/aws-rds-proxy/img-02-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/aws-rds-proxy/img-02-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/aws-rds/img-01.png": {
+    "width": 2850,
+    "height": 1710,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/aws-rds/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/aws-rds/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/aws-rds/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/aws-rds/img-02.png": {
+    "width": 1666,
+    "height": 336,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/aws-rds/img-02-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/aws-rds/img-02-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/aws-rds/img-02-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/aws-rds/img-03.png": {
+    "width": 2958,
+    "height": 1080,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/aws-rds/img-03-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/aws-rds/img-03-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/aws-rds/img-03-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/aws-rds/img-04.png": {
+    "width": 3042,
+    "height": 526,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/aws-rds/img-04-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/aws-rds/img-04-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/aws-rds/img-04-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/aws-rds/img-05.png": {
+    "width": 1730,
+    "height": 1452,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/aws-rds/img-05-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/aws-rds/img-05-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/aws-rds/img-05-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/aws/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/aws/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/aws/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/aws/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/back-to-school-family-routine-7-days/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/back-to-school-family-routine-7-days/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/back-to-school-family-routine-7-days/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/back-to-school-family-routine-7-days/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/batch-edit-photo-exif-metadata/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/batch-edit-photo-exif-metadata/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/batch-edit-photo-exif-metadata/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/batch-edit-photo-exif-metadata/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/beat-mariadb-mysql/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/beat-mariadb-mysql/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/beat-mariadb-mysql/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/beat-mariadb-mysql/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/blog-monetization-coupang/img-01.png": {
+    "width": 1571,
+    "height": 746,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/blog-monetization-coupang/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/blog-monetization-coupang/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/blog-monetization-coupang/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/blog-monetization-coupang/img-02.png": {
+    "width": 306,
+    "height": 418,
+    "variants": []
+  },
+  "/images/posts/bottle-warmer-selection-guide/img-01.png": {
+    "width": 2562,
+    "height": 1202,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/bottle-warmer-selection-guide/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/bottle-warmer-selection-guide/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/bottle-warmer-selection-guide/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/bottle-warmer-selection-guide/img-02.png": {
+    "width": 1834,
+    "height": 1004,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/bottle-warmer-selection-guide/img-02-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/bottle-warmer-selection-guide/img-02-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/bottle-warmer-selection-guide/img-02-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/car-insurance-discount-guide/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/car-insurance-discount-guide/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/car-insurance-discount-guide/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/car-insurance-discount-guide/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/career-padding-employment-fraud/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/career-padding-employment-fraud/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/career-padding-employment-fraud/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/career-padding-employment-fraud/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/child-discipline-guide/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/child-discipline-guide/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/child-discipline-guide/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/child-discipline-guide/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/codepipeline-slack-bot/img-01.png": {
+    "width": 2470,
+    "height": 972,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/codepipeline-slack-bot/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/codepipeline-slack-bot/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/codepipeline-slack-bot/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/composer/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/composer/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/composer/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/composer/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/cors-error-fix-guide/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/cors-error-fix-guide/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/cors-error-fix-guide/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/cors-error-fix-guide/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/cors-error-fix-guide/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/cors-error-fix-guide/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/cors-error-fix-guide/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/cors-error-fix-guide/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/dart/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/dart/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/dart/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/dart/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/design-application-audit-checklist/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/design-application-audit-checklist/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/design-application-audit-checklist/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/design-application-audit-checklist/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/design-application-audit-checklist/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/design-application-audit-checklist/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/design-application-audit-checklist/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/design-application-audit-checklist/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/desk-neck-shoulder-pain-routine/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/desk-neck-shoulder-pain-routine/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/desk-neck-shoulder-pain-routine/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/desk-neck-shoulder-pain-routine/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/developer-health-exercise/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/developer-health-exercise/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/developer-health-exercise/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/developer-health-exercise/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/developer-identity-specialist-vs-generalist/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/developer-identity-specialist-vs-generalist/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/developer-identity-specialist-vs-generalist/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/developer-identity-specialist-vs-generalist/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/developer-monitor-guide/img-01.jpg": {
+    "width": 2500,
+    "height": 2500,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/developer-monitor-guide/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/developer-monitor-guide/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/developer-monitor-guide/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/developer-monitor-guide/img-02.jpg": {
+    "width": 808,
+    "height": 652,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/developer-monitor-guide/img-02-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/developer-monitor-guide/img-02-800.webp"
+      }
+    ]
+  },
+  "/images/posts/developer-monitor-guide/img-03.jpg": {
+    "width": 824,
+    "height": 768,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/developer-monitor-guide/img-03-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/developer-monitor-guide/img-03-800.webp"
+      }
+    ]
+  },
+  "/images/posts/developer-quarterly-goals/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/developer-quarterly-goals/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/developer-quarterly-goals/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/developer-quarterly-goals/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/digital-eye-strain-20-20-20/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/digital-eye-strain-20-20-20/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/digital-eye-strain-20-20-20/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/digital-eye-strain-20-20-20/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/docker-image-size-checklist/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/docker-image-size-checklist/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/docker-image-size-checklist/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/docker-image-size-checklist/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/docker-image-size-checklist/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/docker-image-size-checklist/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/docker-image-size-checklist/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/docker-image-size-checklist/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/docker-php/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/docker-php/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/docker-php/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/docker-php/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/docker-watchtower/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/docker-watchtower/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/docker-watchtower/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/docker-watchtower/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/drift/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/drift/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/drift/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/drift/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/ecs-fargate/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/ecs-fargate/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/ecs-fargate/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/ecs-fargate/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/empty/img-01.png": {
+    "width": 935,
+    "height": 186,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/empty/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/empty/img-01-800.webp"
+      }
+    ]
+  },
+  "/images/posts/env-secret-management-guide/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/env-secret-management-guide/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/env-secret-management-guide/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/env-secret-management-guide/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/env-secret-management-guide/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/env-secret-management-guide/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/env-secret-management-guide/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/env-secret-management-guide/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/erd/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/erd/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/erd/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/erd/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/euc-kr-utf-8/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/euc-kr-utf-8/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/euc-kr-utf-8/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/euc-kr-utf-8/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/eval/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/eval/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/eval/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/eval/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/fall-closet-cleanout-checklist/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/fall-closet-cleanout-checklist/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/fall-closet-cleanout-checklist/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/fall-closet-cleanout-checklist/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/feat-ollama/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/feat-ollama/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/feat-ollama/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/feat-ollama/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/feat/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/feat/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/feat/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/feat/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/fetch-timeout-retry-checklist/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/fetch-timeout-retry-checklist/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/fetch-timeout-retry-checklist/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/fetch-timeout-retry-checklist/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/fetch-timeout-retry-checklist/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/fetch-timeout-retry-checklist/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/fetch-timeout-retry-checklist/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/fetch-timeout-retry-checklist/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/flutter-air-quality-app-lesson/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/flutter-air-quality-app-lesson/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/flutter-air-quality-app-lesson/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/flutter-air-quality-app-lesson/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/flutter-android-sdk/img-01.jpg": {
+    "width": 1716,
+    "height": 1180,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/flutter-android-sdk/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/flutter-android-sdk/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/flutter-android-sdk/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/flutter-app-one-day-mvp/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/flutter-app-one-day-mvp/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/flutter-app-one-day-mvp/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/flutter-app-one-day-mvp/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/flutter-baby-app/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/flutter-baby-app/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/flutter-baby-app/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/flutter-baby-app/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/flutter-essential-libraries/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/flutter-essential-libraries/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/flutter-essential-libraries/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/flutter-essential-libraries/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/flutter-pokemon-app-getx/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/flutter-pokemon-app-getx/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/flutter-pokemon-app-getx/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/flutter-pokemon-app-getx/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/flutter/img-01.png": {
+    "width": 3282,
+    "height": 444,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/flutter/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/flutter/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/flutter/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/flutter/img-02.jpg": {
+    "width": 992,
+    "height": 252,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/flutter/img-02-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/flutter/img-02-800.webp"
+      }
+    ]
+  },
+  "/images/posts/freezed/img-01.jpg": {
+    "width": 1698,
+    "height": 2194,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/freezed/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/freezed/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/freezed/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/freezeddart-gdart/img-01.png": {
+    "width": 292,
+    "height": 122,
+    "variants": []
+  },
+  "/images/posts/freezeddart-gdart/img-02.png": {
+    "width": 1828,
+    "height": 132,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/freezeddart-gdart/img-02-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/freezeddart-gdart/img-02-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/freezeddart-gdart/img-02-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/freezeddart-gdart/img-03.png": {
+    "width": 762,
+    "height": 496,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/freezeddart-gdart/img-03-400.webp"
+      }
+    ]
+  },
+  "/images/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/img-01.png": {
+    "width": 1575,
+    "height": 292,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/getclierror/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/getclierror/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/getclierror/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/getclierror/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/git-merge-vs-rebase-when-to-use/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/git-merge-vs-rebase-when-to-use/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/git-merge-vs-rebase-when-to-use/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/git-merge-vs-rebase-when-to-use/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/git-merge-vs-rebase-when-to-use/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/git-merge-vs-rebase-when-to-use/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/git-merge-vs-rebase-when-to-use/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/git-merge-vs-rebase-when-to-use/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/github-actions-cache-checklist/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/github-actions-cache-checklist/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/github-actions-cache-checklist/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/github-actions-cache-checklist/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/github-actions-cache-checklist/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/github-actions-cache-checklist/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/github-actions-cache-checklist/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/github-actions-cache-checklist/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/gitignore/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/gitignore/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/gitignore/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/gitignore/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/goalng/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/goalng/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/goalng/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/goalng/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/good-developer-core-skills/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/good-developer-core-skills/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/good-developer-core-skills/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/good-developer-core-skills/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/http-cache-headers-guide/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/http-cache-headers-guide/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/http-cache-headers-guide/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/http-cache-headers-guide/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/http-cache-headers-guide/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/http-cache-headers-guide/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/http-cache-headers-guide/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/http-cache-headers-guide/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/http/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/http/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/http/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/http/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/input-textarea/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/input-textarea/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/input-textarea/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/input-textarea/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/intervention-image/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/intervention-image/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/intervention-image/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/intervention-image/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/ios-164-feat-pwa/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/ios-164-feat-pwa/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/ios-164-feat-pwa/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/ios-164-feat-pwa/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/iot/img-01.jpeg": {
+    "width": 1125,
+    "height": 2436,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/iot/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/iot/img-01-800.webp"
+      }
+    ]
+  },
+  "/images/posts/iot/img-02.jpg": {
+    "width": 3024,
+    "height": 4032,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/iot/img-02-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/iot/img-02-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/iot/img-02-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/iot/img-03.jpeg": {
+    "width": 1125,
+    "height": 2436,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/iot/img-03-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/iot/img-03-800.webp"
+      }
+    ]
+  },
+  "/images/posts/it/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/it/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/it/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/it/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/java-spring/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/java-spring/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/java-spring/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/java-spring/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/java-vs-php/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/java-vs-php/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/java-vs-php/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/java-vs-php/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/javascript-learning-books/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/javascript-learning-books/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/javascript-learning-books/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/javascript-learning-books/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/jetbrainphpstorm-tool-method/img-01.png": {
+    "width": 1070,
+    "height": 532,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/jetbrainphpstorm-tool-method/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/jetbrainphpstorm-tool-method/img-01-800.webp"
+      }
+    ]
+  },
+  "/images/posts/jetbrainphpstorm-tool-method/img-02.png": {
+    "width": 1506,
+    "height": 1046,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/jetbrainphpstorm-tool-method/img-02-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/jetbrainphpstorm-tool-method/img-02-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/jetbrainphpstorm-tool-method/img-02-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/jetbrainphpstorm-tool-method/img-03.jpg": {
+    "width": 225,
+    "height": 225,
+    "variants": []
+  },
+  "/images/posts/jetbrains/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/jetbrains/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/jetbrains/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/jetbrains/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/jquery-cdn-version-loading/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/jquery-cdn-version-loading/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/jquery-cdn-version-loading/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/jquery-cdn-version-loading/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/jwt-localstorage-vs-cookie/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/jwt-localstorage-vs-cookie/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/jwt-localstorage-vs-cookie/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/jwt-localstorage-vs-cookie/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/jwt-localstorage-vs-cookie/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/jwt-localstorage-vs-cookie/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/jwt-localstorage-vs-cookie/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/jwt-localstorage-vs-cookie/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/keyboard-driven-development/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/keyboard-driven-development/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/keyboard-driven-development/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/keyboard-driven-development/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/kids-activity-photo-record-routine/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/kids-activity-photo-record-routine/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/kids-activity-photo-record-routine/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/kids-activity-photo-record-routine/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/korean-tech-market-reality/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/korean-tech-market-reality/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/korean-tech-market-reality/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/korean-tech-market-reality/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/lambda-c-library-dependencies/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/lambda-c-library-dependencies/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/lambda-c-library-dependencies/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/lambda-c-library-dependencies/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-blog-architecture/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-blog-architecture/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-blog-architecture/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-blog-architecture/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-composer/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-composer/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-composer/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-composer/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-debugbar/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-debugbar/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-debugbar/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-debugbar/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-ide-helper-guide/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-ide-helper-guide/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-ide-helper-guide/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-ide-helper-guide/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-korean-localization/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-korean-localization/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-korean-localization/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-korean-localization/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-modern-dto-feat/img-01.png": {
+    "width": 809,
+    "height": 52,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-modern-dto-feat/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-modern-dto-feat/img-01-800.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-orm-paginate/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-orm-paginate/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-orm-paginate/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-orm-paginate/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-swagger/img-01.png": {
+    "width": 555,
+    "height": 765,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-swagger/img-01-400.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-swagger/img-02.jpg": {
+    "width": 2040,
+    "height": 1332,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-swagger/img-02-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-swagger/img-02-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-swagger/img-02-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-swagger/img-03.jpg": {
+    "width": 2926,
+    "height": 788,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-swagger/img-03-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-swagger/img-03-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-swagger/img-03-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-swagger/img-04.jpg": {
+    "width": 2920,
+    "height": 1612,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-swagger/img-04-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-swagger/img-04-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-swagger/img-04-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-swagger/img-05.jpg": {
+    "width": 2940,
+    "height": 1260,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-swagger/img-05-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-swagger/img-05-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-swagger/img-05-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-swagger/img-06.jpg": {
+    "width": 2864,
+    "height": 1318,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-swagger/img-06-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-swagger/img-06-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-swagger/img-06-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-swagger/img-07.jpg": {
+    "width": 2850,
+    "height": 1904,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-swagger/img-07-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-swagger/img-07-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-swagger/img-07-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel-swagger/img-08.jpg": {
+    "width": 2040,
+    "height": 1332,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel-swagger/img-08-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel-swagger/img-08-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel-swagger/img-08-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/laravel/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/laravel/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/laravel/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/laravel/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/legacy-2022-02-24-140/img-01.png": {
+    "width": 896,
+    "height": 636,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/legacy-2022-02-24-140/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/legacy-2022-02-24-140/img-01-800.webp"
+      }
+    ]
+  },
+  "/images/posts/legacy-2023-11-01-74/img-01.jpg": {
+    "width": 2534,
+    "height": 678,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/legacy-2023-11-01-74/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/legacy-2023-11-01-74/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/legacy-2023-11-01-74/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/link-component-feat-nextjs/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/link-component-feat-nextjs/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/link-component-feat-nextjs/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/link-component-feat-nextjs/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/m2-feat/img-01.png": {
+    "width": 1091,
+    "height": 713,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/m2-feat/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/m2-feat/img-01-800.webp"
+      }
+    ]
+  },
+  "/images/posts/mbti/img-01.jpg": {
+    "width": 750,
+    "height": 1094,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/mbti/img-01-400.webp"
+      }
+    ]
+  },
+  "/images/posts/microsoft-edge-chromium/img-01.png": {
+    "width": 1140,
+    "height": 505,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/microsoft-edge-chromium/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/microsoft-edge-chromium/img-01-800.webp"
+      }
+    ]
+  },
+  "/images/posts/ms-edge/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/ms-edge/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/ms-edge/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/ms-edge/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/naver-blog-xmlrpc-automation/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/naver-blog-xmlrpc-automation/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/naver-blog-xmlrpc-automation/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/naver-blog-xmlrpc-automation/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/neis-school-api/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/neis-school-api/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/neis-school-api/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/neis-school-api/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/nestjs-todo/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/nestjs-todo/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/nestjs-todo/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/nestjs-todo/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/ngrinder/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/ngrinder/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/ngrinder/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/ngrinder/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/node-feat-nvm/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/node-feat-nvm/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/node-feat-nvm/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/node-feat-nvm/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/nodejs-event-loop-blocking-checklist/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/nodejs-event-loop-blocking-checklist/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/nodejs-event-loop-blocking-checklist/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/nodejs-event-loop-blocking-checklist/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/nodejs-graceful-shutdown-checklist/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/nodejs-graceful-shutdown-checklist/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/nodejs-graceful-shutdown-checklist/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/nodejs-graceful-shutdown-checklist/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/offset-paginate/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/offset-paginate/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/offset-paginate/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/offset-paginate/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/offset-vs-cursor-pagination-hero.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/offset-vs-cursor-pagination-hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/offset-vs-cursor-pagination-hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/offset-vs-cursor-pagination-hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/oil-support-fund-use-before-deadline/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/oil-support-fund-use-before-deadline/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/oil-support-fund-use-before-deadline/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/oil-support-fund-use-before-deadline/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/openapi-contract-drift-checklist/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/openapi-contract-drift-checklist/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/openapi-contract-drift-checklist/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/openapi-contract-drift-checklist/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/orm-n-plus-one-query/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/orm-n-plus-one-query/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/orm-n-plus-one-query/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/orm-n-plus-one-query/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/orm-n-plus-one-query/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/orm-n-plus-one-query/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/orm-n-plus-one-query/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/orm-n-plus-one-query/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/packaging-website-case/img-01.png": {
+    "width": 1940,
+    "height": 1808,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/packaging-website-case/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/packaging-website-case/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/packaging-website-case/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/packaging-website-case/img-02.png": {
+    "width": 1944,
+    "height": 1418,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/packaging-website-case/img-02-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/packaging-website-case/img-02-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/packaging-website-case/img-02-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/pagination-offset-vs-cursor/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/pagination-offset-vs-cursor/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/pagination-offset-vs-cursor/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/pagination-offset-vs-cursor/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/pagination-offset-vs-cursor/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/pagination-offset-vs-cursor/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/pagination-offset-vs-cursor/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/pagination-offset-vs-cursor/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/pgsql/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/pgsql/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/pgsql/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/pgsql/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/php-71/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/php-71/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/php-71/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/php-71/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/php-version-feat-php-monitor/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/php-version-feat-php-monitor/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/php-version-feat-php-monitor/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/php-version-feat-php-monitor/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/php/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/php/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/php/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/php/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/php72/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/php72/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/php72/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/php72/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/phpstorm/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/phpstorm/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/phpstorm/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/phpstorm/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/portable-booster-baby-review/img-01.jpg": {
+    "width": 600,
+    "height": 600,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/portable-booster-baby-review/img-01-400.webp"
+      }
+    ]
+  },
+  "/images/posts/private/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/private/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/private/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/private/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/programming-language-selection/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/programming-language-selection/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/programming-language-selection/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/programming-language-selection/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/property-tax-july-september-budget/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/property-tax-july-september-budget/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/property-tax-july-september-budget/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/property-tax-july-september-budget/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/react-native-avd/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/react-native-avd/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/react-native-avd/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/react-native-avd/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/react-native-iso/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/react-native-iso/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/react-native-iso/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/react-native-iso/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/react-vs-vue/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/react-vs-vue/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/react-vs-vue/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/react-vs-vue/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/react/img-01.jpg": {
+    "width": 390,
+    "height": 512,
+    "variants": []
+  },
+  "/images/posts/recycling-sorting-home-checklist/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/recycling-sorting-home-checklist/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/recycling-sorting-home-checklist/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/recycling-sorting-home-checklist/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/refactoring-2-javascript-review/img-01.jpg": {
+    "width": 196,
+    "height": 196,
+    "variants": []
+  },
+  "/images/posts/remote-work-productivity-checklist/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/remote-work-productivity-checklist/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/remote-work-productivity-checklist/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/remote-work-productivity-checklist/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/repos/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/repos/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/repos/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/repos/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/school-lunch-app-development/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/school-lunch-app-development/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/school-lunch-app-development/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/school-lunch-app-development/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/seo/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/seo/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/seo/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/seo/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/serverless-image-optimizer/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/serverless-image-optimizer/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/serverless-image-optimizer/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/serverless-image-optimizer/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/shell-config-zsh-vim/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/shell-config-zsh-vim/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/shell-config-zsh-vim/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/shell-config-zsh-vim/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/speedtest/img-01.png": {
+    "width": 1770,
+    "height": 1306,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/speedtest/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/speedtest/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/speedtest/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/sql-index-when-to-add/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/sql-index-when-to-add/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/sql-index-when-to-add/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/sql-index-when-to-add/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/sql-index-when-to-add/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/sql-index-when-to-add/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/sql-index-when-to-add/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/sql-index-when-to-add/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/sqlite-production-checklist/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/sqlite-production-checklist/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/sqlite-production-checklist/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/sqlite-production-checklist/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/sqlite-production-checklist/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/sqlite-production-checklist/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/sqlite-production-checklist/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/sqlite-production-checklist/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/ssr-ssg-isr-feat-nextjs/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/ssr-ssg-isr-feat-nextjs/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/ssr-ssg-isr-feat-nextjs/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/ssr-ssg-isr-feat-nextjs/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/structured-logging-log-levels/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/structured-logging-log-levels/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/structured-logging-log-levels/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/structured-logging-log-levels/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/structured-logging-log-levels/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/structured-logging-log-levels/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/structured-logging-log-levels/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/structured-logging-log-levels/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/sweet-alert-alert/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/sweet-alert-alert/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/sweet-alert-alert/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/sweet-alert-alert/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/test-data-fixture-factory-checklist/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/test-data-fixture-factory-checklist/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/test-data-fixture-factory-checklist/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/test-data-fixture-factory-checklist/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/test-data-fixture-factory-checklist/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/test-data-fixture-factory-checklist/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/test-data-fixture-factory-checklist/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/test-data-fixture-factory-checklist/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/timezone-utc-handling/figure.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/timezone-utc-handling/figure-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/timezone-utc-handling/figure-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/timezone-utc-handling/figure-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/timezone-utc-handling/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/timezone-utc-handling/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/timezone-utc-handling/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/timezone-utc-handling/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/vr/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/vr/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/vr/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/vr/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-05-25/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-05-25/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-05-25/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-05-25/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-06-01/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-06-01/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-06-01/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-06-01/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-06-08/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-06-08/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-06-08/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-06-08/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-06-15/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-06-15/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-06-15/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-06-15/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-06-22/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-06-22/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-06-22/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-06-22/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-06-29/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-06-29/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-06-29/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-06-29/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-07-06/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-07-06/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-07-06/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-07-06/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-07-27/hero.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-07-27/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-07-27/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-07-27/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-08-03/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-08-03/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-08-03/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-08-03/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-08-10/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-08-10/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-08-10/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-08-10/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-08-17/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-08-17/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-08-17/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-08-17/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-08-24/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-08-24/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-08-24/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-08-24/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-08-31/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-08-31/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-08-31/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-08-31/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-09-07/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-09-07/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-09-07/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-09-07/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-09-28/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-09-28/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-09-28/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-09-28/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-10-05/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-10-05/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-10-05/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-10-05/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-10-12/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-10-12/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-10-12/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-10-12/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/weekly-tech-news-2026-10-19/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/weekly-tech-news-2026-10-19/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/weekly-tech-news-2026-10-19/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/weekly-tech-news-2026-10-19/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/what-this-blog-covers/hero.png": {
+    "width": 1200,
+    "height": 630,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/what-this-blog-covers/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/what-this-blog-covers/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/what-this-blog-covers/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/year-end-card-deduction-25-percent/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/year-end-card-deduction-25-percent/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/year-end-card-deduction-25-percent/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/year-end-card-deduction-25-percent/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/year-end-card-deduction-25-percent/hero.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/year-end-card-deduction-25-percent/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/year-end-card-deduction-25-percent/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/year-end-card-deduction-25-percent/hero-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/yulsoft-farm/img-01.png": {
+    "width": 1242,
+    "height": 2688,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/yulsoft-farm/img-01-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/yulsoft-farm/img-01-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/yulsoft-farm/img-01-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/yulsoft-farm/img-02.png": {
+    "width": 1242,
+    "height": 2688,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/yulsoft-farm/img-02-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/yulsoft-farm/img-02-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/yulsoft-farm/img-02-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/yulsoft-farm/img-03.png": {
+    "width": 1242,
+    "height": 2688,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/yulsoft-farm/img-03-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/yulsoft-farm/img-03-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/yulsoft-farm/img-03-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/yulsoft-farm/img-04.png": {
+    "width": 1242,
+    "height": 2688,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/yulsoft-farm/img-04-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/yulsoft-farm/img-04-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/yulsoft-farm/img-04-1200.webp"
+      }
+    ]
+  },
+  "/images/posts/zsh-vim/cover.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/posts/zsh-vim/cover-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/posts/zsh-vim/cover-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/posts/zsh-vim/cover-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/ai-junior-developer-cliff-debate/1.jpg": {
+    "width": 1200,
+    "height": 900,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/ai-junior-developer-cliff-debate/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/ai-junior-developer-cliff-debate/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/ai-junior-developer-cliff-debate/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/homeplanet-metal-laptop-stand-review/1.jpg": {
+    "width": 1600,
+    "height": 900,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/homeplanet-metal-laptop-stand-review/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/homeplanet-metal-laptop-stand-review/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/homeplanet-metal-laptop-stand-review/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/40s-morning-workout-3month-log/1.jpg": {
+    "width": 1600,
+    "height": 2400,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/40s-morning-workout-3month-log/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/40s-morning-workout-3month-log/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/40s-morning-workout-3month-log/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/40s-morning-workout-3month-log/2.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/40s-morning-workout-3month-log/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/40s-morning-workout-3month-log/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/40s-morning-workout-3month-log/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/40s-morning-workout-3month-log/3.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/40s-morning-workout-3month-log/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/40s-morning-workout-3month-log/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/40s-morning-workout-3month-log/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/1.jpg": {
+    "width": 1200,
+    "height": 900,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/2.jpg": {
+    "width": 1200,
+    "height": 900,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/3.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/ai-era-junior-developer-growth/1.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/ai-era-junior-developer-growth/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/ai-era-junior-developer-growth/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/ai-era-junior-developer-growth/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/ai-era-junior-developer-growth/2.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/ai-era-junior-developer-growth/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/ai-era-junior-developer-growth/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/ai-era-junior-developer-growth/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/ai-era-junior-developer-growth/3.jpg": {
+    "width": 1200,
+    "height": 864,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/ai-era-junior-developer-growth/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/ai-era-junior-developer-growth/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/ai-era-junior-developer-growth/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/ai-junior-developer-cliff-debate/2.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/ai-junior-developer-cliff-debate/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/ai-junior-developer-cliff-debate/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/ai-junior-developer-cliff-debate/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/ai-junior-developer-cliff-debate/3.jpg": {
+    "width": 1200,
+    "height": 797,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/ai-junior-developer-cliff-debate/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/ai-junior-developer-cliff-debate/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/ai-junior-developer-cliff-debate/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/aula-f87-dokgeomi-keyboard-review/1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/aula-f87-dokgeomi-keyboard-review/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/aula-f87-dokgeomi-keyboard-review/1-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/aula-f87-dokgeomi-keyboard-review/2.jpg": {
+    "width": 768,
+    "height": 1024,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/aula-f87-dokgeomi-keyboard-review/2-400.webp"
+      }
+    ]
+  },
+  "/images/tistory/aula-f87-dokgeomi-keyboard-review/3.jpg": {
+    "width": 768,
+    "height": 1024,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/aula-f87-dokgeomi-keyboard-review/3-400.webp"
+      }
+    ]
+  },
+  "/images/tistory/aula-f87-dokgeomi-keyboard-review/4.jpg": {
+    "width": 1024,
+    "height": 768,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/aula-f87-dokgeomi-keyboard-review/4-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/aula-f87-dokgeomi-keyboard-review/4-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/aws-cost-optimization-checklist/1.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/aws-cost-optimization-checklist/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/aws-cost-optimization-checklist/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/aws-cost-optimization-checklist/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/aws-cost-optimization-checklist/2.jpg": {
+    "width": 1200,
+    "height": 715,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/aws-cost-optimization-checklist/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/aws-cost-optimization-checklist/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/aws-cost-optimization-checklist/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/aws-cost-optimization-checklist/3.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/aws-cost-optimization-checklist/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/aws-cost-optimization-checklist/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/aws-cost-optimization-checklist/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/back-to-school-routine-recovery/1.jpg": {
+    "width": 1600,
+    "height": 2844,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/back-to-school-routine-recovery/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/back-to-school-routine-recovery/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/back-to-school-routine-recovery/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/back-to-school-routine-recovery/2.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/back-to-school-routine-recovery/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/back-to-school-routine-recovery/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/back-to-school-routine-recovery/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/back-to-school-routine-recovery/3.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/back-to-school-routine-recovery/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/back-to-school-routine-recovery/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/back-to-school-routine-recovery/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/back-to-school-routine-recovery/4.jpg": {
+    "width": 1600,
+    "height": 1070,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/back-to-school-routine-recovery/4-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/back-to-school-routine-recovery/4-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/back-to-school-routine-recovery/4-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/base-rate-3percent-household-check/1.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/base-rate-3percent-household-check/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/base-rate-3percent-household-check/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/base-rate-3percent-household-check/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/base-rate-3percent-household-check/2.jpg": {
+    "width": 1600,
+    "height": 2400,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/base-rate-3percent-household-check/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/base-rate-3percent-household-check/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/base-rate-3percent-household-check/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/base-rate-3percent-household-check/3.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/base-rate-3percent-household-check/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/base-rate-3percent-household-check/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/base-rate-3percent-household-check/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/chuseok-couple-fight-prevention/1.jpg": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/chuseok-couple-fight-prevention/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/chuseok-couple-fight-prevention/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/chuseok-couple-fight-prevention/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/chuseok-couple-fight-prevention/2.jpg": {
+    "width": 1200,
+    "height": 904,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/chuseok-couple-fight-prevention/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/chuseok-couple-fight-prevention/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/chuseok-couple-fight-prevention/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/chuseok-couple-fight-prevention/3.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/chuseok-couple-fight-prevention/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/chuseok-couple-fight-prevention/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/chuseok-couple-fight-prevention/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/codeway-8port-usb-c-hub-review/1.jpg": {
+    "width": 1024,
+    "height": 576,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/codeway-8port-usb-c-hub-review/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/codeway-8port-usb-c-hub-review/1-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/codeway-8port-usb-c-hub-review/2.jpg": {
+    "width": 1024,
+    "height": 576,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/codeway-8port-usb-c-hub-review/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/codeway-8port-usb-c-hub-review/2-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/codeway-8port-usb-c-hub-review/3.jpg": {
+    "width": 1024,
+    "height": 576,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/codeway-8port-usb-c-hub-review/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/codeway-8port-usb-c-hub-review/3-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/codeway-8port-usb-c-hub-review/4.jpg": {
+    "width": 1024,
+    "height": 576,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/codeway-8port-usb-c-hub-review/4-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/codeway-8port-usb-c-hub-review/4-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/docker-disk-full-overlay2-cleanup/1.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/docker-disk-full-overlay2-cleanup/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/docker-disk-full-overlay2-cleanup/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/docker-disk-full-overlay2-cleanup/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/docker-disk-full-overlay2-cleanup/2.jpg": {
+    "width": 1600,
+    "height": 898,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/docker-disk-full-overlay2-cleanup/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/docker-disk-full-overlay2-cleanup/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/docker-disk-full-overlay2-cleanup/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/docker-disk-full-overlay2-cleanup/3.jpg": {
+    "width": 1600,
+    "height": 2400,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/docker-disk-full-overlay2-cleanup/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/docker-disk-full-overlay2-cleanup/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/docker-disk-full-overlay2-cleanup/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/goal-midyear-review-2026/1.jpg": {
+    "width": 1200,
+    "height": 802,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/goal-midyear-review-2026/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/goal-midyear-review-2026/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/goal-midyear-review-2026/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/goal-midyear-review-2026/2.jpg": {
+    "width": 1200,
+    "height": 799,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/goal-midyear-review-2026/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/goal-midyear-review-2026/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/goal-midyear-review-2026/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/goal-midyear-review-2026/3.jpg": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/goal-midyear-review-2026/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/goal-midyear-review-2026/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/goal-midyear-review-2026/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/goal-midyear-review-2026/4.jpg": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/goal-midyear-review-2026/4-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/goal-midyear-review-2026/4-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/goal-midyear-review-2026/4-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/goal-midyear-review-2026/5.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/goal-midyear-review-2026/5-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/goal-midyear-review-2026/5-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/goal-midyear-review-2026/5-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/google-photos-vs-synology-nas-family-backup/1.jpg": {
+    "width": 1200,
+    "height": 810,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/google-photos-vs-synology-nas-family-backup/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/google-photos-vs-synology-nas-family-backup/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/google-photos-vs-synology-nas-family-backup/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/google-photos-vs-synology-nas-family-backup/2.jpg": {
+    "width": 1200,
+    "height": 900,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/google-photos-vs-synology-nas-family-backup/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/google-photos-vs-synology-nas-family-backup/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/google-photos-vs-synology-nas-family-backup/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/google-photos-vs-synology-nas-family-backup/3.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/google-photos-vs-synology-nas-family-backup/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/google-photos-vs-synology-nas-family-backup/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/google-photos-vs-synology-nas-family-backup/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/hansung-tfg27q14p2-qhd-monitor-review/1.jpg": {
+    "width": 1000,
+    "height": 750,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/hansung-tfg27q14p2-qhd-monitor-review/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/hansung-tfg27q14p2-qhd-monitor-review/1-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/hansung-tfg27q14p2-qhd-monitor-review/2.jpg": {
+    "width": 1000,
+    "height": 750,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/hansung-tfg27q14p2-qhd-monitor-review/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/hansung-tfg27q14p2-qhd-monitor-review/2-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/hansung-tfg27q14p2-qhd-monitor-review/3.jpg": {
+    "width": 750,
+    "height": 1000,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/hansung-tfg27q14p2-qhd-monitor-review/3-400.webp"
+      }
+    ]
+  },
+  "/images/tistory/home-assistant-smart-home-guide/1.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/home-assistant-smart-home-guide/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/home-assistant-smart-home-guide/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/home-assistant-smart-home-guide/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/home-assistant-smart-home-guide/2.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/home-assistant-smart-home-guide/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/home-assistant-smart-home-guide/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/home-assistant-smart-home-guide/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/home-assistant-smart-home-guide/3.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/home-assistant-smart-home-guide/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/home-assistant-smart-home-guide/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/home-assistant-smart-home-guide/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/homeplanet-metal-laptop-stand-review/2.jpg": {
+    "width": 1600,
+    "height": 900,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/homeplanet-metal-laptop-stand-review/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/homeplanet-metal-laptop-stand-review/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/homeplanet-metal-laptop-stand-review/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/homeplanet-metal-laptop-stand-review/3.jpg": {
+    "width": 1600,
+    "height": 900,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/homeplanet-metal-laptop-stand-review/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/homeplanet-metal-laptop-stand-review/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/homeplanet-metal-laptop-stand-review/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/homeplanet-metal-laptop-stand-review/4.jpg": {
+    "width": 1600,
+    "height": 900,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/homeplanet-metal-laptop-stand-review/4-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/homeplanet-metal-laptop-stand-review/4-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/homeplanet-metal-laptop-stand-review/4-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/jwt-vs-session-auth-practical-guide/1.jpg": {
+    "width": 1600,
+    "height": 1068,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/jwt-vs-session-auth-practical-guide/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/jwt-vs-session-auth-practical-guide/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/jwt-vs-session-auth-practical-guide/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/jwt-vs-session-auth-practical-guide/2.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/jwt-vs-session-auth-practical-guide/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/jwt-vs-session-auth-practical-guide/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/jwt-vs-session-auth-practical-guide/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/jwt-vs-session-auth-practical-guide/3.jpg": {
+    "width": 1600,
+    "height": 1044,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/jwt-vs-session-auth-practical-guide/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/jwt-vs-session-auth-practical-guide/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/jwt-vs-session-auth-practical-guide/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/kids-flu-shot-october-routine/1.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/kids-flu-shot-october-routine/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/kids-flu-shot-october-routine/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/kids-flu-shot-october-routine/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/kids-flu-shot-october-routine/2.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/kids-flu-shot-october-routine/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/kids-flu-shot-october-routine/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/kids-flu-shot-october-routine/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/kids-flu-shot-october-routine/3.jpg": {
+    "width": 1600,
+    "height": 2400,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/kids-flu-shot-october-routine/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/kids-flu-shot-october-routine/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/kids-flu-shot-october-routine/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/kids-phone-vs-smarttag-location-safety/1.jpg": {
+    "width": 1200,
+    "height": 1593,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/kids-phone-vs-smarttag-location-safety/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/kids-phone-vs-smarttag-location-safety/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/kids-phone-vs-smarttag-location-safety/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/kids-phone-vs-smarttag-location-safety/2.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/kids-phone-vs-smarttag-location-safety/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/kids-phone-vs-smarttag-location-safety/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/kids-phone-vs-smarttag-location-safety/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/kids-phone-vs-smarttag-location-safety/3.jpg": {
+    "width": 1200,
+    "height": 2121,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/kids-phone-vs-smarttag-location-safety/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/kids-phone-vs-smarttag-location-safety/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/kids-phone-vs-smarttag-location-safety/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/kids-study-desk-setup-gear/1.jpg": {
+    "width": 1400,
+    "height": 786,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/kids-study-desk-setup-gear/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/kids-study-desk-setup-gear/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/kids-study-desk-setup-gear/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/kids-study-desk-setup-gear/2.jpg": {
+    "width": 1400,
+    "height": 1400,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/kids-study-desk-setup-gear/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/kids-study-desk-setup-gear/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/kids-study-desk-setup-gear/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/kids-study-desk-setup-gear/3.jpg": {
+    "width": 1400,
+    "height": 2100,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/kids-study-desk-setup-gear/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/kids-study-desk-setup-gear/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/kids-study-desk-setup-gear/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/last-100-days-2026-three-goals/1.jpg": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/last-100-days-2026-three-goals/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/last-100-days-2026-three-goals/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/last-100-days-2026-three-goals/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/last-100-days-2026-three-goals/2.jpg": {
+    "width": 1200,
+    "height": 1500,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/last-100-days-2026-three-goals/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/last-100-days-2026-three-goals/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/last-100-days-2026-three-goals/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/last-100-days-2026-three-goals/3.jpg": {
+    "width": 1200,
+    "height": 802,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/last-100-days-2026-three-goals/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/last-100-days-2026-three-goals/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/last-100-days-2026-three-goals/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/logitech-lift-vertical-mouse-review/1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/logitech-lift-vertical-mouse-review/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/logitech-lift-vertical-mouse-review/1-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/logitech-lift-vertical-mouse-review/2.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/logitech-lift-vertical-mouse-review/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/logitech-lift-vertical-mouse-review/2-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/logitech-lift-vertical-mouse-review/3.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/logitech-lift-vertical-mouse-review/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/logitech-lift-vertical-mouse-review/3-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/logitech-lift-vertical-mouse-review/4.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/logitech-lift-vertical-mouse-review/4-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/logitech-lift-vertical-mouse-review/4-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/logitech-lift-vertical-mouse-review/5.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/logitech-lift-vertical-mouse-review/5-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/logitech-lift-vertical-mouse-review/5-800.webp"
+      }
+    ]
+  },
+  "/images/tistory/married-11years-fight-less-rules/1.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/married-11years-fight-less-rules/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/married-11years-fight-less-rules/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/married-11years-fight-less-rules/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/married-11years-fight-less-rules/2.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/married-11years-fight-less-rules/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/married-11years-fight-less-rules/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/married-11years-fight-less-rules/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/married-11years-fight-less-rules/3.jpg": {
+    "width": 1200,
+    "height": 1600,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/married-11years-fight-less-rules/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/married-11years-fight-less-rules/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/married-11years-fight-less-rules/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/married-11years-fight-less-rules/4.jpg": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/married-11years-fight-less-rules/4-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/married-11years-fight-less-rules/4-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/married-11years-fight-less-rules/4-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/modern-css-replaces-javascript/1.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/modern-css-replaces-javascript/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/modern-css-replaces-javascript/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/modern-css-replaces-javascript/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/modern-css-replaces-javascript/2.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/modern-css-replaces-javascript/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/modern-css-replaces-javascript/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/modern-css-replaces-javascript/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/modern-css-replaces-javascript/3.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/modern-css-replaces-javascript/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/modern-css-replaces-javascript/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/modern-css-replaces-javascript/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/mysql-index-not-used-execution-plan/1.jpg": {
+    "width": 1600,
+    "height": 900,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/mysql-index-not-used-execution-plan/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/mysql-index-not-used-execution-plan/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/mysql-index-not-used-execution-plan/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/mysql-index-not-used-execution-plan/2.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/mysql-index-not-used-execution-plan/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/mysql-index-not-used-execution-plan/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/mysql-index-not-used-execution-plan/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/mysql-index-not-used-execution-plan/3.jpg": {
+    "width": 1600,
+    "height": 1143,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/mysql-index-not-used-execution-plan/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/mysql-index-not-used-execution-plan/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/mysql-index-not-used-execution-plan/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/national-pension-40s-checklist/1.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/national-pension-40s-checklist/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/national-pension-40s-checklist/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/national-pension-40s-checklist/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/national-pension-40s-checklist/2.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/national-pension-40s-checklist/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/national-pension-40s-checklist/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/national-pension-40s-checklist/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/national-pension-40s-checklist/3.jpg": {
+    "width": 1200,
+    "height": 676,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/national-pension-40s-checklist/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/national-pension-40s-checklist/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/national-pension-40s-checklist/3-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/national-pension-40s-checklist/4.jpg": {
+    "width": 1200,
+    "height": 800,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/national-pension-40s-checklist/4-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/national-pension-40s-checklist/4-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/national-pension-40s-checklist/4-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/rds-too-many-connections-troubleshooting/1.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/rds-too-many-connections-troubleshooting/1-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/rds-too-many-connections-troubleshooting/1-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/rds-too-many-connections-troubleshooting/1-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/rds-too-many-connections-troubleshooting/2.jpg": {
+    "width": 1600,
+    "height": 898,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/rds-too-many-connections-troubleshooting/2-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/rds-too-many-connections-troubleshooting/2-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/rds-too-many-connections-troubleshooting/2-1200.webp"
+      }
+    ]
+  },
+  "/images/tistory/rds-too-many-connections-troubleshooting/3.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/images/tistory/rds-too-many-connections-troubleshooting/3-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/images/tistory/rds-too-many-connections-troubleshooting/3-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/images/tistory/rds-too-many-connections-troubleshooting/3-1200.webp"
+      }
+    ]
+  }
+}

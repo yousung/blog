@@ -12,6 +12,7 @@ const postDates = await readPostDates(new URL('./src/content/posts/', import.met
 export default defineConfig({
   site: 'https://blog.lovizu.com',
   output: 'static',
+  build: { inlineStylesheets: 'always' },
   integrations: [
     sitemap({
       filter: (page) => !page.includes('/search/') && !page.includes('/og/'),

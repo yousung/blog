@@ -109,16 +109,39 @@ const jsonLd =
 <!doctype html>
 <html lang="ko" data-theme="light">
   <head>
-    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;if(f&&f.parentNode){f.parentNode.insertBefore(j,f);}})(window,document,'script','dataLayer','GTM-WXL65FXF');</script>
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-R5MVZZDBHM"></script>
+    <meta charset="UTF-8" />
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-R5MVZZDBHM');
+      // Analytics starts on the first interaction; queued page-view configuration is preserved.
+      (function () {
+        var events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+        function removeListeners() {
+          events.forEach(function (event) { window.removeEventListener(event, loadAnalytics); });
+        }
+        function appendScript(id, src) {
+          if (document.getElementById(id)) return false;
+          var script = document.createElement('script');
+          script.id = id;
+          script.async = true;
+          script.src = src;
+          document.head.appendChild(script);
+          return true;
+        }
+        function loadAnalytics() {
+          removeListeners();
+          if (window.__lovizuAnalyticsLoaded) return;
+          window.__lovizuAnalyticsLoaded = true;
+          if (appendScript('lovizu-gtm', 'https://www.googletagmanager.com/gtm.js?id=GTM-WXL65FXF')) {
+            window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+          }
+          appendScript('lovizu-ga', 'https://www.googletagmanager.com/gtag/js?id=G-R5MVZZDBHM');
+        }
+        events.forEach(function (event) { window.addEventListener(event, loadAnalytics, { passive: true, once: true }); });
+      })();
     </script>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="google-adsense-account" content="ca-pub-1322828698634218" />
@@ -136,9 +159,6 @@ const jsonLd =
     <link rel="manifest" href={withBasePath('/site.webmanifest')} />
     <link rel="canonical" href={canonical.href} />
     <link rel="alternate" type="application/rss+xml" title={`${SITE_TITLE} RSS`} href={rssHref} />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" /></noscript>
 
     <meta property="og:type" content={type} />
     <meta property="og:locale" content="ko_KR" />
@@ -165,7 +185,41 @@ const jsonLd =
     {tags.map((tag) => <meta property="article:tag" content={tag} />)}
 
     <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-    {shouldLoadAdSense && <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1322828698634218" crossorigin="anonymous"></script>}
+    {shouldLoadAdSense && <script is:inline>
+      (function () {
+        var events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+        var observer;
+        function removeListeners() {
+          events.forEach(function (event) { window.removeEventListener(event, loadAds); });
+        }
+        function loadAds() {
+          removeListeners();
+          if (observer) observer.disconnect();
+          if (window.__lovizuAdsLoaded) return;
+          window.__lovizuAdsLoaded = true;
+          if (document.getElementById('lovizu-adsense')) return;
+          var script = document.createElement('script');
+          script.id = 'lovizu-adsense';
+          script.async = true;
+          script.crossOrigin = 'anonymous';
+          script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1322828698634218';
+          document.head.appendChild(script);
+        }
+        events.forEach(function (event) { window.addEventListener(event, loadAds, { passive: true, once: true }); });
+        // Also request the ad when a reader reaches the existing end-of-post slot.
+        window.addEventListener('DOMContentLoaded', function () {
+          if (window.__lovizuAdsLoaded) return;
+          var slot = document.querySelector('.ad-slot');
+          if (!slot || !('IntersectionObserver' in window)) return;
+          observer = new IntersectionObserver(function (entries) {
+            if (entries.some(function (entry) { return entry.isIntersecting; })) {
+              loadAds();
+            }
+          }, { rootMargin: '800px' });
+          observer.observe(slot);
+        }, { once: true });
+      })();
+    </script>}
   </head>
   <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXL65FXF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -362,15 +416,15 @@ const jsonLd =
     --bg-surface: #f9f9f9;
     --bg-muted: #f0f0f0;
     --text-primary: #08102b;
-    --text-secondary: #6c6f74;
-    --text-tertiary: #aaaaaa;
+    --text-secondary: #6a6d72;
+    --text-tertiary: #6a6d72;
     --text-inverse: #ffffff;
     --border-default: #e8eaf0;
     --border-strong: #08102b;
     --accent-primary: #482dff;
     --focus-ring: #482dff;
-    --font-display: 'Pretendard Variable', 'Pretendard', -apple-system, 'Apple SD Gothic Neo', system-ui, sans-serif;
-    --font-body: 'Pretendard Variable', 'Pretendard', -apple-system, 'Apple SD Gothic Neo', system-ui, sans-serif;
+    --font-display: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Segoe UI', 'Malgun Gothic', system-ui, sans-serif;
+    --font-body: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Segoe UI', 'Malgun Gothic', system-ui, sans-serif;
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
     --text-base: 1rem;

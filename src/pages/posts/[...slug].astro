@@ -175,6 +175,12 @@ const authorName = post.data.author === 'BLOA Team' ? '감성개발자' : post.d
     word-break: keep-all;
   }
 
+  /* Older inline captions use #777, which fails contrast on the article surface. */
+  .article-body :global([style*="color:#777"]),
+  .article-body :global([style*="color: #777"]) {
+    color: var(--text-secondary) !important;
+  }
+
   .post :global(ul > li::before) {
     content: '';
     position: absolute;

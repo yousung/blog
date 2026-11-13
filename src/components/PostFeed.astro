@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import TagList from './TagList.astro';
+import { getResponsiveImage } from '../lib/responsive-images';
 
 interface Props {
   posts: CollectionEntry<'posts'>[];
@@ -20,7 +21,6 @@ const getThumb = (post: CollectionEntry<'posts'>) =>
     .match(/!\[[^\]]*\]\(((?:\/|https?:\/\/)[^)\s]+)[^)]*\)|<img[^>]*\ssrc=["']((?:\/|https?:\/\/)[^"']+)["']/)
     ?.slice(1)
     .find(Boolean);
-const resolveSrc = (src: string) => (/^https?:\/\//.test(src) ? src : `${basePath}${src.replace(/^\//, '')}`);
 const normalize = (value: string) => value.toLocaleLowerCase('ko-KR').trim();
 const getSearchText = (post: CollectionEntry<'posts'>) =>
   normalize([post.data.title, post.data.oneLineSummary ?? '', post.data.summary ?? '', ...post.data.tags].join(' '));
@@ -33,11 +33,13 @@ const matchesQuery = (post: CollectionEntry<'posts'>, rawQuery: string) => {
   if (searchText.includes(normalizedQuery)) return true;
   return tokens.length > 1 && tokens.every((token) => searchText.includes(token));
 };
+const thumbnails = posts.map((post) => getResponsiveImage(getThumb(post) ?? DEFAULT_THUMB, 800, basePath));
 ---
 
 <ul class="post-list" aria-label={listLabel}>
-  {posts.map((post) => {
+  {posts.map((post, index) => {
     const thumb = getThumb(post);
+    const thumbnail = thumbnails[index];
     return (
     <li
       class="post-row"
@@ -46,7 +48,17 @@ const matchesQuery = (post: CollectionEntry<'posts'>, rawQuery: string) => {
     >
       <a class="card-link" href={postHref(post.data.slug)} aria-label={post.data.title}></a>
       <div class:list={['thumb', { 'thumb-fallback': !thumb }]}>
-        <img src={resolveSrc(thumb ?? DEFAULT_THUMB)} alt="" loading="lazy" decoding="async" />
+        <img
+          src={thumbnail.src}
+          srcset={thumbnail.srcset}
+          sizes="(min-width: 1104px) 496px, (min-width: 768px) calc((100vw - 64px) / 2), calc(100vw - 34px)"
+          width={thumbnail.width}
+          height={thumbnail.height}
+          alt=""
+          loading={!searchable && index < 2 ? 'eager' : 'lazy'}
+          fetchpriority={!searchable && index === 0 ? 'high' : undefined}
+          decoding="async"
+        />
       </div>
       <div class="row-inner">
         <h3>{post.data.title}</h3>
