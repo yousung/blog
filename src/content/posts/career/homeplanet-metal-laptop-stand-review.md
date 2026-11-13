@@ -14,7 +14,7 @@ tistoryUrl: "https://tistory.lovizu.com/entry/homeplanet-metal-laptop-stand-revi
 
 노트북 거치대를 검색하면 가격이 1만 원대부터 10만 원 가까이까지 벌어져 있습니다. 1만 원대 제품을 사도 괜찮은지, 아니면 돈을 조금 더 써야 하는지가 제일 먼저 드는 의문입니다. 그래서 그 가격대에서 후기가 가장 많이 쌓인 제품 하나를 골라, 실제 구매자들이 남긴 후기를 읽어 보기로 했습니다. 대상은 **홈플래닛 메탈 쿨링홀 노트북 거치대**입니다. 확인 시점 기준 후기가 8,943개로, 같은 검색 결과 첫 화면의 노트북 거치대 중 후기 수가 가장 많았습니다.
 
-<p style="text-align:center;"><a href="https://link.coupang.com/a/iEjrIYKPKK" target="_blank" referrerpolicy="unsafe-url"><img src="https://image8.coupangcdn.com/image/affiliate/banner/0dc8ba1e065f4b0fccc6cbe0a673244e@2x.jpg" alt="홈플래닛 메탈 쿨링홀 노트북 거치대, 실버, 1개" width="120" height="240"></a></p>
+<p style="text-align:center;"><a href="https://link.coupang.com/a/iEjrIYKPKK" target="_blank" rel="noopener sponsored" referrerpolicy="unsafe-url"><img src="https://thumbnail8.coupangcdn.com/thumbnails/remote/492x492ex/image/1025_amir_coupang_oct_80k/775a/91bd8d92c0aa9389e54f9c4fe8505e1e391cc69d2fa1ff3f255987623c09.jpg" alt="홈플래닛 메탈 쿨링홀 노트북 거치대 실버" width="492" style="max-width:100%;height:auto;"></a><br><span style="font-size:13px;color:#666;">홈플래닛 메탈 쿨링홀 노트북 거치대 (실버·블랙). 이미지를 누르면 쿠팡 구매 페이지로 이동합니다.</span></p>
 
 ## 먼저 밝혀 둘 것: 직접 써본 사용기가 아닙니다
 
@@ -162,7 +162,7 @@ tistoryUrl: "https://tistory.lovizu.com/entry/homeplanet-metal-laptop-stand-revi
 - 쿨링은 보조 효과로 보고, 발열이 심한 작업이면 팬 달린 제품을 따로 볼 것
 - 가격과 배송 조건은 구매 시점에 다시 확인할 것
 
-<p style="text-align:center;"><a href="https://link.coupang.com/a/iEjrIYKPKK" target="_blank" referrerpolicy="unsafe-url"><img src="https://image8.coupangcdn.com/image/affiliate/banner/0dc8ba1e065f4b0fccc6cbe0a673244e@2x.jpg" alt="홈플래닛 메탈 쿨링홀 노트북 거치대, 실버, 1개" width="120" height="240"></a></p>
+<p style="text-align:center;"><a href="https://link.coupang.com/a/iEjrIYKPKK" target="_blank" rel="noopener sponsored" referrerpolicy="unsafe-url"><img src="https://thumbnail8.coupangcdn.com/thumbnails/remote/492x492ex/image/1025_amir_coupang_oct_80k/775a/91bd8d92c0aa9389e54f9c4fe8505e1e391cc69d2fa1ff3f255987623c09.jpg" alt="홈플래닛 메탈 쿨링홀 노트북 거치대 실버" width="492" style="max-width:100%;height:auto;"></a><br><span style="font-size:13px;color:#666;">홈플래닛 메탈 쿨링홀 노트북 거치대 (실버·블랙). 이미지를 누르면 쿠팡 구매 페이지로 이동합니다.</span></p>
 
 <p style="font-size:13px;color:#666;">가격·후기 수 확인 시점: 2026-11-14 00시. 제품 이미지는 쿠팡 파트너스 공식 제공 이미지입니다.<br>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
 
