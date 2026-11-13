@@ -1,102 +1,124 @@
 ---
+import { ADSENSE_CLIENT } from '../../consts';
+
 interface Props {
-  variant: 'top' | 'feed' | 'article' | 'sidebar' | 'bottom';
-  label?: string;
+  /** AdSense ad unit slot id */
+  slot: string;
+  /** display: responsive display unit, in-article: fluid in-article unit, multiplex: autorelaxed grid */
+  variant: 'display' | 'in-article' | 'multiplex';
+  /**
+   * in-article only: move this ad block in front of the Nth <h2> inside `.article-body`
+   * before the ad is requested. If the body has fewer headings, the ad stays where it was rendered.
+   */
+  beforeHeading?: number;
 }
 
-const { variant, label = '광고' } = Astro.props as Props;
-const adSenseClient = import.meta.env.PUBLIC_ADSENSE_CLIENT?.trim() ?? '';
-const adSlots: Record<Props['variant'], string> = {
-  top: import.meta.env.PUBLIC_ADSENSE_SLOT_TOP?.trim() ?? '',
-  feed: import.meta.env.PUBLIC_ADSENSE_SLOT_FEED?.trim() ?? '',
-  article: import.meta.env.PUBLIC_ADSENSE_SLOT_ARTICLE?.trim() ?? '',
-  sidebar: import.meta.env.PUBLIC_ADSENSE_SLOT_SIDEBAR?.trim() ?? '',
-  bottom: import.meta.env.PUBLIC_ADSENSE_SLOT_BOTTOM?.trim() ?? ''
-};
-const adSlot = adSlots[variant];
-const canRenderAd = adSenseClient.length > 0 && adSlot.length > 0;
+const { slot, variant, beforeHeading } = Astro.props;
+const id = `ad-${slot}`;
 ---
 
-<aside class={`ad-slot ad-slot--${variant}`} aria-label={`${label} 슬롯`}>
-  <span class="ad-slot__badge">{label}</span>
-  {
-    canRenderAd ? (
-      <>
-        <ins
-          class="adsbygoogle"
-          style="display:block"
-          data-ad-client={adSenseClient}
-          data-ad-slot={adSlot}
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        ></ins>
-        <script is:inline>{`(adsbygoogle = window.adsbygoogle || []).push({});`}</script>
-      </>
-    ) : (
-      <p class="ad-slot__copy">광고 영역</p>
-    )
-  }
+<aside class={`ad-slot ad-slot--${variant}`} id={id} aria-label="광고">
+  <span class="ad-slot__label">광고</span>
+  {variant === 'display' && (
+    <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-client={ADSENSE_CLIENT}
+      data-ad-slot={slot}
+      data-ad-format="auto"
+      data-full-width-responsive="false"
+    ></ins>
+  )}
+  {variant === 'in-article' && (
+    <ins
+      class="adsbygoogle"
+      style="display:block; text-align:center;"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client={ADSENSE_CLIENT}
+      data-ad-slot={slot}
+    ></ins>
+  )}
+  {variant === 'multiplex' && (
+    <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-format="autorelaxed"
+      data-matched-content-ui-type="image_stacked,image_stacked"
+      data-matched-content-rows-num="3,2"
+      data-matched-content-columns-num="2,4"
+      data-ad-client={ADSENSE_CLIENT}
+      data-ad-slot={slot}
+    ></ins>
+  )}
 </aside>
+<script is:inline define:vars={{ id, beforeHeading }}>
+  (function () {
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (beforeHeading) {
+      var headings = document.querySelectorAll('.article-body h2');
+      var target = headings[beforeHeading - 1];
+      if (target && target.parentNode) target.parentNode.insertBefore(el, target);
+    }
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      el.hidden = true;
+    }
+  })();
+</script>
 
 <style>
   .ad-slot {
     box-sizing: border-box;
     width: 100%;
-    margin: 0;
-    border: 1px dashed var(--ad-slot-border);
+    margin: var(--space-8) 0;
+    padding: 0.6rem clamp(0.6rem, 2vw, 1rem) clamp(0.75rem, 2vw, 1rem);
+    border: 1px solid var(--border-default);
     border-radius: var(--radius-md);
-    background: var(--ad-slot-bg);
-    color: var(--text-secondary);
-    display: grid;
-    align-content: center;
-    justify-items: center;
-    gap: var(--space-2);
-    text-align: center;
-    padding: var(--space-4);
-  }
-
-  .ad-slot__badge {
-    display: inline-flex;
-    min-height: 44px;
-    align-items: center;
-    border-radius: 999px;
-    border: 1px solid var(--ad-slot-border);
     background: var(--bg-surface);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    min-height: 120px;
+  }
+
+  .ad-slot__label {
+    display: block;
+    margin-bottom: 0.45rem;
     color: var(--text-secondary);
-    padding: 0 var(--space-4);
     font-size: var(--text-xs);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
     font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
   }
 
-  .ad-slot__copy {
-    margin: 0;
-    font-size: var(--text-sm);
-  }
-
-  .ad-slot--top {
-    min-height: 90px;
-  }
-
-  .ad-slot--feed,
-  .ad-slot--article {
-    min-height: 280px;
-  }
-
-  .ad-slot--bottom {
-    min-height: 250px;
-  }
-
-  .ad-slot--sidebar {
-    min-height: 600px;
-    width: 300px;
+  .ad-slot ins.adsbygoogle {
+    width: 100%;
     max-width: 100%;
+    margin-inline: auto;
   }
 
-  @media (min-width: 768px) {
-    .ad-slot--top {
-      min-height: 120px;
+  .ad-slot--multiplex {
+    min-height: 300px;
+  }
+
+  .ad-slot ins.adsbygoogle[data-ad-status='unfilled'] {
+    display: none !important;
+  }
+
+  .ad-slot:has(ins.adsbygoogle[data-ad-status='unfilled']) {
+    display: none;
+  }
+
+  @media (max-width: 560px) {
+    .ad-slot {
+      margin: var(--space-6) 0;
+      min-height: 280px;
+    }
+
+    .ad-slot--multiplex {
+      min-height: 360px;
     }
   }
 </style>
