@@ -1,5 +1,5 @@
 ---
-title: "fetch 요청 취소와 타임아웃, AbortController 하나로 끝내기 (15년차 개발자의 실전 패턴과 함정 3가지)"
+title: "fetch 요청 취소와 타임아웃, AbortController 하나로 끝내기 (11년차 개발자의 실전 패턴과 함정 3가지)"
 slug: "abortcontroller-fetch-timeout-cancel-patterns"
 author: "감성개발자"
 date: "2026-10-16"
@@ -12,9 +12,9 @@ tistoryUrl: "https://lovizu.tistory.com/entry/abortcontroller-fetch-timeout-canc
 
 지난달에 사내 어드민 화면에서 묘한 버그 제보를 받았다. 검색창에 "김"까지 치고 "김철수"를 마저 입력했는데, 결과 목록에는 "김"으로 검색한 결과가 떠 있다는 것이다. 재현도 잘 안 되고, 새로고침하면 멀쩡하다. 네트워크 탭을 한참 들여다보고서야 원인을 찾았다. 먼저 보낸 "김" 요청이 늦게 도착해서, 나중에 보낸 "김철수" 응답을 덮어쓰고 있었다. 전형적인 레이스 컨디션이다.
 
-이 문제의 정석 해법이 AbortController다. 이름은 다들 안다. 그런데 15년 일하면서 느낀 건, 이걸 "fetch 취소하는 거"라고만 알고 실제로는 안 쓰는 개발자가 생각보다 많다는 점이다. 요즘 자바스크립트에서 AbortController는 요청 취소를 넘어 타임아웃, 이벤트 리스너 정리까지 커버하는 범용 취소 도구가 됐다. 오늘은 내가 실무에서 실제로 쓰는 패턴 위주로 정리한다.
+이 문제의 정석 해법이 AbortController다. 이름은 다들 안다. 그런데 10년 넘게 일하면서 느낀 건, 이걸 "fetch 취소하는 거"라고만 알고 실제로는 안 쓰는 개발자가 생각보다 많다는 점이다. 요즘 자바스크립트에서 AbortController는 요청 취소를 넘어 타임아웃, 이벤트 리스너 정리까지 커버하는 범용 취소 도구가 됐다. 오늘은 내가 실무에서 실제로 쓰는 패턴 위주로 정리한다.
 
-![fetch 요청 취소와 타임아웃, AbortController 하나로 끝내기 (15년차 개발자의 실전 패턴과 함정 3가지)](/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/1.jpg)
+![fetch 요청 취소와 타임아웃, AbortController 하나로 끝내기 (11년차 개발자의 실전 패턴과 함정 3가지)](/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/1.jpg)
 
 ## 기본기: 컨트롤러 하나, 시그널 하나, 그리고 일회용이라는 사실
 
@@ -78,7 +78,7 @@ AbortSignal.timeout()은 지정 시간이 지나면 알아서 abort되는 시그
 
 또 하나, 이 타임아웃은 경과 시간이 아니라 "활성 시간" 기준이다. 탭이 bfcache에 들어가거나 워커가 일시 중단되면 타이머도 같이 멈춘다. 사용자가 다른 탭에 갔다 왔다고 애꿎은 타임아웃이 터지지 않는다는 뜻이라, 대부분의 경우 오히려 장점이다.
 
-![fetch 요청 취소와 타임아웃, AbortController 하나로 끝내기 (15년차 개발자의 실전 패턴과 함정 3가지)](/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/2.jpg)
+![fetch 요청 취소와 타임아웃, AbortController 하나로 끝내기 (11년차 개발자의 실전 패턴과 함정 3가지)](/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/2.jpg)
 
 ## 검색 자동완성 레이스 컨디션, 이렇게 끊는다
 
@@ -129,7 +129,7 @@ const res = await fetch(url, {
 
 내가 AbortController를 가장 요긴하게 쓰는 곳은 사실 fetch가 아니라 이벤트 리스너 정리다. addEventListener 옵션에 signal을 넘기면, 그 시그널이 abort될 때 **리스너가 자동으로 제거된다.** removeEventListener를 하나하나 짝 맞춰 호출할 필요가 없다.
 
-![fetch 요청 취소와 타임아웃, AbortController 하나로 끝내기 (15년차 개발자의 실전 패턴과 함정 3가지)](/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/3.jpg)
+![fetch 요청 취소와 타임아웃, AbortController 하나로 끝내기 (11년차 개발자의 실전 패턴과 함정 3가지)](/images/tistory/abortcontroller-fetch-timeout-cancel-patterns/3.jpg)
 
 ```javascript
 const controller = new AbortController();
