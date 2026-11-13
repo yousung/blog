@@ -14,14 +14,17 @@ tistoryUrl: "https://tistory.lovizu.com/entry/homeplanet-metal-laptop-stand-revi
 
 노트북 거치대, 막상 사려고 보면 은근히 고민됩니다. 1만 원대부터 10만 원 가까이까지 가격이 쭉 늘어서 있는데, 싼 걸 사면 금방 흔들리거나 내려앉을 것 같고, 비싼 걸 사자니 받침대 하나에 그만큼 쓸 일인가 싶거든요. 그래서 1만 원대에서 후기가 제일 많이 쌓인 제품 하나를 붙잡고, 실제로 산 사람들이 뭐라고 하는지 쭉 읽어 봤습니다. 주인공은 **홈플래닛 메탈 쿨링홀 노트북 거치대**입니다. 후기가 8,943개로, 같은 검색 결과 첫 화면의 거치대 중 가장 많았습니다.
 
-[](https://link.coupang.com/a/iEjrIYKPKK)  
-홈플래닛 메탈 쿨링홀 노트북 거치대 (실버·블랙). 이미지를 누르면 쿠팡 구매 페이지로 이동합니다.
+<p style="text-align:center;"><a href="https://link.coupang.com/a/iEjrIYKPKK" target="_blank" rel="noopener sponsored" referrerpolicy="unsafe-url"><img src="https://thumbnail8.coupangcdn.com/thumbnails/remote/492x492ex/image/1025_amir_coupang_oct_80k/775a/91bd8d92c0aa9389e54f9c4fe8505e1e391cc69d2fa1ff3f255987623c09.jpg" alt="홈플래닛 메탈 쿨링홀 노트북 거치대 실버" width="492" style="max-width:100%;height:auto;"></a><br><span style="font-size:13px;color:#666;">홈플래닛 메탈 쿨링홀 노트북 거치대 (실버·블랙). 이미지를 누르면 쿠팡 구매 페이지로 이동합니다.</span></p>
 
 ## 후기 30개를 이렇게 읽었습니다
 
 후기가 8천 개가 넘으니 다 읽을 수는 없고, 베스트순 상위 30개를 처음부터 끝까지 꼼꼼히 봤습니다. 2026년 2월부터 11월 사이에 올라온 글들이고, 실버와 블랙을 산 사람이 섞여 있습니다. 판매자는 전부 쿠팡(주)로 된 같은 상품 페이지입니다.
 
 읽으면서 원칙은 하나 정했습니다. "가성비 최고", "강추" 같은 감탄은 일단 넘기고, 상황이 구체적으로 적힌 말만 모으자는 거였죠. "2.5kg 게이밍 노트북을 올려도 안 내려앉는다", "처음 각도 맞출 때 힘이 꽤 든다" 같은 문장들이요. 그리고 한 명만 한 얘기는 참고로만 두고, 서너 명 이상이 똑같이 한 얘기만 장점이나 단점으로 올렸습니다. 그래야 우연히 좋았던 사람, 우연히 운이 나빴던 사람 얘기에 휘둘리지 않으니까요.
+
+![돋보기로 별점 후기 카드를 살펴보는 일러스트](/images/tistory/homeplanet-metal-laptop-stand-review/3.jpg)
+
+<p style="text-align:center;font-size:13px;color:#666;">후기 수천 개 중에서 구체적인 얘기만 골라 읽었습니다 (일러스트, AI 생성 이미지)</p>
 
 ## 일단 기본 정보부터
 
@@ -48,6 +51,10 @@ tistoryUrl: "https://tistory.lovizu.com/entry/homeplanet-metal-laptop-stand-revi
 
 왜 샀냐는 질문에 대한 답은 거의 다 거북목, 어깨 결림이었습니다. 노트북을 책상에 그냥 놓으면 화면이 눈보다 한참 아래 있으니 고개가 자꾸 숙여지잖아요. 거치대를 쓰고 나서 "고개를 덜 숙이게 됐다", "두세 시간 일해도 목이 덜 뻐근하다"는 말이 정말 많았습니다. 솔직히 이건 이 제품만의 장점이라기보다 화면 높이를 올린 효과라서, 다른 거치대를 써도 비슷하게 느낄 부분이긴 합니다. 그래도 "거치대 하나로 이렇게 달라질 줄 몰랐다"는 반응이 반복되는 걸 보면, 아직 노트북을 책상에 그냥 두고 쓰는 분이라면 체감이 꽤 클 겁니다.
 
+![노트북을 책상에 둘 때와 거치대로 올렸을 때의 자세 비교 일러스트](/images/tistory/homeplanet-metal-laptop-stand-review/1.jpg)
+
+<p style="text-align:center;font-size:13px;color:#666;">화면 높이만 올려도 고개 숙이는 자세가 달라집니다 (일러스트, AI 생성 이미지)</p>
+
 ### 3. 1만 원대치고 기본기가 탄탄하다
 
 바닥과 상판에 미끄럼 방지 패드가 붙어 있고, 앞쪽에 노트북이 미끄러지지 않게 받쳐 주는 턱이 있다는 얘기가 여러 번 나왔습니다. 노트북 닿는 면에 패드가 있어서 바닥 긁힘 걱정이 덜하다는 분도 있었고, 모서리가 둥글게 마감돼 손 다칠 일이 없다는 분도 있었어요. 이런 디테일이 빠지면 매일 은근히 신경 쓰이는데, 30개 후기 중에 이 부분 불만은 없었습니다.
@@ -69,6 +76,10 @@ tistoryUrl: "https://tistory.lovizu.com/entry/homeplanet-metal-laptop-stand-revi
 ### "쿨링"은 팬이 아니라 구멍이다
 
 이름에 쿨링이 들어가 있어서 오해하기 쉬운데, 팬이 달린 제품은 아닙니다. 상판에 구멍을 뚫어서 노트북 바닥과 책상 사이로 바람이 통하게 한 구조예요. "열이 확실히 덜하다"는 사람과 "냉각보다는 높이 맞추는 용도로 보는 게 맞다"는 사람이 같이 있었습니다. 바닥을 띄우는 것만으로 책상에 바로 놓을 때보단 나을 수 있지만, 게임이나 무거운 빌드 돌릴 때 열을 확 잡아 줄 거라고 기대하면 실망할 수 있어요.
+
+![타공 거치대 아래로 공기가 지나가는 모습 일러스트](/images/tistory/homeplanet-metal-laptop-stand-review/4.jpg)
+
+<p style="text-align:center;font-size:13px;color:#666;">쿨링홀은 팬이 아니라 바닥 아래로 공기가 지나갈 길을 내 주는 구조입니다 (일러스트, AI 생성 이미지)</p>
 
 노트북마다 바람 들어가는 위치가 다르다는 것도 알아 두면 좋습니다. 바닥으로 공기를 빨아들이는 노트북이면 바닥을 띄우는 것 자체가 도움이 되고, 옆이나 뒤로 공기가 드나드는 노트북이면 쿨링홀 효과는 더 작을 수 있어요. 노트북을 한 번 뒤집어서 바닥에 통풍구가 있는지 보면 기대치를 정하기 쉽습니다.
 
@@ -126,6 +137,10 @@ tistoryUrl: "https://tistory.lovizu.com/entry/homeplanet-metal-laptop-stand-revi
 
 생각해 보면 당연합니다. 화면을 눈높이 가까이 올리면 노트북 키보드도 같이 올라가고 기울어지죠. 그 상태로 노트북 키보드를 치면 손목을 꺾고 팔을 들어야 해서, 목이 편해진 만큼 손목과 어깨가 고생합니다. 노트북 하나로는 화면과 키보드를 둘 다 편한 위치에 둘 수가 없는 거예요.
 
+![거치대와 외장 키보드·마우스로 꾸민 책상 일러스트](/images/tistory/homeplanet-metal-laptop-stand-review/2.jpg)
+
+<p style="text-align:center;font-size:13px;color:#666;">거치대 + 외장 키보드·마우스 조합이어야 목도 손목도 편합니다 (일러스트, AI 생성 이미지)</p>
+
 그래서 노트북을 하루 몇 시간씩 쓰는 분이라면 계산을 이렇게 하는 게 맞습니다. 거치대 1만 6천 원에 외장 키보드와 마우스까지 더해야 목도 손목도 편한 구성이 완성됩니다. 집에 남는 키보드가 있으면 거치대만 사면 되고, 없다면 거치대보다 키보드 예산을 먼저 잡는 게 낫습니다. 반대로 영상 보기나 화상 회의처럼 키보드를 거의 안 치는 용도라면 거치대만으로도 충분하고요.
 
 키보드를 고를 때도 거창할 필요는 없습니다. 거치대 앞 공간에 들어가는 크기면 되고, 책상이 좁다면 숫자 키패드가 없는 작은 배열이 거치대랑 같이 두기 편합니다. 마우스까지 무선으로 맞추면 노트북 주변 선이 줄어서 책상이 한결 정리돼 보여요. 후기에서도 거치대를 들이면서 책상 정리까지 됐다는 말도 있었습니다.
@@ -164,8 +179,7 @@ tistoryUrl: "https://tistory.lovizu.com/entry/homeplanet-metal-laptop-stand-revi
 - 쿨링은 덤으로 보고, 발열이 심한 작업이면 팬 달린 제품 따로 보기
 - 가격과 배송 조건은 살 때 다시 확인하기
 
-[](https://link.coupang.com/a/iEjrIYKPKK)  
-홈플래닛 메탈 쿨링홀 노트북 거치대 (실버·블랙). 이미지를 누르면 쿠팡 구매 페이지로 이동합니다.
+<p style="text-align:center;"><a href="https://link.coupang.com/a/iEjrIYKPKK" target="_blank" rel="noopener sponsored" referrerpolicy="unsafe-url"><img src="https://thumbnail8.coupangcdn.com/thumbnails/remote/492x492ex/image/1025_amir_coupang_oct_80k/775a/91bd8d92c0aa9389e54f9c4fe8505e1e391cc69d2fa1ff3f255987623c09.jpg" alt="홈플래닛 메탈 쿨링홀 노트북 거치대 실버" width="492" style="max-width:100%;height:auto;"></a><br><span style="font-size:13px;color:#666;">홈플래닛 메탈 쿨링홀 노트북 거치대 (실버·블랙). 이미지를 누르면 쿠팡 구매 페이지로 이동합니다.</span></p>
 
 <p style="font-size:13px;color:#666;">가격·후기 수 확인 시점: 2026-11-14 00시. 구매자 후기 내용은 판매 페이지 베스트순 후기 30개를 요약한 것입니다.<br>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
 
