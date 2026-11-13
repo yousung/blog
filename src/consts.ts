@@ -1,5 +1,5 @@
 export const SITE_TITLE = '감성개발자의 Blog';
-export const SITE_DESCRIPTION = '기술과 실무 경험을 기록하는 SEO 기반 개발 블로그.';
+export const SITE_DESCRIPTION = '11년 차 개발자 감성개발자의 개발 실무·장비 리뷰·육아/일상·재테크 기록.';
 export const SITE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://blog.lovizu.com';
 
 // Google AdSense (publisher account shared with tv-blog; site lovizu.com covers blog.lovizu.com)

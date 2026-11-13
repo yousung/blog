@@ -1,5 +1,6 @@
 ---
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from '../consts';
+import { getPublicImageMetadata } from '../lib/public-images.mjs';
 
 interface Props {
   title?: string;
@@ -37,6 +38,7 @@ const withBasePath = (value: string) => {
   return `${basePath}${normalized}`;
 };
 const ogImage = new URL(withBasePath(image ?? '/og/site.png'), siteOrigin);
+const ogImageSize = await getPublicImageMetadata(ogImage.origin === siteOrigin.origin ? ogImage.pathname : undefined);
 const ogImageAlt = imageAlt ?? `${pageTitle} 대표 이미지`;
 const socialTitle = type === 'article' ? title : pageTitle;
 const imagePathname = ogImage.pathname.toLowerCase();
@@ -76,11 +78,12 @@ const jsonLd =
           name: SITE_TITLE,
           url: websiteUrl
         },
-        author: author ? { '@type': 'Person', name: author } : undefined,
+        author: { '@type': 'Person', name: author ?? '감성개발자' },
         publisher: {
           '@type': 'Organization',
           name: SITE_TITLE,
-          url: websiteUrl
+          url: websiteUrl,
+          logo: { '@type': 'ImageObject', url: new URL('/icon-512.png', siteOrigin).href }
         },
         keywords: tags.length > 0 ? tags.join(', ') : undefined,
         datePublished: publishedTime,
@@ -133,7 +136,9 @@ const jsonLd =
     <link rel="manifest" href={withBasePath('/site.webmanifest')} />
     <link rel="canonical" href={canonical.href} />
     <link rel="alternate" type="application/rss+xml" title={`${SITE_TITLE} RSS`} href={rssHref} />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" /></noscript>
 
     <meta property="og:type" content={type} />
     <meta property="og:locale" content="ko_KR" />
@@ -144,8 +149,8 @@ const jsonLd =
     <meta property="og:image" content={ogImage.href} />
     <meta property="og:image:secure_url" content={ogImage.href} />
     <meta property="og:image:type" content={ogImageType} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    {ogImageSize && <meta property="og:image:width" content={String(ogImageSize.width)} />}
+    {ogImageSize && <meta property="og:image:height" content={String(ogImageSize.height)} />}
     <meta property="og:image:alt" content={ogImageAlt} />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -260,7 +265,7 @@ const jsonLd =
         </nav>
       </div>
     </footer>
-    <script is:inline type="text/javascript" src="//wcs.pstatic.net/wcslog.js"></script>
+    <script is:inline type="text/javascript" src="https://wcs.pstatic.net/wcslog.js"></script>
     <script is:inline type="text/javascript">
       if(!wcs_add) var wcs_add = {};
       wcs_add["wa"] = "12f71a2fc18bd8";

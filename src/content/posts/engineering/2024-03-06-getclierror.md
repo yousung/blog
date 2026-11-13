@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/getclierror"
 
 Flutter에서 GetX 프레임워크를 사용 중이라면 `get_cli`(GetX CLI)를 통해 자동으로 프로젝트 구조와 보일러플레이트를 생성하곤 합니다. 최근 다음과 같은 에러가 발생했습니다:
 
+![콘솔에 반복 출력된 빨간 오류 메시지](/images/posts/getclierror/cover.jpg)
+
 ```
 Synchronous waiting using dart:cli waitFor and C API Dart_WaitForEvent is deprecated 
 and disabled by default. This feature will be fully removed in Dart 3.4 release. 
@@ -97,3 +99,5 @@ dart --enable_deprecated_wait_for /path/to/get_cli
 GetX CLI는 여전히 Flutter 개발의 생산성을 크게 높이는 훌륭한 도구입니다. 다만 공식 버전의 업데이트가 늦을 수 있으므로, 이 가이드의 커뮤니티 포크 버전 설치를 권장합니다.
 
 최신 기술을 사용하면서도 필요한 개발 도구를 계속 사용할 수 있는 좋은 해결책입니다. 만약 다른 에러가 발생한다면, 공식 get_cli GitHub 저장소의 이슈 섹션을 확인해보세요.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/heNwUmEtZzo) — [David Pupăză](https://unsplash.com/@davidpupaza?utm_source=lovizu_blog&utm_medium=referral)

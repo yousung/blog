@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%
 
 Node.js 버전 관리와 유사하게, PHP 프로젝트도 각 프로젝트마다 다른 PHP 버전을 필요로 합니다. Laravel Valet과 PHP Monitor를 사용하는 개발자들을 위해 프로젝트 진입 시 자동으로 PHP 버전을 전환하는 방법을 소개합니다.
 
+![모니터에 표시된 PHP 코드](/images/posts/php-version-feat-php-monitor/cover.jpg)
+
 ## 전제조건
 
 다음 환경이 필요합니다:
@@ -120,3 +122,5 @@ PHP Monitor가 버전을 전환하는 데 시간이 걸릴 수 있습니다. 이
 이 방법은 Valet 사용자들이 여러 프로젝트를 효율적으로 관리할 수 있게 해줍니다. 초기 설정이 약간 필요하지만, 일단 완료하면 프로젝트 디렉토리 진입 시 자동으로 PHP 버전이 전환되어 개발 생산성을 크게 높일 수 있습니다.
 
 특히 PHP 5.6부터 PHP 8.2까지 다양한 레거시 프로젝트를 동시에 관리해야 하는 경우, 이 자동화 스크립트는 필수적인 도구가 됩니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/OqtafYT5kTw) — [Ilya Pavlov](https://unsplash.com/@ilyapavlov?utm_source=lovizu_blog&utm_medium=referral)

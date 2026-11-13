@@ -187,5 +187,3 @@ tistoryUrl: "https://tistory.lovizu.com/entry/homeplanet-metal-laptop-stand-revi
 
 
 ---
-
-이 글은 티스토리에 먼저 게시되었습니다: [원문 보기](https://tistory.lovizu.com/entry/homeplanet-metal-laptop-stand-review)

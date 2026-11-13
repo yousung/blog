@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/React-Native-ISO-%ED%85%8C%EC%8A%A
 
 React Native로 iOS 앱을 개발할 때 에뮬레이터만으로는 부족합니다. 실제 기기에서 테스트해야 성능, 터치 반응성, 메모리 사용량 등을 정확히 파악할 수 있습니다. **ios-deploy**는 바로 이 작업을 가능하게 해주는 필수 도구입니다.
 
+![나무 책상 위 iPhone과 MacBook](/images/posts/react-native-iso/cover.jpg)
+
 ## ios-deploy란 무엇인가
 
 ios-deploy는 커맨드라인에서 iOS 앱을 실제 iPhone이나 iPad에 직접 배포할 수 있는 도구입니다. Xcode GUI 없이도 빌드와 배포가 가능하므로 자동화에 매우 유용합니다.
@@ -122,3 +124,5 @@ ios-deploy 사용 전에 반드시 준비해야 할 것들이 있습니다.
 ios-deploy는 React Native iOS 개발의 필수 도구입니다. 실기기 테스트는 단순히 '되는지 안 되는지' 확인하는 수준을 넘어, 실제 사용자가 경험할 성능과 안정성을 검증하는 중요한 과정입니다. 이 도구를 활용하면 개발 품질을 크게 높일 수 있습니다.
 
 더 자세한 정보는 [ios-deploy 공식 GitHub](https://github.com/ios-control/ios-deploy)를 참고하세요.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/HgHyKjlvjJs) — [Théo Sautif](https://unsplash.com/@theosautif?utm_source=lovizu_blog&utm_medium=referral)

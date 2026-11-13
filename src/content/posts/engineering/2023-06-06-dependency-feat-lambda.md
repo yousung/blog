@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%
 
 AWS Lambda 함수를 개발할 때 흔히 마주치는 문제가 있습니다. 로컬 컴퓨터(맥이나 윈도우)에서는 정상 동작하지만, Linux 기반의 Lambda 환경에서는 실패하는 경우입니다. 특히 `jpegoptim`, `imagemagick` 같은 외부 도구를 사용할 때 더 심합니다.
 
+![층층이 쌓인 컨테이너](/images/posts/lambda-c-library-dependencies/cover.jpg)
+
 원인은 간단합니다. 이런 도구들은 C 언어로 컴파일된 바이너리로, 각각 많은 동적 라이브러리(.so 파일) 의존성을 가집니다. 도구 자체만 Lambda에 포함시키면 안 되고, 그 도구가 필요로 하는 모든 라이브러리도 함께 포함시켜야 합니다.
 
 ## Lambda 함수 로컬 테스트하기
@@ -175,3 +177,5 @@ def lambda_handler(event, context):
 ## 마치며
 
 Lambda에서 외부 도구를 사용하려면 단순히 바이너리만 포함하면 안 됩니다. C 라이브러리 의존성을 정확히 파악하고 함께 배포해야 합니다. Docker로 로컬 테스트하고 exodus로 의존성을 자동 수집하면, "로컬에서는 되는데 Lambda에서는 안 되는" 좌절스러운 상황을 피할 수 있습니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/bukjsECgmeU) — [Paul .T](https://unsplash.com/@hooverpaul55?utm_source=lovizu_blog&utm_medium=referral)

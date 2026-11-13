@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/java-spring-%ED%95%9C%EA%B8%80%EC%
 
 Java Spring 프로젝트를 시작할 때 가장 먼저 해야 할 설정 중 하나가 **한글 인코딩**입니다. 이 설정을 놓치면 사용자가 입력한 한글 데이터가 깨져서 저장되거나, 데이터베이스에서 조회한 한글이 제대로 표시되지 않는 문제가 발생합니다. 특히 한국 사용자를 대상으로 하는 프로젝트라면 이 설정은 선택이 아닌 필수입니다.
 
+![백라이트가 켜진 키보드 자판](/images/posts/java-spring/cover.jpg)
+
 ## web.xml 필터 설정
 
 `web.xml` 파일에 다음 코드를 추가하세요. 일반적으로 `<filter>` 섹션 뒤에 `<filter-mapping>` 섹션을 배치합니다:
@@ -120,3 +122,5 @@ String url = "jdbc:mysql://localhost:3306/dbname?useUnicode=true&characterEncodi
 ## 마치며
 
 이 간단한 설정으로 Spring 프로젝트에서 한글 처리 문제를 완벽하게 해결할 수 있습니다. 한국어를 많이 사용하는 프로젝트라면 이 설정은 필수이며, 프로젝트 초기부터 적용하는 것이 향후 많은 문제를 예방할 수 있습니다. Spring Boot를 사용한다면 자동 설정으로 이미 UTF-8이 기본값이지만, 전통적인 Spring MVC 프로젝트에서는 반드시 수동으로 설정해야 합니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/oA7MMRxTVzo) — [Sam Albury](https://unsplash.com/@sammisamuel21?utm_source=lovizu_blog&utm_medium=referral)

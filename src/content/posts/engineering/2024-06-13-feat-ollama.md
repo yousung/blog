@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EC%BD%94%ED%8C%8C%EC%9D%BC%EB%9F%
 
 ChatGPT가 처음 나왔을 때는 부정확한 답변이 많았습니다. 하지만 최근 ChatGPT 4o는 정말 유용하고 Google 검색보다 믿을 만합니다.
 
+![AI라고 새겨진 칩 3D 이미지](/images/posts/feat-ollama/cover.jpg)
+
 자연스럽게 GitHub Copilot 같은 **AI 코파일럿**에 관심을 갖게 되었습니다. 무료 체험은 훌륭했지만 **월 $20의 유료 비용**이 마음에 걸렸습니다.
 
 그 과정에서 발견한 것이 **Ollama**입니다.
@@ -88,3 +90,5 @@ IDE의 Continue 설정에서:
 ## 마치며
 
 GitHub Copilot이나 ChatGPT 요금이 부담스럽다면, **Ollama는 충분히 실용적인 무료 대안**입니다. 오픈소스 LLM의 발전 속도를 감안하면, 시간이 갈수록 더 강력해질 것으로 기대됩니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/5K_ijgjiDko) — [Mohamed Nohassi](https://unsplash.com/@coopery?utm_source=lovizu_blog&utm_medium=referral)
