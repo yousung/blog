@@ -265,13 +265,25 @@ const jsonLd =
         </nav>
       </div>
     </footer>
-    <script is:inline type="text/javascript" src="https://wcs.pstatic.net/wcslog.js"></script>
     <script is:inline type="text/javascript">
-      if(!wcs_add) var wcs_add = {};
-      wcs_add["wa"] = "12f71a2fc18bd8";
-      if(window.wcs) {
-        wcs_do();
-      }
+      // Naver Analytics: load on first user interaction (keeps third-party cookies/console errors out of page load).
+      (function () {
+        var loaded = false;
+        var events = ['scroll', 'pointerdown', 'keydown', 'touchstart'];
+        function load() {
+          if (loaded) return;
+          loaded = true;
+          events.forEach(function (e) { window.removeEventListener(e, load, { passive: true }); });
+          window.wcs_add = window.wcs_add || {};
+          window.wcs_add['wa'] = '12f71a2fc18bd8';
+          var s = document.createElement('script');
+          s.src = 'https://wcs.pstatic.net/wcslog.js';
+          s.async = true;
+          s.onload = function () { if (window.wcs) window.wcs_do(); };
+          document.body.appendChild(s);
+        }
+        events.forEach(function (e) { window.addEventListener(e, load, { passive: true, once: true }); });
+      })();
     </script>
   </body>
 </html>
