@@ -11,7 +11,7 @@ common.md(공통 규칙) → 해당 카테고리 가이드(engineering / weekly-
 
 1. 새 글은 `status: "published"`로 바로 공개한다 (2026-11-14 사용자 결정).
 2. legacy 카테고리에 새 글 금지 (아카이브 전용).
-3. frontmatter에 쿠팡/파트너스/제휴/상품/추천 단어 추가 금지 (AdSense 품질 관리용 작성 규칙. 격리 코드는 AdSense 승인 후 2026-11-13 제거됨).
+3. frontmatter에 쿠팡/파트너스/제휴/상품/추천 단어 추가 금지 (AdSense 품질 관리용 작성 규칙. 격리 코드는 AdSense 승인 후 2026-11-13 제거됨). 예외: 쿠팡 파트너스 리뷰 글은 태그에 `coupang` 허용 (2026-11-14 사용자 결정).
 4. 출처 URL은 실존하는 것만. 사실 확인 안 된 내용 작성 금지.
 5. 태그는 `src/content/taxonomy.json`의 `allowedTags`에 있는 값만.
 6. 작성·수정 후 `npm run validate:frontmatter`와 `npm run build` 통과 확인.

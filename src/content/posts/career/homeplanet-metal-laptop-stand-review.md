@@ -5,7 +5,7 @@ author: "감성개발자"
 date: "2026-11-14"
 summary: "1만 원대 노트북 거치대 중 후기가 가장 많은 홈플래닛 메탈 쿨링홀 거치대, 산 사람들 후기 30개에서 반복된 칭찬과 아쉬움, 가격대별 차이, 세팅 순서, 외장 키보드가 필요한 이유까지 편하게 정리했습니다."
 oneLineSummary: "단단해서 안 처지는 대신 무겁고 뻑뻑하다, 책상 고정용이면 충분한 1만 원대 거치대"
-tags: ["장비", "인체공학", "재택근무", "건강", "개발환경"]
+tags: ["coupang", "장비", "인체공학", "재택근무", "건강", "개발환경"]
 status: "published"
 tistoryUrl: "https://tistory.lovizu.com/entry/homeplanet-metal-laptop-stand-review"
 ---
