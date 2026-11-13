@@ -12,6 +12,15 @@ interface Props {
 
 const { posts, basePath, listLabel = '최근 글 목록', searchable = false, searchQuery = '' } = Astro.props;
 const postHref = (slug: string) => `${basePath}posts/${slug}/`;
+const DEFAULT_THUMB = '/images/logo.jpg';
+// First image in the body (markdown or HTML), else the blog logo.
+const getThumb = (post: CollectionEntry<'posts'>) =>
+  post.body
+    ?.replace(/```[\s\S]*?```/g, '')
+    .match(/!\[[^\]]*\]\(((?:\/|https?:\/\/)[^)\s]+)[^)]*\)|<img[^>]*\ssrc=["']((?:\/|https?:\/\/)[^"']+)["']/)
+    ?.slice(1)
+    .find(Boolean);
+const resolveSrc = (src: string) => (/^https?:\/\//.test(src) ? src : `${basePath}${src.replace(/^\//, '')}`);
 const normalize = (value: string) => value.toLocaleLowerCase('ko-KR').trim();
 const getSearchText = (post: CollectionEntry<'posts'>) =>
   normalize([post.data.title, post.data.oneLineSummary ?? '', post.data.summary ?? '', ...post.data.tags].join(' '));
@@ -27,13 +36,18 @@ const matchesQuery = (post: CollectionEntry<'posts'>, rawQuery: string) => {
 ---
 
 <ul class="post-list" aria-label={listLabel}>
-  {posts.map((post) => (
+  {posts.map((post) => {
+    const thumb = getThumb(post);
+    return (
     <li
       class="post-row"
       data-search-text={searchable ? getSearchText(post) : undefined}
       hidden={searchable ? !matchesQuery(post, searchQuery) : undefined}
     >
       <a class="card-link" href={postHref(post.data.slug)} aria-label={post.data.title}></a>
+      <div class:list={['thumb', { 'thumb-fallback': !thumb }]}>
+        <img src={resolveSrc(thumb ?? DEFAULT_THUMB)} alt="" loading="lazy" decoding="async" />
+      </div>
       <div class="row-inner">
         <h3>{post.data.title}</h3>
         <p class="one-line-summary">{post.data.oneLineSummary ?? post.data.summary}</p>
@@ -45,7 +59,8 @@ const matchesQuery = (post: CollectionEntry<'posts'>, rawQuery: string) => {
         </div>
       </div>
     </li>
-  ))}
+    );
+  })}
 </ul>
 
 <style>
@@ -73,6 +88,37 @@ const matchesQuery = (post: CollectionEntry<'posts'>, rawQuery: string) => {
     transform: translateY(-2px);
   }
 
+  .post-row {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .thumb {
+    aspect-ratio: 16 / 9;
+    flex-shrink: 0;
+    background: var(--bg-subtle, #f4f4f6);
+    border-bottom: 1px solid var(--border-default);
+    overflow: hidden;
+  }
+
+  .thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .thumb-fallback {
+    background: #fff;
+  }
+
+  .thumb-fallback img {
+    object-fit: contain;
+    padding: var(--space-4);
+    box-sizing: border-box;
+  }
+
   .card-link {
     position: absolute;
     inset: 0;
@@ -85,7 +131,7 @@ const matchesQuery = (post: CollectionEntry<'posts'>, rawQuery: string) => {
     display: flex;
     flex-direction: column;
     gap: var(--space-3);
-    min-height: 100%;
+    flex: 1;
     padding: var(--space-6);
     pointer-events: none;
   }
