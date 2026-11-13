@@ -36,7 +36,7 @@ const withBasePath = (value: string) => {
   const normalized = value.startsWith('/') ? value.slice(1) : value;
   return `${basePath}${normalized}`;
 };
-const ogImage = new URL(withBasePath(image ?? '/og/site.svg'), siteOrigin);
+const ogImage = new URL(withBasePath(image ?? '/og/site.png'), siteOrigin);
 const ogImageAlt = imageAlt ?? `${pageTitle} 대표 이미지`;
 const socialTitle = type === 'article' ? title : pageTitle;
 const imagePathname = ogImage.pathname.toLowerCase();
@@ -126,6 +126,11 @@ const jsonLd =
     <meta name="theme-color" content="#ffffff" />
     <meta name="application-name" content={SITE_TITLE} />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="icon" href={withBasePath('/favicon.ico')} sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href={withBasePath('/icon-32.png')} />
+    <link rel="icon" type="image/png" sizes="16x16" href={withBasePath('/icon-16.png')} />
+    <link rel="apple-touch-icon" href={withBasePath('/apple-touch-icon.png')} />
+    <link rel="manifest" href={withBasePath('/site.webmanifest')} />
     <link rel="canonical" href={canonical.href} />
     <link rel="alternate" type="application/rss+xml" title={`${SITE_TITLE} RSS`} href={rssHref} />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
@@ -171,7 +176,7 @@ const jsonLd =
     <a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
     <header class="site-header">
       <div class="site-shell">
-        <a class="site-brand" href={homeHref}>{SITE_TITLE}</a>
+        <a class="site-brand" href={homeHref}><img class="site-brand-mark" src={withBasePath('/icon-192.png')} width="28" height="28" alt="" />{SITE_TITLE}</a>
         <div class="header-actions">
           <nav class="desktop-nav" aria-label="주요 메뉴">
             <a href={homeHref}>홈</a>
@@ -457,6 +462,14 @@ const jsonLd =
     min-height: 44px;
     display: inline-flex;
     align-items: center;
+    gap: 0.5rem;
+  }
+
+  .site-brand-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    flex: none;
   }
 
   .search-toggle {
