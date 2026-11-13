@@ -14,6 +14,8 @@ status: "published"
 
 여름옷을 정리할 때 가장 아까운 실수는 옷을 덜 버리는 게 아닙니다. 땀과 음식 냄새가 남은 티셔츠, 덜 마른 셔츠, 한 번 입고 의자에 걸어둔 니트를 그대로 넣어두는 일입니다. 몇 달 뒤 꺼냈을 때 나는 눅눅한 냄새와 누런 자국은 대개 수납함 안에서 갑자기 생긴 문제가 아니라, 넣기 전 상태가 그대로 묵은 결과에 가깝습니다.
 
+![여러 색의 옷이 걸린 옷장](/images/posts/fall-closet-cleanout-checklist/cover.jpg)
+
 가을 옷장 정리는 대청소처럼 크게 잡으면 미뤄집니다. 반대로 순서를 정해두면 1~2시간 안에도 꽤 많이 정리됩니다. 핵심은 `꺼낼 옷`, `빨아서 넣을 옷`, `버리거나 수선할 옷`, `따로 보호할 옷`을 먼저 나누고, 옷장 안 습도와 통풍을 같이 보는 것입니다.
 
 > 먼저 기준부터 잡으면 이렇습니다.
@@ -158,3 +160,5 @@ EPA와 CDC 자료는 곰팡이 관리를 수분 관리와 연결해서 설명합
 - [Federal Trade Commission - Care Labeling of Textile Wearing Apparel & Certain Piece Goods](https://www.ftc.gov/legal-library/browse/rules/care-labeling-textile-wearing-apparel-certain-piece-goods-text)
 - [University of Kentucky Entomology - Clothes Moths](https://entomology.mgcafe.uky.edu/ef609)
 - [University of Maryland Extension - Clothes Moths](https://extension.umd.edu/resource/clothes-moths)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/OYYE4g-I5ZQ) — [Burgess Milner](https://unsplash.com/@burgessbadass?utm_source=lovizu_blog&utm_medium=referral)

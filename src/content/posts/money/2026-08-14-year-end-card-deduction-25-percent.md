@@ -16,6 +16,8 @@ tistoryUrl: "https://lovizu.com/entry/year-end-card-deduction-25-percent"
 
 카드를 많이 썼는데 연말정산에서는 생각보다 돌려받는 느낌이 약할 때가 있습니다. 이유는 단순합니다. 신용카드 소득공제는 `쓴 돈 전체`를 봐주는 제도가 아니라, 총급여의 25%를 넘긴 뒤의 사용분부터 계산하기 때문입니다.
 
+![카드 결제 단말기를 든 손](/images/posts/year-end-card-deduction-25-percent/cover.jpg)
+
 그래서 8월쯤에는 "올해 카드값이 얼마였지?"만 보면 부족합니다. 지금까지 쓴 금액이 총급여의 25%에 가까운지, 이미 넘겼는지, 넘긴 뒤에는 신용카드와 체크카드·현금영수증 비중을 어떻게 가져갈지 봐야 합니다. 같은 30만 원을 써도 어느 구간에서, 어떤 결제수단으로 썼는지에 따라 연말정산 체감이 달라질 수 있습니다.
 
 이 글은 2026년 8월 14일 기준 공개 자료를 바탕으로, 직장인이 연말정산 신용카드 등 사용금액 소득공제를 생활비 관점에서 점검하는 방법을 정리한 글입니다. 세무 대리나 절세 처방이 아니라 가계 예산을 흔들지 않기 위한 확인 순서에 가깝습니다. 실제 공제 가능 여부와 금액은 국세청 홈택스, 회사 연말정산 안내, 세무 전문가 상담으로 최종 확인하는 편이 안전합니다.
@@ -163,3 +165,5 @@ tistoryUrl: "https://lovizu.com/entry/year-end-card-deduction-25-percent"
 - [국세청, 현금영수증 등 사용금액에 대한 소득공제금액 계산방법](https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=15559&nttSn=1463)
 - [문화비 소득공제, 사업자 찾기](https://www.culture.go.kr/deduction/search/list.do?id=37600)
 - [대한민국 정책브리핑, 2026 문화비 소득공제 체크리스트](https://m.korea.kr/multi/visualNewsView.do?newsId=148958164)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/-JJg90OAnWI) — [Square](https://unsplash.com/@squareinc/%EC%BB%AC%EB%A0%89%EC%85%98?utm_source=lovizu_blog&utm_medium=referral)

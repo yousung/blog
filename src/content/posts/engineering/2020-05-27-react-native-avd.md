@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/React-Native-AVD-%EA%B0%80-%EC%95%
 
 React Native 프로젝트 초기 설정 후 `yarn android` 또는 `npm run android` 명령어를 실행하면 안드로이드 가상머신(AVD) 연결 실패 에러가 발생합니다.
 
+![안드로이드 스마트폰을 든 손](/images/posts/react-native-avd/cover.jpg)
+
 ## 에러 메시지 분석
 
 다음과 같은 에러 메시지가 출력됩니다:
@@ -155,3 +157,5 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 ## 마치며
 
 React Native의 Android 개발 환경 구성에서 Gradle은 필수 요소입니다. 초기 설정 시 모든 종속성이 제대로 설치되었는지 확인하는 것이 중요합니다. 에러 메시지를 신중히 읽고 그에 맞는 해결책을 찾으면 대부분의 빌드 문제를 해결할 수 있습니다. Gradle이 설치되지 않은 경우가 가장 흔한 원인이므로 먼저 이를 확인하시기 바랍니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/wK-elt11pF0) — [Jonas Leupe](https://unsplash.com/@jonasleupe?utm_source=lovizu_blog&utm_medium=referral)

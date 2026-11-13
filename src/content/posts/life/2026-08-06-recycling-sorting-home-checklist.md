@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EB%B6%84%EB%A6%AC%EB%B0%B0%EC%B6%
 
 택배 상자를 뜯고 나면 종이 상자, 송장 스티커, 완충재, 테이프가 한꺼번에 남습니다. 배달 음식 용기는 더 애매합니다. 플라스틱처럼 보이지만 기름이 묻어 있고, 비닐은 깨끗한 것 같지만 양념 냄새가 남아 있습니다.
 
+![분리수거함의 재활용 표시](/images/posts/recycling-sorting-home-checklist/cover.jpg)
+
 이럴 때 분리배출 표시만 보고 바로 버리면 자주 틀립니다. 표시가 있더라도 내용물이 남아 있거나, 다른 재질이 붙어 있거나, 지역 수거 방식과 맞지 않으면 재활용품으로 처리되기 어렵습니다. 집에서 판단할 때는 `표시 확인`보다 `비우기 → 헹구기 → 분리하기 → 섞지 않기` 순서가 먼저입니다.
 
 > 3줄 요약
@@ -176,3 +178,5 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EB%B6%84%EB%A6%AC%EB%B0%B0%EC%B6%
 - [환경부 보도자료 - 분리배출 궁금증, 이제 손 안에서 해결하세요](https://www.me.go.kr/home/web/board/read.do%3Bjsessionid%3D03_Y48FUv5TWCN0L7DFCHHUgbat6bsPHL4VrI403.mehome1?boardCategoryId=&boardId=879120&boardMasterId=1&decorator=&maxIndexPages=10&maxPageItems=10&menuId=&orgCd=&pagerOffset=7980&searchKey=&searchValue=)
 - [대한민국 정책브리핑 - 분리배출 궁금증, 모바일에서 확인하세요](https://www.korea.kr/news/policyNewsView.do?newsId=148852018)
 - [대한민국 정책브리핑 - 재활용품 분리배출, 이제 자원관리도우미가 도와드립니다](https://www.korea.kr/news/policyNewsView.do?newsId=148886639)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/aI4RJ--Mw4I) — [Compagnons](https://unsplash.com/@sigmund?utm_source=lovizu_blog&utm_medium=referral)

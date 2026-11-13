@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EC%9E%AC%EC%82%B0%EC%84%B8-7%EC%9
 
 7월에 재산세를 냈는데 9월에 고지서가 한 번 더 오면, 계산이 잘못된 것처럼 느껴질 수 있습니다. 특히 아파트 한 채만 가진 사람이라면 더 그렇습니다. "지난달에 냈는데 왜 또 내지?"라는 생각이 먼저 들죠.
 
+![노트북 옆 계산기, 세금 계산](/images/posts/property-tax-july-september-budget/cover.jpg)
+
 하지만 주택 재산세는 원래 한 해 세액을 7월과 9월에 나눠 내는 구조입니다. 7월 고지서가 전부가 아니라 `주택분 1/2`일 수 있고, 9월에는 나머지 `주택분 1/2`이 다시 나옵니다. 토지를 함께 갖고 있다면 9월에는 토지분까지 더해질 수 있습니다.
 
 이 글은 2026년 8월 7일 기준 공개 자료를 바탕으로, 재산세 고지서를 받았을 때 어디를 먼저 봐야 하는지 정리한 생활 금융 가이드입니다. 특정 절세 방법이나 세무 판단을 권하는 글은 아닙니다. 실제 세액과 감면 여부는 관할 지방자치단체 고지서, 위택스, 이택스, 세무 담당 부서에서 최종 확인하는 편이 안전합니다.
@@ -163,3 +165,5 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EC%9E%AC%EC%82%B0%EC%84%B8-7%EC%9
 - [서울특별시, 2026년 7월분 재산세 고지 보도자료](https://www.seoul.go.kr/news/news_report.do?bbsNo=158&nttNo=461668)
 - [국가법령정보센터, 지방세법 제114조·제115조 조문정보](https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1033349659)
 - [정부24, 재산세 분할납부 신청 민원 안내](https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=13100000302&HighCtgCD=A09002&tp_seq=01)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/8wLZi9OhsWU) — [Jakub Żerdzicki](https://unsplash.com/@jakubzerdzicki?utm_source=lovizu_blog&utm_medium=referral)

@@ -13,6 +13,8 @@ status: "published"
 
 배포 직후 사용자 화면이 갑자기 1초 이상 걸린다고 나왔을 때, 대개 먼저 DB나 캐시를 의심합니다. 실제로는 요청 하나가 오래 걸려 CPU를 잡아먹는 동기 함수 한 줄이 큐의 맨 앞을 차지해 전체 흐름이 밀리는 경우가 더 자주 있습니다. 이런 상황에서 로그의 `query` 부분만 붙잡고 분석하면 시간은 더 오래 걸립니다.  
 
+![보라색과 파란색 나선, 이벤트 루프](/images/posts/nodejs-event-loop-blocking-checklist/cover.jpg)
+
 내가 가장 먼저 보는 질문은 한 가지입니다.  
 
 **“이 요청이 완료되지 못하게 만든 것은 대기 시간이 아니라, 이벤트 루프를 점유한 동기 작업인가?”**
@@ -193,3 +195,5 @@ async function safeUpstreamFetch(url, attempt = 0) {
 - Node.js Docs — `perf_hooks`: https://nodejs.org/api/perf_hooks.html
 - Node.js Docs — `worker_threads`: https://nodejs.org/api/worker_threads.html
 - Node.js Docs — Command-line options (`--uv-thread-pool-size`): https://nodejs.org/api/cli.html#--uv-thread-pool-size
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/mfxTRWrjtV0) — [Niloy T](https://unsplash.com/@niloytesla?utm_source=lovizu_blog&utm_medium=referral)

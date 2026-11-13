@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/JAVA-vs-PHP"
 
 이 글은 Java와 PHP의 기술적 우수성을 논하는 것이 아닙니다. 대신 **한국의 개발자 생태계**에서 각 언어로 경력을 쌓을 때의 현실적 차이를 분석합니다.
 
+![숲속에서 갈라지는 두 갈래 길](/images/posts/java-vs-php/cover.jpg)
+
 저자의 경험:
 - **초반**: 주요 포털, 대기업, 정부 사이트 등 Spring 기반 Java 개발
 - **후반**: 다양한 규모의 프로젝트에서 Modern PHP (Laravel) 개발
@@ -196,3 +198,5 @@ Modern PHP
 4. **어느 언어든**: 좋은 회사 > 언어 선택
 
 한국의 개발자 시장은 언어보다 **회사 문화와 팀의 가치관**이 경력을 좌우합니다. 기술 검증 후 문화 검증으로 진로를 결정하세요.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/u0vgcIOQG08) — [Jens Lelie](https://unsplash.com/@madebyjens?utm_source=lovizu_blog&utm_medium=referral)

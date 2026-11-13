@@ -14,6 +14,8 @@ updatedDate: "2026-08-06"
 
 지원금은 받는 순간보다 쓰는 마지막 주에 더 헷갈립니다. 잔액은 남아 있는데 온라인 결제는 안 되고, 대형마트도 안 되고, 자동이체도 안 됩니다. 결국 기한이 다가와서 아무 데나 쓰거나, 반대로 쓸 수 있는 곳을 찾다가 남겨버리는 경우가 생깁니다.
 
+![주유소에서 주유하는 모습](/images/posts/oil-support-fund-use-before-deadline/cover.jpg)
+
 2026년 고유가 피해지원금은 신청보다 **사용기한 관리**가 더 중요해진 시점입니다. 2차 신청 기간은 이미 2026년 7월 3일에 끝났고, 1차·2차 지급분 모두 사용기한은 **2026년 8월 31일**까지로 안내되어 있습니다. 남은 기간에는 "어디서 쓸 수 있나"보다 "내가 원래 쓰려던 생활비 중 어디에 대체할 수 있나"를 먼저 봐야 합니다.
 
 이 글은 특정 카드사나 결제수단 이용을 권하는 글이 아닙니다. 2026년 8월 6일 기준 공개된 정부·지자체 안내를 바탕으로, 고유가 피해지원금을 생활비 흐름 안에서 확인하는 방법을 정리한 생활 금융 가이드입니다.
@@ -129,3 +131,5 @@ updatedDate: "2026-08-06"
 - [대한민국 정책브리핑 - 고유가 피해지원금 2차 지급 18일 시작](https://www.korea.kr/news/policyNewsView.do?newsId=148964141)
 - [강남구청 - 고유가 피해지원금 안내](https://www.gangnam.go.kr/contents/oil_support/1/view.do?mid=ID05_050501)
 - [KB국민카드 - 고유가 피해지원금 안내](https://card.kbcard.com/SVC/DVIEW/HBGV1103)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/f4UbPVbJcjw) — [engin akyurt](https://unsplash.com/@enginakyurt?utm_source=lovizu_blog&utm_medium=referral)

@@ -17,6 +17,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EB%94%94%EB%B9%84-%EB%B9%A0%EB%A5
 
 RDS MariaDB에서 RDS Aurora로 마이그레이션하게 되었습니다.
 
+![백업용 하드 디스크 드라이브](/images/posts/beat-mariadb-mysql/cover.jpg)
+
 매월 1~2만 명의 사용자가 증가하고 있었고, 피크 타임과 이벤트 타임에 데이터베이스를 유연하게 관리하기 위해 MariaDB에서 Aurora로 전환하기로 결정했습니다.
 
 문제는 **데이터가 너무 많았습니다.**
@@ -124,3 +126,5 @@ mysqldump -u root -p DBname --ignore-table=DBname.tbname1 --ignore-table=DBname.
 대용량 데이터베이스 백업은 작은 최적화가 모여 큰 효과를 만듭니다. 위의 옵션들을 올바르게 적용하면 백업 시간을 크게 단축할 수 있습니다.
 
 특히 `--extended-insert`와 `--no-autocommit` 옵션만 적용해도 상당한 성능 향상을 기대할 수 있습니다. 대규모 마이그레이션이나 AWS RDS 환경에서 작업할 때는 꼭 이 옵션들을 사용하여 시간과 비용을 절약하시기 바랍니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/VYfxkePredI) — [Nick](https://unsplash.com/@nkend?utm_source=lovizu_blog&utm_medium=referral)

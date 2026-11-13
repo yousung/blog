@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%
 
 하나의 프로젝트만 진행할 때는 Node 버전이 크게 문제가 되지 않지만, 레거시 유지보수와 신규 프로젝트를 동시에 진행해야 할 때 프로젝트마다 필요한 Node 버전이 다를 수 있습니다. 이 경우 매번 수동으로 버전을 변경하는 것은 번거롭고 실수하기 쉽습니다. **NVM(Node Version Manager)**을 활용하면 이를 완전히 자동화할 수 있으며, 프로젝트 진입 시 필요한 Node 버전이 자동으로 로드됩니다.
 
+![어두운 화면의 자바스크립트 코드](/images/posts/node-feat-nvm/cover.jpg)
+
 ## 준비물
 
 - **NVM** (Node Version Manager)
@@ -229,3 +231,5 @@ Now using node v18.15.0
 ## 핵심 요약
 
 NVM을 활용한 자동 Node 버전 관리는 다중 프로젝트 환경에서 개발자의 생산성을 크게 향상시킵니다. `.nvmrc` 파일과 zsh 훅의 조합으로 프로젝트 간 전환 시 자동으로 올바른 버전이 로드되므로, 수동 설정 실수를 완전히 제거할 수 있습니다. 특히 레거시 유지보수와 신규 프로젝트를 동시에 진행할 때 버전 호환성 문제를 근본적으로 해결하는 강력한 도구입니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/g5jpH62pwes) — [Gabriel Heinzer](https://unsplash.com/@6heinz3r?utm_source=lovizu_blog&utm_medium=referral)

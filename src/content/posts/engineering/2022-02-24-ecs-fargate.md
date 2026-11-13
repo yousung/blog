@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/ECS-Fargate-%ED%99%9C%EC%9A%A9%ED%
 
 AWS ECS Fargate는 서버를 관리하지 않고 Docker 컨테이너를 직접 실행할 수 있는 서버리스 컨테이너 서비스다. 이 글에서는 Fargate를 이용한 완전한 애플리케이션 배포 환경을 구축하는 방법을 다룬다.
 
+![바다 위 배를 내려다본 항공 사진](/images/posts/ecs-fargate/cover.jpg)
+
 ### 준비 사항
 
 #### 코드 영역
@@ -112,3 +114,5 @@ Cron 표현식을 이용해 정기적인 배치 작업을 실행할 수 있다. 
 AWS ECS Fargate는 서버 관리의 부담을 크게 줄이면서도 강력한 컨테이너 오케스트레이션을 제공합니다. 초기 설정이 복잡해 보일 수 있지만, 한 번 구성하면 이후 배포와 스케일링은 매우 간단해집니다.
 
 특히 마이크로서비스 아키텍처나 변동성이 큰 트래픽을 처리하는 애플리케이션의 경우, Fargate의 자동 스케일링과 무중단 배포는 운영 효율을 크게 향상시킵니다. 위의 설정 방법을 따르면 프로덕션 환경에서도 안정적으로 애플리케이션을 운영할 수 있습니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/1cqIcrWFQBI) — [Venti Views](https://unsplash.com/@ventiviews?utm_source=lovizu_blog&utm_medium=referral)

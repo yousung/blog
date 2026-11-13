@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/Link-Component-feat-nextJs"
 
 Next.js의 Link 컴포넌트는 내장 컴포넌트로, 애플리케이션의 페이지 간 이동을 최적화합니다. 일반적인 HTML `<a>` 태그와 달리, 클라이언트 사이드 라우팅을 사용하여 페이지 전체를 다시 로드하지 않고 필요한 부분만 업데이트합니다.
 
+![서로 연결된 금속 체인](/images/posts/link-component-feat-nextjs/cover.jpg)
+
 ## 기본 사용법
 
 Link 컴포넌트의 가장 간단한 사용 방법입니다.
@@ -116,3 +118,5 @@ export default function Navigation() {
 ## 핵심 요약
 
 Next.js의 Link 컴포넌트는 웹 애플리케이션의 라우팅을 최적화하는 핵심 도구입니다. 클라이언트 사이드 라우팅, 자동 prefetching, 코드 분할 등의 기능으로 사용자 경험을 크게 향상시킬 수 있습니다. Next.js 애플리케이션에서는 내부 링크에 Link 컴포넌트를 사용하는 것이 권장됩니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/ipuiM-36tAg) — [Karine Avetisyan](https://unsplash.com/@kar111?utm_source=lovizu_blog&utm_medium=referral)

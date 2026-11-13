@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/Sweet-Alert-%EB%9D%BC%EB%9D%BC%EB%
 
 기본 JavaScript의 `alert()` 함수는 단순하고 투박합니다. SweetAlert는 이를 대체하는 아름다운 알림창 라이브러리로, 사용자 경험을 크게 향상시킵니다.
 
+![알림 화면이 보이는 스마트폰](/images/posts/sweet-alert-alert/cover.jpg)
+
 ## 설치
 
 ### 1. Composer를 통한 설치
@@ -170,3 +172,5 @@ SweetAlert는 다양한 미리 정의된 색상과 아이콘을 제공합니다:
 기존 alert() 함수를 SweetAlert로 대체할 때는 사용자 기대값을 고려하여 단계적으로 진행하는 것이 좋습니다.
 
 SweetAlert를 사용하면 일반적인 웹 애플리케이션을 프로페셔널한 수준으로 한 단계 업그레이드할 수 있습니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/w33-zg-dNL4) — [Rami Al-zayat](https://unsplash.com/@rami_alzayat?utm_source=lovizu_blog&utm_medium=referral)

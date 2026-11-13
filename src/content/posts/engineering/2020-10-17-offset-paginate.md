@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/Offset-%EA%B8%B0%EB%B0%98-paginate
 
 게시판, 검색 결과, 뉴스피드 등 대량의 데이터를 화면에 표시할 때 페이지네이션이 필수입니다. 하지만 가장 흔한 구현 방식인 Offset 기반 페이지네이션에는 심각한 문제가 있습니다.
 
+![나무 테이블 위 달걀과 상자](/images/posts/offset-paginate/cover.jpg)
+
 ## Offset 기반 페이지네이션의 문제점
 
 ### 문제 1: 데이터가 많아질수록 쿼리가 느려진다
@@ -192,3 +194,5 @@ Offset 기반 페이지네이션은 간단하지만, **성능과 데이터 일�
 초기 개발할 때는 Offset으로 시작하되, 서비스가 성장하면서 데이터가 증가할 것을 예상한다면 **처음부터 커서 기반 아키텍처를 고려**하는 것이 좋습니다.
 
 이미 Offset으로 구축한 서비스라면, 성능이나 일관성 문제가 발생하기 전에 미리 커서 기반으로 마이그레이션 하는 것을 추천합니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/O7ja1feliQA) — [Slidebean](https://unsplash.com/@slidebean?utm_source=lovizu_blog&utm_medium=referral)

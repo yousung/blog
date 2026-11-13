@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EB%AA%A9-%EC%96%B4%EA%B9%A8-%ED%8
 
 목이 뻐근해서 자세를 고쳐 앉아도 10분 뒤면 다시 모니터 쪽으로 몸이 기울어집니다. 의지가 약해서가 아닙니다. 모니터가 낮고, 마우스가 멀고, 팔을 둘 곳이 없으면 몸은 계속 그쪽으로 끌려갑니다. 오래 앉아 일하는 사람의 목 어깨 통증은 "바른 자세를 얼마나 오래 참느냐"보다 `틀어진 세팅을 얼마나 덜 만들었느냐`에서 먼저 갈립니다.
 
+![사무용 의자에 기대 앉은 사람](/images/posts/desk-neck-shoulder-pain-routine/cover.jpg)
+
 최종 업데이트: 2026-08-06
 
 이 글은 일반적인 생활 건강 정보입니다. 목 통증의 진단이나 치료를 대신하지 않습니다. 통증이 심하거나 팔 저림, 힘 빠짐, 발열, 외상 뒤 통증처럼 경고 신호가 있으면 의료 전문가에게 확인하는 편이 안전합니다.
@@ -128,3 +130,5 @@ Mayo Clinic도 외상, 팔이나 다리의 근력 약화, 고열과 함께 오�
 - [OSHA - Work Process and Recognition](https://www.osha.gov/etools/computer-workstations/work-process) — 정적인 자세와 반복 작업, 짧은 휴식 필요성, 목·어깨 경고 신호를 확인했습니다. 확인일: 2026-08-06
 - [MedlinePlus - Neck pain](https://medlineplus.gov/ency/article/003025.htm) — 목 통증의 흔한 원인, 자가 관리 범위, 의료진 상담이 필요한 신호를 확인했습니다. 확인일: 2026-08-06
 - [Mayo Clinic - Neck pain: When to see a doctor](https://www.mayoclinic.org/symptoms/neck-pain/basics/when-to-see-doctor/sym-20050882) — 응급 진료와 외래 상담이 필요한 목 통증 신호를 확인했습니다. 확인일: 2026-08-06
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/5S6mlftrChI) — [Saik Al Marzan](https://unsplash.com/@al_marzan?utm_source=lovizu_blog&utm_medium=referral)

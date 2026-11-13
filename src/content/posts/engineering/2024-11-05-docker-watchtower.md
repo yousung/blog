@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EB%8F%84%EC%BB%A4-%ED%95%AD%EC%83
 
 프로덕션 환경에서 실행되는 Docker 컨테이너들은 정기적으로 보안 업데이트와 버그 픽스를 받아야 합니다. 수동으로 각 컨테이너를 확인하고 업데이트하는 것은 시간이 많이 걸리고 실수하기 쉽습니다.
 
+![타자기에 끼워진 흰 종이](/images/posts/docker-watchtower/cover.jpg)
+
 특히 장기 운영 중인 프로젝트에서는 컨테이너 이미지가 오래될수록:
 - 보안 취약점에 노출될 가능성 증가
 - 성능 개선사항을 놓치게 됨
@@ -158,3 +160,5 @@ docker inspect watchtower
 Watchtower는 Docker 컨테이너 관리를 대폭 자동화하는 강력한 도구입니다. 적절한 설정과 모니터링을 통해 보안과 안정성을 모두 확보하면서, 운영 효율을 크게 높일 수 있습니다.
 
 특히 마이크로서비스 아키텍처나 대량의 컨테이너를 관리하는 환경에서는 필수적인 도구라고 할 수 있습니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/cxoR55-bels) — [Markus Winkler](https://unsplash.com/@markuswinkler?utm_source=lovizu_blog&utm_medium=referral)

@@ -14,6 +14,8 @@ tistoryUrl: "https://blog.lovizu.com/entry/nodejs-graceful-shutdown-checklist"
 
 배포 버튼을 눌렀을 뿐인데 몇 초 동안 502가 튑니다. 로그에는 에러가 많지 않고, 새 컨테이너도 정상으로 떠 있습니다. 그런데 사용자 입장에서는 방금 누른 저장 버튼이 실패했고, 운영자는 "배포 중 잠깐 그런 것 같다"는 애매한 말만 남깁니다.
 
+![주황색과 노란색 버튼 아이콘](/images/posts/nodejs-graceful-shutdown-checklist/cover.jpg)
+
 이런 문제는 보통 배포 도구만 바꿔서는 사라지지 않습니다. **컨테이너가 내려갈 때 애플리케이션이 어떤 순서로 요청을 멈추고, 남은 일을 끝내고, 프로세스를 종료할지 정해져 있어야 합니다.** Node.js 서버라면 `SIGTERM`을 받고도 계속 새 요청을 받는지, `server.close()` 이후 오래 붙은 연결을 어떻게 다룰지, readiness가 먼저 내려가는지부터 확인해야 합니다.
 
 나는 작은 팀의 Node.js 서비스를 볼 때 graceful shutdown을 아래 네 가지 질문으로 쪼갭니다.
@@ -278,3 +280,5 @@ Node.js API 서버와 큐 워커를 같은 프로세스에 묶어 둔 경우도 
 - [Kubernetes - Pod termination](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination)
 - [Amazon ECS - Determine task health using container health checks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/healthcheck.html)
 - [Amazon ECS - Optimize load balancer connection draining parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/load-balancer-connection-draining.html)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/RedqSy1OPns) — [Dima Shishkov](https://unsplash.com/@shishkovdima?utm_source=lovizu_blog&utm_medium=referral)

@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/frontend-aws-%EB%B0%B0%ED%8F%AC%ED
 
 AWS를 이용해 정적 웹사이트를 안전하고 빠르게 배포하는 방법을 다룬다.
 
+![클라우드 컴퓨팅 개념 3D 렌더링](/images/posts/frontend-aws-feat-s3-cloudefront-certificate-route53/cover.jpg)
+
 ### 전체 아키텍처
 
 ```
@@ -180,3 +182,5 @@ SPA(Single Page Application)를 배포할 때:
 - [ ] 도메인에서 정상 접근 확인
 
 이 아키텍처로 안전하고 빠른 프론트엔드 서빙이 가능하다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/Am6pBe2FpJw) — [Growtika](https://unsplash.com/@growtika?utm_source=lovizu_blog&utm_medium=referral)

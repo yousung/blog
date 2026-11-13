@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EC%9C%A0%ED%9A%A8%EC%84%B1-%EA%B2
 
 사용자가 폼을 입력할 때 유효성 검사에 실패하면 단순한 텍스트 오류 메시지보다 입력 필드 자체에 시각적 피드백을 주는 것이 더 직관적입니다. 부트스트랩 스타일을 활용하여 오류가 있는 입력 필드의 테두리 색상을 빨간색으로 변경하는 방법을 소개합니다.
 
+![맥북으로 폼 화면을 개발하는 모습](/images/posts/input-textarea/cover.jpg)
+
 ## Laravel 커스텀 헬퍼 함수 작성
 
 먼저 `app/Helpers` 또는 프로젝트 구조에 맞는 위치에 헬퍼 함수를 정의합니다:
@@ -91,3 +93,5 @@ input.has-error {
 ## 정리
 
 이 방법은 Bootstrap 스타일에 부합하면서도 간단하게 구현할 수 있는 폼 검증 피드백 시스템입니다. 사용자 경험을 향상시키고 시각적 명확성을 제공합니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/OGOWDVLbMSc) — [Campaign Creators](https://unsplash.com/@campaign_creators?utm_source=lovizu_blog&utm_medium=referral)

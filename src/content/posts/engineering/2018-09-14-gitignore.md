@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/gitignore-%EC%A0%81%EC%9A%A9-%EC%9
 
 `.gitignore` 파일에 제외 규칙을 추가했는데도 파일이 계속 Git에 추적되는 현상이 발생합니다. 특히 이미 저장소에 커밋된 파일들이 `.gitignore`를 무시하고 버전 관리 대상으로 남아있습니다.
 
+![모니터 속 설정 파일 텍스트 클로즈업](/images/posts/gitignore/cover.jpg)
+
 ## 원인 분석
 
 Git의 동작 방식을 이해하면 이 문제를 쉽게 해결할 수 있습니다:
@@ -124,3 +126,5 @@ git status
 ## 마치며
 
 `.gitignore`가 작동하지 않는 대부분의 경우는 이미 Git이 파일을 추적하고 있기 때문입니다. `git rm --cached` 명령으로 Git 인덱스에서 제거한 후 다시 추가하면 `.gitignore` 규칙이 정상 적용됩니다. 초기 프로젝트 설정 시 `.gitignore`를 먼저 준비하면 이러한 상황을 예방할 수 있습니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/842ofHC6MaI) — [Yancy Min](https://unsplash.com/@yancymin?utm_source=lovizu_blog&utm_medium=referral)

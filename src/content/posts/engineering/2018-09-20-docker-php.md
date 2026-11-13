@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/docker-%EB%A1%9C-PHP-%EA%B0%9C%EB%
 
 전통적인 방식으로는 로컬에 WAMP나 XAMPP를 설치하고, 프로젝트마다 PHP, MySQL, Redis 등의 버전을 맞춰야 하는 번거로움이 있습니다. Docker를 사용하면 이 모든 과정을 yml 파일 하나로 자동화할 수 있습니다. 팀의 모든 개발자가 정확히 동일한 환경에서 작업할 수 있고, 프로덕션 환경과의 차이도 제거할 수 있습니다.
 
+![바다 위 컨테이너 화물선](/images/posts/docker-php/cover.jpg)
+
 ## 왜 Docker를 써야 할까요
 
 기존 방식의 문제점을 먼저 살펴보겠습니다.
@@ -176,3 +178,5 @@ Windows 사용자는 WSL2를 사용하면 성능이 크게 개선됩니다. MySQ
 ## 마치며
 
 Docker Compose는 PHP 개발 환경 설정의 복잡도를 획기적으로 줄여줍니다. 이제 새로운 팀원이 프로젝트에 참여할 때 마주했던 '환경 차이'라는 골치 아픈 문제를 완전히 제거할 수 있습니다. 이 yml 파일을 버전 관리 시스템에 저장해두면, 누구나 같은 명령어 하나로 동일한 개발 환경을 구성할 수 있습니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/HjBOmBPbi9k) — [Ian Taylor](https://unsplash.com/@carrier_lost?utm_source=lovizu_blog&utm_medium=referral)

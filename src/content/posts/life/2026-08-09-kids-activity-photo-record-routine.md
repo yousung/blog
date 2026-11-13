@@ -14,6 +14,8 @@ status: "published"
 
 아이와 박물관, 과학관, 숲 체험, 공연을 다녀오면 휴대폰에는 사진이 잔뜩 남습니다. 그런데 며칠만 지나도 어디서 찍은 사진인지, 아이가 무엇을 신기해했는지 흐려집니다. 정작 다음에 필요할 때는 단체 채팅방에서 사진을 다시 찾거나, 비슷한 사진 수십 장 사이에서 한참을 넘기게 됩니다.
 
+![잔디밭에 앉아 노는 두 아이](/images/posts/kids-activity-photo-record-routine/cover.jpg)
+
 체험활동 기록은 앨범을 예쁘게 만드는 일이 아닙니다. 핵심은 `그날의 장면`, `아이의 말`, `다음에 써먹을 정보`를 작게 남기는 것입니다. 주말 저녁 15분만 써도 나중에 독후활동, 학교 과제, 가족 대화, 다음 나들이 준비가 훨씬 쉬워집니다.
 
 > 3줄 요약
@@ -166,3 +168,5 @@ Google 포토 고객센터는 공유 앨범에서 특정 사용자 접근 권한
 - [개인정보보호위원회 - 아동·청소년 개인정보보호 가이드라인](https://www.pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS217&mCode=G010030000&nttId=8161) — 아동·청소년 개인정보 보호 가이드라인 게시 정보 확인. (확인일: 2026-08-09)
 - [개인정보보호위원회 - 아동·청소년 디지털 잊힐권리 시범사업](https://www.pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&mCode=C020010000&nttId=8796) — 아동·청소년 온라인 게시물 삭제·접근배제 지원 사업 설명 확인. (확인일: 2026-08-09)
 - [Google 포토 고객센터 - 공유 앨범 제어 기능을 사용하여 사진의 개인정보 보호를 강화하는 방법](https://support.google.com/photos/answer/9789702?hl=ko) — 공유 앨범 접근 권한, 링크 공유, 공동작업자 관리 기준 참고. (확인일: 2026-08-09)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/fZEGoHBTz9A) — [Micah Tindell](https://unsplash.com/@micahtindell?utm_source=lovizu_blog&utm_medium=referral)

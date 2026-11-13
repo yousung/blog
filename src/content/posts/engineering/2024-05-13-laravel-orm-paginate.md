@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/laravel-ORM-paginate-%EC%A3%BC%EC%
 
 통계 시스템에서 이상한 버그가 보고되었습니다.
 
+![쌓여 있는 서류와 파일 폴더](/images/posts/laravel-orm-paginate/cover.jpg)
+
 **증상**: 페이지를 새로고침할 때마다 일정 확률로 다른 집계 결과가 나타남
 
 처음에는 **프론트엔드의 데이터 취합 오류**로 의심했습니다. 하지만 조사 결과, 훨씬 더 근본적인 문제였습니다.
@@ -315,3 +317,5 @@ paginate() 사용 = ORDER BY 필수
 ```
 
 이 간단한 규칙을 지키면, 데이터 일관성 문제를 사전에 방지할 수 있습니다. 특히 대규모 시스템에서 여러 데이터베이스를 운영할 때는 더욱 중요합니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/snNHKZ-mGfE) — [Wesley Tingey](https://unsplash.com/@wesleyphotography?utm_source=lovizu_blog&utm_medium=referral)

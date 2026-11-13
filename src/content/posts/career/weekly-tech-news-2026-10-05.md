@@ -12,6 +12,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-10-05"
 
 지난주에 "다음 주는 OpenAI 데브데이"라고 예고를 했었는데, 뚜껑을 열어보니 데브데이는 오히려 조연이었다. 이번 주 주인공은 구글이었다. 조용하던 구글이 9월 30일 제미나이 4 아르곤을 꺼내 들면서 프론티어 모델 경쟁이 다시 한 바퀴 돌았고, 앤스로픽 IPO 서류에서는 입이 벌어지는 숫자가 나왔다. 아이 셋 재우고 밤에 뉴스 정리하면서 "이 판은 이제 모델 싸움이 아니라 돈 싸움이구나" 싶었던 한 주였다. 9월 28일부터 10월 4일까지, 지난주 테크 뉴스를 정리한다.
 
+![구글 사옥 앞 로고 간판](/images/posts/weekly-tech-news-2026-10-05/cover.jpg)
+
 ## 구글 제미나이 4 아르곤 공개, 그런데 일반 사용자는 아직 못 쓴다
 
 9월 30일 구글이 새 프론티어 모델 **제미나이 4 아르곤(Gemini 4 Argon)**을 공개했다. 작년 11월 제미나이 3 이후 최상위 모델 공백이 길었던 구글의 반격이다. 구글 발표 기준으로 실제 장기 소프트웨어 엔지니어링 작업을 평가하는 DeepSWE v1.1에서 77.9%로 최고 기록을 세웠고, 보안 취약점 수정 능력을 보는 CWE-bench v1에서 68%로 공동 1위, 기업 업무 자동화를 보는 재피어 AutomationBench에서도 51.3%로 1위에 올랐다.
@@ -69,3 +71,5 @@ tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-10-05"
 ## 이번 주를 한 줄로
 
 **"모델은 수렴하고, 돈은 발산한다."** 아르곤과 GPT-6.1 솔의 가격표가 똑같아지는 동안, 인프라 쪽에서는 420억 달러짜리 대출 계약이 나왔다. 다음 주는 앤스로픽 IPO 일정 구체화 여부, 그리고 아르곤의 일반 공개 범위 확대 소식을 지켜보면 될 것 같다. 월요일 출근길에 커피 한잔하면서 참고가 되셨길.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/ngVT4tdLpxM) — [Sam](https://unsplash.com/@samtakespictures?utm_source=lovizu_blog&utm_medium=referral)

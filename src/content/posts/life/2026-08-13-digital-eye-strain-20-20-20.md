@@ -13,6 +13,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/digital-eye-strain-20-20-20"
 
 오후가 되면 화면 글자가 또렷하지 않고, 눈을 몇 번 감았다 떠도 뻑뻑한 날이 있습니다. 이럴 때 많은 사람이 모니터 밝기부터 낮추거나 블루라이트 차단 안경을 찾습니다. 그런데 실제로 먼저 봐야 할 것은 `얼마나 오래 한 지점을 봤는지`, `화면과 눈 사이가 너무 가까운지`, `창문과 조명이 화면에 비치는지`입니다.
 
+![노트북 화면 앞에 앉은 사람](/images/posts/digital-eye-strain-20-20-20/cover.jpg)
+
 화면 눈 피로는 대개 한 가지 원인으로만 오지 않습니다. 깜빡임이 줄고, 초점이 가까운 곳에 오래 묶이고, 화면 반사를 피하려고 몸이 앞으로 기울어지는 일이 겹칩니다. 그래서 해결도 "밝기 하나"가 아니라 하루 작업 흐름을 조금씩 바꾸는 쪽이 현실적입니다.
 
 > 먼저 기준부터 잡으면 이렇습니다.
@@ -129,3 +131,5 @@ OSHA는 조명과 밝기 수준을 적절히 잡아야 모니터 이미지를 �
 - [OSHA - Computer Workstations: Monitors](https://www.osha.gov/etools/computer-workstations/components/monitors) — 모니터 거리, 높이, 정면 배치, 장시간 화면 보기와 눈 피로·건조함 관련 내용을 확인했습니다. 확인일: 2026-08-13
 - [OSHA - Computer Workstations: Workstation Environment](https://www.osha.gov/etools/computer-workstations/workstation-environment) — 조명, 화면 반사, 건조한 공기와 작업 환경 관련 기준을 확인했습니다. 확인일: 2026-08-13
 - [AAO EyeWiki - Computer Vision Syndrome (Digital Eye Strain)](https://eyewiki.aao.org/Computer_Vision_Syndrome_%28Digital_Eye_Strain%29) — 디지털 눈 피로 증상, 휴식·깜빡임, 블루라이트 차단 안경에 대한 한계를 확인했습니다. 확인일: 2026-08-13
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/f2JMVDnarks) — [Resume Genius](https://unsplash.com/@resumegenius?utm_source=lovizu_blog&utm_medium=referral)

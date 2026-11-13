@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/nestjs-todo-%EB%A7%8C%EB%93%A4%EA%
 
 NestJS의 강력한 구조와 모듈식 설계를 활용하여 프로덕션급 TODO 애플리케이션을 만드는 과정을 단계별로 설명합니다.
 
+![노트에 할 일 목록을 적는 손](/images/posts/nestjs-todo/cover.jpg)
+
 ### 프로젝트 생성
 
 NestJS 프로젝트를 초기화한다.
@@ -215,3 +217,5 @@ export class TodoController {
 NestJS는 TypeScript 기반의 강력한 백엔드 프레임워크로, 이 예제는 기초를 다루고 있습니다. 제공된 구조와 패턴을 이해하면 더 복잡한 엔터프라이즈 애플리케이션으로 확장하는 것이 수월합니다.
 
 **소스 코드**: [github.com/yousung/nestjs-todo](https://github.com/yousung/nestjs-todo)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/RLw-UC03Gwc) — [Glenn Carstens-Peters](https://unsplash.com/@glenncarstenspeters?utm_source=lovizu_blog&utm_medium=referral)

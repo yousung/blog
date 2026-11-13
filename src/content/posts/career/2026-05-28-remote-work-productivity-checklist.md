@@ -13,6 +13,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EC%9E%AC%ED%83%9D%EA%B7%BC%EB%AC%
 
 재택근무 생산성은 "집에서 일하느냐"보다 "집에서 일하는 방식을 어떻게 설계하느냐"에 더 크게 좌우됩니다. OECD는 관리자와 근로자 모두 재택근무를 대체로 긍정적으로 평가했지만, 이상적인 빈도는 주 2~3일 수준이라고 분석했고, 커뮤니케이션과 지식 흐름 저하가 주요 비용이라고 설명합니다. ILO도 재택근무는 유연성을 주지만 일과 사생활의 경계가 흐려지고 장시간 노동과 고립 위험이 커질 수 있다고 지적합니다. (출처: [OECD - The role of telework for productivity during and post-COVID-19](https://www.oecd.org/en/publications/the-role-of-telework-for-productivity-during-and-post-covid-19_7fe47de2-en.html), [ILO - Working from home: From invisibility to decent work](https://files.ilo.org/digitalguides/en-gb/story/working-from-home))
 
+![체크리스트 항목에 표시하는 손](/images/posts/remote-work-productivity-checklist/cover.jpg)
+
 > 요약 박스
 >
 > - 재택근무 생산성은 `집중 시간 확보`, `비동기 문서화`, `경계 설정`이 핵심입니다.
@@ -96,3 +98,5 @@ OECD 자료는 중간 수준의 하이브리드 형태가 생산성과 웰빙의
 - [OECD - The role of telework for productivity during and post-COVID-19](https://www.oecd.org/en/publications/the-role-of-telework-for-productivity-during-and-post-covid-19_7fe47de2-en.html)
 - [ILO - Working from home: From invisibility to decent work](https://files.ilo.org/digitalguides/en-gb/story/working-from-home)
 - [ILO - Human factors/ergonomics considerations for teleworking](https://www.ilo.org/publications/work-home-human-factorsergonomics-considerations-teleworking)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/yKnIbJV0RbY) — [Jakub Żerdzicki](https://unsplash.com/@jakubzerdzicki?utm_source=lovizu_blog&utm_medium=referral)

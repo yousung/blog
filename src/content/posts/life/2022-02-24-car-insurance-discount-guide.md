@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EC%9E%90%EB%8F%99%EC%B0%A8-%EB%B3
 
 자동차 보험료는 여러 복합적인 요인에 의해 결정됩니다. 같은 차를 타는 사람들도 개인의 운전 기록에 따라 보험료가 크게 차이 나는 이유가 바로 이것입니다. 이 글에서는 보험료를 좌우하는 요인들과 현명한 관리 방법을 설명하겠습니다.
 
+![도로 위를 달리는 은색 자동차](/images/posts/car-insurance-discount-guide/cover.jpg)
+
 ## 보험료를 올리는 할증 요인들
 
 ### 사고 기록의 영향
@@ -116,3 +118,5 @@ tistoryUrl: "https://lovizu.tistory.com/entry/%EC%9E%90%EB%8F%99%EC%B0%A8-%EB%B3
 자동차 보험료는 단순히 차량과 노선에만 의존하지 않습니다. 개인의 운전 기록과 법규 준수 여부가 직접적으로 영향을 미칩니다. 특히 범칙금과 과태료의 차이를 이해하면, 장기적으로 상당한 금액을 절약할 수 있습니다. 
 
 안전 운전이 최고의 보험료 절감 방법이라는 것을 기억하세요. 매년 수십만 원의 보험료를 절약하는 것보다, 안전하고 건강한 운전 문화를 만드는 것이 더 중요합니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/ZRns2R5azu0) — [Erik Mclean](https://unsplash.com/@introspectivedsgn?utm_source=lovizu_blog&utm_medium=referral)

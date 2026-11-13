@@ -14,6 +14,8 @@ status: "published"
 
 휴대폰 메모장에는 이상하게 중요한 것과 사소한 것이 같이 쌓입니다. 아이 준비물, 카드 해지, 회사에서 떠오른 아이디어, 장보기 목록, 언젠가 읽을 책 제목까지 한 화면에 섞입니다. 문제는 메모가 많아질수록 안심은 되지만, 정작 무엇부터 해야 하는지는 더 흐려진다는 점입니다.
 
+![노트북, 메모장, 휴대폰이 놓인 책상](/images/posts/ai-phone-memo-to-checklist-routine/cover.jpg)
+
 AI 메모 정리의 쓸모는 여기서 나옵니다. 메모를 멋진 문장으로 요약하는 것이 아니라, `이번 주에 할 일`, `나중에 봐도 되는 일`, `버려도 되는 생각`을 갈라내는 데 쓰는 겁니다. 휴대폰 메모가 계속 쌓이기만 한다면, 일요일 저녁 20분 정도만 써서 실행 체크리스트로 바꿔보세요.
 
 > 3줄 요약
@@ -212,3 +214,5 @@ AI에 맡기지 않는 편이 나은 경우는 아래와 같습니다.
 - [OpenAI Help Center - How your data is used to improve model performance](https://help.openai.com/en/articles/5722486-chatgpt-privacy-policies) — 개인용 서비스와 비즈니스/API 서비스의 데이터 사용 방식 차이 참고. (확인일: 2026-08-16)
 - [Google Keep 고객센터 - 목록 만들기](https://support.google.com/keep/answer/6395451?hl=ko) — Google Keep 체크리스트 생성·수정 기능 확인. (확인일: 2026-08-16)
 - [Google Keep 고객센터 - 메모 정리하기](https://support.google.com/keep/answer/6191044?hl=ko) — Google Keep 라벨, 색상, 고정 등 메모 정리 기능 확인. (확인일: 2026-08-16)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/_cgcOEWKSKM) — [Hrushi Chavhan](https://unsplash.com/@hcphotos?utm_source=lovizu_blog&utm_medium=referral)

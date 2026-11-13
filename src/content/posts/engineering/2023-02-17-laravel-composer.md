@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/Laravel-%EC%B6%94%EC%B2%9C-Compose
 
 Laravel은 강력한 프레임워크이지만, **올바른 Composer 패키지**를 선택하면 개발 속도를 2배 이상 향상시킬 수 있습니다. 각 프로젝트의 요구사항에 맞는 패키지를 선택하여 **개발 시간을 획기적으로 단축**하세요.
 
+![이륙하는 로켓, 개발 속도 향상](/images/posts/laravel-composer/cover.jpg)
+
 ## 1. Laravel IDE Helper
 
 **용도**: IDE 자동완성, 개발 경험 향상
@@ -144,3 +146,5 @@ $user->assignRole('admin');
 ## 마치며
 
 Laravel 개발에서 **올바른 패키지 조합은 코드 품질과 개발 속도를 동시에 향상**시킵니다. Packagist에서 더 많은 패키지를 발견하고, 팀의 개발 스타일과 프로젝트 특성에 맞춰 유연하게 조합하세요. **효율적인 도구 선택이 성공적인 프로젝트의 첫 번째 조건**입니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/OHOU-5UVIYQ) — [SpaceX](https://unsplash.com/@spacex?utm_source=lovizu_blog&utm_medium=referral)

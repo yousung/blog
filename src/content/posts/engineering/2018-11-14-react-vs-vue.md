@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/React-vs-Vue"
 
 JavaScript 커뮤니티에서 가장 뜨거운 질문 중 하나가 바로 이것입니다. "React를 배워야 할까, Vue를 배워야 할까?"
 
+![어두운 편집기에 표시된 프론트엔드 코드](/images/posts/react-vs-vue/cover.jpg)
+
 한때 jQuery가 지배하던 프론트엔드 생태계는 React의 등장으로 완전히 바뀌었습니다. 그리고 Vue가 빠르게 성장하면서 개발자들의 선택지가 더욱 풍부해졌습니다. 이 글에서는 실무 개발자의 관점에서 두 프레임워크를 비교해봅니다.
 
 ## 1. 재사용성과 생태계: React의 강점
@@ -131,3 +133,5 @@ GitHub의 스타 개수로는 Vue와 React가 팽팽하지만, 실제 업계에�
 결국 프레임워크는 도구일 뿐입니다. 중요한 것은 어떤 프레임워크를 선택하든 그것을 깊이 있게 익혀서 좋은 코드를 작성하는 것입니다.
 
 많은 리서치를 통해 현명한 선택을 하시기 바랍니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/eYpcLDXHVb0) — [Ferenc Almasi](https://unsplash.com/@flowforfrank?utm_source=lovizu_blog&utm_medium=referral)

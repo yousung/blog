@@ -15,6 +15,8 @@ tistoryUrl: "https://blog.lovizu.com/entry/back-to-school-family-routine-7-days"
 
 방학이 끝나갈 때 부모가 가장 먼저 떠올리는 건 밀린 숙제입니다. 그런데 막상 개학 첫 주에 더 크게 흔들리는 건 숙제보다 생활 리듬인 경우가 많습니다. 밤에는 잠이 안 오고, 아침에는 일어나지 못하고, 책가방은 전날 밤에야 뒤집어엎습니다.
 
+![침대에 함께 누운 가족](/images/posts/back-to-school-family-routine-7-days/cover.jpg)
+
 개학 준비는 아이를 갑자기 부지런하게 만드는 일이 아닙니다. 마지막 7일 동안 잠드는 시간, 아침에 움직이는 순서, 화면을 끄는 기준, 준비물 위치를 조금씩 되돌리는 작업에 가깝습니다. 공부 계획을 더 얹기 전에 집 안의 시간표부터 학교 쪽으로 천천히 당겨야 합니다.
 
 > 3줄 요약
@@ -180,3 +182,5 @@ tistoryUrl: "https://blog.lovizu.com/entry/back-to-school-family-routine-7-days"
 - [CDC - About Sleep](https://www.cdc.gov/sleep/about/index.html) — 연령대별 권장 수면 시간과 수면의 기본 역할 참고. (확인일: 2026-08-08)
 - [CDC - Sleep and Health](https://www.cdc.gov/physical-activity-education/staying-healthy/sleep.html) — 학생 수면과 집중, 학업 수행, 건강의 관련성 참고. (확인일: 2026-08-08)
 - [HealthyChildren.org - How to Make a Family Media Plan](https://www.healthychildren.org/English/family-life/Media/Pages/How-to-Make-a-Family-Media-Use-Plan.aspx) — 가족 미디어 계획, 화면 없는 시간과 구역 설정 기준 참고. (확인일: 2026-08-08)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/DUrU_bZV8So) — [Jonathan Borba](https://unsplash.com/@jonathanborba?utm_source=lovizu_blog&utm_medium=referral)

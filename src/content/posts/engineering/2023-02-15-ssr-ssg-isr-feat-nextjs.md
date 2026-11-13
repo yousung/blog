@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/SSR-SSG-ISR-feat-NextJS"
 
 Next.js는 React 기반의 프레임워크로, 다양한 페이지 렌더링 방식을 지원합니다. 각 방식은 고유한 장단점을 가지고 있으며, 프로젝트의 요구사항에 따라 적절한 방식을 선택해야 합니다.
 
+![웹사이트 레이아웃 와이어프레임 스케치](/images/posts/ssr-ssg-isr-feat-nextjs/cover.jpg)
+
 ## SSR (Server Side Rendering)
 
 ### 정의
@@ -116,3 +118,5 @@ ISR은 SSG와 SSR의 장점을 결합한 방식으로, 정적 페이지를 주�
 
 - [Next.js Data Fetching 문서](https://nextjs.org/docs/basic-features/data-fetching)
 - [Incremental Static Regeneration](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/tZc3vjPCk-Q) — [Hal Gatewood](https://unsplash.com/@halacious?utm_source=lovizu_blog&utm_medium=referral)

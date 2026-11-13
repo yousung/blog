@@ -15,6 +15,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/Jetbrains-%ED%95%9C%EA%B8%80-%EC%9
 
 JetBrains IDE의 한글 언어팩 플러그인을 설치하고 활성화했는데도 IDE 인터페이스가 여전히 영어로 표시되는 경우가 많습니다. 이 문제는 단순히 플러그인만 활성화해서는 안 되고 추가 설정이 필요하기 때문입니다.
 
+![접힌 노트북](/images/posts/jetbrains/cover.jpg)
+
 ### 최근 변화
 
 | 기간 | 설정 방식 |
@@ -299,3 +301,5 @@ JetBrains IDE의 한글 설정은 복잡해 보이지만, 핵심은 두 가지�
 이 두 단계를 거친 후 IDE를 재시작하면 완벽한 한글 환경을 구성할 수 있습니다. 만약 작동하지 않으면 캐시를 삭제하고 다시 시도하세요.
 
 효과적인 개발을 위해서는 편한 언어 환경이 중요합니다. 이 가이드가 여러분의 한글화 문제를 완벽히 해결하는 데 도움이 되길 바랍니다.
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/urbSCgUxfQ0) — [Agung Raharja](https://unsplash.com/@agungraharja?utm_source=lovizu_blog&utm_medium=referral)

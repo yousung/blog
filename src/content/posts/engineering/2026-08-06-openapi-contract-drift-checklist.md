@@ -14,6 +14,8 @@ tistoryUrl: "https://lovizu.tistory.com/entry/OpenAPI-%EB%AC%B8%EC%84%9C%EC%99%8
 
 Swagger UI에는 분명 `email`이 필수라고 적혀 있는데, 실제 응답에는 가끔 빠집니다. 문서에는 `status`가 `active | blocked`라고 되어 있지만 운영 데이터에는 `pending`이 섞여 있습니다. 프론트엔드는 타입을 믿고 배포했는데, 어느 날 특정 고객 계정에서만 화면이 깨집니다.
 
+![컨텍스트 메뉴가 열린 코드 편집 화면](/images/posts/openapi-contract-drift-checklist/cover.jpg)
+
 이런 문제는 OpenAPI를 "문서 자동 생성" 정도로만 보면 계속 반복됩니다. **OpenAPI는 예쁜 API 문서가 아니라, 클라이언트와 서버가 함께 지키는 계약으로 다뤄야 합니다.** 계약이 깨지는 순간은 대개 큰 리팩토링 때가 아닙니다. 필드 하나를 optional로 바꾸거나, 에러 응답 형식을 급하게 추가하거나, 테스트 데이터에 없는 케이스가 운영에서 들어올 때 조용히 생깁니다.
 
 내가 작은 팀에서 OpenAPI를 볼 때 먼저 확인하는 기준은 세 가지입니다.
@@ -253,3 +255,5 @@ Swagger UI는 사람이 API를 읽고 시도해 보기 좋은 도구입니다. �
 - [OpenAPI Specification v3.2.0](https://spec.openapis.org/oas/latest.html)
 - [OpenAPI Learn - Structure of an OpenAPI Description](https://learn.openapis.org/specification/structure.html)
 - [OpenAPI Learn - API Endpoints](https://learn.openapis.org/specification/paths.html)
+
+이미지 출처: [Unsplash](https://unsplash.com/photos/bglsBQQwMWA) — [Daniil Komov](https://unsplash.com/@dkomow?utm_source=lovizu_blog&utm_medium=referral)
