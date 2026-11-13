@@ -12,7 +12,7 @@ interface Props {
 
 const { posts, basePath, listLabel = '최근 글 목록', searchable = false, searchQuery = '' } = Astro.props;
 const postHref = (slug: string) => `${basePath}posts/${slug}/`;
-const DEFAULT_THUMB = '/images/logo.jpg';
+const DEFAULT_THUMB = '/images/logo.png';
 // First image in the body (markdown or HTML), else the blog logo.
 const getThumb = (post: CollectionEntry<'posts'>) =>
   post.body
