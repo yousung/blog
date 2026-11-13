@@ -4,31 +4,21 @@ import { ADSENSE_CLIENT } from '../../consts';
 interface Props {
   /** AdSense ad unit slot id */
   slot: string;
-  /** display: responsive display unit, in-article: fluid in-article unit, multiplex: autorelaxed grid */
-  variant: 'display' | 'in-article' | 'multiplex';
+  /** in-article: fluid in-article unit placed mid-body, multiplex: autorelaxed grid at the end */
+  variant: 'in-article' | 'multiplex';
   /**
-   * in-article only: move this ad block in front of the Nth <h2> inside `.article-body`
-   * before the ad is requested. If the body has fewer headings, the ad stays where it was rendered.
+   * in-article only: render the ad only when `.article-body` has at least this many <h2>,
+   * and place it in front of the middle <h2>. Shorter posts get no in-article ad.
    */
-  beforeHeading?: number;
+  minHeadings?: number;
 }
 
-const { slot, variant, beforeHeading } = Astro.props;
+const { slot, variant, minHeadings } = Astro.props;
 const id = `ad-${slot}`;
 ---
 
-<aside class={`ad-slot ad-slot--${variant}`} id={id} aria-label="광고">
+<aside class={`ad-slot ad-slot--${variant}`} id={id} aria-label="광고" hidden={Boolean(minHeadings)}>
   <span class="ad-slot__label">광고</span>
-  {variant === 'display' && (
-    <ins
-      class="adsbygoogle"
-      style="display:block"
-      data-ad-client={ADSENSE_CLIENT}
-      data-ad-slot={slot}
-      data-ad-format="auto"
-      data-full-width-responsive="false"
-    ></ins>
-  )}
   {variant === 'in-article' && (
     <ins
       class="adsbygoogle"
@@ -52,14 +42,19 @@ const id = `ad-${slot}`;
     ></ins>
   )}
 </aside>
-<script is:inline define:vars={{ id, beforeHeading }}>
+<script is:inline define:vars={{ id, minHeadings }}>
   (function () {
     var el = document.getElementById(id);
     if (!el) return;
-    if (beforeHeading) {
+    if (minHeadings) {
       var headings = document.querySelectorAll('.article-body h2');
-      var target = headings[beforeHeading - 1];
-      if (target && target.parentNode) target.parentNode.insertBefore(el, target);
+      var target = headings[Math.floor(headings.length / 2)];
+      if (headings.length < minHeadings || !target || !target.parentNode) {
+        el.remove();
+        return;
+      }
+      target.parentNode.insertBefore(el, target);
+      el.hidden = false;
     }
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});

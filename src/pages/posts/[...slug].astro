@@ -50,11 +50,10 @@ const authorName = post.data.author === 'BLOA Team' ? '감성개발자' : post.d
       <TagList tags={post.data.tags} basePath={basePath} />
     </div>
     {post.data.tistoryUrl && <a class="tistory-deep-link" href={post.data.tistoryUrl} rel="alternate">티스토리 원문</a>}
-    <AdSlot slot={AD_SLOTS.postTopDisplay} variant="display" />
     <div class="article-body">
       <Content />
     </div>
-    <AdSlot slot={AD_SLOTS.postInArticle} variant="in-article" beforeHeading={3} />
+    <AdSlot slot={AD_SLOTS.postInArticle} variant="in-article" minHeadings={4} />
     <AdSlot slot={AD_SLOTS.postMultiplex} variant="multiplex" />
   </article>
   <GiscusComments />
