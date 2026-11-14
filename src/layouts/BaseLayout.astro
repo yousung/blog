@@ -209,7 +209,9 @@ const jsonLd =
         // Also request the ad when a reader reaches the existing end-of-post slot.
         window.addEventListener('DOMContentLoaded', function () {
           if (window.__lovizuAdsLoaded) return;
-          var slot = document.querySelector('.ad-slot');
+          // Observe only the end-of-post slot; the top-of-post slot is always in view
+          // and must not trigger AdSense on page load.
+          var slot = document.querySelector('.ad-slot--multiplex');
           if (!slot || !('IntersectionObserver' in window)) return;
           observer = new IntersectionObserver(function (entries) {
             if (entries.some(function (entry) { return entry.isIntersecting; })) {

@@ -11,13 +11,15 @@ interface Props {
    * and place it in front of the middle <h2>. Shorter posts get no in-article ad.
    */
   minHeadings?: number;
+  /** top: compact, low-key unit between the post header and the body */
+  placement?: 'top';
 }
 
-const { slot, variant, minHeadings } = Astro.props;
-const id = `ad-${slot}`;
+const { slot, variant, minHeadings, placement } = Astro.props;
+const id = placement ? `ad-${placement}-${slot}` : `ad-${slot}`;
 ---
 
-<aside class={`ad-slot ad-slot--${variant}`} id={id} aria-label="광고" hidden={Boolean(minHeadings)}>
+<aside class:list={['ad-slot', `ad-slot--${variant}`, placement && `ad-slot--${placement}`]} id={id} aria-label="광고" hidden={Boolean(minHeadings)}>
   <span class="ad-slot__label">광고</span>
   {variant === 'in-article' && (
     <ins
@@ -96,6 +98,13 @@ const id = `ad-${slot}`;
 
   .ad-slot--multiplex {
     min-height: 300px;
+  }
+
+  /* Top-of-post: flat and quiet so it does not compete with the title. */
+  .ad-slot--top {
+    margin: var(--space-6) 0 var(--space-8);
+    box-shadow: none;
+    background: transparent;
   }
 
   .ad-slot ins.adsbygoogle[data-ad-status='unfilled'] {

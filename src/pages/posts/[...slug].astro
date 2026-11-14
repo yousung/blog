@@ -51,6 +51,7 @@ const authorName = post.data.author === 'BLOA Team' ? '감성개발자' : post.d
     <div class="tags-wrapper">
       <TagList tags={post.data.tags} basePath={basePath} />
     </div>
+    <AdSlot slot={AD_SLOTS.postInArticle} variant="in-article" placement="top" />
     <div class="article-body">
       <Content />
     </div>
