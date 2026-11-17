@@ -7,6 +7,7 @@ summary: "Let's Encrypt가 2027년 2월부터 인증서 유효기간을 64일로
 oneLineSummary: "인증서 수명이 짧아지면 고정 일수로 짠 갱신 자동화부터 어긋납니다."
 tags: ["보안", "NGINX", "자동화", "인프라", "체크리스트"]
 status: "published"
+tistoryUrl: "https://tistory.lovizu.com/entry/tls-certificate-renewal-64-day-checklist"
 ---
 
 SSL 인증서 자동 갱신은 오래전에 끝난 숙제처럼 취급됩니다. 서버를 처음 세팅할 때 certbot을 설치하고, 타이머가 돌고 있는 걸 한 번 확인하고 나면 그 뒤로는 아무도 들여다보지 않습니다. 실제로 그렇게 몇 년을 아무 문제 없이 지나가는 경우도 많습니다. 그런데 "몇 년 동안 문제가 없었다"는 사실이 "앞으로도 문제가 없다"는 근거가 되려면 전제가 하나 필요합니다. 인증서의 유효기간과 갱신 규칙이 그동안과 같아야 한다는 전제입니다.
