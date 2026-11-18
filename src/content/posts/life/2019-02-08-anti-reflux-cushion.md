@@ -11,6 +11,8 @@ updatedDate: "2026-05-30"
 tistoryUrl: "https://tistory.lovizu.com/entry/%EC%97%AD%EB%A5%98%EB%B0%A9%EC%A7%80-%EC%BF%A0%EC%85%98"
 ---
 
+> 이 상품의 최신 가격·구매 후기 정리는 [러비쥬 픽](https://pick.lovizu.com/posts/anti-reflux-cushion/)에서 이어서 업데이트합니다.
+
 아기 역류방지쿠션은 이름 때문에 기능을 과하게 기대하기 쉽습니다. 막상 집에서 쓸 장면을 떠올리면 `수유 후 잠깐 눕힐 수 있는지`, `커버 세탁이 쉬운지`, `아기가 누웠을 때 안정적으로 보이는지`, `사용 시간을 관리할 수 있는지`입니다. 로토토베베 유아용 역류방지쿠션 + 커버 세트도 의료적 효과보다 생활 보조 쿠션으로 보는 편이 현실적입니다.
 
 ![로토토베베 유아용 역류방지쿠션 제품 이미지](https://cdn-blog.lovizu.com/bloa/coupang/2026/05/rototobebe-anti-reflux-cushion-8750318355.webp)
