@@ -8,7 +8,7 @@ oneLineSummary: 'Laravel SweetAlert로 맞춤형 알림창 구현하기'
 tags: ['Laravel', 'JavaScript', 'UI']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/Sweet-Alert-%EB%9D%BC%EB%9D%BC%EB%B2%A8-alert-%EC%89%BD%EA%B2%8C-%EB%9D%84%EC%9A%B0%EA%B8%B0"
+tistoryUrl: "https://tistory.lovizu.com/entry/Sweet-Alert-%EB%9D%BC%EB%9D%BC%EB%B2%A8-alert-%EC%89%BD%EA%B2%8C-%EB%9D%84%EC%9A%B0%EA%B8%B0"
 ---
 
 ## SweetAlert란?

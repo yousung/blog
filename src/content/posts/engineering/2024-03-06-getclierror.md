@@ -8,7 +8,7 @@ oneLineSummary: 'GetX CLI waitFor 에러 완벽 해결 가이드'
 tags: ['Flutter', 'Dart', 'GetX', 'troubleshooting']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/getclierror"
+tistoryUrl: "https://tistory.lovizu.com/entry/getclierror"
 ---
 
 ## 문제 상황

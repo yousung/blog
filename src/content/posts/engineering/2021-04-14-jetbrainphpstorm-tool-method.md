@@ -8,7 +8,7 @@ oneLineSummary: '테스트 코드에서 한글 메서드명 경고 없애기'
 tags: ['JetBrains', 'PhpStorm', '테스트코드', '개발환경', '설정']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/jetbrainPHPSTORM-tool-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%ED%95%9C%EA%B8%80-method-%EB%B0%91%EC%A4%84-%EC%97%86%EC%95%A0%EA%B8%B0"
+tistoryUrl: "https://tistory.lovizu.com/entry/jetbrainPHPSTORM-tool-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%ED%95%9C%EA%B8%80-method-%EB%B0%91%EC%A4%84-%EC%97%86%EC%95%A0%EA%B8%B0"
 ---
 ## 테스트 코드의 특별한 관례
 

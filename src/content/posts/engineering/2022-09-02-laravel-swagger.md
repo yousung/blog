@@ -8,7 +8,7 @@ oneLineSummary: 'Laravel API: OpenAPI 속성으로 우아하고 재사용 가능
 tags: ['Laravel', 'PHP', 'API', 'OpenAPI', 'Backend']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/Laravel-Swagger-%EC%89%BD%EA%B2%8C-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0"
+tistoryUrl: "https://tistory.lovizu.com/entry/Laravel-Swagger-%EC%89%BD%EA%B2%8C-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0"
 ---
 ## 전통적 Swagger 주석의 문제점
 

@@ -8,7 +8,7 @@ oneLineSummary: 'Link 컴포넌트로 빠르고 효율적인 라우팅 구현'
 tags: ['Next.js', 'React', '라우팅']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/Link-Component-feat-nextJs"
+tistoryUrl: "https://tistory.lovizu.com/entry/Link-Component-feat-nextJs"
 ---
 
 ## Link 컴포넌트란?

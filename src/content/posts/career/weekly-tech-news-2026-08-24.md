@@ -7,7 +7,7 @@ summary: "8월 셋째 주 IT 뉴스 정리. 앤스로픽의 분기 매출 OpenAI
 oneLineSummary: "돈은 코딩 AI로 몰리고, 리스크는 에이전트와 커널에서 터진 한 주"
 tags: ["AI", "보안", "기술트렌드", "클라우드", "개발"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-08-24"
+tistoryUrl: "https://tistory.lovizu.com/entry/weekly-tech-news-2026-08-24"
 ---
 
 월요일 아침이면 늘 하던 대로, 지난주(8월 17일~23일) IT 뉴스 중에서 개발자 입장에서 그냥 넘기기 어려운 것들만 추려봤다. 이번 주는 한 문장으로 요약하면 이렇다. "AI 판의 서열이 바뀌었고, 그 와중에 보안은 계속 뚫리고 있다." 앤스로픽이 OpenAI 매출을 처음으로 넘어섰다는 소식이 단연 컸고, 국내에서는 KT의 소버린 AI 어플라이언스 출시와 반도체 주가의 롤러코스터가 눈에 띄었다. 하나씩 정리해 본다.

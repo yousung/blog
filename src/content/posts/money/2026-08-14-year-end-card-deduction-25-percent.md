@@ -9,7 +9,7 @@ tags: [머니, 예산, 금융, 체크리스트]
 status: "published"
 updatedDate: "2026-08-14"
 ogImage: "/images/posts/year-end-card-deduction-25-percent/hero.png"
-tistoryUrl: "https://lovizu.com/entry/year-end-card-deduction-25-percent"
+tistoryUrl: "https://tistory.lovizu.com/entry/year-end-card-deduction-25-percent"
 ---
 
 # 연말정산 카드 소득공제, 25% 넘기 전후로 다르게 써야 하는 이유

@@ -8,7 +8,7 @@ oneLineSummary: 'Next.js Shallow Routing으로 서버 요청 없이 URL 변경�
 tags: ['Next.js', 'React', '라우팅', 'Web-Performance', 'UX']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/Shallow-Routing-feat-nextJs"
+tistoryUrl: "https://tistory.lovizu.com/entry/Shallow-Routing-feat-nextJs"
 ---
 
 ## 도입: 페이지 이동의 비효율성

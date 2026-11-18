@@ -8,7 +8,7 @@ oneLineSummary: '소규모 팀의 고성능 B2B 기업 웹사이트 개발 사�
 tags: ['웹개발', 'SEO', '포트폴리오', '성능최적화']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/%EC%A3%BC-%ED%8B%B0%EC%94%A8%ED%8C%A9-wwwtcpackcokr"
+tistoryUrl: "https://tistory.lovizu.com/entry/%EC%A3%BC-%ED%8B%B0%EC%94%A8%ED%8C%A9-wwwtcpackcokr"
 ---
 ## 프로젝트 개요
 

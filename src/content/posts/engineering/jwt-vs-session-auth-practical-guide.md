@@ -7,7 +7,7 @@ summary: "JWT와 세션 인증을 실무 관점에서 비교한 기록. JWT 로�
 oneLineSummary: "인증 방식은 유행이 아니라 제약 조건으로 고른다"
 tags: ["인증", "보안", "백엔드", "웹개발", "설계"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/jwt-vs-session-auth-practical-guide"
+tistoryUrl: "https://tistory.lovizu.com/entry/jwt-vs-session-auth-practical-guide"
 ---
 
 며칠 전 사내 신규 프로젝트 킥오프에서 인증 방식 얘기가 나왔다. 주니어 한 명이 "요즘 누가 세션 쓰나요, JWT 가야죠"라고 했고, 나는 잠깐 고민하다가 "이 프로젝트는 세션이 맞을 것 같은데"라고 답했다. 회의가 끝나고 그 친구가 따로 물어보러 왔다. 왜 JWT가 아니냐고. 그때 했던 얘기를 정리해서 글로 남긴다. 10년 넘게 백엔드를 하면서 JWT로 인증을 구현해 장애도 겪어봤고, 세션으로 돌아간 프로젝트도 있고, 결국 둘 다 쓰는 프로젝트도 있다. 이론은 간단한데 실무는 간단하지 않았다.

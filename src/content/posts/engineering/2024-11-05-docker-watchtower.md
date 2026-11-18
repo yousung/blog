@@ -8,7 +8,7 @@ oneLineSummary: 'Docker 자동 업데이트 설정'
 tags: ['Docker', '자동화', 'DevOps']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/%EB%8F%84%EC%BB%A4-%ED%95%AD%EC%83%81-%EC%B5%9C%EC%8B%A0%ED%99%94"
+tistoryUrl: "https://tistory.lovizu.com/entry/%EB%8F%84%EC%BB%A4-%ED%95%AD%EC%83%81-%EC%B5%9C%EC%8B%A0%ED%99%94"
 ---
 
 ## Docker 컨테이너 자동 업데이트의 필요성

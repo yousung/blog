@@ -7,7 +7,7 @@ summary: "방학 동안 무너진 아이 생활 리듬을 개학 전 일주일 �
 oneLineSummary: "개학 전 일주일을 어떻게 보내느냐가 개학 후 한 달을 결정한다."
 tags: ["육아", "일상", "체크리스트", "루틴", "수면", "생활정보", "부모교육"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/back-to-school-routine-recovery"
+tistoryUrl: "https://tistory.lovizu.com/entry/back-to-school-routine-recovery"
 ---
 
 8월 말이 되면 우리 집 공기가 달라진다. 달력을 보던 첫째가 "아빠, 개학 며칠 남았어?"라고 묻는 순간부터다. 방학 내내 밤 11시에 자고 아침 9시에 일어나던 아이들이, 일주일 뒤에는 7시에 일어나서 밥 먹고 가방 메고 나가야 한다. 이게 자동으로 될 리가 없다. 아이 셋을 키우면서 개학을 여러 번 치러보니, 개학 전 일주일을 어떻게 보내느냐가 개학 후 한 달을 결정한다는 걸 몸으로 배웠다.

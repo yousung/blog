@@ -8,7 +8,7 @@ oneLineSummary: "역류방지쿠션은 소재, 경사감, 세탁, 사용 시간 
 tags: ['육아', '아기용품', '수면교육', '제품리뷰', 'coupang']
 status: "published"
 updatedDate: "2026-05-30"
-tistoryUrl: "https://lovizu.tistory.com/entry/%EC%97%AD%EB%A5%98%EB%B0%A9%EC%A7%80-%EC%BF%A0%EC%85%98"
+tistoryUrl: "https://tistory.lovizu.com/entry/%EC%97%AD%EB%A5%98%EB%B0%A9%EC%A7%80-%EC%BF%A0%EC%85%98"
 ---
 
 아기 역류방지쿠션은 이름 때문에 기능을 과하게 기대하기 쉽습니다. 막상 집에서 쓸 장면을 떠올리면 `수유 후 잠깐 눕힐 수 있는지`, `커버 세탁이 쉬운지`, `아기가 누웠을 때 안정적으로 보이는지`, `사용 시간을 관리할 수 있는지`입니다. 로토토베베 유아용 역류방지쿠션 + 커버 세트도 의료적 효과보다 생활 보조 쿠션으로 보는 편이 현실적입니다.

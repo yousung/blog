@@ -8,7 +8,7 @@ oneLineSummary: '2018년 React와 Vue 프레임워크 선택 기준과 비교'
 tags: ['JavaScript', 'React', 'Vue', '프론트엔드', '프레임워크']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/React-vs-Vue"
+tistoryUrl: "https://tistory.lovizu.com/entry/React-vs-Vue"
 ---
 
 ## JavaScript 프레임워크의 선택

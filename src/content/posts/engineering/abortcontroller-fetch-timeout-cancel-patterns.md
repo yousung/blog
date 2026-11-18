@@ -7,7 +7,7 @@ summary: "검색 자동완성 레이스 컨디션부터 fetch 타임아웃, 이�
 oneLineSummary: "취소를 제대로 다루는 코드는 티가 안 나지만, 없으면 재현 안 되는 버그로 돌아온다"
 tags: ["JavaScript", "웹개발", "프론트엔드", "개발팁", "동시성"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/abortcontroller-fetch-timeout-cancel-patterns"
+tistoryUrl: "https://tistory.lovizu.com/entry/abortcontroller-fetch-timeout-cancel-patterns"
 ---
 
 지난달에 사내 어드민 화면에서 묘한 버그 제보를 받았다. 검색창에 "김"까지 치고 "김철수"를 마저 입력했는데, 결과 목록에는 "김"으로 검색한 결과가 떠 있다는 것이다. 재현도 잘 안 되고, 새로고침하면 멀쩡하다. 네트워크 탭을 한참 들여다보고서야 원인을 찾았다. 먼저 보낸 "김" 요청이 늦게 도착해서, 나중에 보낸 "김철수" 응답을 덮어쓰고 있었다. 전형적인 레이스 컨디션이다.

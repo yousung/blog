@@ -7,7 +7,7 @@ summary: "10월 셋째 주 IT 뉴스 정리. 마이크로소프트 역대 최대
 oneLineSummary: "이번 주 키워드는 기록 경신과 체급 확인이다"
 tags: ["AI", "LLM", "보안", "기술트렌드", "개발"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-10-19"
+tistoryUrl: "https://tistory.lovizu.com/entry/weekly-tech-news-2026-10-19"
 ---
 
 월요일 아침마다 지난 한 주 테크 뉴스를 정리하고 있다. 이번 주(10월 12일~18일)는 보안과 반도체가 번갈아 가며 시장을 흔든 한 주였다. 마이크로소프트가 역대 최대 규모의 패치를 쏟아냈고, 중국 메모리 업체의 발표 한 번에 코스피가 5% 넘게 빠졌다가 다음 날 바로 반등했다. 그 와중에 앤스로픽은 상장 전 실적을 처음 공개하며 IPO 레이스의 방아쇠를 당겼다. 하나씩 정리해 본다.

@@ -7,7 +7,7 @@ summary: "인덱스가 있어도 안 타는 대표 케이스를 MySQL 실행계�
 oneLineSummary: "인덱스가 있다는 것과 인덱스를 탄다는 것은 완전히 다른 얘기다. EXPLAIN 세 컬럼부터 보자."
 tags: ["MySQL", "SQL", "데이터베이스", "쿼리", "성능최적화", "Backend", "troubleshooting", "체크리스트"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/mysql-index-not-used-execution-plan"
+tistoryUrl: "https://tistory.lovizu.com/entry/mysql-index-not-used-execution-plan"
 ---
 
 운영 DB에서 특정 화면이 느리다는 제보를 받으면, 나는 제일 먼저 쿼리부터 본다. 그런데 쿼리를 열어보면 십중팔구 이런 반응이 나온다. "어? 이거 인덱스 있는데?" 인덱스가 있다는 것과 인덱스를 탄다는 것은 완전히 다른 얘기다. 이 차이를 모르면 인덱스를 아무리 추가해도 쿼리는 계속 느리다.

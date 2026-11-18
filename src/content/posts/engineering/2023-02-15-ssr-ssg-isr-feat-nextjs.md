@@ -8,7 +8,7 @@ oneLineSummary: 'Next.js의 4가지 렌더링 방식 완벽 이해하기'
 tags: ['Next.js', 'React', 'SEO', '렌더링']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/SSR-SSG-ISR-feat-NextJS"
+tistoryUrl: "https://tistory.lovizu.com/entry/SSR-SSG-ISR-feat-NextJS"
 ---
 
 ## Next.js 렌더링 방식 개요

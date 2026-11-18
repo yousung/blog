@@ -7,7 +7,7 @@ summary: "RDS MySQL의 Too many connections 장애를 실제로 겪고 정리한
 oneLineSummary: "Too many connections는 DB 장애가 아니라 용량 계획 장애다"
 tags: ["AWS", "RDS", "MySQL", "데이터베이스", "troubleshooting", "인프라", "백엔드"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/rds-too-many-connections-troubleshooting"
+tistoryUrl: "https://tistory.lovizu.com/entry/rds-too-many-connections-troubleshooting"
 ---
 
 금요일 저녁 8시였다. 애들 셋 씻기고 이제 좀 앉아볼까 하는데 폰이 울렸다. 슬랙 알람. "DB 연결이 안 됩니다." 운영 서버 로그를 열어보니 익숙하면서도 제일 보기 싫은 그 문구가 찍혀 있었다. **SQLSTATE[HY000] [1040] Too many connections.**

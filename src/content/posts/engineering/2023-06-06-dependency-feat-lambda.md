@@ -8,7 +8,7 @@ oneLineSummary: 'Lambda의 C 라이브러리 의존성을 exodus로 자동 수�
 tags: ['AWS', 'Lambda', 'Docker', 'C라이브러리', '배포']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4-Dependency-%EC%84%A4%EC%B9%98-feat-lambda"
+tistoryUrl: "https://tistory.lovizu.com/entry/%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4-Dependency-%EC%84%A4%EC%B9%98-feat-lambda"
 ---
 
 ## 도입

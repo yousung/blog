@@ -8,7 +8,7 @@ oneLineSummary: '대용량 데이터베이스 백업을 4시간에서 1시간 �
 tags: ['MariaDB', 'MySQL', 'AWS', 'RDS', '데이터베이스']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/%EB%94%94%EB%B9%84-%EB%B9%A0%EB%A5%B4%EA%B2%8C-%EB%B0%B1%EC%97%85%ED%95%98%EA%B3%A0-%EB%B3%B5%EC%9B%90%ED%95%98%EA%B8%B0-beat-mariadb-mysql"
+tistoryUrl: "https://tistory.lovizu.com/entry/%EB%94%94%EB%B9%84-%EB%B9%A0%EB%A5%B4%EA%B2%8C-%EB%B0%B1%EC%97%85%ED%95%98%EA%B3%A0-%EB%B3%B5%EC%9B%90%ED%95%98%EA%B8%B0-beat-mariadb-mysql"
 ---
 
 ## MariaDB 빠르게 백업하고 복원하기

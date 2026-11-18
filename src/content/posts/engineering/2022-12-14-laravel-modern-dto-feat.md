@@ -8,7 +8,7 @@ oneLineSummary: 'Laravel: PHP 8 Attribute로 Spring 스타일 DTO 구현'
 tags: ['Laravel', 'PHP', 'DTO', 'Backend', '아키텍처']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/Laravel%EC%97%90-Modern-%ED%95%98%EA%B2%8C-DTO-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-feat-%EB%9D%BC%EB%9D%BC%EB%B2%A8-%EC%8A%A4%ED%94%84%EB%A7%81"
+tistoryUrl: "https://tistory.lovizu.com/entry/Laravel%EC%97%90-Modern-%ED%95%98%EA%B2%8C-DTO-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-feat-%EB%9D%BC%EB%9D%BC%EB%B2%A8-%EC%8A%A4%ED%94%84%EB%A7%81"
 ---
 ## PHP 8 Attribute와 Modern한 Laravel 개발
 

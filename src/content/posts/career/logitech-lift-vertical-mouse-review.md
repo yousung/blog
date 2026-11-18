@@ -7,7 +7,7 @@ summary: "손목 통증 때문에 갈아탄 로지텍 리프트(Lift) 버티컬 
 oneLineSummary: "손목이 신호를 보내기 시작한 개발자에게, 리프트는 파스값보다 싼 투자다"
 tags: ["제품리뷰", "장비", "인체공학", "건강", "개발환경", "리뷰", "it"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/logitech-lift-vertical-mouse-review"
+tistoryUrl: "https://tistory.lovizu.com/entry/logitech-lift-vertical-mouse-review"
 ---
 
 작년부터 오른쪽 손목이 심상치 않았다. 하루에 열 시간 가까이 키보드와 마우스를 잡는 직업이라 어느 정도 각오는 하고 살았는데, 마우스를 쥔 채로 스크롤을 오래 내리고 나면 손목 바깥쪽이 시큰거리는 날이 잦아졌다. 파스를 붙이고 손목 보호대를 차 봐도 그때뿐이었다. 얼마 전 [키보드를 독거미 F87로 바꾸면서](https://lovizu.tistory.com/entry/aula-f87-dokgeomi-keyboard-review) 입력 장비를 한 번 정리한 김에, 이번에는 마우스 차례라고 생각했다. 그래서 고른 게 로지텍 리프트(Lift) 버티컬 마우스다. 한 달 정도 회사와 집에서 번갈아 써 본 솔직한 후기를 남긴다.

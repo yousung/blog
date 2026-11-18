@@ -8,7 +8,7 @@ summary: 'NestJS로 CRUD 기능이 완전한 TODO REST API를 구현하는 단�
 oneLineSummary: 'NestJS로 TODO API 만들기 (CRUD, 유효성 검사, 상태 관리)'
 tags: ['NestJS', 'TypeScript', 'Backend']
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/nestjs-todo-%EB%A7%8C%EB%93%A4%EA%B8%B0"
+tistoryUrl: "https://tistory.lovizu.com/entry/nestjs-todo-%EB%A7%8C%EB%93%A4%EA%B8%B0"
 ---
 
 ## NestJS로 TODO API 구현하기

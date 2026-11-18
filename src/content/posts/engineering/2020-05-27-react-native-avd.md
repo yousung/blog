@@ -8,7 +8,7 @@ oneLineSummary: 'React Native Android 빌드 실패는 Gradle 설치로 해결�
 tags: ['React Native', 'Android', 'Gradle', '개발환경']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/React-Native-AVD-%EA%B0%80-%EC%95%88%EB%90%A0-%EB%95%8C"
+tistoryUrl: "https://tistory.lovizu.com/entry/React-Native-AVD-%EA%B0%80-%EC%95%88%EB%90%A0-%EB%95%8C"
 ---
 
 ## 문제 상황

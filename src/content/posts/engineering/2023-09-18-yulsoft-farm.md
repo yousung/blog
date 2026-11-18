@@ -8,7 +8,7 @@ oneLineSummary: '농장 배송 관리 앱: Flutter 프로젝트 사례'
 tags: ['Flutter', 'Dart', '모바일앱', '농업']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/yulsoft-farm"
+tistoryUrl: "https://tistory.lovizu.com/entry/yulsoft-farm"
 ---
 
 ## 프로젝트 개요

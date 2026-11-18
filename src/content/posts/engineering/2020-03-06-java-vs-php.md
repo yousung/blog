@@ -8,7 +8,7 @@ oneLineSummary: 'Java vs PHP: 한국 개발자가 선택해야 할 언어'
 tags: ['Java', 'PHP', '백엔드', '커리어', 'Spring', 'Laravel']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/JAVA-vs-PHP"
+tistoryUrl: "https://tistory.lovizu.com/entry/JAVA-vs-PHP"
 ---
 
 ## 개요

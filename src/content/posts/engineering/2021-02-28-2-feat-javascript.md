@@ -8,7 +8,7 @@ oneLineSummary: "리팩토링 2판은 기법 암기보다 코드 개선 사고�
 tags: ['책리뷰', '리팩토링', 'JavaScript', 'coupang', 'cleancode']
 status: "published"
 updatedDate: "2026-05-30"
-tistoryUrl: "https://lovizu.tistory.com/entry/%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-2%ED%8C%90-feat-javascript"
+tistoryUrl: "https://tistory.lovizu.com/entry/%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-2%ED%8C%90-feat-javascript"
 ---
 
 개발서 구매는 최신 유행보다 지금 내 코드에 적용할 수 있는지가 중요합니다. `리팩토링 - 코드 구조를 체계적으로 개선하여 효율적인 리팩터링 구현하기 (2판)`은 코드가 커지고 수정이 무서워질 때 책상 옆에 둘 만한 책인지 따져보게 되는 제목입니다. JavaScript 예제로 바뀐 2판이라 웹 개발자 입장에서도 접근성이 좋아졌습니다.

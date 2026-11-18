@@ -7,7 +7,7 @@ summary: "2026-2027절기 어린이 인플루엔자 국가예방접종이 14세�
 oneLineSummary: "독감 접종은 유행이 시작되기 전인 10월이 골든타임이고, 아이 셋 집의 접종은 운영의 영역이다"
 tags: ["일상", "육아", "건강", "생활정보", "체크리스트"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/kids-flu-shot-october-routine"
+tistoryUrl: "https://tistory.lovizu.com/entry/kids-flu-shot-october-routine"
 ---
 
 아침에 애들 등교시키려고 현관문을 여는데 공기가 달라졌다. 지난주까지만 해도 반팔로 버틸 만했는데, 이번 주부터는 얇은 패딩 조끼를 꺼냈다. 이맘때가 되면 우리 집에는 연례행사가 하나 있다. 독감 예방접종이다. 아이가 셋이면 접종도 이벤트다. 한 명씩 데려가면 세 번 왕복이고, 한 번에 데려가면 소아과 대기실에서 한 시간짜리 인내심 테스트가 열린다.

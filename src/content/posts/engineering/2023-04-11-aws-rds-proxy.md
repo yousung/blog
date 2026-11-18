@@ -8,7 +8,7 @@ oneLineSummary: "AWS RDS Proxy로 데이터베이스 연결을 효율적으로 �
 tags: ['AWS', 'RDS', '데이터베이스', 'Lambda', '서버리스']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/AWS-RDS-proxy-%EC%A0%81%EC%9A%A9-%ED%9B%84%EA%B8%B0"
+tistoryUrl: "https://tistory.lovizu.com/entry/AWS-RDS-proxy-%EC%A0%81%EC%9A%A9-%ED%9B%84%EA%B8%B0"
 ---
 
 ## RDS Proxy 개요

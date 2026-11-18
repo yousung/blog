@@ -8,7 +8,7 @@ summary: 'AWS ECS Fargate를 이용한 서버리스 컨테이너 배포 방법. 
 oneLineSummary: 'ECS Fargate: 컨테이너 기반 서버리스 배포부터 스케일링까지'
 tags: ['AWS', 'ECS', 'Fargate', 'Docker', 'DevOps', '인프라']
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/ECS-Fargate-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0"
+tistoryUrl: "https://tistory.lovizu.com/entry/ECS-Fargate-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0"
 ---
 
 ## AWS ECS Fargate 완벽 가이드

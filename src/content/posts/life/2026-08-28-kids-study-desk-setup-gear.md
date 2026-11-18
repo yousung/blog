@@ -7,7 +7,7 @@ summary: "개학 후 무너진 아이 책상을 되살린 실전 장비 후기. 
 oneLineSummary: "장비는 아이를 공부시키지 못한다. 대신 공부를 방해하는 물리적 핑계를 없애준다."
 tags: ["육아", "일상", "장비", "학습", "습관", "생활정보", "자녀양육"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/kids-study-desk-setup-gear"
+tistoryUrl: "https://tistory.lovizu.com/entry/kids-study-desk-setup-gear"
 ---
 
 지난주에 [개학 전 생활 리듬 복구 작전](https://lovizu.tistory.com/entry/back-to-school-routine-recovery)이라는 글을 썼다. 수면 시간 되돌리고, 아침 루틴 다시 세우고, 준비물 체크리스트 만들고. 그런데 개학하고 일주일을 지켜보니 하나가 더 남아 있었다. 아이들 책상이다. 방학 두 달 동안 책상은 공부하는 곳이 아니라 잡동사니 두는 곳이었다. 레고 부품, 슬라임 통, 어디서 났는지 모를 스티커들. 첫째를 앉혀놓고 숙제를 시키는데 10분을 못 버티고 일어난다. 조명은 어둡고, 책은 바닥에 눕혀져 있고, 시간 개념은 없고.

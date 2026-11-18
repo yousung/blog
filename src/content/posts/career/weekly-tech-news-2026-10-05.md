@@ -7,7 +7,7 @@ summary: "9월 다섯째 주 IT 뉴스 정리. 구글 제미나이 4 아르곤 �
 oneLineSummary: "모델은 수렴하고, 돈은 발산한다"
 tags: ["AI", "보안", "기술트렌드", "클라우드", "개발"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-10-05"
+tistoryUrl: "https://tistory.lovizu.com/entry/weekly-tech-news-2026-10-05"
 ---
 
 지난주에 "다음 주는 OpenAI 데브데이"라고 예고를 했었는데, 뚜껑을 열어보니 데브데이는 오히려 조연이었다. 이번 주 주인공은 구글이었다. 조용하던 구글이 9월 30일 제미나이 4 아르곤을 꺼내 들면서 프론티어 모델 경쟁이 다시 한 바퀴 돌았고, 앤스로픽 IPO 서류에서는 입이 벌어지는 숫자가 나왔다. 아이 셋 재우고 밤에 뉴스 정리하면서 "이 판은 이제 모델 싸움이 아니라 돈 싸움이구나" 싶었던 한 주였다. 9월 28일부터 10월 4일까지, 지난주 테크 뉴스를 정리한다.

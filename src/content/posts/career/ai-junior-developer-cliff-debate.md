@@ -7,7 +7,7 @@ summary: "앤스로픽의 주니어 기술직 채용 비중이 27%에서 9%로 �
 oneLineSummary: "AI는 주니어의 일이 아니라 주니어에게 시키던 기계적인 일을 가져갔다, 다음 시니어는 누가 키우나"
 tags: ["AI", "커리어", "개발자", "취업", "기술트렌드", "경력개발", "개발철학"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/ai-junior-developer-cliff-debate"
+tistoryUrl: "https://tistory.lovizu.com/entry/ai-junior-developer-cliff-debate"
 ---
 
 지난 주말에 뉴스 하나를 읽고 생각이 많아졌다. 앤스로픽이 자기 회사 채용 데이터를 분석한 보고서를 냈는데, 신규 채용에서 주니어 기술직이 차지하는 비중이 1년 사이에 27%에서 9%로 떨어졌다는 내용이었다. AI를 만드는 회사가 AI 때문에 주니어를 덜 뽑게 됐다고 스스로 공개한 셈이다. 사내에서 AI 에이전트가 일한 시간이 사람이 일한 시간의 6배라는 수치도 같이 나왔다. 남 얘기처럼 읽히지 않았다. 10년 넘게 이 바닥에서 밥을 벌어먹은 사람으로서, 그리고 언젠가 "아빠, 나도 개발자 할래"라고 말할지도 모르는 아이 셋의 아빠로서, 오늘은 코드 얘기 대신 이 논쟁 얘기를 해보려고 한다.

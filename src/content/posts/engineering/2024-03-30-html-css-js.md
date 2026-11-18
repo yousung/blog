@@ -8,7 +8,7 @@ oneLineSummary: '헷갈리는 HTML 태그의 정확한 의미론적 차이와 �
 tags: ['HTML', '웹개발', 'Semantics', 'SEO', 'accessibility']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/HTML-CSS-JS-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EB%8B%A4%EC%8B%9C-%EB%8B%A4%EB%93%AC%EA%B8%B0"
+tistoryUrl: "https://tistory.lovizu.com/entry/HTML-CSS-JS-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EB%8B%A4%EC%8B%9C-%EB%8B%A4%EB%93%AC%EA%B8%B0"
 ---
 
 ## 의미론적 HTML의 중요성

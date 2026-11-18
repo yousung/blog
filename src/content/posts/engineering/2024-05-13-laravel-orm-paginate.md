@@ -8,7 +8,7 @@ oneLineSummary: 'paginate() 사용 시 ORDER BY는 필수, 선택이 아닙니�
 tags: ['Laravel', 'ORM', 'Database', 'Eloquent']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/laravel-ORM-paginate-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD"
+tistoryUrl: "https://tistory.lovizu.com/entry/laravel-ORM-paginate-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD"
 ---
 
 ## 문제 상황: 신비한 데이터 불일치

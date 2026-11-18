@@ -7,7 +7,7 @@ summary: "AI 코딩 도구가 기본값이 된 시대의 주니어 개발자 성
 oneLineSummary: "코드는 AI가 짜줄 수 있어도, 설명할 수 없는 코드에 네 이름을 붙이지 마라."
 tags: ["AI", "개발자", "커리어", "경력개발", "개발철학", "기술트렌드", "career"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/ai-era-junior-developer-growth"
+tistoryUrl: "https://tistory.lovizu.com/entry/ai-era-junior-developer-growth"
 ---
 
 얼마 전 팀 주니어 개발자가 짜온 코드를 리뷰하다가 잠깐 멍해진 적이 있다. 코드가 이상해서가 아니다. 너무 멀쩡해서였다. 예외 처리도 깔끔하고, 네이밍도 좋고, 테스트 코드까지 붙어 있었다. 3년차가 쓴 코드라고 보기엔 지나치게 정돈되어 있었다. 물어보니 역시나였다. "AI한테 시키고 제가 다듬었어요." 요즘은 이게 표준이다. 나도 쓴다. 부정할 생각은 없다. 다만 그날 이후로 계속 머릿속을 떠나지 않는 질문이 하나 있다. AI가 코드를 다 짜주는 시대에, 주니어 개발자는 도대체 어떻게 성장해야 하는가.

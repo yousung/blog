@@ -7,7 +7,7 @@ summary: "24인치 FHD에서 갈아탄 한성컴퓨터 TFG27Q14P2 27인치 QHD 1
 oneLineSummary: "17만 원대에 27인치 QHD 144Hz IPS 무결점까지, 코딩용 첫 QHD 모니터로 가장 무난한 선택"
 tags: ["제품리뷰", "장비", "모니터", "개발환경", "재택근무", "생산성", "리뷰", "it"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/hansung-tfg27q14p2-qhd-monitor-review"
+tistoryUrl: "https://tistory.lovizu.com/entry/hansung-tfg27q14p2-qhd-monitor-review"
 ---
 
 집에서 쓰던 24인치 FHD 모니터가 슬슬 한계였다. 재택근무 날이면 IDE 한 쪽에 터미널 띄우고, 브라우저까지 올리면 창 전환만 하루 종일 하는 기분이었다. 회사 모니터는 27인치 QHD인데 집에 오면 화면이 좁아서 능률이 뚝 떨어지는 게 몸으로 느껴졌다. 그래서 조건을 딱 정했다. 27인치, QHD, 주사율 144Hz 이상, 그리고 20만 원 이하. 이 네 가지 조건으로 한참을 뒤지다가 결국 한성컴퓨터 TFG27Q14P2로 정착했다.

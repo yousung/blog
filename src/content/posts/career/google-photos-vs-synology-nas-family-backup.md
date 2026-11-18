@@ -7,7 +7,7 @@ summary: "아이 셋 10년 치 가족 사진 수백 기가, 구글 포토 구독
 oneLineSummary: "사진 200GB 이하면 구글 포토, 1TB 넘고 3년 이상 보면 NAS, 애들 사진은 결국 하이브리드"
 tags: ["사진", "클라우드", "데이터", "네트워크", "장비"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/google-photos-vs-synology-nas-family-backup"
+tistoryUrl: "https://tistory.lovizu.com/entry/google-photos-vs-synology-nas-family-backup"
 ---
 
 휴대폰 사진첩을 열 때마다 마음이 무겁다. 아이가 셋이면 사진이 그냥 쌓이는 게 아니라 쏟아진다. 첫째 때는 한 장 한 장 고르면서 찍었는데, 셋째쯤 되니 연사로 갈기고 나중에 고르자는 식이 됐다. 그렇게 10년 넘게 모인 가족 사진과 영상이 수백 기가다. 그리고 어느 날 구글 포토가 조용히 경고를 띄웠다. 저장용량이 거의 다 찼다고.

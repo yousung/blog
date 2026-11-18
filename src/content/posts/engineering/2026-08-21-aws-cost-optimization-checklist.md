@@ -7,7 +7,7 @@ summary: "AWS 청구서에서 조용히 새는 비용을 잡는 실전 점검 �
 oneLineSummary: "AWS 요금은 큰 실수 하나가 아니라 아무도 안 보는 작은 낭비들이 쌓여서 터진다."
 tags: ["AWS", "클라우드", "인프라", "S3", "RDS", "Lambda", "체크리스트"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/aws-cost-optimization-checklist"
+tistoryUrl: "https://tistory.lovizu.com/entry/aws-cost-optimization-checklist"
 ---
 
 매달 초가 되면 나는 습관처럼 AWS 청구서를 연다. 예전 회사에서 월 청구액이 예상보다 40% 넘게 튀어나온 적이 있었는데, 그때 원인을 추적하면서 알게 된 게 하나 있다. AWS 요금은 큰 실수 하나로 터지는 게 아니라, 아무도 안 보는 작은 낭비들이 조용히 쌓여서 터진다는 것이다.

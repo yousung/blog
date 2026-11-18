@@ -8,7 +8,7 @@ oneLineSummary: "Freezed 생성 파일 3개를 IDE에서 하나로 묶기"
 tags: ['Flutter', 'Dart', 'IDE', 'IntelliJ']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/freezeddart-gdart-%ED%8C%8C%EC%9D%BC-%ED%95%98%EB%82%98%EB%A1%9C-%ED%95%A9%EC%B9%98%EA%B8%B0"
+tistoryUrl: "https://tistory.lovizu.com/entry/freezeddart-gdart-%ED%8C%8C%EC%9D%BC-%ED%95%98%EB%82%98%EB%A1%9C-%ED%95%A9%EC%B9%98%EA%B8%B0"
 ---
 
 Flutter 개발에서 Freezed나 Drift 같은 코드 생성 패키지를 사용하면 같은 이름으로 여러 개의 파일이 생성됩니다. 예를 들어 `user.dart` 파일이 있다면:

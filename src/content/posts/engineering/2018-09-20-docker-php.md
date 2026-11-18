@@ -8,7 +8,7 @@ oneLineSummary: 'Docker Compose로 PHP 스택 5분 안에 구성하기'
 tags: ['Docker', 'PHP', 'DevOps', 'NGINX']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/docker-%EB%A1%9C-PHP-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0"
+tistoryUrl: "https://tistory.lovizu.com/entry/docker-%EB%A1%9C-PHP-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0"
 ---
 
 ## Docker로 PHP 개발 환경을 빠르게 준비하기

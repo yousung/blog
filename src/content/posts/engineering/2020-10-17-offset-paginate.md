@@ -8,7 +8,7 @@ oneLineSummary: 'Offset 페이지네이션의 문제점과 커서 기반 대안 
 tags: ['데이터베이스', '페이지네이션', '성능최적화', 'SQL']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/Offset-%EA%B8%B0%EB%B0%98-paginate-%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90"
+tistoryUrl: "https://tistory.lovizu.com/entry/Offset-%EA%B8%B0%EB%B0%98-paginate-%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90"
 ---
 
 ## 페이지네이션: 개발자가 가장 자주 사용하는 기능

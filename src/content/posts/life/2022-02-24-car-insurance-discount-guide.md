@@ -8,7 +8,7 @@ oneLineSummary: '범칙금 vs 과태료: 이 차이를 아는 것이 돈입니�
 tags: ['자동차', '보험', '생활정보', '금융']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/%EC%9E%90%EB%8F%99%EC%B0%A8-%EB%B3%B4%ED%97%98%EB%A3%8C-%ED%95%A0%EC%9D%B8-%ED%95%A0%EC%A6%9D-%EC%A1%B0%ED%9A%8C-%EC%8B%9C%EC%8A%A4%ED%85%9C"
+tistoryUrl: "https://tistory.lovizu.com/entry/%EC%9E%90%EB%8F%99%EC%B0%A8-%EB%B3%B4%ED%97%98%EB%A3%8C-%ED%95%A0%EC%9D%B8-%ED%95%A0%EC%A6%9D-%EC%A1%B0%ED%9A%8C-%EC%8B%9C%EC%8A%A4%ED%85%9C"
 ---
 
 ## 자동차 보험료는 운전 기록에 직결됩니다

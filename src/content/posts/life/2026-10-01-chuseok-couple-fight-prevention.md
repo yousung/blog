@@ -7,7 +7,7 @@ summary: "결혼 11년차, 아이 셋 키우는 부부가 명절 부부싸움을
 oneLineSummary: "명절 부부싸움의 본질은 시댁도 처가도 아니라 '당신은 내 편인가'라는 질문 하나다"
 tags: ["일상", "라이프", "습관", "회고", "생활정보", "체크리스트"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/chuseok-couple-fight-prevention"
+tistoryUrl: "https://tistory.lovizu.com/entry/chuseok-couple-fight-prevention"
 ---
 
 추석 연휴가 끝나고 일주일쯤 지났다. 결혼 11년차니까 명절을 스무 번 넘게 치렀다. 아이가 셋이 되고 나서는 명절이 '쉬는 날'이 아니라 '치르는 날'이라는 걸 몸으로 안다. 그리고 솔직히 고백하면, 우리 부부가 크게 싸운 날의 절반은 명절이거나 명절 직후였다. 연휴가 끝나고 출근한 월요일에 서로 말을 안 한 적도 있다.

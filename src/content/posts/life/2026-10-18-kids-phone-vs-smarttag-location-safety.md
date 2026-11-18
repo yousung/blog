@@ -7,7 +7,7 @@ summary: "초등 아이 등하교 안전 장비 세 갈래 비교. 갤럭시 스
 oneLineSummary: "키즈폰은 기기값이 아니라 2년 총비용으로 봐야 한다. 저학년이라면 2만 원짜리 태그부터."
 tags: ["육아", "일상", "장비", "생활정보", "체크리스트", "제품리뷰"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/kids-phone-vs-smarttag-location-safety"
+tistoryUrl: "https://tistory.lovizu.com/entry/kids-phone-vs-smarttag-location-safety"
 ---
 
 지난달에 둘째가 학교 끝나고 두 시간 동안 연락이 안 된 적이 있다. 알고 보니 같은 반 친구 집에 가서 놀고 있었는데, 그 두 시간 동안 아내와 나는 번갈아 가며 학교 앞과 놀이터를 돌았다. 결론은 해프닝이었지만, 그날 저녁 부부회의 안건은 하나였다. "위치 확인되는 뭔가를 하나 달아주자."

@@ -7,7 +7,7 @@ summary: "제조사 앱이 제각각인 IoT 기기를 홈어시스턴트(Home As
 oneLineSummary: "스마트홈의 완성은 제어가 아니라, 내가 아무것도 안 해도 알아서 돌아가는 상태다."
 tags: ["스마트홈", "IoT", "홈오토메이션", "자동화", "인프라", "보안", "it"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/home-assistant-smart-home-guide"
+tistoryUrl: "https://tistory.lovizu.com/entry/home-assistant-smart-home-guide"
 ---
 
 우리 집에는 스마트 기기가 꽤 많다. 샤오미 공기청정기, 스마트 플러그, 거실 조명, 현관 도어센서, 아이 방 온습도계까지. 문제는 이걸 제어하는 앱이 전부 따로 놀았다는 거다. 공기청정기는 미홈 앱, 조명은 또 다른 앱, 플러그는 헤이홈 앱. 아내가 "불 좀 꺼줘"라고 하면 폰에서 앱을 세 번 갈아타야 했다. 스마트홈이 아니라 앱 지옥이었다.

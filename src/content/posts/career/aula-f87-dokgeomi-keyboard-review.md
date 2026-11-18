@@ -7,7 +7,7 @@ summary: "가성비 기계식 키보드의 대명사 독거미 AULA F87 회목�
 oneLineSummary: "4만 원대 독거미 F87, 키보드에 진심이었던 개발자가 인정한 가성비 반칙"
 tags: ["제품리뷰", "장비", "개발환경", "재택근무", "리뷰", "it"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/aula-f87-dokgeomi-keyboard-review"
+tistoryUrl: "https://tistory.lovizu.com/entry/aula-f87-dokgeomi-keyboard-review"
 ---
 
 집 서재에서 쓰던 키보드가 얼마 전부터 스페이스바를 두 번에 한 번꼴로 먹기 시작했다. 8년 넘게 쓴 물건이라 보낼 때가 되긴 했는데, 문제는 예산이었다. 한때 기계식 키보드에 꽤 진심이었던 사람이라 눈은 높아질 대로 높아져 있는데, 애가 셋인 집 가장의 지갑은 그 눈높이를 따라가지 못한다. 스위치를 하나하나 뜯어 윤활하고, 흡음재를 채우고, 키캡에 몇만 원씩 쓰던 시절은 결혼과 함께 끝났다.

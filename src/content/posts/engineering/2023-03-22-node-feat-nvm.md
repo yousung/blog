@@ -8,7 +8,7 @@ oneLineSummary: 'NVM으로 다중 프로젝트 Node 버전 자동 관리'
 tags: ['Node.js', 'NVM', '개발환경', 'zsh']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%B3%84%EB%A1%9C-node-%EB%B2%84%EC%A0%84-%EC%9E%90%EB%8F%99-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0-feat-nvm"
+tistoryUrl: "https://tistory.lovizu.com/entry/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%B3%84%EB%A1%9C-node-%EB%B2%84%EC%A0%84-%EC%9E%90%EB%8F%99-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0-feat-nvm"
 ---
 
 ## 도입

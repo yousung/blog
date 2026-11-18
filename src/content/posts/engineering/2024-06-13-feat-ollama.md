@@ -8,7 +8,7 @@ oneLineSummary: '무료로 로컬 LLM 기반 AI 코파일럿 만들기'
 tags: ['AI', 'LLM']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/%EC%BD%94%ED%8C%8C%EC%9D%BC%EB%9F%BF-%EB%AC%B4%EB%A3%8C%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-feat-ollama"
+tistoryUrl: "https://tistory.lovizu.com/entry/%EC%BD%94%ED%8C%8C%EC%9D%BC%EB%9F%BF-%EB%AC%B4%EB%A3%8C%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-feat-ollama"
 ---
 
 ## 배경: 유료 AI 서비스의 대안 찾기

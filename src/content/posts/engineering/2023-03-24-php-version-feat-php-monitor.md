@@ -8,7 +8,7 @@ oneLineSummary: "프로젝트 진입 시 자동으로 PHP 버전을 전환하는
 tags: ['PHP', 'Laravel', 'Valet', 'MacOS', '개발환경']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%B3%84%EB%A1%9C-php-version-%EC%9E%90%EB%8F%99-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0-feat-php-monitor"
+tistoryUrl: "https://tistory.lovizu.com/entry/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%B3%84%EB%A1%9C-php-version-%EC%9E%90%EB%8F%99-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0-feat-php-monitor"
 ---
 
 ## 개요

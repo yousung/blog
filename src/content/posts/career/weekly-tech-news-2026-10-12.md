@@ -7,7 +7,7 @@ summary: "10월 둘째 주 IT 뉴스 정리. 챗GPT GPT-6 전면 배포와 인�
 oneLineSummary: "이번 주 키워드는 검증이다"
 tags: ["AI", "LLM", "보안", "기술트렌드", "개발"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-10-12"
+tistoryUrl: "https://tistory.lovizu.com/entry/weekly-tech-news-2026-10-12"
 ---
 
 이번 주는 한 주 안에 천당과 지옥이 다 있었다. 오픈AI는 GPT-6를 무료 사용자까지 풀면서 "챗봇의 다음 단계"를 자랑했는데, 바로 다음 날 매출 숫자가 알려진 것보다 한참 적다는 보도가 나오면서 기술주가 휘청였다. 그 와중에 삼성전자는 분기 영업이익 100조라는, 몇 년 전이라면 오타라고 생각했을 숫자를 찍었다. 지난주(10/5~10/11) 뉴스 중에서 개발자 입장에서 알아둘 만한 것들만 추려봤다.

@@ -7,7 +7,7 @@ summary: "올해가 88일 남은 시점에서 4분기 목표를 새로 추가하
 oneLineSummary: "목표의 개수를 줄이는 것 자체가 가장 강력한 목표 달성 기술이다"
 tags: ["목표관리", "자기개발", "습관", "루틴", "체크리스트", "회고"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/last-100-days-2026-three-goals"
+tistoryUrl: "https://tistory.lovizu.com/entry/last-100-days-2026-three-goals"
 ---
 
 달력을 보다가 잠깐 멈췄다. 오늘이 10월 4일이면, 올해가 딱 88일 남았다. 지난달 말에 '올해 100일 남음' 지점을 지나쳤고, 이제는 두 자리 숫자다. 수능 100일 전에 교실 뒤에 붙던 그 숫자를 마흔 넘어서 다시 만나니 기분이 묘하다. 지난 8월에 [2026년 목표 중간 결산](https://lovizu.tistory.com/entry/goal-midyear-review-2026)을 하면서 살아남은 목표 3개와 접은 목표 4개를 정리했는데, 그로부터 한 달 반쯤 지났다. 이번 글은 그 후속이다. 남은 100일 동안 뭘 할 것인가. 결론부터 말하면, 나는 목표를 새로 세우지 않았다. 오히려 더 줄였다.

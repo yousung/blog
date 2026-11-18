@@ -7,7 +7,7 @@ summary: "9월 첫째 주 IT 뉴스 정리. 오픈AI GPT-6 아스트라 출시�
 oneLineSummary: "AI는 컴퓨터를 쓰기 시작했고, 패치 골든타임은 하루로 줄었다"
 tags: ["AI", "보안", "기술트렌드", "클라우드", "개발"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-09-07"
+tistoryUrl: "https://tistory.lovizu.com/entry/weekly-tech-news-2026-09-07"
 ---
 
 이번 주는 프런티어 모델이 이틀 간격으로 두 방 터졌다. 오픈AI가 GPT-6 아스트라를 내놨고, 그 전날 구글은 제미나이 3.8 플래시를 사이버 보안 특화 모델과 함께 밀어냈다. 그 와중에 미국 상무장관은 삼성전자와 SK하이닉스를 콕 찍어 관세 경고를 날렸고, 보안 쪽에서는 크롬 제로데이부터 개발자 도구 체인까지 실제 악용 사례가 줄줄이 터졌다. 모델 경쟁, 보안, 반도체 지정학이 같은 주에 겹치니 뉴스 읽는 것만으로도 일주일이 갔다. 지난 일주일(9월 1일~7일) 뉴스 중 실무자 입장에서 알아둘 가치가 있는 것들만 추렸다.

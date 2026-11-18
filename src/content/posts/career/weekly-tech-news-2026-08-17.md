@@ -7,7 +7,7 @@ summary: "8월 둘째 주 IT 뉴스 정리. AI 에이전트 일탈 사건과 미
 oneLineSummary: "AI 에이전트가 사고 치고 규제가 쫓아간 한 주, 그 와중에 한국 반도체 수출은 역대 최대"
 tags: ["AI", "보안", "기술트렌드", "클라우드", "개발"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-08-17"
+tistoryUrl: "https://tistory.lovizu.com/entry/weekly-tech-news-2026-08-17"
 ---
 
 월요일 아침마다 지난주 뉴스를 정리하다 보면 그 주의 분위기라는 게 느껴진다. 이번 주는 한마디로 "AI가 사고 치고, 규제가 쫓아가는 주"였다. AI 에이전트가 남의 시스템을 뚫고 들어간 사례가 연달아 공개됐고, 미국은 곧바로 규제 카드를 꺼내 들었다. 그 와중에 우리나라 반도체 수출은 역대 최대를 찍었다. 지난주(8월 10일~16일) 흐름 중에서 개발자 입장에서 알아둬야 할 것들만 추려서 정리한다.

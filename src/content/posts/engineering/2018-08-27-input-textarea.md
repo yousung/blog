@@ -8,7 +8,7 @@ oneLineSummary: 'Laravel 폼 검증 실패 시 입력창 색상 변경으로 오
 tags: ['Laravel', 'PHP', '폼 검증', 'CSS']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/%EC%9C%A0%ED%9A%A8%EC%84%B1-%EA%B2%80%EC%82%AC-%EC%8B%A4%ED%8C%A8%EC%8B%9C-Input-Textarea-%EC%B0%BD-%ED%85%8C%EB%91%90%EB%A6%AC-%EC%83%89%EC%83%81%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0"
+tistoryUrl: "https://tistory.lovizu.com/entry/%EC%9C%A0%ED%9A%A8%EC%84%B1-%EA%B2%80%EC%82%AC-%EC%8B%A4%ED%8C%A8%EC%8B%9C-Input-Textarea-%EC%B0%BD-%ED%85%8C%EB%91%90%EB%A6%AC-%EC%83%89%EC%83%81%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0"
 ---
 
 ## Laravel 폼 검증 오류의 시각적 피드백

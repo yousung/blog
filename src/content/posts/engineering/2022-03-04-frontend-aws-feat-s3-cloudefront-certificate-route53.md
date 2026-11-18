@@ -8,7 +8,7 @@ summary: 'AWS를 이용해 정적 프론트엔드를 프로덕션 환경에 배�
 oneLineSummary: 'AWS 프론트엔드 배포: S3부터 커스텀 도메인까지 완전 자동화'
 tags: ['AWS', 'S3', 'CloudFront', 'Route53', '프론트엔드', '배포']
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/frontend-aws-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0-feat-s3-CloudeFront-Certificate-Route53"
+tistoryUrl: "https://tistory.lovizu.com/entry/frontend-aws-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0-feat-s3-CloudeFront-Certificate-Route53"
 ---
 
 ## AWS로 프론트엔드 배포하기

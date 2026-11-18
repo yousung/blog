@@ -7,7 +7,7 @@ summary: "결혼 11년차, 아이 셋 키우는 부부가 부부싸움을 줄이
 oneLineSummary: "부부싸움을 줄인 건 애정이 아니라 규칙이었다, 11년차 부부의 운영 노하우"
 tags: ["일상", "라이프", "습관", "루틴", "회고", "생활정보"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/married-11years-fight-less-rules"
+tistoryUrl: "https://tistory.lovizu.com/entry/married-11years-fight-less-rules"
 ---
 
 결혼한 지 11년이 넘었다. 아이는 셋이다. 이렇게 쓰면 어딘가 안정적인 가정처럼 보이지만, 사실 우리 부부도 많이 싸웠다. 신혼 때는 치약 짜는 방향 같은 걸로 싸웠고, 첫째가 태어난 뒤에는 잠 못 자는 서로에게 날을 세웠고, 셋째가 태어난 뒤에는 싸울 힘도 없어서 냉전을 했다. 부부싸움의 형태가 체력에 따라 진화한다는 걸 그때 알았다.

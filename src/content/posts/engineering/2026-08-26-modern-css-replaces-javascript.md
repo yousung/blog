@@ -7,7 +7,7 @@ summary: "자바스크립트로 짜던 UI 로직을 모던 CSS로 걷어낸 실�
 oneLineSummary: "그건 CSS로 안 되니까 JS로, 라는 반사신경이 이제 꽤 자주 틀린다."
 tags: ["CSS", "JavaScript", "HTML", "프론트엔드", "웹개발", "브라우저", "성능최적화"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/modern-css-replaces-javascript"
+tistoryUrl: "https://tistory.lovizu.com/entry/modern-css-replaces-javascript"
 ---
 
 이 블로그를 오래 보신 분이라면 알겠지만, 나는 제이쿼리로 DOM을 주무르던 시절부터 웹을 만들어온 사람이다. 그 시절엔 뭐만 하려고 하면 자바스크립트였다. 아코디언 메뉴도 JS, 툴팁도 JS, 부모 요소 스타일 바꾸는 것도 JS. "CSS는 못 하니까"가 당연한 전제였다.

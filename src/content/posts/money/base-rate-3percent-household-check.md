@@ -7,7 +7,7 @@ summary: "한국은행이 7월과 8월 두 번 연속 기준금리를 올려 3.0
 oneLineSummary: "금리가 오르는 건 못 막지만, 내 가계의 숫자를 아는 건 내가 할 수 있다"
 tags: ["머니", "예산", "가계부", "저축", "체크리스트"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/base-rate-3percent-household-check"
+tistoryUrl: "https://tistory.lovizu.com/entry/base-rate-3percent-household-check"
 ---
 
 월급날 저녁, 아내가 은행 앱을 보다가 한마디 했다. "우리 대출 이자 또 올랐는데?" 알고 있었다. 알고 있었는데 애써 안 보고 있었다는 게 정확하다. 한국은행이 7월에 이어 8월에도 기준금리를 올리면서, 이제 기준금리는 3.00%가 됐다. 두 달 사이 0.5%포인트가 올랐다. 애 셋 키우는 외벌이에 가까운 가장 입장에서 이건 그냥 뉴스가 아니라 매달 통장에서 빠져나가는 숫자의 문제다.

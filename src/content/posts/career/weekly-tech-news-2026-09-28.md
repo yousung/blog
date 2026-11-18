@@ -7,7 +7,7 @@ summary: "9월 넷째 주 IT 뉴스 정리. 앤스로픽 클로드 오푸스 5.5
 oneLineSummary: "프런티어 경쟁은 가격 전쟁으로, 엣지 장비는 공격자들의 정문으로"
 tags: ["AI", "보안", "기술트렌드", "클라우드", "개발"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/weekly-tech-news-2026-09-28"
+tistoryUrl: "https://tistory.lovizu.com/entry/weekly-tech-news-2026-09-28"
 ---
 
 3주 만에 다시 쓰는 주간 테크 뉴스 정리다. 애 셋 데리고 추석 연휴를 통과하느라 정리를 걸렀더니, 그 사이 업계가 조용했느냐 하면 정반대였다. 지난주(9/21~9/27)는 앤스로픽과 OpenAI가 같은 날, 그것도 90분 간격으로 신모델을 맞붙여 내놨고, 시트릭스는 CVE 번호조차 없는 제로데이 2건이 실전에서 터지는 초유의 상황을 맞았다. 국내 반도체 수출은 또 기록을 갈아치웠다. 하나씩 정리해 본다.

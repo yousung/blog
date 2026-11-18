@@ -7,7 +7,7 @@ summary: "올해부터 국민연금 보험료율이 오르기 시작했습니다
 oneLineSummary: "보험료율 인상기, 40대 가장이 연금 구조를 다시 짠 기록"
 tags: [money, 가계부]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/national-pension-40s-checklist"
+tistoryUrl: "https://tistory.lovizu.com/entry/national-pension-40s-checklist"
 ---
 
 ![](/images/tistory/national-pension-40s-checklist/1.jpg)

@@ -8,7 +8,7 @@ oneLineSummary: 'JetBrains 한글 언어팩 완벽 설정: 플러그인 + 시스
 tags: ['JetBrains', 'IDE', '개발도구', 'IntelliJ']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/Jetbrains-%ED%95%9C%EA%B8%80-%EC%96%B8%EC%96%B4%ED%8C%A9%EC%9D%B4-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EC%9E%91%EB%8F%99%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C"
+tistoryUrl: "https://tistory.lovizu.com/entry/Jetbrains-%ED%95%9C%EA%B8%80-%EC%96%B8%EC%96%B4%ED%8C%A9%EC%9D%B4-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EC%9E%91%EB%8F%99%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C"
 ---
 
 ## 문제 상황

@@ -8,7 +8,7 @@ oneLineSummary: 'ios-deploy로 React Native 앱을 실기기에 배포하기'
 tags: ['React Native', 'iOS', '모바일', 'DevOps']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/React-Native-ISO-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0"
+tistoryUrl: "https://tistory.lovizu.com/entry/React-Native-ISO-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0"
 ---
 
 ## React Native 개발자가 꼭 알아야 할 도구

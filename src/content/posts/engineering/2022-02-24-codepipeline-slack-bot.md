@@ -8,7 +8,7 @@ summary: 'GitHub push부터 Docker 빌드, Slack 승인, 배포 실행까지 전
 oneLineSummary: 'CodePipeline + Slack: 완전 자동화된 인프라 배포'
 tags: ['AWS', 'CI/CD', 'CodePipeline', 'Slack', 'Lambda', 'Docker']
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/codepipeline-slack-bot-%EC%8A%A4%EB%A7%88%ED%8A%B8-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0"
+tistoryUrl: "https://tistory.lovizu.com/entry/codepipeline-slack-bot-%EC%8A%A4%EB%A7%88%ED%8A%B8-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0"
 ---
 ## 개요
 

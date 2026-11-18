@@ -8,7 +8,7 @@ oneLineSummary: 'Spring 프로젝트 필수 설정: UTF-8 한글 인코딩'
 tags: ['Java', 'Spring', 'UTF-8', 'web.xml']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/java-spring-%ED%95%9C%EA%B8%80%EC%B2%98%EB%A6%AC"
+tistoryUrl: "https://tistory.lovizu.com/entry/java-spring-%ED%95%9C%EA%B8%80%EC%B2%98%EB%A6%AC"
 ---
 
 ## 도입

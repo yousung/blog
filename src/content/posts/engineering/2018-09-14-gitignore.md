@@ -8,7 +8,7 @@ oneLineSummary: 'Git이 .gitignore를 무시할 때 캐시 초기화로 해결�
 tags: ['Git', 'VCS', '버전관리']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/gitignore-%EC%A0%81%EC%9A%A9-%EC%95%88%EB%90%A0-%EB%95%8C-%EC%B2%98%EB%A6%AC-%EB%B0%A9%EB%B2%95"
+tistoryUrl: "https://tistory.lovizu.com/entry/gitignore-%EC%A0%81%EC%9A%A9-%EC%95%88%EB%90%A0-%EB%95%8C-%EC%B2%98%EB%A6%AC-%EB%B0%A9%EB%B2%95"
 ---
 
 ## 문제 상황

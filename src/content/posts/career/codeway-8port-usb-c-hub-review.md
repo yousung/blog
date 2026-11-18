@@ -7,7 +7,7 @@ summary: "맥북 에어 M2의 포트 부족 문제를 코드웨이 8포트 USB-C
 oneLineSummary: "맥북 포트 부족을 해결한 코드웨이 8포트 USB-C 허브 6개월 실사용 리뷰"
 tags: ["제품리뷰", "장비", "재택근무", "개발환경", "모니터", "it"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/codeway-8port-usb-c-hub-review"
+tistoryUrl: "https://tistory.lovizu.com/entry/codeway-8port-usb-c-hub-review"
 ---
 
 ![코드웨이 8포트 USB-C 허브, 맥북 개발자가 6개월 쓴 솔직 후기](/images/tistory/codeway-8port-usb-c-hub-review/4.jpg)

@@ -7,7 +7,7 @@ summary: "도커를 쓰는 서버에서 디스크가 100% 차는 장애를 겪�
 oneLineSummary: "도커는 기본값 그대로 두면 디스크를 다 쓸 때까지 자란다"
 tags: ["Docker", "DevOps", "인프라", "troubleshooting", "시스템-관리"]
 status: "published"
-tistoryUrl: "https://lovizu.tistory.com/entry/docker-disk-full-overlay2-cleanup"
+tistoryUrl: "https://tistory.lovizu.com/entry/docker-disk-full-overlay2-cleanup"
 ---
 
 금요일 밤 11시에 배포가 실패했다. CI는 초록불인데 서버에서 컨테이너가 안 뜬다. 에러 메시지는 딱 한 줄. **no space left on device**. 디스크가 꽉 찬 것이다. 코드 몇 줄 바꿨다고 디스크가 찰 리는 없는데, 확인해 보니 루트 파티션 사용률이 100%였다. 범인은 도커였다.

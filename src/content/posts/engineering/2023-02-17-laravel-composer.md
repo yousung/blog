@@ -8,7 +8,7 @@ oneLineSummary: 'Laravel 개발 생산성 극대화 5가지 Composer 패키지'
 tags: ['Laravel', 'PHP', '개발도구', '개발환경']
 status: "published"
 updatedDate: '2026-04-23'
-tistoryUrl: "https://lovizu.tistory.com/entry/Laravel-%EC%B6%94%EC%B2%9C-Composer"
+tistoryUrl: "https://tistory.lovizu.com/entry/Laravel-%EC%B6%94%EC%B2%9C-Composer"
 ---
 
 ## Laravel 개발의 효율성 극대화
