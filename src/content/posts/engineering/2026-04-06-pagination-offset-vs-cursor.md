@@ -85,7 +85,8 @@ const SORT = 'created_desc';
 
 function encodeCursor(row) {
   // created_at은 DB에서 문자열로 받아 정밀도를 그대로 보존한다
-  const payload = { s: SORT, t: row.created_at_text, id: row.id };
+  // id는 문자열로 통일한다 (node-postgres는 bigint를 문자열로 돌려준다)
+  const payload = { s: SORT, t: row.created_at_text, id: String(row.id) };
   return Buffer.from(JSON.stringify(payload)).toString('base64url');
 }
 
@@ -97,7 +98,7 @@ function decodeCursor(token) {
   } catch {
     throw new Error('INVALID_CURSOR');
   }
-  if (payload.s !== SORT || typeof payload.t !== 'string' || !Number.isInteger(payload.id)) {
+  if (payload.s !== SORT || typeof payload.t !== 'string' || !/^\d+$/.test(String(payload.id))) {
     throw new Error('INVALID_CURSOR');
   }
   return payload;
