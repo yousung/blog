@@ -1,16 +1,16 @@
 ---
-title: "테스트 데이터는 Fixture와 Factory 중 무엇으로 만들까"
+title: "테스트 픽스처(Test Fixture)와 Factory, 테스트 데이터는 무엇으로 만들까"
 slug: "test-data-fixture-factory-checklist"
 author: "감성개발자"
 date: "2026-07-14"
-summary: "테스트 코드가 늘어날수록 테스트 데이터 관리가 더 어려워진다. Fixture, Factory, Builder, seed 데이터를 언제 나눠 써야 하는지, E2E 테스트에서 계정과 상태를 어떻게 다뤄야 하는지 실무에서 부딪히며 정한 기준을 담았다."
+summary: "테스트 픽스처(test fixture)가 맞는 데이터와 Factory·Builder·seed로 넘겨야 할 데이터를 가르는 기준입니다. 전역 Fixture가 테스트를 서로 묶어 깨뜨리는 이유, E2E 계정·인증 상태 파일 관리까지 실무에서 부딪히며 정한 원칙을 담았습니다."
 oneLineSummary: "테스트 데이터는 전역 Fixture로 쌓기보다 테스트 목적에 맞게 Factory, Builder, seed 데이터를 나눠야 유지보수가 쉬워진다."
 tags: [테스트코드, 개발팁, QA, TDD]
 status: "published"
 ogImage: "/images/posts/test-data-fixture-factory-checklist/hero.png"
 ---
 
-# 테스트 데이터는 Fixture와 Factory 중 무엇으로 만들까
+# 테스트 픽스처(Test Fixture)와 Factory, 테스트 데이터는 무엇으로 만들까
 
 ![Fixture와 Factory 기반 테스트 데이터 구조를 추상적으로 표현한 삽화](/images/posts/test-data-fixture-factory-checklist/hero.png)
 
