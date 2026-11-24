@@ -1,0 +1,48 @@
+---
+// 2026-11-13 이전 blog.lovizu.com은 티스토리 도메인이었다. 그때 색인된 옛 글 주소
+// /entry/<티스토리 슬러그>를 현재 글 /posts/<slug>/로 넘긴다 (frontmatter tistoryUrl 기준).
+// GitHub Pages는 서버 리다이렉트가 없어 meta refresh + canonical 페이지로 처리한다. sitemap에서는 제외.
+import { getCollection } from 'astro:content';
+import { getPublishedPosts } from '../../lib/posts';
+import { SITE_URL } from '../../consts';
+
+export async function getStaticPaths() {
+  const posts = getPublishedPosts(await getCollection('posts'));
+  const seen = new Set<string>();
+  const paths = [];
+  for (const post of posts) {
+    const url = post.data.tistoryUrl;
+    if (!url) continue;
+    const match = /\/entry\/([^/?#]+)/.exec(url);
+    if (!match) continue;
+    let entry: string;
+    try {
+      entry = decodeURIComponent(match[1]);
+    } catch {
+      continue;
+    }
+    if (!entry || seen.has(entry)) continue;
+    seen.add(entry);
+    paths.push({ params: { slug: entry }, props: { slug: post.data.slug, title: post.data.title } });
+  }
+  return paths;
+}
+
+const { slug, title } = Astro.props;
+const base = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
+const target = `${base}/posts/${slug}/`;
+---
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>{title}</title>
+<meta http-equiv="refresh" content={`0; url=${target}`}>
+<link rel="canonical" href={target}>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script is:inline define:vars={{ target }}>location.replace(target + location.hash);</script>
+</head>
+<body style="font-family:sans-serif;padding:2rem;line-height:1.6">
+<p>글 주소가 바뀌었습니다. 자동으로 이동하지 않으면 <a href={target}>{title}</a>을(를) 눌러 주세요.</p>
+</body>
+</html>

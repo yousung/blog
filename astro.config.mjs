@@ -15,7 +15,7 @@ export default defineConfig({
   build: { inlineStylesheets: 'always' },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/search/') && !page.includes('/og/'),
+      filter: (page) => !page.includes('/search/') && !page.includes('/og/') && !page.includes('/entry/'),
       serialize: (item) => ({ ...item, lastmod: postDates.get(new URL(item.url).pathname) })
     }),
     {
